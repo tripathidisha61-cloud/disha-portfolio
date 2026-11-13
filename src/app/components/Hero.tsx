@@ -12,6 +12,8 @@ import {
   Sparkles,
   MapPin,
   GraduationCap,
+  Trophy,
+  GitBranch,
 } from "lucide-react";
 
 export function Hero() {
@@ -48,14 +50,24 @@ export function Hero() {
           animate="visible"
           className="max-w-3xl"
         >
-          {/* Status Badge */}
-          <motion.div variants={itemVariants} className="inline-flex items-center gap-2 mb-6">
+          {/* Status Badges */}
+          <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-2 mb-6">
             <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium border border-neutral-200 dark:border-neutral-800 bg-neutral-50/80 dark:bg-neutral-900/60 text-neutral-700 dark:text-neutral-300 backdrop-blur-sm shadow-xs">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
               </span>
               <span>{PERSONAL_INFO.availability}</span>
+            </span>
+
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium border border-amber-500/20 bg-amber-500/10 text-amber-700 dark:text-amber-400">
+              <Trophy className="w-3.5 h-3.5 text-amber-500" />
+              <span>SIH 2026 Internal Cleared</span>
+            </span>
+
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium border border-blue-500/20 bg-blue-500/10 text-blue-700 dark:text-blue-400">
+              <GitBranch className="w-3.5 h-3.5 text-blue-500" />
+              <span>GSoC 2027 Aspirant</span>
             </span>
           </motion.div>
 
@@ -81,6 +93,7 @@ export function Hero() {
             className="mt-6 text-base sm:text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed"
           >
             3rd-year B.Tech Computer Science student at Raj Kumar Goel Institute of Technology (CGPA: 8.8/10).
+            Internal level cleared for Smart India Hackathon (SIH 2026) and actively preparing for Google Summer of Code (GSoC 2027).
             Passionate about architecting resilient full-stack applications, deep learning solutions, and developer
             tooling with performance, scalability, and recruiter-ready clean code.
           </motion.p>
@@ -92,7 +105,7 @@ export function Hero() {
           >
             <span className="inline-flex items-center gap-1.5">
               <GraduationCap className="w-3.5 h-3.5" />
-              RKGIT Ghaziabad • CSE 2026
+              RKGIT Ghaziabad • CSE
             </span>
             <span className="inline-flex items-center gap-1.5">
               <Sparkles className="w-3.5 h-3.5 text-amber-500" />

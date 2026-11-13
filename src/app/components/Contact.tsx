@@ -7,6 +7,8 @@ import {
   Mail,
   Linkedin,
   Github,
+  Phone,
+  MapPin,
   Copy,
   Check,
   Send,
@@ -15,7 +17,8 @@ import {
 } from "lucide-react";
 
 export function Contact() {
-  const [copied, setCopied] = useState(false);
+  const [copiedEmail, setCopiedEmail] = useState(false);
+  const [copiedPhone, setCopiedPhone] = useState(false);
   const [formState, setFormState] = useState({
     name: "",
     email: "",
@@ -26,8 +29,16 @@ export function Contact() {
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(PERSONAL_INFO.email);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2500);
+    setCopiedEmail(true);
+    setTimeout(() => setCopiedEmail(false), 2500);
+  };
+
+  const handleCopyPhone = () => {
+    if (PERSONAL_INFO.phone) {
+      navigator.clipboard.writeText(PERSONAL_INFO.phone);
+      setCopiedPhone(true);
+      setTimeout(() => setCopiedPhone(false), 2500);
+    }
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -100,13 +111,48 @@ export function Contact() {
                     className="p-2 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 hover:bg-neutral-100 dark:hover:bg-neutral-800 text-neutral-700 dark:text-neutral-300 transition-colors shrink-0"
                     aria-label="Copy email address"
                   >
-                    {copied ? (
+                    {copiedEmail ? (
                       <Check className="w-4 h-4 text-emerald-500" />
                     ) : (
                       <Copy className="w-4 h-4" />
                     )}
                   </button>
                 </div>
+
+                {/* Phone Box with Direct Dial & One-Click Copy */}
+                {PERSONAL_INFO.phone && (
+                  <div className="p-4 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-950 flex items-center justify-between gap-3">
+                    <div className="flex items-center gap-3 truncate">
+                      <div className="p-2 rounded-lg bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 shrink-0">
+                        <Phone className="w-4 h-4 text-neutral-700 dark:text-neutral-300" />
+                      </div>
+                      <div className="truncate">
+                        <div className="text-[11px] font-mono text-neutral-400 uppercase">
+                          Direct Phone
+                        </div>
+                        <a
+                          href={`tel:${PERSONAL_INFO.phone}`}
+                          className="text-sm font-medium text-neutral-900 dark:text-white hover:underline truncate block font-mono"
+                        >
+                          {PERSONAL_INFO.phone}
+                        </a>
+                      </div>
+                    </div>
+
+                    <button
+                      type="button"
+                      onClick={handleCopyPhone}
+                      className="p-2 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 hover:bg-neutral-100 dark:hover:bg-neutral-800 text-neutral-700 dark:text-neutral-300 transition-colors shrink-0"
+                      aria-label="Copy phone number"
+                    >
+                      {copiedPhone ? (
+                        <Check className="w-4 h-4 text-emerald-500" />
+                      ) : (
+                        <Copy className="w-4 h-4" />
+                      )}
+                    </button>
+                  </div>
+                )}
 
                 {/* Network Links */}
                 <div className="space-y-2.5">
@@ -137,9 +183,18 @@ export function Contact() {
                   </a>
                 </div>
 
-                <div className="pt-2 border-t border-neutral-100 dark:border-neutral-800 flex items-center justify-between text-xs text-neutral-500 font-mono">
-                  <span>RESPONSE TIME</span>
-                  <span className="text-emerald-500 font-medium">Within 24 Hours</span>
+                <div className="pt-3 border-t border-neutral-100 dark:border-neutral-800 space-y-2 text-xs text-neutral-500 font-mono">
+                  <div className="flex items-center justify-between">
+                    <span>LOCATION</span>
+                    <span className="text-neutral-700 dark:text-neutral-300 font-sans text-xs flex items-center gap-1">
+                      <MapPin className="w-3.5 h-3.5 text-neutral-400" />
+                      {PERSONAL_INFO.location}
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span>RESPONSE TIME</span>
+                    <span className="text-emerald-500 font-medium">Within 24 Hours</span>
+                  </div>
                 </div>
               </div>
             </Reveal>

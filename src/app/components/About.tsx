@@ -2,14 +2,14 @@
 
 import { PERSONAL_INFO } from "@/lib/data";
 import { Reveal } from "./Reveal";
-import { GraduationCap, Award, Compass, Code2 } from "lucide-react";
+import { GraduationCap, Award, Compass, Code2, Trophy, GitPullRequest } from "lucide-react";
 
 export function About() {
   const stats = [
     { label: "Current CGPA", value: PERSONAL_INFO.cgpa, note: "Top tier academic record" },
     { label: "Program", value: "B.Tech CSE", note: "3rd Year Undergraduate" },
-    { label: "Core Focus", value: "Full-Stack & AI", note: "ML, Next.js, Systems" },
-    { label: "Institution", value: "RKGIT", note: "Ghaziabad, AKTU" },
+    { label: "National Hackathon", value: "SIH 2026", note: "Internal Level Cleared" },
+    { label: "Open Source", value: "GSoC 2027", note: "Research & Preparation" },
   ];
 
   return (
@@ -35,55 +35,66 @@ export function About() {
                 <span className="font-semibold text-neutral-900 dark:text-neutral-200">
                   Raj Kumar Goel Institute of Technology, Ghaziabad
                 </span>
-                . With a strong foundation in computer science principles and a consistent{" "}
+                . With a strong foundation in computer science fundamentals and a consistent{" "}
                 <span className="font-semibold text-neutral-900 dark:text-neutral-200">
                   8.8 / 10 CGPA
                 </span>
-                , I specialize in combining robust backend engineering with intuitive, responsive user experiences.
+                , I focus on building high-performance backend APIs, scalable web architectures, and applied AI systems.
               </p>
             </Reveal>
 
             <Reveal delay={0.2}>
               <p>
-                My technical pursuits center on the intersection of modern web architectures and applied Artificial
-                Intelligence. I enjoy developing intelligent systems—such as{" "}
+                I have cleared the internal college qualification round for{" "}
+                <span className="font-semibold text-neutral-900 dark:text-neutral-200">
+                  Smart India Hackathon (SIH 2026)
+                </span>{" "}
+                and am actively gearing up for{" "}
+                <span className="font-semibold text-neutral-900 dark:text-neutral-200">
+                  Google Summer of Code (GSoC 2027)
+                </span>
+                , engaging with open-source communities and honeynet telemetry architectures. My project portfolio spans{" "}
                 <span className="text-neutral-900 dark:text-neutral-200 font-medium">RepoMedic AI</span>{" "}
-                and high-concurrency event platforms like{" "}
-                <span className="text-neutral-900 dark:text-neutral-200 font-medium">Live Hackathon Leaderboard</span>.
-                I thrive on solving complex algorithmic puzzles in C++ and Python while exploring cutting-edge retrieval
-                mechanisms (RAG) and open-source contributions.
+                (intelligent repo diagnostics), the{" "}
+                <span className="text-neutral-900 dark:text-neutral-200 font-medium">Live Hackathon Leaderboard</span>, and{" "}
+                <span className="text-neutral-900 dark:text-neutral-200 font-medium">SecureHealth Telehealth Platform</span>.
               </p>
             </Reveal>
 
             <Reveal delay={0.3}>
               <p>
-                Outside of coursework, I actively lead and participate in technical campus bodies including the{" "}
-                <span className="text-neutral-900 dark:text-neutral-200 font-medium">GeeksforGeeks Student Chapter</span>
-                , mentoring fellow students in Data Structures and Algorithms, coordinating hackathons, and preparing
-                open-source research initiatives for programs like Google Summer of Code (GSoC 2026).
+                Beyond individual development, I serve as a student leader at the{" "}
+                <span className="text-neutral-900 dark:text-neutral-200 font-medium">
+                  GeeksforGeeks Student Chapter (RKGIT)
+                </span>
+                , curating algorithmic challenges and mentoring peers in C++ and Python. I also coordinated a 100+ participant campus event as an{" "}
+                <span className="text-neutral-900 dark:text-neutral-200 font-medium">
+                  NSS Event Coordinator
+                </span>
+                , managing end-to-end logistics and volunteer execution.
               </p>
             </Reveal>
 
-            {/* Core Values / Philosophy */}
+            {/* Core Values / Highlights */}
             <Reveal delay={0.4}>
               <div className="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="p-4 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50/60 dark:bg-neutral-900/40">
                   <div className="flex items-center gap-2 font-medium text-neutral-900 dark:text-neutral-200 mb-1 text-sm">
-                    <Code2 className="w-4 h-4 text-neutral-600 dark:text-neutral-400" />
-                    Clean & Scalable Code
+                    <Trophy className="w-4 h-4 text-amber-500" />
+                    SIH 2026 Internal Cleared
                   </div>
                   <p className="text-xs text-neutral-500 dark:text-neutral-400">
-                    Strong focus on type safety, modular design patterns, and maintainable architectures.
+                    Qualified in the internal campus evaluation round with innovative problem-solving prototypes.
                   </p>
                 </div>
 
                 <div className="p-4 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50/60 dark:bg-neutral-900/40">
                   <div className="flex items-center gap-2 font-medium text-neutral-900 dark:text-neutral-200 mb-1 text-sm">
-                    <Compass className="w-4 h-4 text-neutral-600 dark:text-neutral-400" />
-                    Continuous Growth
+                    <GitPullRequest className="w-4 h-4 text-blue-500" />
+                    GSoC 2027 Preparation
                   </div>
                   <p className="text-xs text-neutral-500 dark:text-neutral-400">
-                    Proactive explorer of modern tooling, ML pipelines, and distributed cloud computing.
+                    Deep-diving into open-source repositories and proposal planning for GSoC 2027.
                   </p>
                 </div>
               </div>
@@ -100,10 +111,10 @@ export function About() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-neutral-900 dark:text-neutral-100 text-sm">
-                      Education & Academics
+                      Education & Milestones
                     </h3>
                     <p className="text-xs text-neutral-500 dark:text-neutral-400">
-                      Academic standing & milestone record
+                      RKGIT Ghaziabad • CSE Class of 2028
                     </p>
                   </div>
                 </div>
@@ -117,7 +128,7 @@ export function About() {
                       <div className="text-xs text-neutral-500 dark:text-neutral-400 font-mono">
                         {stat.label}
                       </div>
-                      <div className="mt-1 text-lg font-bold text-neutral-900 dark:text-white">
+                      <div className="mt-1 text-base sm:text-lg font-bold text-neutral-900 dark:text-white truncate">
                         {stat.value}
                       </div>
                       <div className="mt-0.5 text-[11px] text-neutral-400 dark:text-neutral-500">
@@ -132,7 +143,7 @@ export function About() {
                     <Award className="w-3.5 h-3.5 text-neutral-400" />
                     Consistent Top Ranker
                   </span>
-                  <span className="font-mono text-[11px] text-neutral-400">2022 - 2026</span>
+                  <span className="font-mono text-[11px] text-neutral-400">2022 - 2028</span>
                 </div>
               </div>
             </Reveal>

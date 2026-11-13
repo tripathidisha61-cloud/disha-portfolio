@@ -44,12 +44,14 @@ export const PERSONAL_INFO = {
   name: "Disha Tripathi",
   title: "Software Developer | AI/ML Enthusiast | Computer Science Student",
   shortBio:
-    "3rd-year Computer Science Engineering student at RKGIT Ghaziabad. Passionate about architecting intelligent full-stack applications, deep learning solutions, and developer tooling with high performance and elegant UX.",
+    "3rd-year B.Tech CSE student at RKGIT Ghaziabad (CGPA: 8.8/10). Smart India Hackathon (SIH 2026) internal level cleared, actively preparing for Google Summer of Code (GSoC 2027). Passionate about software engineering, AI/ML systems, and resilient full-stack applications.",
   college: "Raj Kumar Goel Institute of Technology, Ghaziabad",
   degree: "B.Tech Computer Science and Engineering",
   year: "3rd Year",
+  graduationYear: "2028",
   cgpa: "8.8 / 10",
   email: "tripathidisha61@gmail.com",
+  phone: "+91-9120338372",
   location: "Ghaziabad, Uttar Pradesh, India",
   availability: "Open to Software Engineering & AI/ML Internships",
   socials: {
@@ -74,22 +76,24 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
   {
     title: "Programming Languages",
     skills: [
-      { name: "C" },
-      { name: "C++" },
       { name: "Python" },
+      { name: "C++" },
+      { name: "C" },
+      { name: "Bash" },
       { name: "JavaScript" },
       { name: "TypeScript" },
       { name: "SQL" },
     ],
   },
   {
-    title: "Web & API Development",
+    title: "Web & Backend Engineering",
     skills: [
       { name: "React" },
       { name: "Next.js" },
       { name: "FastAPI" },
-      { name: "Node.js" },
       { name: "REST APIs" },
+      { name: "PostgreSQL" },
+      { name: "MySQL" },
       { name: "Tailwind CSS" },
     ],
   },
@@ -105,13 +109,13 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     ],
   },
   {
-    title: "Cloud & DevOps",
+    title: "Cloud & DevOps Tools",
     skills: [
-      { name: "AWS" },
+      { name: "AWS (EC2, S3)" },
       { name: "Docker" },
       { name: "Linux" },
       { name: "Git & GitHub" },
-      { name: "GitHub Actions" },
+      { name: "GitHub Actions (CI/CD)" },
       { name: "Vercel" },
     ],
   },
@@ -147,7 +151,20 @@ export const PROJECTS: Project[] = [
     featured: true,
   },
   {
-    id: "ai-campus-navigator",
+    id: "securehealth-telehealth",
+    title: "SecureHealth — Telehealth Platform",
+    description:
+      "Architected a comprehensive telehealth platform design featuring an intelligent symptom-checker triage flow, specialist consultations, and modular care pathways.",
+    longDescription:
+      "Led a 2-person engineering team formulating the product roadmap, symptom-checker decision trees, physician scheduling module, and subscription tiering.",
+    technologies: ["Python", "FastAPI", "React", "PostgreSQL", "REST APIs"],
+    image: "/images/securehealth.png",
+    githubUrl: "https://github.com/tripathidisha61-cloud",
+    devStatus: "Prototype",
+    featured: true,
+  },
+  {
+    id: "campuspilot-ai",
     title: "CampusPilot AI",
     description:
       "Context-aware student resource indexing and autonomous Q&A platform for academic curricula, timetables, and campus workflows.",
@@ -164,32 +181,71 @@ export const PROJECTS: Project[] = [
 export const EXPERIENCES: ExperienceItem[] = [
   {
     id: "gfg-rkgit",
-    role: "Technical Team Member / Lead",
+    role: "Student Member / Lead",
     organization: "GeeksforGeeks Student Chapter — RKGIT",
     period: "2023 - Present",
     location: "Ghaziabad, India",
     description: [
       "Mentored junior undergraduates in Data Structures, Algorithms, and foundational C++/Python programming.",
-      "Spearheaded technical problem curation and platform management for campus-wide competitive programming contests.",
-      "Collaborated with core executive teams to host workshops, hackathons, and technical bootcamps.",
+      "Shared high-quality technical resources, problem sheets, and event updates across collegiate student networks.",
+      "Spearheaded promotion and execution of technical webinars, workshops, and competitive coding contests.",
     ],
     tags: ["DSA", "C++", "Mentorship", "Community Leadership"],
   },
   {
+    id: "nss-coordinator",
+    role: "Event Coordinator",
+    organization: "National Service Scheme (NSS)",
+    period: "2023 - 2024",
+    location: "RKGIT Campus",
+    description: [
+      "Successfully coordinated a campus-wide academic quiz competition engaging 100+ active student participants.",
+      "Managed scheduling, volunteer mobilization, venue logistics, and institutional administrative permissions.",
+    ],
+    tags: ["Event Leadership", "Logistics", "Operations", "Team Management"],
+  },
+  {
     id: "tech-communities",
     role: "Active Member & Contributor",
-    organization: "College Technical Societies & Coding Clubs",
+    organization: "College Technical Societies & Coding Bodies",
     period: "2023 - Present",
     location: "RKGIT Campus",
     description: [
       "Organized open-source awareness seminars and hands-on Git/GitHub onboarding sessions for 150+ students.",
       "Contributed to collegiate hackathon logistics, judging coordination, and automated scoring infrastructure.",
     ],
-    tags: ["Open Source", "Hackathons", "Event Operations"],
+    tags: ["Open Source", "Hackathons", "Git/GitHub"],
   },
 ];
 
 export const ACHIEVEMENTS: AchievementItem[] = [
+  {
+    id: "sih-2026",
+    title: "Smart India Hackathon (SIH 2026) — Internal Level Cleared",
+    issuer: "Ministry of Education & RKGIT Campus Screening",
+    date: "2026",
+    description:
+      "Cleared the rigorous internal college qualification round of Smart India Hackathon (SIH 2026), presenting technology-driven solutions for real-world impact.",
+    badge: "SIH 2026 Cleared",
+  },
+  {
+    id: "gsoc-2027",
+    title: "Google Summer of Code (GSoC 2027) — Preparation & Open Source",
+    issuer: "Open Source Organizations & The Honeynet Project",
+    date: "2026 - 2027",
+    description:
+      "Actively analyzing threat intelligence telemetry and honeypot architectures to formulate a competitive Google Summer of Code (GSoC 2027) project proposal.",
+    badge: "GSoC 2027 Aspirant",
+  },
+  {
+    id: "sih-2025",
+    title: "Smart India Hackathon (SIH 2025) — Participant",
+    issuer: "National Hackathon Initiative",
+    date: "2025",
+    description:
+      "Collaborated on technology-driven software concepts designed for community health monitoring and disaster preparedness.",
+    badge: "National Participant",
+  },
   {
     id: "flutter-dart",
     title: "Getting Started with Flutter & Dart Certification",
@@ -198,24 +254,6 @@ export const ACHIEVEMENTS: AchievementItem[] = [
     description:
       "Demonstrated core competence in cross-platform mobile development, reactive UI architecture, and Dart object-oriented paradigms.",
     badge: "Certified",
-  },
-  {
-    id: "gsoc-honeynet",
-    title: "GSoC 2026 Proposal Preparation & Research",
-    issuer: "The Honeynet Project",
-    date: "2024 - 2026",
-    description:
-      "Actively analyzing threat intelligence telemetry and honeypot architectures to formulate a competitive Google Summer of Code project proposal.",
-    badge: "Open Source Initiative",
-  },
-  {
-    id: "hackathons",
-    title: "Inter-College Hackathon Finalist & Participant",
-    issuer: "State & Collegiate Technical Competitions",
-    date: "2023 - 2024",
-    description:
-      "Competed across 36-hour sprint hackathons designing prototypes in AI tooling, student productivity, and automated evaluation.",
-    badge: "Competitive",
   },
 ];
 
