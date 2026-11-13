@@ -1,0 +1,91 @@
+"use client";
+
+import { PERSONAL_INFO } from "@/lib/data";
+import { ArrowUp, Github, Linkedin, Mail, Code } from "lucide-react";
+
+export function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  return (
+    <footer className="border-t border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#09090b] py-12">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+          {/* Brand info */}
+          <div className="flex flex-col items-center md:items-start text-center md:text-left">
+            <div className="font-mono text-sm font-bold text-neutral-900 dark:text-white">
+              Disha Tripathi
+            </div>
+            <p className="mt-1 text-xs text-neutral-500 max-w-sm">
+              Computer Science & Engineering • Software Developer & AI/ML Enthusiast
+            </p>
+          </div>
+
+          {/* Social Links */}
+          <div className="flex items-center gap-3">
+            <a
+              href={PERSONAL_INFO.socials.github.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-lg text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors"
+              aria-label="GitHub"
+            >
+              <Github className="w-4 h-4" />
+            </a>
+
+            <a
+              href={PERSONAL_INFO.socials.linkedin.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-lg text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors"
+              aria-label="LinkedIn"
+            >
+              <Linkedin className="w-4 h-4" />
+            </a>
+
+            <a
+              href={PERSONAL_INFO.socials.leetcode.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-lg text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors"
+              aria-label="LeetCode"
+            >
+              <Code className="w-4 h-4" />
+            </a>
+
+            <a
+              href={`mailto:${PERSONAL_INFO.email}`}
+              className="p-2 rounded-lg text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors"
+              aria-label="Email"
+            >
+              <Mail className="w-4 h-4" />
+            </a>
+
+            <div className="h-4 w-[1px] bg-neutral-200 dark:border-neutral-800 mx-1" />
+
+            {/* Back to top button */}
+            <button
+              type="button"
+              onClick={scrollToTop}
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-neutral-200 dark:border-neutral-800 hover:bg-neutral-100 dark:hover:bg-neutral-800 text-xs font-mono text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-all"
+              aria-label="Scroll back to top"
+            >
+              <span>Top</span>
+              <ArrowUp className="w-3.5 h-3.5" />
+            </button>
+          </div>
+        </div>
+
+        <div className="mt-8 pt-8 border-t border-neutral-100 dark:border-neutral-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-400">
+          <div>
+            © {new Date().getFullYear()} Disha Tripathi. Crafted with Next.js, TypeScript & Tailwind CSS.
+          </div>
+          <div className="font-mono text-[11px]">
+            Designed for high performance & clean architecture.
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
