@@ -12,20 +12,21 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        navy: {
-          950: "#070B14",
-          900: "#0B1120", // Main Midnight Navy Background
-          850: "#101827",
-          800: "#151F32", // Primary Elevated Card Surface
-          750: "#1A263D",
-          700: "#1E293B", // Border & Line Accent
-          600: "#334155",
+        obsidian: {
+          950: "#050507",
+          900: "#09090B", // Main Black Background
+          850: "#121215",
+          800: "#18181B", // Primary Elevated Card Surface
+          700: "#27272A", // Border & Inset Lines
+          600: "#3F3F46",
         },
-        electric: {
-          blue: "#3B82F6", // Primary Accent: Electric Blue
-          cyan: "#22D3EE", // Secondary Accent: Electric Cyan
-          indigo: "#6366F1",
+        purpleTheme: {
+          primary: "#8B5CF6", // Vibrant Violet / Primary
+          hover: "#7C3AED",
+          accent: "#C084FC",  // Neon / Light Violet Accent
+          glow: "rgba(139, 92, 246, 0.25)",
         },
+        whiteText: "#FAFAFA",
       },
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "-apple-system", "sans-serif"],

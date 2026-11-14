@@ -51,19 +51,19 @@ export function InterviewSimulator() {
   return (
     <section
       id="interview-prep"
-      className="py-20 md:py-28 border-t border-neutral-200/60 dark:border-slate-800/80"
+      className="py-20 md:py-28 border-t border-zinc-200/60 dark:border-zinc-800/80"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal>
           <div className="flex items-center gap-2 mb-3">
-            <span className="font-mono text-xs uppercase tracking-wider text-neutral-500 dark:text-[#22D3EE]">
+            <span className="font-mono text-xs uppercase tracking-wider text-zinc-500 dark:text-[#C084FC]">
               07 // Candidate Screening
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-[#F8FAFC]">
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-zinc-900 dark:text-[#FAFAFA]">
             Recruiter Interview Q&A Simulator (STAR Method)
           </h2>
-          <p className="mt-3 text-base text-neutral-600 dark:text-slate-400 max-w-2xl">
+          <p className="mt-3 text-base text-zinc-600 dark:text-zinc-400 max-w-2xl">
             Structured, articulate responses to Tier-1 MNC screening questions—structured using the Situation, Task, Action, and Result (STAR) framework for rapid evaluation.
           </p>
         </Reveal>
@@ -79,8 +79,8 @@ export function InterviewSimulator() {
                 onClick={() => setSelectedCategory(cat)}
                 className={`px-3.5 py-1.5 rounded-xl text-xs font-medium transition-all ${
                   isSelected
-                    ? "bg-neutral-900 text-white dark:bg-[#3B82F6] dark:text-white shadow-xs font-semibold"
-                    : "border border-neutral-200 dark:border-slate-800 bg-white dark:bg-[#151F32] text-neutral-600 dark:text-slate-300 hover:text-neutral-900 dark:hover:text-[#F8FAFC] hover:bg-neutral-50 dark:hover:bg-[#151F32]/80"
+                    ? "bg-zinc-900 text-white dark:bg-[#8B5CF6] dark:text-white shadow-xs font-semibold"
+                    : "border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-[#18181B] text-zinc-600 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-[#FAFAFA] hover:bg-zinc-50 dark:hover:bg-[#27272A]"
                 }`}
               >
                 {cat}
@@ -98,8 +98,8 @@ export function InterviewSimulator() {
                 <div
                   className={`rounded-2xl border transition-all ${
                     isExpanded
-                      ? "border-neutral-900 dark:border-[#3B82F6]/60 bg-white dark:bg-[#151F32] shadow-md dark:shadow-[#3B82F6]/10"
-                      : "border-neutral-200 dark:border-slate-800 bg-white/70 dark:bg-[#151F32]/60 hover:border-neutral-300 dark:hover:border-slate-700"
+                      ? "border-zinc-900 dark:border-[#8B5CF6]/60 bg-white dark:bg-[#18181B] shadow-md dark:shadow-[#8B5CF6]/10"
+                      : "border-zinc-200 dark:border-zinc-800 bg-white/70 dark:bg-[#18181B]/60 hover:border-zinc-300 dark:hover:border-zinc-700"
                   }`}
                 >
                   {/* Question Accordion Header */}
@@ -109,26 +109,26 @@ export function InterviewSimulator() {
                     className="w-full flex items-center justify-between p-5 sm:p-6 text-left gap-4"
                   >
                     <div className="flex items-start gap-3.5 min-w-0">
-                      <div className="p-2 rounded-xl bg-neutral-100 dark:bg-[#0B1120] text-neutral-700 dark:text-[#22D3EE] shrink-0 mt-0.5">
+                      <div className="p-2 rounded-xl bg-zinc-100 dark:bg-[#09090B] text-zinc-700 dark:text-[#C084FC] shrink-0 mt-0.5">
                         <MessageSquare className="w-4 h-4" />
                       </div>
                       <div className="min-w-0">
                         <div className="flex items-center gap-2 mb-1.5">
-                          <span className="px-2 py-0.5 rounded-md text-[10px] font-mono font-medium border border-neutral-200 dark:border-slate-800 bg-neutral-50 dark:bg-[#0B1120] text-neutral-600 dark:text-slate-300">
+                          <span className="px-2 py-0.5 rounded-md text-[10px] font-mono font-medium border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-[#09090B] text-zinc-600 dark:text-zinc-300">
                             {q.category}
                           </span>
-                          <span className="text-[11px] font-mono text-neutral-400 dark:text-slate-400 flex items-center gap-1">
+                          <span className="text-[11px] font-mono text-zinc-400 dark:text-zinc-400 flex items-center gap-1">
                             <Clock className="w-3.5 h-3.5" />
                             {q.timeEstimate}
                           </span>
                         </div>
-                        <h3 className="text-base sm:text-lg font-bold text-neutral-900 dark:text-[#F8FAFC] leading-snug">
+                        <h3 className="text-base sm:text-lg font-bold text-zinc-900 dark:text-[#FAFAFA] leading-snug">
                           {q.question}
                         </h3>
                       </div>
                     </div>
 
-                    <div className="p-1 rounded-lg text-neutral-400 hover:text-neutral-900 dark:hover:text-[#22D3EE] shrink-0">
+                    <div className="p-1 rounded-lg text-zinc-400 hover:text-zinc-900 dark:hover:text-[#C084FC] shrink-0">
                       <ChevronDown
                         className={`w-5 h-5 transition-transform duration-200 ${
                           isExpanded ? "rotate-180" : ""
@@ -145,58 +145,58 @@ export function InterviewSimulator() {
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.2 }}
-                        className="overflow-hidden border-t border-neutral-100 dark:border-slate-800 px-5 sm:px-6 pb-6 pt-5 space-y-4"
+                        className="overflow-hidden border-t border-zinc-100 dark:border-zinc-800 px-5 sm:px-6 pb-6 pt-5 space-y-4"
                       >
                         {/* 4 STAR Steps */}
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                           {/* Situation */}
-                          <div className="p-4 rounded-xl border border-neutral-100 dark:border-slate-800/80 bg-neutral-50/60 dark:bg-[#0B1120] space-y-1">
+                          <div className="p-4 rounded-xl border border-zinc-100 dark:border-zinc-800/80 bg-zinc-50/60 dark:bg-[#09090B] space-y-1">
                             <span className="text-[11px] font-mono font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider">
                               [Situation]
                             </span>
-                            <p className="text-xs sm:text-sm text-neutral-700 dark:text-slate-300 leading-relaxed">
+                            <p className="text-xs sm:text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed">
                               {q.star.situation}
                             </p>
                           </div>
 
                           {/* Task */}
-                          <div className="p-4 rounded-xl border border-neutral-100 dark:border-slate-800/80 bg-neutral-50/60 dark:bg-[#0B1120] space-y-1">
-                            <span className="text-[11px] font-mono font-bold text-blue-600 dark:text-[#22D3EE] uppercase tracking-wider">
+                          <div className="p-4 rounded-xl border border-zinc-100 dark:border-zinc-800/80 bg-zinc-50/60 dark:bg-[#09090B] space-y-1">
+                            <span className="text-[11px] font-mono font-bold text-purple-600 dark:text-[#C084FC] uppercase tracking-wider">
                               [Task]
                             </span>
-                            <p className="text-xs sm:text-sm text-neutral-700 dark:text-slate-300 leading-relaxed">
+                            <p className="text-xs sm:text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed">
                               {q.star.task}
                             </p>
                           </div>
 
                           {/* Action */}
-                          <div className="p-4 rounded-xl border border-neutral-100 dark:border-slate-800/80 bg-neutral-50/60 dark:bg-[#0B1120] space-y-1">
+                          <div className="p-4 rounded-xl border border-zinc-100 dark:border-zinc-800/80 bg-zinc-50/60 dark:bg-[#09090B] space-y-1">
                             <span className="text-[11px] font-mono font-bold text-purple-600 dark:text-purple-400 uppercase tracking-wider">
                               [Action]
                             </span>
-                            <p className="text-xs sm:text-sm text-neutral-700 dark:text-slate-300 leading-relaxed">
+                            <p className="text-xs sm:text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed">
                               {q.star.action}
                             </p>
                           </div>
 
                           {/* Result */}
-                          <div className="p-4 rounded-xl border border-cyan-500/30 bg-cyan-500/5 dark:bg-cyan-500/[0.05] space-y-1">
-                            <span className="text-[11px] font-mono font-bold text-cyan-600 dark:text-[#22D3EE] uppercase tracking-wider flex items-center gap-1">
-                              <CheckCircle2 className="w-3.5 h-3.5 text-[#22D3EE]" />
+                          <div className="p-4 rounded-xl border border-[#C084FC]/30 bg-[#C084FC]/5 dark:bg-[#C084FC]/[0.05] space-y-1">
+                            <span className="text-[11px] font-mono font-bold text-purple-600 dark:text-[#C084FC] uppercase tracking-wider flex items-center gap-1">
+                              <CheckCircle2 className="w-3.5 h-3.5 text-[#C084FC]" />
                               [Result]
                             </span>
-                            <p className="text-xs sm:text-sm text-neutral-700 dark:text-slate-300 leading-relaxed">
+                            <p className="text-xs sm:text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed">
                               {q.star.result}
                             </p>
                           </div>
                         </div>
 
                         {/* Interviewer Takeaway Box & Copy Action */}
-                        <div className="p-3.5 rounded-xl border border-neutral-200 dark:border-slate-800 bg-neutral-100/50 dark:bg-[#0B1120]/80 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
+                        <div className="p-3.5 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-100/50 dark:bg-[#09090B]/80 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
                           <div className="flex items-start sm:items-center gap-2">
-                            <Sparkles className="w-4 h-4 text-[#22D3EE] shrink-0 mt-0.5 sm:mt-0" />
-                            <span className="text-neutral-600 dark:text-slate-300">
-                              <span className="font-semibold text-neutral-900 dark:text-[#22D3EE]">
+                            <Sparkles className="w-4 h-4 text-[#C084FC] shrink-0 mt-0.5 sm:mt-0" />
+                            <span className="text-zinc-600 dark:text-zinc-300">
+                              <span className="font-semibold text-zinc-900 dark:text-[#C084FC]">
                                 Evaluator Takeaway:{" "}
                               </span>
                               {q.keyTakeaway}
@@ -206,7 +206,7 @@ export function InterviewSimulator() {
                           <button
                             type="button"
                             onClick={() => handleCopyAnswer(q)}
-                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-mono text-[11px] border border-neutral-200 dark:border-slate-700 bg-white dark:bg-[#151F32] text-neutral-700 dark:text-slate-200 hover:text-neutral-900 dark:hover:text-[#F8FAFC] transition-colors shrink-0 self-end sm:self-auto"
+                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-mono text-[11px] border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-[#18181B] text-zinc-700 dark:text-zinc-200 hover:text-zinc-900 dark:hover:text-[#FAFAFA] transition-colors shrink-0 self-end sm:self-auto"
                           >
                             {copiedId === q.id ? (
                               <>

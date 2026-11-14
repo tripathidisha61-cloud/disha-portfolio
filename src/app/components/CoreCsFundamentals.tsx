@@ -28,46 +28,46 @@ export function CoreCsFundamentals() {
       case "Database":
         return <Database className="w-5 h-5 text-emerald-500" />;
       case "Network":
-        return <Network className="w-5 h-5 text-[#3B82F6]" />;
+        return <Network className="w-5 h-5 text-[#8B5CF6]" />;
       default:
-        return <Cpu className="w-5 h-5 text-neutral-500" />;
+        return <Cpu className="w-5 h-5 text-zinc-500" />;
     }
   };
 
   return (
     <section
       id="cs-fundamentals"
-      className="py-20 md:py-28 border-t border-neutral-200/60 dark:border-slate-800/80"
+      className="py-20 md:py-28 border-t border-zinc-200/60 dark:border-zinc-800/80"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
           <Reveal>
             <div className="flex items-center gap-2 mb-3">
-              <span className="font-mono text-xs uppercase tracking-wider text-neutral-500 dark:text-[#22D3EE]">
+              <span className="font-mono text-xs uppercase tracking-wider text-zinc-500 dark:text-[#C084FC]">
                 04 // Engineering Rigor
               </span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-[#F8FAFC]">
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-zinc-900 dark:text-[#FAFAFA]">
               Core CS & Algorithmic Patterns
             </h2>
-            <p className="mt-3 text-base text-neutral-600 dark:text-slate-400 max-w-2xl">
+            <p className="mt-3 text-base text-zinc-600 dark:text-zinc-400 max-w-2xl">
               Engineered to meet Tier-1 MNC hiring standards—combining time/space complexity guarantees with deep foundations in operating systems, DBMS, and distributed protocols.
             </p>
           </Reveal>
 
           {/* Tab Selector */}
           <Reveal delay={0.1}>
-            <div className="inline-flex p-1 rounded-xl border border-neutral-200 dark:border-slate-800 bg-neutral-100/60 dark:bg-[#151F32] text-xs font-medium self-start sm:self-auto">
+            <div className="inline-flex p-1 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-100/60 dark:bg-[#18181B] text-xs font-medium self-start sm:self-auto">
               <button
                 type="button"
                 onClick={() => setActiveTab("dsa")}
                 className={`flex items-center gap-2 px-3.5 py-1.5 rounded-lg transition-all ${
                   activeTab === "dsa"
-                    ? "bg-white dark:bg-[#3B82F6] text-neutral-900 dark:text-white shadow-xs font-semibold"
-                    : "text-neutral-600 dark:text-slate-400 hover:text-neutral-900 dark:hover:text-[#F8FAFC]"
+                    ? "bg-white dark:bg-[#8B5CF6] text-zinc-900 dark:text-white shadow-xs font-semibold"
+                    : "text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-[#FAFAFA]"
                 }`}
               >
-                <Binary className="w-3.5 h-3.5 text-amber-500 dark:text-[#22D3EE]" />
+                <Binary className="w-3.5 h-3.5 text-amber-500 dark:text-[#C084FC]" />
                 <span>DSA Pattern Mastery (311+)</span>
               </button>
 
@@ -76,11 +76,11 @@ export function CoreCsFundamentals() {
                 onClick={() => setActiveTab("systems")}
                 className={`flex items-center gap-2 px-3.5 py-1.5 rounded-lg transition-all ${
                   activeTab === "systems"
-                    ? "bg-white dark:bg-[#3B82F6] text-neutral-900 dark:text-white shadow-xs font-semibold"
-                    : "text-neutral-600 dark:text-slate-400 hover:text-neutral-900 dark:hover:text-[#F8FAFC]"
+                    ? "bg-white dark:bg-[#8B5CF6] text-zinc-900 dark:text-white shadow-xs font-semibold"
+                    : "text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-[#FAFAFA]"
                 }`}
               >
-                <Layers className="w-3.5 h-3.5 text-blue-500 dark:text-[#22D3EE]" />
+                <Layers className="w-3.5 h-3.5 text-purple-500 dark:text-[#C084FC]" />
                 <span>Systems & Core CS Topics</span>
               </button>
             </div>
@@ -101,20 +101,20 @@ export function CoreCsFundamentals() {
                     onClick={() => setSelectedPatternIndex(idx)}
                     className={`w-full text-left p-4 rounded-xl border transition-all ${
                       isSelected
-                        ? "border-neutral-900 dark:border-[#3B82F6] bg-neutral-50 dark:bg-[#151F32] shadow-md dark:shadow-[#3B82F6]/10"
-                        : "border-neutral-200 dark:border-slate-800/80 bg-white dark:bg-[#0B1120]/60 hover:border-neutral-300 dark:hover:border-slate-700"
+                        ? "border-zinc-900 dark:border-[#8B5CF6] bg-zinc-50 dark:bg-[#18181B] shadow-md dark:shadow-[#8B5CF6]/10"
+                        : "border-zinc-200 dark:border-zinc-800/80 bg-white dark:bg-[#09090B]/60 hover:border-zinc-300 dark:hover:border-zinc-700"
                     }`}
                   >
                     <div className="flex items-center justify-between gap-2">
-                      <span className="font-bold text-sm text-neutral-900 dark:text-[#F8FAFC]">
+                      <span className="font-bold text-sm text-zinc-900 dark:text-[#FAFAFA]">
                         {pattern.name}
                       </span>
-                      <span className="px-2 py-0.5 rounded-md text-[10px] font-mono font-medium border border-neutral-200 dark:border-slate-700 bg-white dark:bg-[#0B1120] text-neutral-700 dark:text-slate-300">
+                      <span className="px-2 py-0.5 rounded-md text-[10px] font-mono font-medium border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-[#09090B] text-zinc-700 dark:text-zinc-300">
                         {pattern.solvedCount}
                       </span>
                     </div>
 
-                    <div className="mt-2 text-xs font-mono text-emerald-600 dark:text-[#22D3EE] truncate">
+                    <div className="mt-2 text-xs font-mono text-emerald-600 dark:text-[#C084FC] truncate">
                       {pattern.complexity}
                     </div>
                   </button>
@@ -131,45 +131,45 @@ export function CoreCsFundamentals() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.2 }}
-                  className="p-6 sm:p-7 rounded-2xl border border-neutral-200 dark:border-slate-800 bg-white dark:bg-[#151F32] shadow-xs space-y-6"
+                  className="p-6 sm:p-7 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-[#18181B] shadow-xs space-y-6"
                 >
-                  <div className="flex items-start justify-between gap-4 pb-4 border-b border-neutral-100 dark:border-slate-800">
+                  <div className="flex items-start justify-between gap-4 pb-4 border-b border-zinc-100 dark:border-zinc-800">
                     <div>
                       <div className="flex items-center gap-2 mb-1.5">
                         <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-mono font-medium border border-amber-500/20 bg-amber-500/10 text-amber-600 dark:text-amber-400">
                           <Sparkles className="w-3 h-3 text-amber-500" />
                           Algorithmic Pattern
                         </span>
-                        <span className="text-xs font-mono text-neutral-400 dark:text-slate-400">
+                        <span className="text-xs font-mono text-zinc-400 dark:text-zinc-400">
                           Verified Solved: {DSA_PATTERNS[selectedPatternIndex].solvedCount}
                         </span>
                       </div>
-                      <h3 className="text-xl sm:text-2xl font-bold text-neutral-900 dark:text-[#F8FAFC]">
+                      <h3 className="text-xl sm:text-2xl font-bold text-zinc-900 dark:text-[#FAFAFA]">
                         {DSA_PATTERNS[selectedPatternIndex].name}
                       </h3>
                     </div>
 
-                    <div className="px-3 py-1.5 rounded-xl border border-cyan-500/30 bg-cyan-500/10 text-cyan-600 dark:text-[#22D3EE] font-mono text-xs font-semibold shrink-0">
+                    <div className="px-3 py-1.5 rounded-xl border border-[#C084FC]/30 bg-[#C084FC]/10 text-[#C084FC] font-mono text-xs font-semibold shrink-0">
                       {DSA_PATTERNS[selectedPatternIndex].complexity}
                     </div>
                   </div>
 
-                  <p className="text-sm text-neutral-600 dark:text-slate-300 leading-relaxed">
+                  <p className="text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed">
                     {DSA_PATTERNS[selectedPatternIndex].description}
                   </p>
 
                   {/* Canonical Problems */}
                   <div>
-                    <h4 className="text-xs font-mono uppercase tracking-wider text-neutral-500 dark:text-slate-400 mb-2.5">
+                    <h4 className="text-xs font-mono uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-2.5">
                       Canonical Interview Problems Mastered
                     </h4>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                       {DSA_PATTERNS[selectedPatternIndex].canonicalProblems.map((prob) => (
                         <div
                           key={prob}
-                          className="p-2.5 rounded-lg border border-neutral-200/80 dark:border-slate-800 bg-neutral-50/60 dark:bg-[#0B1120] flex items-center gap-2 text-xs font-medium text-neutral-800 dark:text-slate-200"
+                          className="p-2.5 rounded-lg border border-zinc-200/80 dark:border-zinc-800 bg-zinc-50/60 dark:bg-[#09090B] flex items-center gap-2 text-xs font-medium text-zinc-800 dark:text-zinc-200"
                         >
-                          <Code2 className="w-3.5 h-3.5 text-neutral-400 dark:text-[#22D3EE] shrink-0" />
+                          <Code2 className="w-3.5 h-3.5 text-zinc-400 dark:text-[#C084FC] shrink-0" />
                           <span className="truncate">{prob}</span>
                         </div>
                       ))}
@@ -178,14 +178,14 @@ export function CoreCsFundamentals() {
 
                   {/* Key Implementation Strategies */}
                   <div>
-                    <h4 className="text-xs font-mono uppercase tracking-wider text-neutral-500 dark:text-slate-400 mb-2.5">
+                    <h4 className="text-xs font-mono uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-2.5">
                       Key Algorithmic Strategies & Invariants
                     </h4>
                     <div className="space-y-1.5">
                       {DSA_PATTERNS[selectedPatternIndex].keyStrategies.map((strat, i) => (
                         <div
                           key={i}
-                          className="flex items-start gap-2 text-xs text-neutral-600 dark:text-slate-300"
+                          className="flex items-start gap-2 text-xs text-zinc-600 dark:text-zinc-300"
                         >
                           <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0 mt-0.5" />
                           <span>{strat}</span>
@@ -204,13 +204,13 @@ export function CoreCsFundamentals() {
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
             {CORE_CS_TOPICS.map((sys, idx) => (
               <Reveal key={sys.subject} delay={idx * 0.1}>
-                <div className="p-6 rounded-2xl border border-neutral-200 dark:border-slate-800 bg-white dark:bg-[#151F32] flex flex-col justify-between h-full shadow-xs hover:border-neutral-300 dark:hover:border-[#3B82F6]/50 transition-all">
+                <div className="p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-[#18181B] flex flex-col justify-between h-full shadow-xs hover:border-zinc-300 dark:hover:border-[#8B5CF6]/50 transition-all">
                   <div>
                     <div className="flex items-center gap-3 mb-4">
-                      <div className="p-2.5 rounded-xl bg-neutral-100 dark:bg-[#0B1120]">
+                      <div className="p-2.5 rounded-xl bg-zinc-100 dark:bg-[#09090B]">
                         {getSystemIcon(sys.iconName)}
                       </div>
-                      <h3 className="font-bold text-base text-neutral-900 dark:text-[#F8FAFC] leading-snug">
+                      <h3 className="font-bold text-base text-zinc-900 dark:text-[#FAFAFA] leading-snug">
                         {sys.subject}
                       </h3>
                     </div>
@@ -219,19 +219,19 @@ export function CoreCsFundamentals() {
                       {sys.topics.map((t) => (
                         <div
                           key={t.name}
-                          className="p-3.5 rounded-xl border border-neutral-100 dark:border-slate-800/80 bg-neutral-50/60 dark:bg-[#0B1120]"
+                          className="p-3.5 rounded-xl border border-zinc-100 dark:border-zinc-800/80 bg-zinc-50/60 dark:bg-[#09090B]"
                         >
-                          <div className="font-semibold text-xs text-neutral-900 dark:text-[#F8FAFC] mb-1">
+                          <div className="font-semibold text-xs text-zinc-900 dark:text-[#FAFAFA] mb-1">
                             {t.name}
                           </div>
-                          <p className="text-[11px] text-neutral-500 dark:text-slate-400 leading-relaxed mb-2">
+                          <p className="text-[11px] text-zinc-500 dark:text-zinc-400 leading-relaxed mb-2">
                             {t.description}
                           </p>
                           <div className="flex flex-wrap gap-1">
                             {t.keyPrerequisites.map((req) => (
                               <span
                                 key={req}
-                                className="px-1.5 py-0.5 rounded text-[10px] font-mono border border-neutral-200 dark:border-slate-700 bg-white dark:bg-[#151F32] text-neutral-600 dark:text-slate-300"
+                                className="px-1.5 py-0.5 rounded text-[10px] font-mono border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-[#18181B] text-zinc-600 dark:text-zinc-300"
                               >
                                 {req}
                               </span>
@@ -242,7 +242,7 @@ export function CoreCsFundamentals() {
                     </div>
                   </div>
 
-                  <div className="mt-6 pt-3 border-t border-neutral-100 dark:border-slate-800/80 flex items-center justify-between text-[11px] font-mono text-neutral-400 dark:text-slate-400">
+                  <div className="mt-6 pt-3 border-t border-zinc-100 dark:border-zinc-800/80 flex items-center justify-between text-[11px] font-mono text-zinc-400">
                     <span className="flex items-center gap-1 text-emerald-500">
                       <ShieldCheck className="w-3.5 h-3.5" />
                       Interview Ready

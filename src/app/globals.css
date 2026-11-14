@@ -3,29 +3,29 @@
 @tailwind utilities;
 
 :root {
-  --background: #f8fafc;
-  --foreground: #0b1120;
-  --muted: #64748b;
-  --muted-bg: #f1f5f9;
-  --border: #e2e8f0;
+  --background: #fafafa;
+  --foreground: #09090b;
+  --muted: #71717a;
+  --muted-bg: #f4f4f5;
+  --border: #e4e4e7;
   --card: #ffffff;
-  --card-foreground: #0b1120;
-  --primary: #3b82f6;
-  --accent: #22d3ee;
-  --ring: #3b82f6;
+  --card-foreground: #09090b;
+  --primary: #8b5cf6;
+  --accent: #c084fc;
+  --ring: #8b5cf6;
 }
 
 .dark {
-  --background: #0b1120;
-  --foreground: #f8fafc;
-  --muted: #94a3b8;
-  --muted-bg: #101827;
-  --border: #1e293b;
-  --card: #151f32;
-  --card-foreground: #f8fafc;
-  --primary: #3b82f6;
-  --accent: #22d3ee;
-  --ring: #3b82f6;
+  --background: #09090b;
+  --foreground: #fafafa;
+  --muted: #a1a1aa;
+  --muted-bg: #121215;
+  --border: #27272a;
+  --card: #18181b;
+  --card-foreground: #fafafa;
+  --primary: #8b5cf6;
+  --accent: #c084fc;
+  --ring: #8b5cf6;
 }
 
 * {
@@ -59,7 +59,7 @@ body {
   }
 }
 
-/* Custom electric scrollbar */
+/* Custom purple scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -70,37 +70,37 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+  background: #d4d4d8;
   border-radius: 9999px;
 }
 
 .dark ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  background: #27272a;
 }
 
 .dark ::-webkit-scrollbar-thumb:hover {
-  background: #3b82f6;
+  background: #8b5cf6;
 }
 
 /* Utility subtle grid background */
 .bg-grid-subtle {
   background-size: 32px 32px;
   background-image: 
-    linear-gradient(to right, rgba(59, 130, 246, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(59, 130, 246, 0.04) 1px, transparent 1px);
+    linear-gradient(to right, rgba(139, 92, 246, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(139, 92, 246, 0.04) 1px, transparent 1px);
 }
 
 .dark .bg-grid-subtle {
   background-image: 
-    linear-gradient(to right, rgba(59, 130, 246, 0.06) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(59, 130, 246, 0.06) 1px, transparent 1px);
+    linear-gradient(to right, rgba(139, 92, 246, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(139, 92, 246, 0.07) 1px, transparent 1px);
 }
 
-/* Electric glow effects */
-.glow-electric-blue {
-  box-shadow: 0 0 25px -5px rgba(59, 130, 246, 0.25);
+/* Purple glow effects */
+.glow-purple {
+  box-shadow: 0 0 25px -5px rgba(139, 92, 246, 0.3);
 }
 
-.glow-electric-cyan {
-  box-shadow: 0 0 25px -5px rgba(34, 211, 238, 0.25);
+.glow-purple-accent {
+  box-shadow: 0 0 25px -5px rgba(192, 132, 252, 0.3);
 }
