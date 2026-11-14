@@ -4,9 +4,14 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { ThemeToggle } from "./ThemeToggle";
 import { NAV_LINKS, PERSONAL_INFO } from "@/lib/data";
-import { Menu, X, ArrowUpRight, Terminal } from "lucide-react";
+import { Menu, X, ArrowUpRight, Terminal, Search, Zap } from "lucide-react";
 
-export function Navbar() {
+interface NavbarProps {
+  onOpenCommandPalette?: () => void;
+  onOpenRecruiter?: () => void;
+}
+
+export function Navbar({ onOpenCommandPalette, onOpenRecruiter }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
@@ -81,6 +86,32 @@ export function Navbar() {
 
           {/* Right controls */}
           <div className="flex items-center gap-2">
+            {onOpenCommandPalette && (
+              <button
+                type="button"
+                onClick={onOpenCommandPalette}
+                className="flex items-center gap-1.5 px-2.5 py-1.5 text-xs text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white rounded-lg border border-neutral-200 dark:border-neutral-800 bg-neutral-50/80 dark:bg-neutral-900/60 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+                aria-label="Open Command Palette (Ctrl+K)"
+              >
+                <Search className="w-3.5 h-3.5" />
+                <kbd className="hidden lg:inline-block text-[10px] font-mono px-1 py-0.5 rounded bg-neutral-200/60 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400">
+                  ⌘K
+                </kbd>
+              </button>
+            )}
+
+            {onOpenRecruiter && (
+              <button
+                type="button"
+                onClick={onOpenRecruiter}
+                className="hidden xl:inline-flex items-center gap-1 px-2.5 py-1.5 text-xs font-semibold rounded-lg border border-amber-500/30 bg-amber-500/10 text-amber-700 dark:text-amber-400 hover:bg-amber-500/20 transition-colors"
+                aria-label="Open Recruiter Fast-Track"
+              >
+                <Zap className="w-3.5 h-3.5 text-amber-500" />
+                <span>Fast-Track</span>
+              </button>
+            )}
+
             <Link
               href={PERSONAL_INFO.resumeUrl}
               target="_blank"
@@ -121,7 +152,43 @@ export function Navbar() {
                 {link.name}
               </Link>
             ))}
-            <div className="pt-3 mt-2 border-t border-neutral-200 dark:border-neutral-800">
+            <div className="pt-3 mt-2 border-t border-neutral-200 dark:border-neutral-800 space-y-2">
+              {onOpenCommandPalette && (
+                <button
+                  type="button"
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    onOpenCommandPalette();
+                  }}
+                  className="w-full flex items-center justify-between px-3 py-2 rounded-lg text-sm font-medium text-neutral-700 dark:text-neutral-300 border border-neutral-200 dark:border-neutral-800"
+                >
+                  <span className="flex items-center gap-2">
+                    <Search className="w-4 h-4 text-neutral-500" />
+                    <span>Search Everything (⌘K)</span>
+                  </span>
+                  <kbd className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-neutral-100 dark:bg-neutral-800">
+                    ⌘K
+                  </kbd>
+                </button>
+              )}
+
+              {onOpenRecruiter && (
+                <button
+                  type="button"
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    onOpenRecruiter();
+                  }}
+                  className="w-full flex items-center justify-between px-3 py-2 rounded-lg text-sm font-medium border border-amber-500/30 bg-amber-500/10 text-amber-700 dark:text-amber-400"
+                >
+                  <span className="flex items-center gap-2">
+                    <Zap className="w-4 h-4 text-amber-500" />
+                    <span>Recruiter Fast-Track (60s)</span>
+                  </span>
+                  <span className="text-[10px] font-mono font-bold">HOT</span>
+                </button>
+              )}
+
               <Link
                 href={PERSONAL_INFO.resumeUrl}
                 target="_blank"

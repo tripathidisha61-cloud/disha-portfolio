@@ -3,6 +3,7 @@
 import { ACHIEVEMENTS } from "@/lib/data";
 import { Reveal } from "./Reveal";
 import { Award, ShieldCheck, Trophy, Sparkles } from "lucide-react";
+import { GsocRoadmap } from "./GsocRoadmap";
 
 export function Achievements() {
   const getBadgeIcon = (index: number) => {
@@ -71,6 +72,11 @@ export function Achievements() {
             </Reveal>
           ))}
         </div>
+
+        {/* GSoC 2027 Interactive Milestone Roadmap */}
+        <Reveal delay={0.3}>
+          <GsocRoadmap />
+        </Reveal>
       </div>
     </section>
   );

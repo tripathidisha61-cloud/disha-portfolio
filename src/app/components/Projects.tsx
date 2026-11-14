@@ -3,10 +3,12 @@
 import { useState } from "react";
 import { PROJECTS, Project } from "@/lib/data";
 import { Reveal } from "./Reveal";
-import { Github, ExternalLink, Code2, FolderGit2 } from "lucide-react";
+import { Github, ExternalLink, Code2, FolderGit2, Sparkles, ArrowRight } from "lucide-react";
+import { ProjectModal } from "./ProjectModal";
 
 export function Projects() {
   const [filter, setFilter] = useState<"All" | "Featured">("All");
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const displayedProjects =
     filter === "Featured" ? PROJECTS.filter((p) => p.featured) : PROJECTS;
@@ -135,28 +137,40 @@ export function Projects() {
                     </div>
 
                     {/* Action Links */}
-                    <div className="flex items-center gap-3">
-                      <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium border border-neutral-200 dark:border-neutral-800 hover:bg-neutral-100 dark:hover:bg-neutral-800 text-neutral-800 dark:text-neutral-200 transition-colors"
-                      >
-                        <Github className="w-3.5 h-3.5" />
-                        <span>Source Code</span>
-                      </a>
-
-                      {project.liveUrl && (
+                    <div className="flex flex-wrap items-center justify-between gap-3">
+                      <div className="flex items-center gap-2">
                         <a
-                          href={project.liveUrl}
+                          href={project.githubUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 hover:bg-neutral-800 dark:hover:bg-neutral-100 transition-colors"
+                          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium border border-neutral-200 dark:border-neutral-800 hover:bg-neutral-100 dark:hover:bg-neutral-800 text-neutral-800 dark:text-neutral-200 transition-colors"
                         >
-                          <ExternalLink className="w-3.5 h-3.5" />
-                          <span>Live Demo</span>
+                          <Github className="w-3.5 h-3.5" />
+                          <span>Code</span>
                         </a>
-                      )}
+
+                        {project.liveUrl && (
+                          <a
+                            href={project.liveUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 hover:bg-neutral-800 dark:hover:bg-neutral-100 transition-colors"
+                          >
+                            <ExternalLink className="w-3.5 h-3.5" />
+                            <span>Demo</span>
+                          </a>
+                        )}
+                      </div>
+
+                      <button
+                        type="button"
+                        onClick={() => setSelectedProject(project)}
+                        className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-medium border border-neutral-200/80 dark:border-neutral-700/80 hover:border-neutral-400 dark:hover:border-neutral-600 bg-neutral-50 dark:bg-neutral-900 text-neutral-800 dark:text-neutral-200 transition-all group-hover:bg-neutral-100 dark:group-hover:bg-neutral-800"
+                      >
+                        <Code2 className="w-3.5 h-3.5 text-neutral-500" />
+                        <span>Architecture & Case Study</span>
+                        <ArrowRight className="w-3 h-3 text-neutral-400 group-hover:translate-x-0.5 transition-transform" />
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -165,6 +179,12 @@ export function Projects() {
           ))}
         </div>
       </div>
+
+      {/* Case Study Deep Dive Modal */}
+      <ProjectModal
+        project={selectedProject}
+        onClose={() => setSelectedProject(null)}
+      />
     </section>
   );
 }

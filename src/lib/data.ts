@@ -9,6 +9,19 @@ export interface Project {
   liveUrl?: string;
   devStatus: "Completed" | "In Development" | "Prototype";
   featured: boolean;
+  architecture?: string;
+  highlights?: string[];
+  challengesSolved?: string[];
+}
+
+export interface RoadmapMilestone {
+  phase: string;
+  title: string;
+  period: string;
+  status: "Completed" | "In Progress" | "Upcoming";
+  description: string;
+  details: string[];
+  tag: string;
 }
 
 export interface SkillCategory {
@@ -135,6 +148,18 @@ export const PROJECTS: Project[] = [
     liveUrl: "https://github.com/tripathidisha61-cloud",
     devStatus: "In Development",
     featured: true,
+    architecture:
+      "GitHub Webhook / REST API -> FastAPI Async Pipeline -> AST Parser & Static Analysis Engine -> LangChain RAG with ChromaDB -> LLM Remediation Agent -> Automated Pull Request Patch",
+    highlights: [
+      "Sub-200ms AST scanning for syntax and security anti-patterns",
+      "Automated contextual PR generation with unified git diff patch formats",
+      "Dockerized isolated execution environment preventing arbitrary code execution",
+      "Contextual code embeddings utilizing AST chunking over raw text splitting",
+    ],
+    challengesSolved: [
+      "Mitigated LLM token bloat by using AST tree pruning before prompt embedding",
+      "Enforced deterministic git patches with strict lint validation checks",
+    ],
   },
   {
     id: "live-hackathon-leaderboard",
@@ -149,6 +174,18 @@ export const PROJECTS: Project[] = [
     liveUrl: "https://github.com/tripathidisha61-cloud",
     devStatus: "Completed",
     featured: true,
+    architecture:
+      "Judge Evaluation Web Client -> Next.js Edge API -> PostgreSQL Transaction Queue -> WebSocket Broadcast Gateway -> Participant Live Dashboard",
+    highlights: [
+      "Real-time synchronized scorecards supporting 100+ concurrent participant teams",
+      "Sub-100ms telemetry broadcasts via low-overhead WebSocket state streams",
+      "ACID-compliant scoring transaction locks preventing race conditions during simultaneous judge submissions",
+      "Dynamic rubric customization engine with category weighting",
+    ],
+    challengesSolved: [
+      "Eliminated duplicate score submissions under high latency via optimistic UI locking and database transactions",
+      "Maintained smooth 60fps leaderboard re-renders using lightweight Framer Motion layout animations",
+    ],
   },
   {
     id: "securehealth-telehealth",
@@ -162,6 +199,18 @@ export const PROJECTS: Project[] = [
     githubUrl: "https://github.com/tripathidisha61-cloud",
     devStatus: "Prototype",
     featured: true,
+    architecture:
+      "Patient React SPA -> Secure FastAPI Gateway -> Symptom Decision Engine & Rule Matrix -> Encrypted PostgreSQL Health Vault -> Doctor Consultation Scheduling Service",
+    highlights: [
+      "Guided clinical triage decision tree covering common acute symptom trajectories",
+      "Role-based access control (RBAC) separating patient health records from public provider directories",
+      "Automated appointment booking logic with slot collision detection",
+      "Designed and led full product lifecycle with a 2-person development squad",
+    ],
+    challengesSolved: [
+      "Architected zero-leakage patient metadata segregation with schema-level tenant partitioning",
+      "Engineered robust fallback to emergency helplines for high-risk triage flags",
+    ],
   },
   {
     id: "campuspilot-ai",
@@ -175,6 +224,75 @@ export const PROJECTS: Project[] = [
     githubUrl: "https://github.com/tripathidisha61-cloud",
     devStatus: "Prototype",
     featured: false,
+    architecture:
+      "Campus Documents / Syllabi -> PyPDF / Markdown Ingestion -> Semantic Chunking -> ChromaDB Vector Store -> FastAPI Query Router -> React Chatbot Interface",
+    highlights: [
+      "Fast semantic retrieval across 500+ pages of academic curricula and college circulars",
+      "Strict citation attribution referencing exact academic calendar pages and circular numbers",
+      "Low-latency response streaming via Server-Sent Events (SSE)",
+    ],
+    challengesSolved: [
+      "Resolved hallucination issues by enforcing strict contextual boundaries and retrieval threshold scores",
+    ],
+  },
+];
+
+export const GSOC_ROADMAP: RoadmapMilestone[] = [
+  {
+    phase: "Phase 1",
+    title: "Threat Intelligence & Honeynet Architecture Deep-Dive",
+    period: "Q3 - Q4 2026",
+    status: "Completed",
+    description:
+      "Conducted extensive analysis of distributed honeypot telemetry, sensor data capture mechanisms, and open-source threat analysis stacks.",
+    details: [
+      "Studied The Honeynet Project's core architectures and sensor pipelines",
+      "Set up isolated Dockerized honeypot environments for behavioral packet inspection",
+      "Documented attack vector classifications for automated telemetry triage",
+    ],
+    tag: "Telemetry Research",
+  },
+  {
+    phase: "Phase 2",
+    title: "Upstream Open-Source Contributions & Issue Triage",
+    period: "Q1 2027",
+    status: "In Progress",
+    description:
+      "Active engagement with target open-source repositories: fixing documentation gaps, resolving beginner-friendly issues, and testing sensor plugins.",
+    details: [
+      "Contributing bug fixes and unit test suites to open-source threat intelligence tools",
+      "Participating in developer discussions and community triage channels",
+      "Benchmarking log ingestion pipelines for performance bottlenecks",
+    ],
+    tag: "Active Contributions",
+  },
+  {
+    phase: "Phase 3",
+    title: "Formal Proposal Formulation & Mentor Alignment",
+    period: "Q2 2027",
+    status: "Upcoming",
+    description:
+      "Drafting a comprehensive, production-grade GSoC 2027 project specification focusing on automated telemetry clustering and sensor intelligence.",
+    details: [
+      "Iterating on system architecture blueprints and milestone timelines",
+      "Soliciting feedback from community mentors and senior maintainers",
+      "Refining deliverables, test harnesses, and documentation roadmaps",
+    ],
+    tag: "Proposal & Mentorship",
+  },
+  {
+    phase: "Phase 4",
+    title: "GSoC 2027 Project Execution & Upstream Release",
+    period: "Summer 2027",
+    status: "Upcoming",
+    description:
+      "Dedicated full-time summer implementation phase delivering production-ready, peer-reviewed open-source modules.",
+    details: [
+      "End-to-end coding, unit testing, and integration verification",
+      "Mid-term and final project evaluations and documentation handoff",
+      "Long-term maintenance and community adoption advocacy",
+    ],
+    tag: "Summer Execution",
   },
 ];
 
@@ -267,3 +385,42 @@ export const NAV_LINKS = [
   { name: "Achievements", href: "#achievements" },
   { name: "Contact", href: "#contact" },
 ];
+
+export const RECRUITER_SUMMARY = {
+  name: "Disha Tripathi",
+  role: "Software Developer | AI/ML Enthusiast",
+  education: "B.Tech Computer Science and Engineering (3rd Year)",
+  institution: "Raj Kumar Goel Institute of Technology, Ghaziabad",
+  cgpa: "8.8 / 10",
+  graduating: "2028",
+  status: "Actively seeking Software Engineering & AI/ML Summer 2025/2026 Internships",
+  coreStrengths: [
+    "High-Performance Python & C++ Algorithmic Problem Solving (311+ LeetCode problems)",
+    "Full-Stack Web Engineering with Next.js 14, React, TypeScript & FastAPI",
+    "Applied AI/ML: Retrieval-Augmented Generation (RAG), Vector Embeddings, LangChain",
+    "Cloud & Systems: Docker, Linux, AWS (EC2, S3), GitHub Actions CI/CD",
+  ],
+  topProjects: [
+    {
+      name: "RepoMedic AI",
+      focus: "Intelligent AST diagnostic assistant for automated PR remediation",
+      stack: "FastAPI, Next.js, Docker, RAG, GitHub API",
+    },
+    {
+      name: "Live Hackathon Leaderboard",
+      focus: "Sub-100ms real-time scoring engine with WebSocket telemetry",
+      stack: "Next.js, TypeScript, PostgreSQL, WebSockets",
+    },
+    {
+      name: "SecureHealth",
+      focus: "Telehealth clinical triage decision tree with RBAC health vault",
+      stack: "FastAPI, React, PostgreSQL",
+    },
+  ],
+  verifiedMetrics: [
+    { label: "Academic CGPA", value: "8.8 / 10" },
+    { label: "LeetCode Solved", value: "311+ Problems" },
+    { label: "National Hackathon", value: "SIH 2026 (Internal Cleared)" },
+    { label: "Open Source Target", value: "GSoC 2027 Aspirant" },
+  ],
+};
