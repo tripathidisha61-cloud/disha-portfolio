@@ -57,21 +57,21 @@ export function GitHubStats() {
   };
 
   return (
-    <section id="github" className="py-20 md:py-28 border-t border-neutral-200/60 dark:border-neutral-800/60">
+    <section id="github" className="py-20 md:py-28 border-t border-neutral-200/60 dark:border-slate-800/80">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
           <Reveal>
             <div className="flex items-center gap-2 mb-3">
-              <span className="font-mono text-xs uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
+              <span className="font-mono text-xs uppercase tracking-wider text-neutral-500 dark:text-[#22D3EE]">
                 04 // Open Source
               </span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white">
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-[#F8FAFC]">
               GitHub Repositories
             </h2>
-            <p className="mt-3 text-base text-neutral-600 dark:text-neutral-400 max-w-2xl">
+            <p className="mt-3 text-base text-neutral-600 dark:text-slate-400 max-w-2xl">
               Live repositories fetched directly from GitHub for{" "}
-              <code className="text-xs px-2 py-1 rounded bg-neutral-100 dark:bg-neutral-800 font-mono text-neutral-800 dark:text-neutral-200">
+              <code className="text-xs px-2 py-1 rounded bg-neutral-100 dark:bg-[#151F32] font-mono text-neutral-800 dark:text-[#22D3EE]">
                 tripathidisha61-cloud
               </code>
               .
@@ -84,7 +84,7 @@ export function GitHubStats() {
                 type="button"
                 onClick={fetchRepos}
                 disabled={loading}
-                className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-medium border border-neutral-200 dark:border-neutral-800 hover:bg-neutral-100 dark:hover:bg-neutral-800 text-neutral-700 dark:text-neutral-300 transition-colors disabled:opacity-50"
+                className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-medium border border-neutral-200 dark:border-slate-800 hover:bg-neutral-100 dark:hover:bg-slate-800 text-neutral-700 dark:text-slate-300 transition-colors disabled:opacity-50"
                 aria-label="Refresh repositories"
               >
                 <RefreshCw className={`w-3.5 h-3.5 ${loading ? "animate-spin" : ""}`} />
@@ -95,7 +95,7 @@ export function GitHubStats() {
                 href="https://github.com/tripathidisha61-cloud"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-semibold bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 hover:bg-neutral-800 dark:hover:bg-neutral-100 transition-colors shadow-xs"
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-semibold bg-neutral-900 text-white dark:bg-[#3B82F6] dark:text-white hover:bg-neutral-800 dark:hover:bg-blue-600 transition-colors shadow-xs"
               >
                 <Github className="w-3.5 h-3.5" />
                 <span>View Profile</span>
@@ -108,28 +108,28 @@ export function GitHubStats() {
         {/* Profile metadata strip if loaded */}
         {profile && (
           <Reveal delay={0.15}>
-            <div className="mt-8 p-4 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50/50 dark:bg-neutral-900/30 flex flex-wrap items-center justify-between gap-4">
+            <div className="mt-8 p-4 rounded-xl border border-neutral-200 dark:border-slate-800 bg-neutral-50/50 dark:bg-[#151F32] flex flex-wrap items-center justify-between gap-4">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full border border-neutral-300 dark:border-neutral-700 bg-neutral-200 dark:bg-neutral-800 flex items-center justify-center font-bold text-sm text-neutral-700 dark:text-neutral-300">
+                <div className="w-10 h-10 rounded-full border border-neutral-300 dark:border-slate-700 bg-neutral-200 dark:bg-[#0B1120] flex items-center justify-center font-bold text-sm text-neutral-700 dark:text-[#22D3EE]">
                   DT
                 </div>
                 <div>
-                  <div className="text-sm font-semibold text-neutral-900 dark:text-neutral-100">
+                  <div className="text-sm font-semibold text-neutral-900 dark:text-[#F8FAFC]">
                     {profile.name || "Disha Tripathi"}
                   </div>
-                  <div className="text-xs text-neutral-500 font-mono">@{profile.login}</div>
+                  <div className="text-xs text-neutral-500 dark:text-slate-400 font-mono">@{profile.login}</div>
                 </div>
               </div>
 
-              <div className="flex items-center gap-6 text-xs text-neutral-600 dark:text-neutral-400 font-mono">
+              <div className="flex items-center gap-6 text-xs text-neutral-600 dark:text-slate-400 font-mono">
                 <div>
-                  <span className="font-semibold text-neutral-900 dark:text-white">
+                  <span className="font-semibold text-neutral-900 dark:text-[#22D3EE]">
                     {profile.public_repos}
                   </span>{" "}
                   Repos
                 </div>
                 <div>
-                  <span className="font-semibold text-neutral-900 dark:text-white">
+                  <span className="font-semibold text-neutral-900 dark:text-[#22D3EE]">
                     {profile.followers}
                   </span>{" "}
                   Followers
@@ -145,14 +145,14 @@ export function GitHubStats() {
             {[1, 2, 3, 4, 5, 6].map((i) => (
               <div
                 key={i}
-                className="h-44 p-6 rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900/40 animate-pulse flex flex-col justify-between"
+                className="h-44 p-6 rounded-2xl border border-neutral-200 dark:border-slate-800 bg-white dark:bg-[#151F32] animate-pulse flex flex-col justify-between"
               >
                 <div className="space-y-3">
-                  <div className="h-4 bg-neutral-200 dark:bg-neutral-800 rounded w-3/4" />
-                  <div className="h-3 bg-neutral-100 dark:bg-neutral-800/60 rounded w-full" />
-                  <div className="h-3 bg-neutral-100 dark:bg-neutral-800/60 rounded w-2/3" />
+                  <div className="h-4 bg-neutral-200 dark:bg-slate-800 rounded w-3/4" />
+                  <div className="h-3 bg-neutral-100 dark:bg-slate-800/60 rounded w-full" />
+                  <div className="h-3 bg-neutral-100 dark:bg-slate-800/60 rounded w-2/3" />
                 </div>
-                <div className="h-4 bg-neutral-100 dark:bg-neutral-800/80 rounded w-1/3" />
+                <div className="h-4 bg-neutral-100 dark:bg-slate-800/80 rounded w-1/3" />
               </div>
             ))}
           </div>
@@ -160,19 +160,19 @@ export function GitHubStats() {
 
         {/* Error state */}
         {!loading && error && (
-          <div className="mt-8 p-6 rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900/40 text-center">
-            <AlertCircle className="w-8 h-8 text-neutral-400 mx-auto mb-3" />
-            <h3 className="text-sm font-semibold text-neutral-900 dark:text-white">
+          <div className="mt-8 p-6 rounded-2xl border border-neutral-200 dark:border-slate-800 bg-neutral-50 dark:bg-[#151F32] text-center">
+            <AlertCircle className="w-8 h-8 text-neutral-400 dark:text-[#22D3EE] mx-auto mb-3" />
+            <h3 className="text-sm font-semibold text-neutral-900 dark:text-[#F8FAFC]">
               Unable to sync live GitHub repositories
             </h3>
-            <p className="mt-1 text-xs text-neutral-500 dark:text-neutral-400 max-w-md mx-auto">
+            <p className="mt-1 text-xs text-neutral-500 dark:text-slate-400 max-w-md mx-auto">
               {error}
             </p>
             <div className="mt-4 flex items-center justify-center gap-3">
               <button
                 type="button"
                 onClick={fetchRepos}
-                className="px-4 py-2 rounded-lg text-xs font-medium border border-neutral-200 dark:border-neutral-800 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+                className="px-4 py-2 rounded-lg text-xs font-medium border border-neutral-200 dark:border-slate-800 hover:bg-neutral-100 dark:hover:bg-slate-800 transition-colors text-neutral-800 dark:text-slate-200"
               >
                 Retry Request
               </button>
@@ -180,7 +180,7 @@ export function GitHubStats() {
                 href="https://github.com/tripathidisha61-cloud"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2 rounded-lg text-xs font-semibold bg-neutral-900 text-white dark:bg-white dark:text-neutral-900"
+                className="px-4 py-2 rounded-lg text-xs font-semibold bg-neutral-900 text-white dark:bg-[#3B82F6] dark:text-white"
               >
                 Open GitHub Profile
               </a>
@@ -190,12 +190,12 @@ export function GitHubStats() {
 
         {/* Empty state */}
         {!loading && !error && repos.length === 0 && (
-          <div className="mt-8 p-8 rounded-2xl border border-dashed border-neutral-300 dark:border-neutral-700 text-center">
-            <BookOpen className="w-8 h-8 text-neutral-400 mx-auto mb-3" />
-            <p className="text-sm font-medium text-neutral-800 dark:text-neutral-200">
+          <div className="mt-8 p-8 rounded-2xl border border-dashed border-neutral-300 dark:border-slate-700 text-center">
+            <BookOpen className="w-8 h-8 text-neutral-400 dark:text-[#22D3EE] mx-auto mb-3" />
+            <p className="text-sm font-medium text-neutral-800 dark:text-slate-200">
               No public repositories found.
             </p>
-            <p className="text-xs text-neutral-500 mt-1">
+            <p className="text-xs text-neutral-500 dark:text-slate-400 mt-1">
               New projects will appear here as soon as they are made public on GitHub.
             </p>
           </div>
@@ -210,45 +210,45 @@ export function GitHubStats() {
                   href={repo.html_url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex flex-col justify-between h-48 p-6 rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900/50 hover:border-neutral-300 dark:hover:border-neutral-700 shadow-xs hover:shadow-md transition-all"
+                  className="group flex flex-col justify-between h-48 p-6 rounded-2xl border border-neutral-200 dark:border-slate-800 bg-white dark:bg-[#151F32] hover:border-neutral-300 dark:hover:border-[#3B82F6]/50 shadow-xs hover:shadow-lg dark:hover:shadow-[#3B82F6]/10 transition-all"
                 >
                   <div>
                     <div className="flex items-start justify-between gap-2">
                       <div className="flex items-center gap-2">
-                        <Code2 className="w-4 h-4 text-neutral-500 flex-shrink-0" />
-                        <h3 className="font-semibold text-sm text-neutral-900 dark:text-white group-hover:text-neutral-600 dark:group-hover:text-neutral-300 transition-colors truncate">
+                        <Code2 className="w-4 h-4 text-neutral-500 dark:text-[#22D3EE] flex-shrink-0" />
+                        <h3 className="font-semibold text-sm text-neutral-900 dark:text-[#F8FAFC] group-hover:text-blue-600 dark:group-hover:text-[#22D3EE] transition-colors truncate">
                           {repo.name}
                         </h3>
                       </div>
-                      <ArrowUpRight className="w-4 h-4 text-neutral-400 group-hover:text-neutral-900 dark:group-hover:text-white transition-colors flex-shrink-0" />
+                      <ArrowUpRight className="w-4 h-4 text-neutral-400 dark:text-slate-400 group-hover:text-neutral-900 dark:group-hover:text-[#22D3EE] transition-colors flex-shrink-0" />
                     </div>
 
-                    <p className="mt-2.5 text-xs text-neutral-600 dark:text-neutral-400 line-clamp-2 leading-relaxed">
+                    <p className="mt-2.5 text-xs text-neutral-600 dark:text-slate-400 line-clamp-2 leading-relaxed">
                       {repo.description || "No description provided."}
                     </p>
                   </div>
 
-                  <div className="flex items-center justify-between text-xs text-neutral-500 dark:text-neutral-400 pt-4 border-t border-neutral-100 dark:border-neutral-800 font-mono">
+                  <div className="flex items-center justify-between text-xs text-neutral-500 dark:text-slate-400 pt-4 border-t border-neutral-100 dark:border-slate-800 font-mono">
                     <div className="flex items-center gap-2">
                       {repo.language && (
                         <span className="flex items-center gap-1.5">
                           <span
                             className={`w-2 h-2 rounded-full ${getLanguageColor(repo.language)}`}
                           />
-                          <span>{repo.language}</span>
+                          <span className="text-neutral-700 dark:text-slate-300">{repo.language}</span>
                         </span>
                       )}
                     </div>
 
                     <div className="flex items-center gap-3">
                       <span className="flex items-center gap-1">
-                        <Star className="w-3.5 h-3.5 text-neutral-400" />
-                        <span>{repo.stargazers_count}</span>
+                        <Star className="w-3.5 h-3.5 text-neutral-400 dark:text-amber-400" />
+                        <span className="text-neutral-700 dark:text-slate-300">{repo.stargazers_count}</span>
                       </span>
                       {repo.forks_count > 0 && (
                         <span className="flex items-center gap-1">
-                          <GitFork className="w-3.5 h-3.5 text-neutral-400" />
-                          <span>{repo.forks_count}</span>
+                          <GitFork className="w-3.5 h-3.5 text-neutral-400 dark:text-slate-400" />
+                          <span className="text-neutral-700 dark:text-slate-300">{repo.forks_count}</span>
                         </span>
                       )}
                     </div>

@@ -9,27 +9,27 @@ export function Achievements() {
   const getBadgeIcon = (index: number) => {
     switch (index) {
       case 0:
-        return <Award className="w-5 h-5 text-neutral-800 dark:text-neutral-200" />;
+        return <Award className="w-5 h-5 text-neutral-800 dark:text-[#22D3EE]" />;
       case 1:
-        return <ShieldCheck className="w-5 h-5 text-neutral-800 dark:text-neutral-200" />;
+        return <ShieldCheck className="w-5 h-5 text-neutral-800 dark:text-[#22D3EE]" />;
       default:
-        return <Trophy className="w-5 h-5 text-neutral-800 dark:text-neutral-200" />;
+        return <Trophy className="w-5 h-5 text-neutral-800 dark:text-[#22D3EE]" />;
     }
   };
 
   return (
-    <section id="achievements" className="py-20 md:py-28 border-t border-neutral-200/60 dark:border-neutral-800/60">
+    <section id="achievements" className="py-20 md:py-28 border-t border-neutral-200/60 dark:border-slate-800/80">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal>
           <div className="flex items-center gap-2 mb-3">
-            <span className="font-mono text-xs uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
+            <span className="font-mono text-xs uppercase tracking-wider text-neutral-500 dark:text-[#22D3EE]">
               07 // Recognition
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white">
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-[#F8FAFC]">
             Achievements & Certifications
           </h2>
-          <p className="mt-3 text-base text-neutral-600 dark:text-neutral-400 max-w-2xl">
+          <p className="mt-3 text-base text-neutral-600 dark:text-slate-400 max-w-2xl">
             Honors, professional credentials, and open-source project initiatives.
           </p>
         </Reveal>
@@ -37,36 +37,36 @@ export function Achievements() {
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
           {ACHIEVEMENTS.map((item, idx) => (
             <Reveal key={item.id} delay={idx * 0.1}>
-              <div className="flex flex-col justify-between h-full p-6 sm:p-7 rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900/50 hover:border-neutral-300 dark:hover:border-neutral-700 shadow-xs hover:shadow-md transition-all">
+              <div className="flex flex-col justify-between h-full p-6 sm:p-7 rounded-2xl border border-neutral-200 dark:border-slate-800 bg-white dark:bg-[#151F32] hover:border-neutral-300 dark:hover:border-[#3B82F6]/50 shadow-xs hover:shadow-lg dark:hover:shadow-[#3B82F6]/10 transition-all">
                 <div>
                   <div className="flex items-center justify-between gap-3 mb-5">
-                    <div className="p-2.5 rounded-xl bg-neutral-100 dark:bg-neutral-800">
+                    <div className="p-2.5 rounded-xl bg-neutral-100 dark:bg-[#0B1120]">
                       {getBadgeIcon(idx)}
                     </div>
                     {item.badge && (
-                      <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-medium border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-950 text-neutral-700 dark:text-neutral-300">
-                        <Sparkles className="w-3 h-3 text-amber-500" />
+                      <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-medium border border-neutral-200 dark:border-slate-700 bg-neutral-50 dark:bg-[#0B1120] text-neutral-700 dark:text-[#22D3EE]">
+                        <Sparkles className="w-3 h-3 text-amber-500 dark:text-[#22D3EE]" />
                         {item.badge}
                       </span>
                     )}
                   </div>
 
-                  <h3 className="font-bold text-base text-neutral-900 dark:text-white leading-snug">
+                  <h3 className="font-bold text-base text-neutral-900 dark:text-[#F8FAFC] leading-snug">
                     {item.title}
                   </h3>
 
-                  <div className="mt-1 text-xs text-neutral-500 font-mono">
+                  <div className="mt-1 text-xs text-neutral-500 dark:text-slate-400 font-mono">
                     {item.issuer} • {item.date}
                   </div>
 
-                  <p className="mt-3 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                  <p className="mt-3 text-xs sm:text-sm text-neutral-600 dark:text-slate-400 leading-relaxed">
                     {item.description}
                   </p>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-neutral-100 dark:border-neutral-800/80 flex items-center justify-between text-[11px] text-neutral-400 font-mono">
+                <div className="mt-6 pt-4 border-t border-neutral-100 dark:border-slate-800 flex items-center justify-between text-[11px] text-neutral-400 dark:text-slate-400 font-mono">
                   <span>VERIFIED RECORD</span>
-                  <span className="text-emerald-500">Active</span>
+                  <span className="text-emerald-500 font-semibold">Active</span>
                 </div>
               </div>
             </Reveal>

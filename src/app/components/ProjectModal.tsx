@@ -62,14 +62,14 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 16 }}
           transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0c0c0e] shadow-2xl p-6 sm:p-8 z-10"
+          className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#151F32] shadow-[0_20px_50px_rgba(11,17,32,0.9)] p-6 sm:p-8 z-10"
         >
           {/* Header */}
-          <div className="flex items-start justify-between gap-4 pb-4 border-b border-neutral-100 dark:border-neutral-800">
+          <div className="flex items-start justify-between gap-4 pb-4 border-b border-slate-100 dark:border-slate-800">
             <div>
               <div className="flex items-center gap-2 mb-2">
-                <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-mono font-medium border border-neutral-200 dark:border-neutral-700 bg-neutral-100/60 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-300">
-                  <Code2 className="w-3.5 h-3.5 text-neutral-500" />
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-mono font-medium border border-blue-500/30 bg-blue-500/10 text-[#3B82F6] dark:text-[#22D3EE]">
+                  <Code2 className="w-3.5 h-3.5 text-[#3B82F6]" />
                   Engineering Deep Dive
                 </span>
                 <span
@@ -84,7 +84,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                   {project.devStatus}
                 </span>
               </div>
-              <h3 className="text-2xl sm:text-3xl font-bold tracking-tight text-neutral-900 dark:text-white">
+              <h3 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-[#F8FAFC]">
                 {project.title}
               </h3>
             </div>
@@ -92,7 +92,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
             <button
               type="button"
               onClick={onClose}
-              className="p-2 rounded-xl text-neutral-500 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+              className="p-2 rounded-xl text-slate-400 hover:text-slate-900 dark:hover:text-[#F8FAFC] hover:bg-slate-100 dark:hover:bg-[#1E293B] transition-colors"
               aria-label="Close modal"
             >
               <X className="w-5 h-5" />
@@ -102,29 +102,29 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
           <div className="mt-6 space-y-6">
             {/* Overview & Long Description */}
             <div>
-              <h4 className="text-xs font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-2">
+              <h4 className="text-xs font-mono uppercase tracking-wider text-slate-400 mb-2">
                 Project Overview & Intent
               </h4>
-              <p className="text-sm sm:text-base text-neutral-700 dark:text-neutral-300 leading-relaxed">
+              <p className="text-sm sm:text-base text-slate-700 dark:text-slate-300 leading-relaxed">
                 {project.longDescription || project.description}
               </p>
             </div>
 
             {/* Architecture Flow Diagram */}
             {archSteps.length > 0 && (
-              <div className="p-4 sm:p-5 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50/70 dark:bg-neutral-950/60">
-                <div className="flex items-center gap-2 mb-3 text-xs font-mono uppercase tracking-wider text-neutral-600 dark:text-neutral-400">
-                  <Cpu className="w-4 h-4 text-emerald-500" />
+              <div className="p-4 sm:p-5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/70 dark:bg-[#0B1120]/90">
+                <div className="flex items-center gap-2 mb-3 text-xs font-mono uppercase tracking-wider text-slate-600 dark:text-slate-400">
+                  <Cpu className="w-4 h-4 text-[#22D3EE]" />
                   <span>System Architecture & Dataflow Pipeline</span>
                 </div>
                 <div className="flex flex-wrap items-center gap-2">
                   {archSteps.map((step, idx) => (
                     <div key={idx} className="flex items-center gap-2">
-                      <span className="px-3 py-1.5 rounded-lg text-xs font-mono border border-neutral-200 dark:border-neutral-700/80 bg-white dark:bg-neutral-900 text-neutral-800 dark:text-neutral-200 shadow-2xs">
+                      <span className="px-3 py-1.5 rounded-lg text-xs font-mono border border-slate-200 dark:border-[#3B82F6]/30 bg-white dark:bg-[#151F32] text-slate-800 dark:text-[#22D3EE] shadow-2xs">
                         {step}
                       </span>
                       {idx < archSteps.length - 1 && (
-                        <ArrowRight className="w-3.5 h-3.5 text-neutral-400 shrink-0" />
+                        <ArrowRight className="w-3.5 h-3.5 text-slate-400 shrink-0" />
                       )}
                     </div>
                   ))}
@@ -135,18 +135,18 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
             {/* Highlights & Metrics */}
             {project.highlights && project.highlights.length > 0 && (
               <div>
-                <h4 className="text-xs font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-3 flex items-center gap-1.5">
-                  <Layers className="w-4 h-4" />
+                <h4 className="text-xs font-mono uppercase tracking-wider text-slate-400 mb-3 flex items-center gap-1.5">
+                  <Layers className="w-4 h-4 text-[#3B82F6]" />
                   <span>Key Architectural Highlights & Performance</span>
                 </h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                   {project.highlights.map((item, idx) => (
                     <div
                       key={idx}
-                      className="p-3 rounded-xl border border-neutral-200/80 dark:border-neutral-800 bg-neutral-50/50 dark:bg-neutral-900/30 flex items-start gap-2.5"
+                      className="p-3 rounded-xl border border-slate-200/80 dark:border-slate-800 bg-slate-50/50 dark:bg-[#0B1120]/60 flex items-start gap-2.5"
                     >
-                      <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
-                      <span className="text-xs text-neutral-700 dark:text-neutral-300 leading-snug">
+                      <CheckCircle2 className="w-4 h-4 text-[#22D3EE] shrink-0 mt-0.5" />
+                      <span className="text-xs text-slate-700 dark:text-slate-300 leading-snug">
                         {item}
                       </span>
                     </div>
@@ -158,7 +158,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
             {/* Technical Challenges & Trade-offs */}
             {project.challengesSolved && project.challengesSolved.length > 0 && (
               <div>
-                <h4 className="text-xs font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-3 flex items-center gap-1.5">
+                <h4 className="text-xs font-mono uppercase tracking-wider text-slate-400 mb-3 flex items-center gap-1.5">
                   <AlertCircle className="w-4 h-4 text-amber-500" />
                   <span>Engineering Challenges Solved & Trade-Offs</span>
                 </h4>
@@ -166,7 +166,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                   {project.challengesSolved.map((challenge, idx) => (
                     <li
                       key={idx}
-                      className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 flex items-start gap-2"
+                      className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 flex items-start gap-2"
                     >
                       <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 shrink-0" />
                       <span>{challenge}</span>
@@ -178,14 +178,14 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
 
             {/* Technologies */}
             <div>
-              <h4 className="text-xs font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-2.5">
+              <h4 className="text-xs font-mono uppercase tracking-wider text-slate-400 mb-2.5">
                 Technologies & Tools Applied
               </h4>
               <div className="flex flex-wrap gap-2">
                 {project.technologies.map((tech) => (
                   <span
                     key={tech}
-                    className="px-2.5 py-1 rounded-lg text-xs font-mono font-medium border border-neutral-200 dark:border-neutral-800 bg-neutral-100/70 dark:bg-neutral-900 text-neutral-800 dark:text-neutral-200"
+                    className="px-2.5 py-1 rounded-lg text-xs font-mono font-medium border border-slate-200 dark:border-slate-800 bg-slate-100/70 dark:bg-[#0B1120] text-slate-800 dark:text-slate-300"
                   >
                     {tech}
                   </span>
@@ -194,13 +194,13 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
             </div>
 
             {/* Actions footer */}
-            <div className="pt-4 border-t border-neutral-100 dark:border-neutral-800 flex flex-wrap items-center justify-between gap-3">
+            <div className="pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-wrap items-center justify-between gap-3">
               <div className="flex items-center gap-3">
                 <a
                   href={project.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-medium border border-neutral-200 dark:border-neutral-800 hover:bg-neutral-100 dark:hover:bg-neutral-800/80 text-neutral-800 dark:text-neutral-200 transition-colors"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-medium border border-slate-700 bg-[#0B1120] hover:bg-[#1E293B] text-slate-200 transition-colors"
                 >
                   <Github className="w-4 h-4" />
                   <span>Source Code</span>
@@ -210,7 +210,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                     href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-medium bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 hover:bg-neutral-800 dark:hover:bg-neutral-100 transition-colors"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold bg-[#3B82F6] text-white hover:bg-[#2563EB] shadow-[0_0_15px_rgba(59,130,246,0.35)] transition-colors"
                   >
                     <span>Live Deployment</span>
                     <ExternalLink className="w-3.5 h-3.5" />
@@ -221,7 +221,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
               <button
                 type="button"
                 onClick={onClose}
-                className="px-4 py-2 rounded-xl text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors"
+                className="px-4 py-2 rounded-xl text-xs font-medium text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"
               >
                 Close
               </button>

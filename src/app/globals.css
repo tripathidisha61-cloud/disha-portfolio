@@ -3,25 +3,29 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #111827;
-  --muted: #6b7280;
-  --muted-bg: #f9fafb;
-  --border: #e5e7eb;
+  --background: #f8fafc;
+  --foreground: #0b1120;
+  --muted: #64748b;
+  --muted-bg: #f1f5f9;
+  --border: #e2e8f0;
   --card: #ffffff;
-  --card-foreground: #111827;
-  --ring: #374151;
+  --card-foreground: #0b1120;
+  --primary: #3b82f6;
+  --accent: #22d3ee;
+  --ring: #3b82f6;
 }
 
 .dark {
-  --background: #09090b;
-  --foreground: #fafafa;
-  --muted: #a1a1aa;
-  --muted-bg: #121214;
-  --border: #27272a;
-  --card: #121215;
-  --card-foreground: #fafafa;
-  --ring: #d4d4d8;
+  --background: #0b1120;
+  --foreground: #f8fafc;
+  --muted: #94a3b8;
+  --muted-bg: #101827;
+  --border: #1e293b;
+  --card: #151f32;
+  --card-foreground: #f8fafc;
+  --primary: #3b82f6;
+  --accent: #22d3ee;
+  --ring: #3b82f6;
 }
 
 * {
@@ -55,7 +59,7 @@ body {
   }
 }
 
-/* Custom minimal scrollbar */
+/* Custom electric scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -71,27 +75,32 @@ body {
 }
 
 .dark ::-webkit-scrollbar-thumb {
-  background: #27272a;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  background: #1e293b;
 }
 
 .dark ::-webkit-scrollbar-thumb:hover {
-  background: #3f3f46;
+  background: #3b82f6;
 }
 
 /* Utility subtle grid background */
 .bg-grid-subtle {
   background-size: 32px 32px;
   background-image: 
-    linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+    linear-gradient(to right, rgba(59, 130, 246, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(59, 130, 246, 0.04) 1px, transparent 1px);
 }
 
 .dark .bg-grid-subtle {
   background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    linear-gradient(to right, rgba(59, 130, 246, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(59, 130, 246, 0.06) 1px, transparent 1px);
+}
+
+/* Electric glow effects */
+.glow-electric-blue {
+  box-shadow: 0 0 25px -5px rgba(59, 130, 246, 0.25);
+}
+
+.glow-electric-cyan {
+  box-shadow: 0 0 25px -5px rgba(34, 211, 238, 0.25);
 }

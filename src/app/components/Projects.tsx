@@ -31,8 +31,8 @@ export function Projects() {
         );
       case "Prototype":
         return (
-          <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-medium border border-blue-500/20 bg-blue-500/10 text-blue-600 dark:text-blue-400">
-            <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-medium border border-[#3B82F6]/30 bg-[#3B82F6]/10 text-blue-600 dark:text-[#22D3EE]">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#3B82F6]" />
             Prototype
           </span>
         );
@@ -40,33 +40,33 @@ export function Projects() {
   };
 
   return (
-    <section id="projects" className="py-20 md:py-28 border-t border-neutral-200/60 dark:border-neutral-800/60">
+    <section id="projects" className="py-20 md:py-28 border-t border-neutral-200/60 dark:border-slate-800/80">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
           <Reveal>
             <div className="flex items-center gap-2 mb-3">
-              <span className="font-mono text-xs uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
+              <span className="font-mono text-xs uppercase tracking-wider text-neutral-500 dark:text-[#22D3EE]">
                 03 // Selected Work
               </span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white">
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-[#F8FAFC]">
               Featured Projects
             </h2>
-            <p className="mt-3 text-base text-neutral-600 dark:text-neutral-400 max-w-2xl">
+            <p className="mt-3 text-base text-neutral-600 dark:text-slate-400 max-w-2xl">
               Architected for real-world impact—featuring automated code diagnostics, competitive telemetry systems, and intelligent NLP services.
             </p>
           </Reveal>
 
           {/* Filter toggle */}
           <Reveal delay={0.1}>
-            <div className="inline-flex p-1 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-neutral-100/60 dark:bg-neutral-900/60 text-xs font-medium">
+            <div className="inline-flex p-1 rounded-xl border border-neutral-200 dark:border-slate-800 bg-neutral-100/60 dark:bg-[#151F32] text-xs font-medium">
               <button
                 type="button"
                 onClick={() => setFilter("All")}
                 className={`px-3 py-1.5 rounded-lg transition-colors ${
                   filter === "All"
-                    ? "bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white shadow-xs font-semibold"
-                    : "text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white"
+                    ? "bg-white dark:bg-[#3B82F6] text-neutral-900 dark:text-white shadow-xs font-semibold"
+                    : "text-neutral-600 dark:text-slate-400 hover:text-neutral-900 dark:hover:text-[#F8FAFC]"
                 }`}
               >
                 All Projects ({PROJECTS.length})
@@ -76,8 +76,8 @@ export function Projects() {
                 onClick={() => setFilter("Featured")}
                 className={`px-3 py-1.5 rounded-lg transition-colors ${
                   filter === "Featured"
-                    ? "bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white shadow-xs font-semibold"
-                    : "text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white"
+                    ? "bg-white dark:bg-[#3B82F6] text-neutral-900 dark:text-white shadow-xs font-semibold"
+                    : "text-neutral-600 dark:text-slate-400 hover:text-neutral-900 dark:hover:text-[#F8FAFC]"
                 }`}
               >
                 Featured
@@ -90,22 +90,22 @@ export function Projects() {
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
           {displayedProjects.map((project, idx) => (
             <Reveal key={project.id} delay={idx * 0.1}>
-              <div className="group flex flex-col justify-between h-full rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900/50 hover:border-neutral-300 dark:hover:border-neutral-700 shadow-xs hover:shadow-md transition-all overflow-hidden">
+              <div className="group flex flex-col justify-between h-full rounded-2xl border border-neutral-200 dark:border-slate-800 bg-white dark:bg-[#151F32] hover:border-neutral-300 dark:hover:border-[#3B82F6]/50 shadow-xs hover:shadow-lg dark:hover:shadow-[#3B82F6]/10 transition-all overflow-hidden">
                 {/* Project Header / Placeholder Visual */}
                 <div className="relative p-6 pb-0">
-                  <div className="h-44 rounded-xl border border-neutral-100 dark:border-neutral-800/80 bg-neutral-50 dark:bg-neutral-950 flex flex-col justify-between p-5 overflow-hidden group-hover:border-neutral-300 dark:group-hover:border-neutral-700 transition-colors">
+                  <div className="h-44 rounded-xl border border-neutral-100 dark:border-slate-800/80 bg-neutral-50 dark:bg-[#0B1120] flex flex-col justify-between p-5 overflow-hidden group-hover:border-neutral-300 dark:group-hover:border-[#3B82F6]/40 transition-colors">
                     <div className="flex items-center justify-between">
-                      <div className="p-2.5 rounded-lg bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 shadow-xs">
-                        <FolderGit2 className="w-5 h-5 text-neutral-700 dark:text-neutral-300" />
+                      <div className="p-2.5 rounded-lg bg-white dark:bg-[#151F32] border border-neutral-200 dark:border-slate-800 shadow-xs">
+                        <FolderGit2 className="w-5 h-5 text-neutral-700 dark:text-[#22D3EE]" />
                       </div>
                       {getStatusBadge(project.devStatus)}
                     </div>
 
                     <div>
-                      <div className="font-mono text-xs text-neutral-400">
+                      <div className="font-mono text-xs text-neutral-400 dark:text-slate-500">
                         REPOSITORY IDENTIFIER
                       </div>
-                      <div className="font-mono text-sm font-semibold text-neutral-800 dark:text-neutral-200 mt-0.5">
+                      <div className="font-mono text-sm font-semibold text-neutral-800 dark:text-slate-200 mt-0.5">
                         {project.title.toLowerCase().replace(/\s+/g, "-")}
                       </div>
                     </div>
@@ -115,21 +115,21 @@ export function Projects() {
                 {/* Project Details */}
                 <div className="p-6 flex flex-col flex-grow justify-between">
                   <div>
-                    <h3 className="text-xl font-bold tracking-tight text-neutral-900 dark:text-white group-hover:text-neutral-600 dark:group-hover:text-neutral-300 transition-colors">
+                    <h3 className="text-xl font-bold tracking-tight text-neutral-900 dark:text-[#F8FAFC] group-hover:text-blue-600 dark:group-hover:text-[#22D3EE] transition-colors">
                       {project.title}
                     </h3>
-                    <p className="mt-2.5 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                    <p className="mt-2.5 text-sm text-neutral-600 dark:text-slate-400 leading-relaxed">
                       {project.description}
                     </p>
                   </div>
 
-                  <div className="mt-6 pt-5 border-t border-neutral-100 dark:border-neutral-800">
+                  <div className="mt-6 pt-5 border-t border-neutral-100 dark:border-slate-800">
                     {/* Tech Badges */}
                     <div className="flex flex-wrap gap-1.5 mb-5">
                       {project.technologies.map((tech) => (
                         <span
                           key={tech}
-                          className="px-2.5 py-0.5 rounded-md text-[11px] font-mono border border-neutral-200/80 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900/60 text-neutral-600 dark:text-neutral-300"
+                          className="px-2.5 py-0.5 rounded-md text-[11px] font-mono border border-neutral-200/80 dark:border-slate-800 bg-neutral-50 dark:bg-[#0B1120] text-neutral-600 dark:text-slate-300"
                         >
                           {tech}
                         </span>
@@ -143,7 +143,7 @@ export function Projects() {
                           href={project.githubUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium border border-neutral-200 dark:border-neutral-800 hover:bg-neutral-100 dark:hover:bg-neutral-800 text-neutral-800 dark:text-neutral-200 transition-colors"
+                          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium border border-neutral-200 dark:border-slate-800 hover:bg-neutral-100 dark:hover:bg-slate-800/80 text-neutral-800 dark:text-slate-200 transition-colors"
                         >
                           <Github className="w-3.5 h-3.5" />
                           <span>Code</span>
@@ -154,7 +154,7 @@ export function Projects() {
                             href={project.liveUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 hover:bg-neutral-800 dark:hover:bg-neutral-100 transition-colors"
+                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-neutral-900 text-white dark:bg-[#3B82F6] dark:text-white hover:bg-neutral-800 dark:hover:bg-blue-600 transition-colors shadow-xs"
                           >
                             <ExternalLink className="w-3.5 h-3.5" />
                             <span>Demo</span>
@@ -165,11 +165,11 @@ export function Projects() {
                       <button
                         type="button"
                         onClick={() => setSelectedProject(project)}
-                        className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-medium border border-neutral-200/80 dark:border-neutral-700/80 hover:border-neutral-400 dark:hover:border-neutral-600 bg-neutral-50 dark:bg-neutral-900 text-neutral-800 dark:text-neutral-200 transition-all group-hover:bg-neutral-100 dark:group-hover:bg-neutral-800"
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium border border-neutral-200/80 dark:border-slate-700/80 hover:border-neutral-400 dark:hover:border-[#3B82F6] bg-neutral-50 dark:bg-[#0B1120] text-neutral-800 dark:text-[#22D3EE] transition-all group-hover:bg-neutral-100 dark:group-hover:bg-[#151F32]"
                       >
-                        <Code2 className="w-3.5 h-3.5 text-neutral-500" />
+                        <Code2 className="w-3.5 h-3.5 text-neutral-500 dark:text-[#22D3EE]" />
                         <span>Architecture & Case Study</span>
-                        <ArrowRight className="w-3 h-3 text-neutral-400 group-hover:translate-x-0.5 transition-transform" />
+                        <ArrowRight className="w-3 h-3 text-neutral-400 dark:text-[#22D3EE] group-hover:translate-x-0.5 transition-transform" />
                       </button>
                     </div>
                   </div>
