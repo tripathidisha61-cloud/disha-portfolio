@@ -6,9 +6,11 @@ import { Hero } from "./components/Hero";
 import { About } from "./components/About";
 import { Skills } from "./components/Skills";
 import { Projects } from "./components/Projects";
+import { RepoMedicSandbox } from "./components/RepoMedicSandbox";
 import { CoreCsFundamentals } from "./components/CoreCsFundamentals";
 import { EngineeringDocs } from "./components/EngineeringDocs";
 import { MncRoleMatcher } from "./components/MncRoleMatcher";
+import { InterviewSimulator } from "./components/InterviewSimulator";
 import { GitHubStats } from "./components/GitHubStats";
 import { LeetCodeStats } from "./components/LeetCodeStats";
 import { Experience } from "./components/Experience";
@@ -49,9 +51,11 @@ export default function Home() {
         <About />
         <Skills />
         <Projects />
+        <RepoMedicSandbox />
         <CoreCsFundamentals />
         <EngineeringDocs />
         <MncRoleMatcher />
+        <InterviewSimulator />
         <GitHubStats />
         <LeetCodeStats />
         <Experience />

@@ -187,6 +187,14 @@ export function CommandPalette({
       onSelect: () => scrollToSection("projects"),
     },
     {
+      id: "nav-sandbox",
+      category: "Developer Tools",
+      title: "RepoMedic AI Live Diagnostic Sandbox",
+      subtitle: "Test real-time AST triage and automated git diff patch generator",
+      icon: <Terminal className="w-4 h-4 text-emerald-400" />,
+      onSelect: () => scrollToSection("ai-sandbox"),
+    },
+    {
       id: "nav-cs",
       category: "Navigation",
       title: "Core CS & Algorithmic Rigor (311+ Solved)",
@@ -209,6 +217,14 @@ export function CommandPalette({
       subtitle: "Direct fit for SDE Backend, Full-Stack, & Applied AI tracks",
       icon: <Zap className="w-4 h-4 text-emerald-500" />,
       onSelect: () => scrollToSection("mnc-alignment"),
+    },
+    {
+      id: "nav-interview",
+      category: "Recruiter Actions",
+      title: "Recruiter Interview Q&A Simulator (STAR Method)",
+      subtitle: "Articulate answers to top behavioral & technical screening questions",
+      icon: <Sparkles className="w-4 h-4 text-amber-500" />,
+      onSelect: () => scrollToSection("interview-prep"),
     },
     {
       id: "nav-github",

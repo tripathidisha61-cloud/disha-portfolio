@@ -70,6 +70,8 @@ export function InteractiveTerminal() {
             <div><span className="text-amber-400 font-bold">dsa</span> - Algorithmic patterns & complexity</div>
             <div><span className="text-amber-400 font-bold">docs</span> - System design RFCs & memos</div>
             <div><span className="text-amber-400 font-bold">mnc</span> - Top MNC role alignment fit</div>
+            <div><span className="text-amber-400 font-bold">sandbox</span> - Live AST code triage sandbox</div>
+            <div><span className="text-amber-400 font-bold">star</span> - Interview screening Q&A (STAR)</div>
             <div><span className="text-amber-400 font-bold">sih</span> - SIH 2026 qualification</div>
             <div><span className="text-amber-400 font-bold">gsoc</span> - GSoC 2027 preparation plan</div>
             <div><span className="text-amber-400 font-bold">leetcode</span> - Algorithmic stats (311+ solved)</div>
@@ -163,6 +165,25 @@ export function InteractiveTerminal() {
           <p>• SDE Intern - Backend (96% Match) -&gt; Target: Google, Amazon, Microsoft, Uber</p>
           <p>• Full-Stack SDE Intern (94% Match) -&gt; Target: Atlassian, Adobe, Cisco</p>
           <p>• Applied AI / ML Intern (92% Match) -&gt; Target: Google, Microsoft, AI Labs</p>
+        </div>
+      );
+    } else if (lower === "sandbox") {
+      output = (
+        <div className="space-y-1 text-xs text-neutral-300 font-mono">
+          <p className="text-emerald-400 font-bold">RepoMedic AI — Live Diagnostic Sandbox</p>
+          <p>Test real-time code scanning in section &apos;#ai-sandbox&apos;.</p>
+          <p>Includes live vulnerability triage for SQL Injection, C++ buffer overflows, and async socket leaks with auto-generated diff patches.</p>
+        </div>
+      );
+    } else if (lower === "star") {
+      output = (
+        <div className="space-y-1 text-xs text-neutral-300 font-mono">
+          <p className="text-amber-400 font-bold">Recruiter Screening Q&amp;A Simulator (STAR Method):</p>
+          <p>1. 60-Second Elevator Pitch &amp; Academics (CGPA 8.8, 311+ LeetCode)</p>
+          <p>2. SIH 2026 Concurrency Challenge &amp; PostgreSQL ACID Locking</p>
+          <p>3. FastAPI &amp; WebSockets vs Polling Trade-offs (82% egress reduction)</p>
+          <p>4. Deliberate practice framework for solving 300+ LeetCode problems</p>
+          <p>5. Blameless code reviews and &apos;Disagree &amp; Commit&apos; collaboration</p>
         </div>
       );
     } else if (lower === "contact") {

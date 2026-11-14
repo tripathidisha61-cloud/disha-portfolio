@@ -425,13 +425,42 @@ export interface EngineeringDoc {
   tags: string[];
 }
 
+export interface CodeVulnerabilitySnippet {
+  id: string;
+  title: string;
+  language: string;
+  severity: "CRITICAL" | "HIGH" | "MEDIUM";
+  cwe: string;
+  code: string;
+  vulnerabilityDescription: string;
+  remediatedCode: string;
+  diffPatch: string;
+  explanation: string;
+}
+
+export interface InterviewQuestion {
+  id: string;
+  category: "Behavioral" | "Technical & System Design" | "Leadership & Culture" | "Academic & Hackathons";
+  question: string;
+  timeEstimate: string;
+  star: {
+    situation: string;
+    task: string;
+    action: string;
+    result: string;
+  };
+  keyTakeaway: string;
+}
+
 export const NAV_LINKS = [
   { name: "About", href: "#about" },
   { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
+  { name: "AI Sandbox", href: "#ai-sandbox" },
   { name: "CS Rigor", href: "#cs-fundamentals" },
   { name: "Design Docs", href: "#design-docs" },
   { name: "MNC Fit", href: "#mnc-alignment" },
+  { name: "Screening Q&A", href: "#interview-prep" },
   { name: "GitHub", href: "#github" },
   { name: "LeetCode", href: "#leetcode" },
   { name: "Experience", href: "#experience" },
@@ -851,3 +880,230 @@ export const RECRUITER_SUMMARY = {
     { label: "Open Source Target", value: "GSoC 2027 Aspirant" },
   ],
 };
+
+export const SAMPLE_VULNERABILITY_SNIPPETS: CodeVulnerabilitySnippet[] = [
+  {
+    id: "sql-injection",
+    title: "SQL Injection in Unsanitized Query (Python)",
+    language: "Python",
+    severity: "CRITICAL",
+    cwe: "CWE-89: SQL Injection",
+    code: `@app.get("/users/search")
+async def search_users(username: str, db: Session = Depends(get_db)):
+    # Vulnerability: Direct f-string interpolation into SQL statement
+    query = f"SELECT id, username, email FROM users WHERE username = '{username}'"
+    result = db.execute(text(query)).fetchall()
+    return {"users": [dict(r) for r in result]}`,
+    vulnerabilityDescription:
+      "Direct string interpolation into raw SQL commands enables attackers to inject SQL syntax (e.g. ' OR '1'='1), leading to unauthorized data exfiltration or table tampering.",
+    remediatedCode: `@app.get("/users/search")
+async def search_users(username: str, db: Session = Depends(get_db)):
+    # Remediation: Parameterized prepared statement preventing SQL injection
+    query = "SELECT id, username, email FROM users WHERE username = :uname"
+    result = db.execute(text(query), {"uname": username}).fetchall()
+    return {"users": [dict(r) for r in result]}`,
+    diffPatch: `@@ -2,4 +2,4 @@
+ async def search_users(username: str, db: Session = Depends(get_db)):
+-    query = f"SELECT id, username, email FROM users WHERE username = '{username}'"
+-    result = db.execute(text(query)).fetchall()
++    query = "SELECT id, username, email FROM users WHERE username = :uname"
++    result = db.execute(text(query), {"uname": username}).fetchall()
+     return {"users": [dict(r) for r in result]}`,
+    explanation:
+      "Replaced dangerous f-string formatting with parameterized query variables (`:uname`). The database engine now treats input strictly as literal data rather than executable SQL syntax.",
+  },
+  {
+    id: "buffer-overflow",
+    title: "Out-of-Bounds Buffer Access (C++)",
+    language: "C++",
+    severity: "HIGH",
+    cwe: "CWE-125: Out-of-bounds Read",
+    code: `void processTelemetryBuffer(const std::vector<int>& rawTelemetry) {
+    int bufferSize = rawTelemetry.size();
+    // Vulnerability: '<=' causes off-by-one out-of-bounds index access
+    for (int i = 0; i <= bufferSize; ++i) {
+        int reading = rawTelemetry[i];
+        transmitMetric(reading);
+    }
+}`,
+    vulnerabilityDescription:
+      "Loop condition 'i <= bufferSize' attempts to access rawTelemetry[bufferSize], which lies outside the allocated bounds of the std::vector, triggering memory corruption or segmentation faults.",
+    remediatedCode: `void processTelemetryBuffer(const std::vector<int>& rawTelemetry) {
+    // Remediation: Safe boundary iteration using standard size_t
+    for (size_t i = 0; i < rawTelemetry.size(); ++i) {
+        int reading = rawTelemetry[i];
+        transmitMetric(reading);
+    }
+}`,
+    diffPatch: `@@ -2,3 +2,3 @@
+ void processTelemetryBuffer(const std::vector<int>& rawTelemetry) {
+-    for (int i = 0; i <= bufferSize; ++i) {
++    for (size_t i = 0; i < rawTelemetry.size(); ++i) {
+         int reading = rawTelemetry[i];`,
+    explanation:
+      "Replaced `<=` with `<` and utilized `size_t` matching the vector size type. This guarantees zero undefined memory reads and enforces memory safety.",
+  },
+  {
+    id: "resource-leak",
+    title: "Async Socket / HTTP Connection Leak (Python)",
+    language: "Python",
+    severity: "MEDIUM",
+    cwe: "CWE-404: Improper Resource Shutdown",
+    code: `@app.post("/triage/scan")
+async def trigger_triage(repo_url: str):
+    # Vulnerability: Async client opened without context manager lifecycle
+    client = httpx.AsyncClient(timeout=10.0)
+    response = await client.get(f"{repo_url}/tarball/main")
+    data = response.json()
+    return {"status": "ok", "payload": data}`,
+    vulnerabilityDescription:
+      "If response.json() raises a decoding error or times out, the underlying HTTP client connection is never cleanly closed, causing socket file descriptor exhaustion under load.",
+    remediatedCode: `@app.post("/triage/scan")
+async def trigger_triage(repo_url: str):
+    # Remediation: Deterministic async context manager guarantees socket closure
+    async with httpx.AsyncClient(timeout=10.0) as client:
+        response = await client.get(f"{repo_url}/tarball/main")
+        response.raise_for_status()
+        data = response.json()
+    return {"status": "ok", "payload": data}`,
+    diffPatch: `@@ -2,5 +2,6 @@
+ async def trigger_triage(repo_url: str):
+-    client = httpx.AsyncClient(timeout=10.0)
+-    response = await client.get(f"{repo_url}/tarball/main")
+-    data = response.json()
++    async with httpx.AsyncClient(timeout=10.0) as client:
++        response = await client.get(f"{repo_url}/tarball/main")
++        response.raise_for_status()
++        data = response.json()
+     return {"status": "ok", "payload": data}`,
+    explanation:
+      "Encapsulated client execution within an `async with` block. Sockets and pool workers are deterministically released even if unexpected HTTP or JSON parse exceptions occur.",
+  },
+  {
+    id: "hardcoded-secret",
+    title: "Hardcoded Cryptographic Secret Key (Python)",
+    language: "Python",
+    severity: "CRITICAL",
+    cwe: "CWE-798: Hard-coded Credentials",
+    code: `# Vulnerability: Raw JWT signing secret hardcoded in source repository
+JWT_SECRET_KEY = "production_super_secret_disha_key_2026!"
+ALGORITHM = "HS256"
+
+def create_access_token(data: dict):
+    return jwt.encode(data, JWT_SECRET_KEY, algorithm=ALGORITHM)`,
+    vulnerabilityDescription:
+      "Hardcoding secret credentials in source files exposes authentication tokens to anybody with repository read access, risking impersonation and compromise.",
+    remediatedCode: `# Remediation: Isolated environment variable configuration with startup guard
+import os
+
+JWT_SECRET_KEY = os.environ.get("JWT_SECRET_KEY")
+if not JWT_SECRET_KEY:
+    raise RuntimeError("JWT_SECRET_KEY environment variable is not configured.")
+ALGORITHM = "HS256"
+
+def create_access_token(data: dict):
+    return jwt.encode(data, JWT_SECRET_KEY, algorithm=ALGORITHM)`,
+    diffPatch: `@@ -1,3 +1,6 @@
+-JWT_SECRET_KEY = "production_super_secret_disha_key_2026!"
++import os
++JWT_SECRET_KEY = os.environ.get("JWT_SECRET_KEY")
++if not JWT_SECRET_KEY:
++    raise RuntimeError("JWT_SECRET_KEY environment variable is not configured.")
+ ALGORITHM = "HS256"`,
+    explanation:
+      "Extracted sensitive secret into runtime environment variables with an explicit configuration guard, adhering to 12-Factor App security standards.",
+  },
+];
+
+export const INTERVIEW_QUESTIONS: InterviewQuestion[] = [
+  {
+    id: "q-intro",
+    category: "Behavioral",
+    question: "Tell me about yourself in 60 seconds.",
+    timeEstimate: "1 min read",
+    star: {
+      situation:
+        "I am a 3rd-year Computer Science and Engineering student at Raj Kumar Goel Institute of Technology, Ghaziabad, maintaining an 8.8 / 10 CGPA.",
+      task:
+        "My passion lies in backend system architectures, applied AI (RAG, AST diagnostics), and high-throughput real-time web services.",
+      action:
+        "I've solved 311+ problems on LeetCode with strong algorithmic rigor across Dynamic Programming, Graphs, and Trees. I cleared the internal campus screening for Smart India Hackathon (SIH 2026) and am actively preparing for Google Summer of Code (GSoC 2027) with The Honeynet Project. I've designed and built RepoMedic AI and real-time hackathon telemetry infrastructure.",
+      result:
+        "I combine algorithmic fundamentals with hands-on full-stack execution, and I am eager to contribute to high-impact production systems in summer internships.",
+    },
+    keyTakeaway:
+      "Demonstrates high agency, clear academic track record, competitive coding maturity, and proactive open-source preparation.",
+  },
+  {
+    id: "q-sih",
+    category: "Technical & System Design",
+    question: "What was your biggest engineering challenge during Smart India Hackathon (SIH 2026)?",
+    timeEstimate: "2 min read",
+    star: {
+      situation:
+        "During our campus qualification round for SIH 2026, we developed an automated competition telemetry platform deployed under high concurrency.",
+      task:
+        "Multiple evaluators were submitting simultaneous rubric scores for top teams, causing database race conditions, phantom reads, and desynchronized leaderboards.",
+      action:
+        "I re-architected our transaction layer using PostgreSQL pessimistic row-level locks ('SELECT FOR UPDATE') during score aggregation and switched our client communication from 2-second HTTP polling to lightweight WebSocket state deltas.",
+      result:
+        "Eliminated race conditions completely across 100+ concurrent team updates with sub-100ms end-to-end telemetry propagation, helping our team clear the internal qualification stage.",
+    },
+    keyTakeaway:
+      "Exhibits deep understanding of ACID transaction isolation, concurrency locking under pressure, and WebSocket optimization.",
+  },
+  {
+    id: "q-architecture",
+    category: "Technical & System Design",
+    question: "Why did you choose FastAPI and WebSockets over standard REST polling?",
+    timeEstimate: "2 min read",
+    star: {
+      situation:
+        "In building our live leaderboard and RepoMedic diagnostic endpoints, responsiveness and low server overhead were critical requirements.",
+      task:
+        "Traditional polling overloaded thread pools and generated excessive network egress with redundant JSON payloads when scores hadn't changed.",
+      action:
+        "I benchmarked FastAPI's asynchronous ASGI architecture against synchronous frameworks and paired it with full-duplex WebSocket connections carrying compact delta diffs.",
+      result:
+        "FastAPI reduced server memory footprint by ~40%, while persistent WebSockets slashed network payload transfers by 82% with sub-100ms broadcast latency.",
+    },
+    keyTakeaway:
+      "Shows data-driven technology evaluation, asynchronous event loop mastery, and network efficiency awareness.",
+  },
+  {
+    id: "q-leetcode",
+    category: "Academic & Hackathons",
+    question: "How did you approach solving 311+ LeetCode problems while maintaining an 8.8 CGPA?",
+    timeEstimate: "2 min read",
+    star: {
+      situation:
+        "Balancing rigorous university exams, lab assignments, and competitive programming requires structured deliberate practice.",
+      task:
+        "Rather than solving arbitrary problems, I needed a repeatable framework that focused on pattern internalization rather than rote memorization.",
+      action:
+        "I organized my prep into 5 core pattern pillars (Dynamic Programming, Graph Shortest Path, Trees, Binary Search Space Reduction, and Monotonic Queues). I reserved 90 minutes every morning to solve 2-3 medium/hard problems, enforcing strict time/space complexity analysis before writing code.",
+      result:
+        "Solved 311+ problems (171 Easy, 129 Medium, 11 Hard), attained global rank #495k, and consistently maintained an 8.8/10 CGPA across all semesters.",
+    },
+    keyTakeaway:
+      "Proves disciplined habit formation, deliberate practice methodology, and consistent academic excellence.",
+  },
+  {
+    id: "q-teamwork",
+    category: "Leadership & Culture",
+    question: "How do you handle disagreement in code reviews or team architectural decisions?",
+    timeEstimate: "2 min read",
+    star: {
+      situation:
+        "While collaborating in team projects like SecureHealth, teammates occasionally disagreed on database schema design and authentication paradigms.",
+      task:
+        "Reach an optimal technical resolution without slowing sprint velocity or causing interpersonal tension.",
+      action:
+        "I maintain an evidence-first review culture: we avoid subjective arguments by writing quick benchmark scripts or citing official RFC documentation. Once a team consensus is formed, I practice Amazon's principle of 'Disagree and Commit' to execute with 100% focus.",
+      result:
+        "Shipped both RepoMedic AI and SecureHealth on schedule with clean code review histories and positive cross-functional rapport.",
+    },
+    keyTakeaway:
+      "Displays emotional intelligence, blameless engineering culture, and commitment to collective team success.",
+  },
+];
