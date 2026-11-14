@@ -6,6 +6,9 @@ import { Hero } from "./components/Hero";
 import { About } from "./components/About";
 import { Skills } from "./components/Skills";
 import { Projects } from "./components/Projects";
+import { CoreCsFundamentals } from "./components/CoreCsFundamentals";
+import { EngineeringDocs } from "./components/EngineeringDocs";
+import { MncRoleMatcher } from "./components/MncRoleMatcher";
 import { GitHubStats } from "./components/GitHubStats";
 import { LeetCodeStats } from "./components/LeetCodeStats";
 import { Experience } from "./components/Experience";
@@ -46,6 +49,9 @@ export default function Home() {
         <About />
         <Skills />
         <Projects />
+        <CoreCsFundamentals />
+        <EngineeringDocs />
+        <MncRoleMatcher />
         <GitHubStats />
         <LeetCodeStats />
         <Experience />
@@ -61,8 +67,9 @@ export default function Home() {
         isOpen={isCommandPaletteOpen}
         onClose={() => setIsCommandPaletteOpen(false)}
         onOpenTerminal={() => {
-          // Trigger click on floating terminal button or open
-          const cliBtn = document.querySelector('button[aria-label="Open Interactive CLI Terminal"]') as HTMLButtonElement;
+          const cliBtn = document.querySelector(
+            'button[aria-label="Open Interactive CLI Terminal"]'
+          ) as HTMLButtonElement;
           cliBtn?.click();
         }}
         onOpenRecruiter={() => setIsRecruiterModalOpen(true)}

@@ -64,17 +64,20 @@ export function InteractiveTerminal() {
         <div className="space-y-1 text-neutral-300 text-xs font-mono">
           <p className="text-neutral-400 font-semibold mb-1">Available Shell Commands:</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1">
-            <div><span className="text-amber-400 font-bold">about</span> - Display Disha&apos;s background & education</div>
-            <div><span className="text-amber-400 font-bold">skills</span> - Display technical skill matrix</div>
-            <div><span className="text-amber-400 font-bold">projects</span> - List flagship engineering projects</div>
-            <div><span className="text-amber-400 font-bold">sih</span> - View SIH 2026 qualification details</div>
-            <div><span className="text-amber-400 font-bold">gsoc</span> - View GSoC 2027 preparation status</div>
-            <div><span className="text-amber-400 font-bold">leetcode</span> - Show algorithmic stats (311+ solved)</div>
-            <div><span className="text-amber-400 font-bold">contact</span> - Direct phone, email, and socials</div>
+            <div><span className="text-amber-400 font-bold">about</span> - Background & education</div>
+            <div><span className="text-amber-400 font-bold">skills</span> - Technical skill matrix</div>
+            <div><span className="text-amber-400 font-bold">projects</span> - Flagship engineering projects</div>
+            <div><span className="text-amber-400 font-bold">dsa</span> - Algorithmic patterns & complexity</div>
+            <div><span className="text-amber-400 font-bold">docs</span> - System design RFCs & memos</div>
+            <div><span className="text-amber-400 font-bold">mnc</span> - Top MNC role alignment fit</div>
+            <div><span className="text-amber-400 font-bold">sih</span> - SIH 2026 qualification</div>
+            <div><span className="text-amber-400 font-bold">gsoc</span> - GSoC 2027 preparation plan</div>
+            <div><span className="text-amber-400 font-bold">leetcode</span> - Algorithmic stats (311+ solved)</div>
+            <div><span className="text-amber-400 font-bold">contact</span> - Phone, email, and socials</div>
             <div><span className="text-amber-400 font-bold">resume</span> - Download official resume PDF</div>
             <div><span className="text-amber-400 font-bold">clear</span> - Clear terminal buffer</div>
-            <div><span className="text-emerald-400 font-bold">sudo hire</span> - Trigger accelerated interview invitation</div>
-            <div><span className="text-neutral-400 font-bold">exit</span> - Close the terminal session</div>
+            <div><span className="text-emerald-400 font-bold">sudo hire</span> - Accelerated interview invite</div>
+            <div><span className="text-neutral-400 font-bold">exit</span> - Close terminal</div>
           </div>
         </div>
       );
@@ -131,6 +134,35 @@ export function InteractiveTerminal() {
           <p>Total Solved: <span className="text-emerald-400 font-bold">311+ Problems</span></p>
           <p>Breakdown: 171 Easy | 129 Medium | 11 Hard</p>
           <p>Global Rank: Top 500k worldwide</p>
+        </div>
+      );
+    } else if (lower === "dsa") {
+      output = (
+        <div className="space-y-1.5 text-xs text-neutral-300 font-mono">
+          <p className="text-amber-400 font-bold">DSA Pattern Breakdown (311+ LeetCode Solved):</p>
+          <p>• Dynamic Programming (48+ Solved) - Knapsack, LCS, Coin Change [O(N)/O(N·W)]</p>
+          <p>• Graph Algorithms (42+ Solved) - Dijkstra, Kahn&apos;s Topo Sort, DSU [O(V+E)]</p>
+          <p>• Trees & BST (65+ Solved) - LCA, Level Order, Diameter, Invariants [O(N)]</p>
+          <p>• Two Pointers & Monotonic Deque (54+ Solved) - 3Sum, Sliding Window Max [O(N)]</p>
+          <p>• Binary Search Space Reduction (38+ Solved) - Search on Answer [O(log N)]</p>
+        </div>
+      );
+    } else if (lower === "docs") {
+      output = (
+        <div className="space-y-1.5 text-xs text-neutral-300 font-mono">
+          <p className="text-blue-400 font-bold">Engineering Design Documents & RFCs:</p>
+          <p>1. High-Throughput Scoring: WebSocket Telemetry & PostgreSQL Row Locks</p>
+          <p>2. Reducing LLM Hallucinations: AST Tree Pruning in Code Triage</p>
+          <p>3. Zero-Leakage Telehealth Architecture: Schema-Partitioned RBAC</p>
+        </div>
+      );
+    } else if (lower === "mnc") {
+      output = (
+        <div className="space-y-1.5 text-xs text-neutral-300 font-mono">
+          <p className="text-emerald-400 font-bold">Top MNC Role Alignment:</p>
+          <p>• SDE Intern - Backend (96% Match) -&gt; Target: Google, Amazon, Microsoft, Uber</p>
+          <p>• Full-Stack SDE Intern (94% Match) -&gt; Target: Atlassian, Adobe, Cisco</p>
+          <p>• Applied AI / ML Intern (92% Match) -&gt; Target: Google, Microsoft, AI Labs</p>
         </div>
       );
     } else if (lower === "contact") {
