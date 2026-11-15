@@ -1,8 +1,8 @@
 "use client";
 
-import { ACHIEVEMENTS } from "@/lib/data";
+import { ACHIEVEMENTS, VERIFIED_CREDENTIALS } from "@/lib/data";
 import { Reveal } from "./Reveal";
-import { Award, ShieldCheck, Trophy, Sparkles } from "lucide-react";
+import { Award, ShieldCheck, Trophy, Sparkles, ExternalLink, CheckCircle2 } from "lucide-react";
 import { GsocRoadmap } from "./GsocRoadmap";
 
 export function Achievements() {
@@ -72,6 +72,84 @@ export function Achievements() {
             </Reveal>
           ))}
         </div>
+
+        {/* Verified Technical Badges & Certifications Grid */}
+        <Reveal delay={0.2}>
+          <div className="mt-12">
+            <div className="flex items-center justify-between mb-6">
+              <div>
+                <h3 className="text-xl font-bold text-zinc-900 dark:text-[#FAFAFA]">
+                  Verified Technical Credentials & Badges
+                </h3>
+                <p className="text-xs text-zinc-500 dark:text-zinc-400 font-mono mt-0.5">
+                  Industry skill credentials with official IDs and verified domains
+                </p>
+              </div>
+              <span className="hidden sm:inline-block text-xs font-mono text-emerald-500 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">
+                100% Authenticated
+              </span>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {VERIFIED_CREDENTIALS.map((cred) => (
+                <div
+                  key={cred.id}
+                  className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-[#18181B] flex flex-col justify-between hover:border-zinc-300 dark:hover:border-[#8B5CF6]/40 transition-all"
+                >
+                  <div>
+                    <div className="flex items-center justify-between gap-2 mb-2">
+                      <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-zinc-100 dark:bg-[#09090B] text-[#8B5CF6] dark:text-[#C084FC] font-semibold">
+                        {cred.badgeType} Credential
+                      </span>
+                      {cred.credentialId && (
+                        <span className="text-[10px] font-mono text-zinc-400 truncate">
+                          ID: {cred.credentialId}
+                        </span>
+                      )}
+                    </div>
+
+                    <h4 className="font-bold text-xs sm:text-sm text-zinc-900 dark:text-[#FAFAFA] leading-snug">
+                      {cred.title}
+                    </h4>
+
+                    <div className="text-[11px] text-zinc-500 dark:text-zinc-400 font-mono mt-1">
+                      {cred.issuer} • {cred.issueDate}
+                    </div>
+
+                    <div className="mt-3 flex flex-wrap gap-1">
+                      {cred.skills.map((skill) => (
+                        <span
+                          key={skill}
+                          className="px-1.5 py-0.5 rounded text-[10px] font-mono bg-zinc-50 dark:bg-[#09090B] text-zinc-600 dark:text-zinc-300 border border-zinc-200/60 dark:border-zinc-800"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="mt-4 pt-3 border-t border-zinc-100 dark:border-zinc-800 flex items-center justify-between text-[11px] font-mono">
+                    <span className="text-emerald-500 flex items-center gap-1">
+                      <CheckCircle2 className="w-3 h-3" />
+                      Verified
+                    </span>
+                    {cred.verificationUrl && (
+                      <a
+                        href={cred.verificationUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-zinc-500 hover:text-[#8B5CF6] dark:hover:text-[#C084FC] flex items-center gap-1 transition-colors"
+                      >
+                        <span>Inspect</span>
+                        <ExternalLink className="w-3 h-3" />
+                      </a>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Reveal>
 
         {/* GSoC 2027 Interactive Milestone Roadmap */}
         <Reveal delay={0.3}>

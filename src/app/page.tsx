@@ -9,12 +9,14 @@ import { Projects } from "./components/Projects";
 import { RepoMedicSandbox } from "./components/RepoMedicSandbox";
 import { CoreCsFundamentals } from "./components/CoreCsFundamentals";
 import { EngineeringDocs } from "./components/EngineeringDocs";
+import { SystemBenchmark } from "./components/SystemBenchmark";
 import { MncRoleMatcher } from "./components/MncRoleMatcher";
 import { InterviewSimulator } from "./components/InterviewSimulator";
 import { GitHubStats } from "./components/GitHubStats";
 import { LeetCodeStats } from "./components/LeetCodeStats";
 import { Experience } from "./components/Experience";
 import { Achievements } from "./components/Achievements";
+import { Endorsements } from "./components/Endorsements";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import { CommandPalette } from "./components/CommandPalette";
@@ -54,12 +56,14 @@ export default function Home() {
         <RepoMedicSandbox />
         <CoreCsFundamentals />
         <EngineeringDocs />
+        <SystemBenchmark />
         <MncRoleMatcher />
         <InterviewSimulator />
         <GitHubStats />
         <LeetCodeStats />
         <Experience />
         <Achievements />
+        <Endorsements />
         <Contact />
       </main>
 

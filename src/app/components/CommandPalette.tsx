@@ -211,6 +211,14 @@ export function CommandPalette({
       onSelect: () => scrollToSection("design-docs"),
     },
     {
+      id: "nav-benchmarks",
+      category: "Developer Tools",
+      title: "Distributed Systems Benchmark & Latency Profiler",
+      subtitle: "Interactive telemetry: WebSockets vs Polling & DB row locks",
+      icon: <Zap className="w-4 h-4 text-[#C084FC]" />,
+      onSelect: () => scrollToSection("system-benchmarks"),
+    },
+    {
       id: "nav-mnc",
       category: "Navigation",
       title: "Top MNC Role Alignment Matrix",
@@ -254,9 +262,17 @@ export function CommandPalette({
       id: "nav-achievements",
       category: "Navigation",
       title: "Achievements & GSoC 2027 Roadmap",
-      subtitle: "SIH 2026 Cleared, GSoC preparation timeline",
+      subtitle: "SIH 2026 Cleared, GSoC preparation timeline, verified badges",
       icon: <Code2 className="w-4 h-4 text-neutral-400" />,
       onSelect: () => scrollToSection("achievements"),
+    },
+    {
+      id: "nav-endorsements",
+      category: "Recruiter Actions",
+      title: "Peer & Faculty Endorsements",
+      subtitle: "Testimonials from RKGIT professors & hackathon co-developers",
+      icon: <Sparkles className="w-4 h-4 text-emerald-400" />,
+      onSelect: () => scrollToSection("endorsements"),
     },
     {
       id: "nav-contact",

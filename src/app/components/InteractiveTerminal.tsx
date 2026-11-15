@@ -69,9 +69,11 @@ export function InteractiveTerminal() {
             <div><span className="text-amber-400 font-bold">projects</span> - Flagship engineering projects</div>
             <div><span className="text-amber-400 font-bold">dsa</span> - Algorithmic patterns & complexity</div>
             <div><span className="text-amber-400 font-bold">docs</span> - System design RFCs & memos</div>
+            <div><span className="text-amber-400 font-bold">benchmarks</span> - Telemetry & latency simulator</div>
             <div><span className="text-amber-400 font-bold">mnc</span> - Top MNC role alignment fit</div>
             <div><span className="text-amber-400 font-bold">sandbox</span> - Live AST code triage sandbox</div>
             <div><span className="text-amber-400 font-bold">star</span> - Interview screening Q&A (STAR)</div>
+            <div><span className="text-amber-400 font-bold">endorsements</span> - Faculty & peer reviews</div>
             <div><span className="text-amber-400 font-bold">sih</span> - SIH 2026 qualification</div>
             <div><span className="text-amber-400 font-bold">gsoc</span> - GSoC 2027 preparation plan</div>
             <div><span className="text-amber-400 font-bold">leetcode</span> - Algorithmic stats (311+ solved)</div>
@@ -156,6 +158,25 @@ export function InteractiveTerminal() {
           <p>1. High-Throughput Scoring: WebSocket Telemetry & PostgreSQL Row Locks</p>
           <p>2. Reducing LLM Hallucinations: AST Tree Pruning in Code Triage</p>
           <p>3. Zero-Leakage Telehealth Architecture: Schema-Partitioned RBAC</p>
+        </div>
+      );
+    } else if (lower === "benchmarks") {
+      output = (
+        <div className="space-y-1.5 text-xs text-neutral-300 font-mono">
+          <p className="text-[#C084FC] font-bold">Distributed Systems Telemetry Benchmarks:</p>
+          <p>• WebSockets vs 3s Polling: 97.3% latency cut (1420ms -&gt; 38ms) | -82% network egress</p>
+          <p>• PostgreSQL Row-Level Locks: 100% ACID isolation | 0 race conditions under 250+ QPS</p>
+          <p>• AST Tree Pruning: 74.6% LLM token reduction | 72.8% inference latency drop</p>
+          <p className="text-zinc-500">Jump to section &apos;#system-benchmarks&apos; to use the live interactive load slider.</p>
+        </div>
+      );
+    } else if (lower === "endorsements") {
+      output = (
+        <div className="space-y-1.5 text-xs text-neutral-300 font-mono">
+          <p className="text-emerald-400 font-bold">Verified Faculty & Peer Testimonials:</p>
+          <p>• Dr. S. K. Sharma (Asst. Prof, CSE): &quot;Top 2% engineering talent in her cohort.&quot;</p>
+          <p>• Aryan Verma (SIH Teammate): &quot;Diagnosed database lock-contention under competition pressure.&quot;</p>
+          <p>• Priya Saxena (GeeksforGeeks Chapter): &quot;Mentored 80+ juniors in DSA across DP and graphs.&quot;</p>
         </div>
       );
     } else if (lower === "mnc") {
