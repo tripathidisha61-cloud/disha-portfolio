@@ -3,29 +3,29 @@
 @tailwind utilities;
 
 :root {
-  --background: #fafafa;
-  --foreground: #09090b;
-  --muted: #71717a;
-  --muted-bg: #f4f4f5;
-  --border: #e4e4e7;
-  --card: #ffffff;
-  --card-foreground: #09090b;
-  --primary: #8b5cf6;
-  --accent: #c084fc;
-  --ring: #8b5cf6;
+  --background: #F8FAFC;
+  --foreground: #0F172A;
+  --muted: #64748B;
+  --muted-bg: #F1F5F9;
+  --border: #E2E8F0;
+  --card: #FFFFFF;
+  --card-foreground: #0F172A;
+  --primary: #2563EB;
+  --accent: #06B6D4;
+  --ring: #2563EB;
 }
 
 .dark {
-  --background: #09090b;
-  --foreground: #fafafa;
-  --muted: #a1a1aa;
-  --muted-bg: #121215;
-  --border: #27272a;
-  --card: #18181b;
-  --card-foreground: #fafafa;
-  --primary: #8b5cf6;
-  --accent: #c084fc;
-  --ring: #8b5cf6;
+  --background: #0B1120;
+  --foreground: #F8FAFC;
+  --muted: #94A3B8;
+  --muted-bg: #111827;
+  --border: #1E293B;
+  --card: #151F32;
+  --card-foreground: #F8FAFC;
+  --primary: #2563EB;
+  --accent: #06B6D4;
+  --ring: #2563EB;
 }
 
 * {
@@ -74,33 +74,37 @@ body {
   border-radius: 9999px;
 }
 
+::-webkit-scrollbar-thumb:hover {
+  background: #2563EB;
+}
+
 .dark ::-webkit-scrollbar-thumb {
-  background: #27272a;
+  background: #1E293B;
 }
 
 .dark ::-webkit-scrollbar-thumb:hover {
-  background: #8b5cf6;
+  background: #2563EB;
 }
 
 /* Utility subtle grid background */
 .bg-grid-subtle {
   background-size: 32px 32px;
   background-image: 
-    linear-gradient(to right, rgba(139, 92, 246, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(139, 92, 246, 0.04) 1px, transparent 1px);
+    linear-gradient(to right, rgba(37, 99, 235, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(37, 99, 235, 0.04) 1px, transparent 1px);
 }
 
 .dark .bg-grid-subtle {
   background-image: 
-    linear-gradient(to right, rgba(139, 92, 246, 0.07) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(139, 92, 246, 0.07) 1px, transparent 1px);
+    linear-gradient(to right, rgba(37, 99, 235, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(37, 99, 235, 0.08) 1px, transparent 1px);
 }
 
-/* Purple glow effects */
-.glow-purple {
-  box-shadow: 0 0 25px -5px rgba(139, 92, 246, 0.3);
+/* Royal Blue & Cyan glow effects */
+.glow-royalblue {
+  box-shadow: 0 0 25px -5px rgba(37, 99, 235, 0.25);
 }
 
-.glow-purple-accent {
-  box-shadow: 0 0 25px -5px rgba(192, 132, 252, 0.3);
+.glow-cyan-accent {
+  box-shadow: 0 0 25px -5px rgba(6, 182, 212, 0.25);
 }

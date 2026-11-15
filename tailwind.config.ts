@@ -12,21 +12,21 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        obsidian: {
-          950: "#050507",
-          900: "#09090B", // Main Black Background
-          850: "#121215",
-          800: "#18181B", // Primary Elevated Card Surface
-          700: "#27272A", // Border & Inset Lines
-          600: "#3F3F46",
+        corporate: {
+          bg: "#F8FAFC",       // Main Background (Slate-50)
+          card: "#FFFFFF",     // White Card Surfaces
+          border: "#E2E8F0",   // Slate-200 Border
+          text: "#0F172A",     // Slate-900 Main Text
+          muted: "#64748B",    // Slate-500 Muted Text
+          inset: "#F1F5F9",    // Slate-100 Inset Surface
         },
-        purpleTheme: {
-          primary: "#8B5CF6", // Vibrant Violet / Primary
-          hover: "#7C3AED",
-          accent: "#C084FC",  // Neon / Light Violet Accent
-          glow: "rgba(139, 92, 246, 0.25)",
+        royalBlue: {
+          primary: "#2563EB",  // Royal Blue (Blue-600)
+          hover: "#1D4ED8",    // Deep Royal Blue (Blue-700)
+          accent: "#06B6D4",   // Cyan-500 Accent
+          light: "#EFF6FF",    // Soft Blue-50 Tint
+          glow: "rgba(37, 99, 235, 0.20)",
         },
-        whiteText: "#FAFAFA",
       },
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "-apple-system", "sans-serif"],

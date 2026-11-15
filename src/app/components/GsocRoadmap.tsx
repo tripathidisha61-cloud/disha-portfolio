@@ -28,14 +28,14 @@ export function GsocRoadmap() {
         );
       case "In Progress":
         return (
-          <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-medium border border-[#8B5CF6]/30 bg-[#8B5CF6]/10 text-purple-600 dark:text-[#C084FC]">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#C084FC] animate-pulse" />
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-medium border border-[#2563EB]/30 bg-[#2563EB]/10 text-blue-600 dark:text-[#06B6D4]">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] dark:bg-[#06B6D4] animate-pulse" />
             In Active Progress
           </span>
         );
       case "Upcoming":
         return (
-          <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-medium border border-zinc-200 dark:border-zinc-700 bg-zinc-100/60 dark:bg-[#09090B] text-zinc-600 dark:text-zinc-400">
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-medium border border-slate-200 dark:border-slate-700 bg-slate-100/60 dark:bg-[#0B1120] text-slate-600 dark:text-slate-400">
             <CircleDashed className="w-3 h-3" />
             Upcoming Roadmap
           </span>
@@ -44,20 +44,20 @@ export function GsocRoadmap() {
   };
 
   return (
-    <div className="mt-8 p-6 sm:p-8 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-[#18181B] shadow-xs">
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-zinc-100 dark:border-zinc-800">
+    <div className="mt-8 p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#151F32] shadow-xs">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-100 dark:border-slate-800">
         <div>
           <div className="flex items-center gap-2 mb-1.5">
-            <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-medium border border-[#8B5CF6]/30 bg-[#8B5CF6]/10 text-purple-600 dark:text-[#C084FC]">
-              <GitBranch className="w-3.5 h-3.5 text-[#C084FC]" />
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-medium border border-[#2563EB]/30 bg-[#2563EB]/10 text-blue-600 dark:text-[#06B6D4]">
+              <GitBranch className="w-3.5 h-3.5 text-[#2563EB] dark:text-[#06B6D4]" />
               Open Source Initiative
             </span>
-            <span className="font-mono text-xs text-zinc-400">• The Honeynet Project</span>
+            <span className="font-mono text-xs text-slate-400">• The Honeynet Project</span>
           </div>
-          <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-zinc-900 dark:text-[#FAFAFA]">
+          <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-[#0F172A] dark:text-[#F8FAFC]">
             Google Summer of Code (GSoC 2027) Roadmap
           </h3>
-          <p className="mt-1 text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 max-w-2xl">
+          <p className="mt-1 text-xs sm:text-sm text-slate-600 dark:text-slate-400 max-w-2xl">
             Structured 4-stage preparation trajectory focusing on distributed honeypot telemetry, sensor data clustering, and open-source threat intelligence.
           </p>
         </div>
@@ -66,10 +66,10 @@ export function GsocRoadmap() {
           href="https://github.com/tripathidisha61-cloud"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-medium border border-zinc-200 dark:border-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-800/80 text-zinc-700 dark:text-zinc-300 transition-colors shrink-0 self-start sm:self-auto"
+          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-medium border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800/80 text-slate-700 dark:text-slate-300 transition-colors shrink-0 self-start sm:self-auto"
         >
           <span>Track Activity</span>
-          <ExternalLink className="w-3 h-3 text-zinc-400 dark:text-[#C084FC]" />
+          <ExternalLink className="w-3 h-3 text-slate-400 dark:text-[#06B6D4]" />
         </a>
       </div>
 
@@ -84,39 +84,39 @@ export function GsocRoadmap() {
               key={item.phase}
               className={`p-5 rounded-xl border transition-all ${
                 isActive
-                  ? "border-[#8B5CF6]/60 bg-purple-500/[0.04] dark:bg-[#09090B] dark:border-[#8B5CF6] shadow-sm"
-                  : "border-zinc-200 dark:border-zinc-800/80 bg-zinc-50/50 dark:bg-[#09090B] hover:border-zinc-300 dark:hover:border-zinc-700"
+                  ? "border-[#2563EB]/60 bg-blue-500/[0.04] dark:bg-[#0B1120] dark:border-[#2563EB] shadow-sm"
+                  : "border-slate-200 dark:border-slate-800/80 bg-slate-50/50 dark:bg-[#0B1120] hover:border-slate-300 dark:hover:border-slate-700"
               }`}
             >
               <div className="flex items-start justify-between gap-3">
                 <div>
                   <div className="flex items-center gap-2 mb-1.5">
-                    <span className="font-mono text-xs font-semibold text-zinc-900 dark:text-[#FAFAFA]">
+                    <span className="font-mono text-xs font-semibold text-[#0F172A] dark:text-[#F8FAFC]">
                       {item.phase}
                     </span>
-                    <span className="text-xs text-zinc-400 font-mono">
+                    <span className="text-xs text-slate-400 font-mono">
                       // {item.period}
                     </span>
                   </div>
-                  <h4 className="text-sm sm:text-base font-bold text-zinc-900 dark:text-[#FAFAFA] leading-snug">
+                  <h4 className="text-sm sm:base font-bold text-[#0F172A] dark:text-[#F8FAFC] leading-snug">
                     {item.title}
                   </h4>
                 </div>
                 {getStatusBadge(item.status)}
               </div>
 
-              <p className="mt-2.5 text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed">
+              <p className="mt-2.5 text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
                 {item.description}
               </p>
 
               {/* Expandable Deliverables */}
-              <div className="mt-4 pt-3 border-t border-zinc-100 dark:border-zinc-800/80">
+              <div className="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800/80">
                 <button
                   type="button"
                   onClick={() =>
                     setExpandedPhase(isExpanded ? "" : item.phase)
                   }
-                  className="flex items-center justify-between w-full text-xs font-mono text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-[#C084FC] transition-colors"
+                  className="flex items-center justify-between w-full text-xs font-mono text-slate-500 dark:text-slate-400 hover:text-[#2563EB] dark:hover:text-[#06B6D4] transition-colors"
                 >
                   <span>
                     {isExpanded ? "Hide Specific Objectives" : "View Specific Objectives"}
@@ -140,9 +140,9 @@ export function GsocRoadmap() {
                       {item.details.map((detail, idx) => (
                         <li
                           key={idx}
-                          className="text-xs text-zinc-600 dark:text-zinc-300 flex items-start gap-2"
+                          className="text-xs text-slate-600 dark:text-slate-300 flex items-start gap-2"
                         >
-                          <span className="w-1.5 h-1.5 rounded-full bg-[#C084FC] mt-1.5 shrink-0" />
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] dark:bg-[#06B6D4] mt-1.5 shrink-0" />
                           <span>{detail}</span>
                         </li>
                       ))}

@@ -57,21 +57,21 @@ export function GitHubStats() {
   };
 
   return (
-    <section id="github" className="py-20 md:py-28 border-t border-zinc-200/60 dark:border-zinc-800/80">
+    <section id="github" className="py-20 md:py-28 border-t border-slate-200/60 dark:border-slate-800/80">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
           <Reveal>
             <div className="flex items-center gap-2 mb-3">
-              <span className="font-mono text-xs uppercase tracking-wider text-zinc-500 dark:text-[#C084FC]">
+              <span className="font-mono text-xs uppercase tracking-wider text-[#2563EB] dark:text-[#06B6D4]">
                 04 // Open Source
               </span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-zinc-900 dark:text-[#FAFAFA]">
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#0F172A] dark:text-[#F8FAFC]">
               GitHub Repositories
             </h2>
-            <p className="mt-3 text-base text-zinc-600 dark:text-zinc-400 max-w-2xl">
+            <p className="mt-3 text-base text-slate-600 dark:text-slate-400 max-w-2xl">
               Live repositories fetched directly from GitHub for{" "}
-              <code className="text-xs px-2 py-1 rounded bg-zinc-100 dark:bg-[#18181B] font-mono text-zinc-800 dark:text-[#C084FC]">
+              <code className="text-xs px-2 py-1 rounded bg-slate-100 dark:bg-[#151F32] font-mono text-slate-800 dark:text-[#06B6D4]">
                 tripathidisha61-cloud
               </code>
               .
@@ -84,7 +84,7 @@ export function GitHubStats() {
                 type="button"
                 onClick={fetchRepos}
                 disabled={loading}
-                className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-medium border border-zinc-200 dark:border-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-700 dark:text-zinc-300 transition-colors disabled:opacity-50"
+                className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-medium border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 transition-colors disabled:opacity-50"
                 aria-label="Refresh repositories"
               >
                 <RefreshCw className={`w-3.5 h-3.5 ${loading ? "animate-spin" : ""}`} />
@@ -95,7 +95,7 @@ export function GitHubStats() {
                 href="https://github.com/tripathidisha61-cloud"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-semibold bg-zinc-900 text-white dark:bg-[#8B5CF6] dark:text-white hover:bg-zinc-800 dark:hover:bg-[#7C3AED] transition-colors shadow-xs"
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-semibold bg-[#2563EB] text-white hover:bg-[#1D4ED8] transition-colors shadow-xs"
               >
                 <Github className="w-3.5 h-3.5" />
                 <span>View Profile</span>
@@ -108,28 +108,28 @@ export function GitHubStats() {
         {/* Profile metadata strip if loaded */}
         {profile && (
           <Reveal delay={0.15}>
-            <div className="mt-8 p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-[#18181B] flex flex-wrap items-center justify-between gap-4">
+            <div className="mt-8 p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#151F32] flex flex-wrap items-center justify-between gap-4">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full border border-zinc-300 dark:border-zinc-700 bg-zinc-200 dark:bg-[#09090B] flex items-center justify-center font-bold text-sm text-zinc-700 dark:text-[#C084FC]">
+                <div className="w-10 h-10 rounded-full border border-blue-200 dark:border-slate-700 bg-blue-50 dark:bg-[#0B1120] flex items-center justify-center font-bold text-sm text-[#2563EB] dark:text-[#06B6D4]">
                   DT
                 </div>
                 <div>
-                  <div className="text-sm font-semibold text-zinc-900 dark:text-[#FAFAFA]">
+                  <div className="text-sm font-semibold text-[#0F172A] dark:text-[#F8FAFC]">
                     {profile.name || "Disha Tripathi"}
                   </div>
-                  <div className="text-xs text-zinc-500 dark:text-zinc-400 font-mono">@{profile.login}</div>
+                  <div className="text-xs text-slate-500 dark:text-slate-400 font-mono">@{profile.login}</div>
                 </div>
               </div>
 
-              <div className="flex items-center gap-6 text-xs text-zinc-600 dark:text-zinc-400 font-mono">
+              <div className="flex items-center gap-6 text-xs text-slate-600 dark:text-slate-400 font-mono">
                 <div>
-                  <span className="font-semibold text-zinc-900 dark:text-[#C084FC]">
+                  <span className="font-semibold text-[#2563EB] dark:text-[#06B6D4]">
                     {profile.public_repos}
                   </span>{" "}
                   Repos
                 </div>
                 <div>
-                  <span className="font-semibold text-zinc-900 dark:text-[#C084FC]">
+                  <span className="font-semibold text-[#2563EB] dark:text-[#06B6D4]">
                     {profile.followers}
                   </span>{" "}
                   Followers
@@ -145,14 +145,14 @@ export function GitHubStats() {
             {[1, 2, 3, 4, 5, 6].map((i) => (
               <div
                 key={i}
-                className="h-44 p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-[#18181B] animate-pulse flex flex-col justify-between"
+                className="h-44 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#151F32] animate-pulse flex flex-col justify-between"
               >
                 <div className="space-y-3">
-                  <div className="h-4 bg-zinc-200 dark:bg-zinc-800 rounded w-3/4" />
-                  <div className="h-3 bg-zinc-100 dark:bg-zinc-800/60 rounded w-full" />
-                  <div className="h-3 bg-zinc-100 dark:bg-zinc-800/60 rounded w-2/3" />
+                  <div className="h-4 bg-slate-200 dark:bg-slate-800 rounded w-3/4" />
+                  <div className="h-3 bg-slate-100 dark:bg-slate-800/60 rounded w-full" />
+                  <div className="h-3 bg-slate-100 dark:bg-slate-800/60 rounded w-2/3" />
                 </div>
-                <div className="h-4 bg-zinc-100 dark:bg-zinc-800/80 rounded w-1/3" />
+                <div className="h-4 bg-slate-100 dark:bg-slate-800/80 rounded w-1/3" />
               </div>
             ))}
           </div>
@@ -160,19 +160,19 @@ export function GitHubStats() {
 
         {/* Error state */}
         {!loading && error && (
-          <div className="mt-8 p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-[#18181B] text-center">
-            <AlertCircle className="w-8 h-8 text-zinc-400 dark:text-[#C084FC] mx-auto mb-3" />
-            <h3 className="text-sm font-semibold text-zinc-900 dark:text-[#FAFAFA]">
+          <div className="mt-8 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#151F32] text-center">
+            <AlertCircle className="w-8 h-8 text-slate-400 dark:text-[#06B6D4] mx-auto mb-3" />
+            <h3 className="text-sm font-semibold text-[#0F172A] dark:text-[#F8FAFC]">
               Unable to sync live GitHub repositories
             </h3>
-            <p className="mt-1 text-xs text-zinc-500 dark:text-zinc-400 max-w-md mx-auto">
+            <p className="mt-1 text-xs text-slate-500 dark:text-slate-400 max-w-md mx-auto">
               {error}
             </p>
             <div className="mt-4 flex items-center justify-center gap-3">
               <button
                 type="button"
                 onClick={fetchRepos}
-                className="px-4 py-2 rounded-lg text-xs font-medium border border-zinc-200 dark:border-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors text-zinc-800 dark:text-zinc-200"
+                className="px-4 py-2 rounded-lg text-xs font-medium border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors text-slate-800 dark:text-slate-200"
               >
                 Retry Request
               </button>
@@ -180,7 +180,7 @@ export function GitHubStats() {
                 href="https://github.com/tripathidisha61-cloud"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2 rounded-lg text-xs font-semibold bg-zinc-900 text-white dark:bg-[#8B5CF6] dark:text-white"
+                className="px-4 py-2 rounded-lg text-xs font-semibold bg-[#2563EB] text-white hover:bg-[#1D4ED8]"
               >
                 Open GitHub Profile
               </a>
@@ -190,12 +190,12 @@ export function GitHubStats() {
 
         {/* Empty state */}
         {!loading && !error && repos.length === 0 && (
-          <div className="mt-8 p-8 rounded-2xl border border-dashed border-zinc-300 dark:border-zinc-700 text-center">
-            <BookOpen className="w-8 h-8 text-zinc-400 dark:text-[#C084FC] mx-auto mb-3" />
-            <p className="text-sm font-medium text-zinc-800 dark:text-zinc-200">
+          <div className="mt-8 p-8 rounded-2xl border border-dashed border-slate-300 dark:border-slate-700 text-center">
+            <BookOpen className="w-8 h-8 text-slate-400 dark:text-[#06B6D4] mx-auto mb-3" />
+            <p className="text-sm font-medium text-slate-800 dark:text-slate-200">
               No public repositories found.
             </p>
-            <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">
+            <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
               New projects will appear here as soon as they are made public on GitHub.
             </p>
           </div>
@@ -210,20 +210,20 @@ export function GitHubStats() {
                   href={repo.html_url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex flex-col justify-between h-48 p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-[#18181B] hover:border-zinc-300 dark:hover:border-[#8B5CF6]/50 shadow-xs hover:shadow-lg dark:hover:shadow-[#8B5CF6]/10 transition-all"
+                  className="group flex flex-col justify-between h-48 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#151F32] hover:border-slate-300 dark:hover:border-[#2563EB]/50 shadow-xs hover:shadow-lg dark:hover:shadow-[#2563EB]/10 transition-all"
                 >
                   <div>
                     <div className="flex items-start justify-between gap-2">
                       <div className="flex items-center gap-2">
-                        <Code2 className="w-4 h-4 text-zinc-500 dark:text-[#C084FC] flex-shrink-0" />
-                        <h3 className="font-semibold text-sm text-zinc-900 dark:text-[#FAFAFA] group-hover:text-purple-600 dark:group-hover:text-[#C084FC] transition-colors truncate">
+                        <Code2 className="w-4 h-4 text-slate-500 dark:text-[#06B6D4] flex-shrink-0" />
+                        <h3 className="font-semibold text-sm text-[#0F172A] dark:text-[#F8FAFC] group-hover:text-[#2563EB] dark:group-hover:text-[#06B6D4] transition-colors truncate">
                           {repo.name}
                         </h3>
                       </div>
-                      <ArrowUpRight className="w-4 h-4 text-zinc-400 dark:text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-[#C084FC] transition-colors flex-shrink-0" />
+                      <ArrowUpRight className="w-4 h-4 text-slate-400 group-hover:text-[#2563EB] dark:group-hover:text-[#06B6D4] transition-colors flex-shrink-0" />
                     </div>
 
-                    <p className="mt-2.5 text-xs text-zinc-600 dark:text-zinc-400 line-clamp-2 leading-relaxed">
+                    <p className="mt-2.5 text-xs text-slate-600 dark:text-slate-400 line-clamp-2 leading-relaxed">
                       {repo.description || "No description provided."}
                     </p>
                   </div>

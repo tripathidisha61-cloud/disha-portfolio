@@ -215,7 +215,7 @@ export function CommandPalette({
       category: "Developer Tools",
       title: "Distributed Systems Benchmark & Latency Profiler",
       subtitle: "Interactive telemetry: WebSockets vs Polling & DB row locks",
-      icon: <Zap className="w-4 h-4 text-[#C084FC]" />,
+      icon: <Zap className="w-4 h-4 text-[#2563EB] dark:text-[#06B6D4]" />,
       onSelect: () => scrollToSection("system-benchmarks"),
     },
     {
@@ -365,11 +365,11 @@ export function CommandPalette({
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.96, y: -10 }}
           transition={{ duration: 0.18, ease: [0.16, 1, 0.3, 1] }}
-          className="relative w-full max-w-xl rounded-2xl border border-neutral-200 dark:border-zinc-800 bg-white dark:bg-[#18181B] shadow-2xl overflow-hidden z-10"
+          className="relative w-full max-w-xl rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#151F32] shadow-2xl overflow-hidden z-10"
         >
           {/* Search Input Bar */}
-          <div className="flex items-center gap-3 px-4 py-3.5 border-b border-neutral-100 dark:border-zinc-800">
-            <Search className="w-4 h-4 text-neutral-400 dark:text-[#C084FC] shrink-0" />
+          <div className="flex items-center gap-3 px-4 py-3.5 border-b border-slate-100 dark:border-slate-800">
+            <Search className="w-4 h-4 text-slate-400 dark:text-[#06B6D4] shrink-0" />
             <input
               ref={inputRef}
               type="text"
@@ -380,9 +380,9 @@ export function CommandPalette({
               }}
               onKeyDown={handleKeyDown}
               placeholder="Search sections, actions, skills, projects (or press ESC)..."
-              className="w-full bg-transparent text-sm text-neutral-900 dark:text-[#FAFAFA] placeholder:text-neutral-400 dark:placeholder:text-zinc-500 focus:outline-none"
+              className="w-full bg-transparent text-sm text-[#0F172A] dark:text-[#F8FAFC] placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none"
             />
-            <kbd className="hidden sm:inline-flex items-center gap-0.5 px-2 py-0.5 text-[10px] font-mono text-neutral-400 dark:text-zinc-400 border border-neutral-200 dark:border-zinc-700 rounded bg-neutral-50 dark:bg-[#09090B]">
+            <kbd className="hidden sm:inline-flex items-center gap-0.5 px-2 py-0.5 text-[10px] font-mono text-slate-400 dark:text-slate-400 border border-slate-200 dark:border-slate-700 rounded bg-slate-50 dark:bg-[#0B1120]">
               ESC
             </kbd>
           </div>
@@ -390,7 +390,7 @@ export function CommandPalette({
           {/* Results List */}
           <div className="max-h-[380px] overflow-y-auto p-2 space-y-1">
             {filteredItems.length === 0 ? (
-              <div className="py-8 text-center text-xs text-neutral-400 dark:text-zinc-400 font-mono">
+              <div className="py-8 text-center text-xs text-slate-400 dark:text-slate-400 font-mono">
                 No matching results found for &quot;{query}&quot;
               </div>
             ) : (
@@ -404,12 +404,12 @@ export function CommandPalette({
                     onMouseEnter={() => setSelectedIndex(idx)}
                     className={`w-full flex items-center justify-between p-3 rounded-xl text-left transition-all ${
                       isSelected
-                        ? "bg-neutral-100 dark:bg-[#8B5CF6]/20 dark:border dark:border-[#8B5CF6]/40 text-neutral-900 dark:text-[#FAFAFA]"
-                        : "text-neutral-700 dark:text-zinc-300 hover:bg-neutral-50 dark:hover:bg-[#09090B]/60"
+                        ? "bg-blue-50 dark:bg-[#2563EB]/20 border border-blue-200 dark:border-[#2563EB]/40 text-[#0F172A] dark:text-[#F8FAFC]"
+                        : "text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-[#0B1120]/60"
                     }`}
                   >
                     <div className="flex items-center gap-3 min-w-0">
-                      <div className="p-2 rounded-lg bg-neutral-100 dark:bg-[#09090B] shrink-0">
+                      <div className="p-2 rounded-lg bg-slate-100 dark:bg-[#0B1120] shrink-0">
                         {item.icon}
                       </div>
                       <div className="min-w-0 truncate">
@@ -417,7 +417,7 @@ export function CommandPalette({
                           {item.title}
                         </div>
                         {item.subtitle && (
-                          <div className="text-[11px] text-neutral-500 dark:text-zinc-400 truncate">
+                          <div className="text-[11px] text-slate-500 dark:text-slate-400 truncate">
                             {item.subtitle}
                           </div>
                         )}
@@ -425,11 +425,11 @@ export function CommandPalette({
                     </div>
 
                     <div className="flex items-center gap-2 shrink-0 ml-3">
-                      <span className="hidden sm:inline-block text-[10px] font-mono text-neutral-400 dark:text-[#C084FC] uppercase">
+                      <span className="hidden sm:inline-block text-[10px] font-mono text-slate-400 dark:text-[#06B6D4] uppercase">
                         {item.category}
                       </span>
                       {isSelected && (
-                        <ArrowRight className="w-3.5 h-3.5 text-neutral-400 dark:text-[#C084FC]" />
+                        <ArrowRight className="w-3.5 h-3.5 text-[#2563EB] dark:text-[#06B6D4]" />
                       )}
                     </div>
                   </button>
@@ -439,12 +439,12 @@ export function CommandPalette({
           </div>
 
           {/* Footer Shortcuts */}
-          <div className="px-4 py-2.5 bg-neutral-50 dark:bg-[#09090B] border-t border-neutral-100 dark:border-zinc-800/80 flex items-center justify-between text-[11px] font-mono text-neutral-400 dark:text-zinc-400">
+          <div className="px-4 py-2.5 bg-slate-50 dark:bg-[#0B1120] border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-[11px] font-mono text-slate-400 dark:text-slate-400">
             <div className="flex items-center gap-3">
               <span>↑↓ to navigate</span>
               <span>↵ to execute</span>
             </div>
-            <span className="text-[#C084FC]">Disha Tripathi Portfolio</span>
+            <span className="text-[#2563EB] dark:text-[#06B6D4]">Disha Tripathi Portfolio</span>
           </div>
         </motion.div>
       </div>
