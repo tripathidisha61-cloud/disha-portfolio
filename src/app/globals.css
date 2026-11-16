@@ -3,31 +3,31 @@
 @tailwind utilities;
 
 :root {
-  --background: #F2FBF7;
-  --foreground: #062018;
+  --background: #F8FCFC;
+  --foreground: #0A1E2F;
   --muted: #475569;
-  --muted-bg: #ECFDF5;
-  --border: #A7F3D0;
+  --muted-bg: #F0FDFA;
+  --border: #99F6E4;
   --card: #FFFFFF;
-  --card-foreground: #062018;
-  --primary: #059669;
-  --bright: #10B981;
-  --accent: #34D399;
-  --ring: #059669;
+  --card-foreground: #0A1E2F;
+  --primary: #0D9488;
+  --bright: #14B8A6;
+  --accent: #2DD4BF;
+  --ring: #0D9488;
 }
 
 .dark {
-  --background: #062018;
-  --foreground: #F0FDF4;
+  --background: #0A1E2F;
+  --foreground: #F0FDFA;
   --muted: #94A3B8;
-  --muted-bg: #0B291F;
-  --border: #1A4736;
-  --card: #0F2E23;
-  --card-foreground: #F0FDF4;
-  --primary: #059669;
-  --bright: #10B981;
-  --accent: #34D399;
-  --ring: #059669;
+  --muted-bg: #0C2338;
+  --border: #1E4265;
+  --card: #102A43;
+  --card-foreground: #F0FDFA;
+  --primary: #0D9488;
+  --bright: #14B8A6;
+  --accent: #2DD4BF;
+  --ring: #0D9488;
 }
 
 * {
@@ -61,7 +61,7 @@ body {
   }
 }
 
-/* Custom forest green scrollbar */
+/* Custom teal scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -77,36 +77,36 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #059669;
+  background: #0D9488;
 }
 
 .dark ::-webkit-scrollbar-thumb {
-  background: #1A4736;
+  background: #1E4265;
 }
 
 .dark ::-webkit-scrollbar-thumb:hover {
-  background: #34D399;
+  background: #2DD4BF;
 }
 
 /* Utility subtle grid background */
 .bg-grid-subtle {
   background-size: 32px 32px;
   background-image: 
-    linear-gradient(to right, rgba(5, 150, 105, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(5, 150, 105, 0.05) 1px, transparent 1px);
+    linear-gradient(to right, rgba(13, 148, 136, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(13, 148, 136, 0.05) 1px, transparent 1px);
 }
 
 .dark .bg-grid-subtle {
   background-image: 
-    linear-gradient(to right, rgba(16, 185, 129, 0.08) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(16, 185, 129, 0.08) 1px, transparent 1px);
+    linear-gradient(to right, rgba(20, 184, 166, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(20, 184, 166, 0.08) 1px, transparent 1px);
 }
 
-/* Forest Green & Mint glow effects */
-.glow-forest {
-  box-shadow: 0 0 25px -5px rgba(5, 150, 105, 0.35);
+/* Teal & Turquoise glow effects */
+.glow-teal {
+  box-shadow: 0 0 25px -5px rgba(13, 148, 136, 0.35);
 }
 
-.glow-mint-accent {
-  box-shadow: 0 0 25px -5px rgba(52, 211, 153, 0.35);
+.glow-aqua-accent {
+  box-shadow: 0 0 25px -5px rgba(45, 212, 191, 0.35);
 }

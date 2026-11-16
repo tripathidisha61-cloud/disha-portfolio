@@ -12,17 +12,17 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        forest: {
-          dark: "#062018",       // Dark Forest Green (Dark background, deep headings)
-          surface: "#0F2E23",    // Forest Pine Card Surface (Dark mode)
-          border: "#1A4736",     // Forest Border (Dark mode)
-          emerald: "#059669",    // Emerald Green (Brand Primary)
-          hover: "#047857",      // Deep Emerald Hover
-          mint: "#10B981",       // Mint Green (Interactive & High Visibility)
-          pale: "#34D399",       // Pale Mint Green (Badges, Accents, Glows)
-          dew: "#F2FBF7",        // Pale Green Dew Canvas (Light mode)
+        teal: {
+          navy: "#0A1E2F",       // Deep Navy (Dark background, deep headings)
+          surface: "#102A43",    // Deep Navy Card Surface (Dark mode)
+          border: "#1E4265",     // Navy Border (Dark mode)
+          primary: "#0D9488",    // Teal (Brand Primary)
+          hover: "#0F766E",      // Deep Teal Hover
+          turquoise: "#14B8A6",  // Turquoise (Interactive & High Visibility)
+          aqua: "#2DD4BF",       // Pale Aqua (Badges, Accents, Glows)
+          canvas: "#F8FCFC",     // Clean White & Pale Aqua Canvas (Light mode)
           card: "#FFFFFF",       // Pure White Surface (Light mode)
-          glow: "rgba(5, 150, 105, 0.20)",
+          glow: "rgba(13, 148, 136, 0.20)",
         },
       },
       fontFamily: {

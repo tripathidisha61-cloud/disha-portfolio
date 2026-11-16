@@ -40,7 +40,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#F2FBF7] dark:bg-[#062018] text-[#062018] dark:text-[#F0FDF4] transition-colors duration-200">
+    <div className="min-h-screen flex flex-col bg-[#F8FCFC] dark:bg-[#0A1E2F] text-[#0A1E2F] dark:text-[#F0FDFA] transition-colors duration-200">
       {/* Navigation */}
       <Navbar
         onOpenCommandPalette={() => setIsCommandPaletteOpen(true)}
