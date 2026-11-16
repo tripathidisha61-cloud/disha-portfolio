@@ -3,31 +3,31 @@
 @tailwind utilities;
 
 :root {
-  --background: #F0F7FF;
-  --foreground: #0B192C;
+  --background: #F2FBF7;
+  --foreground: #062018;
   --muted: #475569;
-  --muted-bg: #E0F2FE;
-  --border: #BAE6FD;
+  --muted-bg: #ECFDF5;
+  --border: #A7F3D0;
   --card: #FFFFFF;
-  --card-foreground: #0B192C;
-  --primary: #0284C7;
-  --bright: #0EA5E9;
-  --accent: #38BDF8;
-  --ring: #0284C7;
+  --card-foreground: #062018;
+  --primary: #059669;
+  --bright: #10B981;
+  --accent: #34D399;
+  --ring: #059669;
 }
 
 .dark {
-  --background: #0B192C;
-  --foreground: #F0F9FF;
+  --background: #062018;
+  --foreground: #F0FDF4;
   --muted: #94A3B8;
-  --muted-bg: #0D2137;
-  --border: #1E3A5F;
-  --card: #112240;
-  --card-foreground: #F0F9FF;
-  --primary: #0284C7;
-  --bright: #0EA5E9;
-  --accent: #38BDF8;
-  --ring: #0284C7;
+  --muted-bg: #0B291F;
+  --border: #1A4736;
+  --card: #0F2E23;
+  --card-foreground: #F0FDF4;
+  --primary: #059669;
+  --bright: #10B981;
+  --accent: #34D399;
+  --ring: #059669;
 }
 
 * {
@@ -61,7 +61,7 @@ body {
   }
 }
 
-/* Custom ocean scrollbar */
+/* Custom forest green scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -77,36 +77,36 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #0284C7;
+  background: #059669;
 }
 
 .dark ::-webkit-scrollbar-thumb {
-  background: #1E3A5F;
+  background: #1A4736;
 }
 
 .dark ::-webkit-scrollbar-thumb:hover {
-  background: #38BDF8;
+  background: #34D399;
 }
 
 /* Utility subtle grid background */
 .bg-grid-subtle {
   background-size: 32px 32px;
   background-image: 
-    linear-gradient(to right, rgba(2, 132, 199, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(2, 132, 199, 0.05) 1px, transparent 1px);
+    linear-gradient(to right, rgba(5, 150, 105, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(5, 150, 105, 0.05) 1px, transparent 1px);
 }
 
 .dark .bg-grid-subtle {
   background-image: 
-    linear-gradient(to right, rgba(14, 165, 233, 0.08) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(14, 165, 233, 0.08) 1px, transparent 1px);
+    linear-gradient(to right, rgba(16, 185, 129, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(16, 185, 129, 0.08) 1px, transparent 1px);
 }
 
-/* Ocean Blue & Light Cyan glow effects */
-.glow-ocean {
-  box-shadow: 0 0 25px -5px rgba(2, 132, 199, 0.35);
+/* Forest Green & Mint glow effects */
+.glow-forest {
+  box-shadow: 0 0 25px -5px rgba(5, 150, 105, 0.35);
 }
 
-.glow-cyan-accent {
-  box-shadow: 0 0 25px -5px rgba(56, 189, 248, 0.35);
+.glow-mint-accent {
+  box-shadow: 0 0 25px -5px rgba(52, 211, 153, 0.35);
 }
