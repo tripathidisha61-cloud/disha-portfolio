@@ -53,7 +53,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={onClose}
-          className="fixed inset-0 bg-[#0A1E2F]/80 backdrop-blur-sm"
+          className="fixed inset-0 bg-[#050B14]/80 backdrop-blur-sm"
         />
 
         {/* Modal Card */}
@@ -62,14 +62,14 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 16 }}
           transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#102A43] shadow-2xl p-6 sm:p-8 z-10"
+          className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0E1B33] shadow-2xl p-6 sm:p-8 z-10"
         >
           {/* Header */}
           <div className="flex items-start justify-between gap-4 pb-4 border-b border-slate-100 dark:border-slate-800">
             <div>
               <div className="flex items-center gap-2 mb-2">
-                <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-mono font-medium border border-[#0D9488]/30 bg-[#0D9488]/10 text-[#0D9488] dark:text-[#2DD4BF]">
-                  <Code2 className="w-3.5 h-3.5 text-[#0D9488]" />
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-mono font-medium border border-[#3B6FD8]/30 bg-[#3B6FD8]/10 text-[#3B6FD8] dark:text-[#8DA4C4]">
+                  <Code2 className="w-3.5 h-3.5 text-[#3B6FD8]" />
                   Engineering Deep Dive
                 </span>
                 <span
@@ -78,13 +78,13 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                       ? "border border-emerald-500/20 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400"
                       : project.devStatus === "In Development"
                       ? "border border-amber-500/20 bg-amber-500/10 text-amber-600 dark:text-amber-400"
-                      : "border border-[#0D9488]/30 bg-[#0D9488]/10 text-[#0D9488] dark:text-[#2DD4BF]"
+                      : "border border-[#3B6FD8]/30 bg-[#3B6FD8]/10 text-[#3B6FD8] dark:text-[#8DA4C4]"
                   }`}
                 >
                   {project.devStatus}
                 </span>
               </div>
-              <h3 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#0A1E2F] dark:text-[#F0FDFA]">
+              <h3 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#050B14] dark:text-[#F1F5F9]">
                 {project.title}
               </h3>
             </div>
@@ -92,7 +92,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
             <button
               type="button"
               onClick={onClose}
-              className="p-2 rounded-xl text-slate-400 hover:text-slate-900 dark:hover:text-[#F0FDFA] hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+              className="p-2 rounded-xl text-slate-400 hover:text-slate-900 dark:hover:text-[#F1F5F9] hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
               aria-label="Close modal"
             >
               <X className="w-5 h-5" />
@@ -112,15 +112,15 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
 
             {/* Architecture Flow Diagram */}
             {archSteps.length > 0 && (
-              <div className="p-4 sm:p-5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/80 dark:bg-[#0A1E2F]">
+              <div className="p-4 sm:p-5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/80 dark:bg-[#050B14]">
                 <div className="flex items-center gap-2 mb-3 text-xs font-mono uppercase tracking-wider text-slate-600 dark:text-slate-400">
-                  <Cpu className="w-4 h-4 text-[#2DD4BF]" />
+                  <Cpu className="w-4 h-4 text-[#8DA4C4]" />
                   <span>System Architecture & Dataflow Pipeline</span>
                 </div>
                 <div className="flex flex-wrap items-center gap-2">
                   {archSteps.map((step, idx) => (
                     <div key={idx} className="flex items-center gap-2">
-                      <span className="px-3 py-1.5 rounded-lg text-xs font-mono border border-slate-200 dark:border-slate-700 bg-white dark:bg-[#102A43] text-[#0D9488] dark:text-[#2DD4BF] shadow-xs">
+                      <span className="px-3 py-1.5 rounded-lg text-xs font-mono border border-slate-200 dark:border-slate-700 bg-white dark:bg-[#0E1B33] text-[#3B6FD8] dark:text-[#8DA4C4] shadow-xs">
                         {step}
                       </span>
                       {idx < archSteps.length - 1 && (
@@ -136,16 +136,16 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
             {project.highlights && project.highlights.length > 0 && (
               <div>
                 <h4 className="text-xs font-mono uppercase tracking-wider text-slate-400 mb-3 flex items-center gap-1.5">
-                  <Layers className="w-4 h-4 text-[#0D9488]" />
+                  <Layers className="w-4 h-4 text-[#3B6FD8]" />
                   <span>Key Architectural Highlights & Performance</span>
                 </h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                   {project.highlights.map((item, idx) => (
                     <div
                       key={idx}
-                      className="p-3 rounded-xl border border-slate-200/80 dark:border-slate-800 bg-slate-50/50 dark:bg-[#0A1E2F] flex items-start gap-2.5"
+                      className="p-3 rounded-xl border border-slate-200/80 dark:border-slate-800 bg-slate-50/50 dark:bg-[#050B14] flex items-start gap-2.5"
                     >
-                      <CheckCircle2 className="w-4 h-4 text-[#2DD4BF] shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-4 h-4 text-[#8DA4C4] shrink-0 mt-0.5" />
                       <span className="text-xs text-slate-700 dark:text-slate-300 leading-snug">
                         {item}
                       </span>
@@ -168,7 +168,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                       key={idx}
                       className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 flex items-start gap-2"
                     >
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#2DD4BF] mt-2 shrink-0" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#8DA4C4] mt-2 shrink-0" />
                       <span>{challenge}</span>
                     </li>
                   ))}
@@ -185,7 +185,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                 {project.technologies.map((tech) => (
                   <span
                     key={tech}
-                    className="px-2.5 py-1 rounded-lg text-xs font-mono font-medium border border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-[#0A1E2F] text-slate-800 dark:text-slate-300"
+                    className="px-2.5 py-1 rounded-lg text-xs font-mono font-medium border border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-[#050B14] text-slate-800 dark:text-slate-300"
                   >
                     {tech}
                   </span>
@@ -200,7 +200,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                   href={project.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-medium border border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-[#0A1E2F] hover:bg-slate-200 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 transition-colors"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-medium border border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-[#050B14] hover:bg-slate-200 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 transition-colors"
                 >
                   <Github className="w-4 h-4" />
                   <span>Source Code</span>
@@ -210,7 +210,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                     href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold bg-[#0D9488] text-white hover:bg-[#0F766E] shadow-[0_0_15px_rgba(13,148,136,0.3)] transition-colors"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold bg-[#3B6FD8] text-white hover:bg-[#2B58B8] shadow-[0_0_15px_rgba(59,111,216,0.3)] transition-colors"
                   >
                     <span>Live Deployment</span>
                     <ExternalLink className="w-3.5 h-3.5" />

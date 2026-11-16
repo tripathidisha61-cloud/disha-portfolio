@@ -12,17 +12,17 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        teal: {
-          navy: "#0A1E2F",       // Deep Navy (Dark background, deep headings)
-          surface: "#102A43",    // Deep Navy Card Surface (Dark mode)
-          border: "#1E4265",     // Navy Border (Dark mode)
-          primary: "#0D9488",    // Teal (Brand Primary)
-          hover: "#0F766E",      // Deep Teal Hover
-          turquoise: "#14B8A6",  // Turquoise (Interactive & High Visibility)
-          aqua: "#2DD4BF",       // Pale Aqua (Badges, Accents, Glows)
-          canvas: "#F8FCFC",     // Clean White & Pale Aqua Canvas (Light mode)
-          card: "#FFFFFF",       // Pure White Surface (Light mode)
-          glow: "rgba(13, 148, 136, 0.20)",
+        navy: {
+          almostBlack: "#050B14", // Almost-Black Navy (Dark background, deep headings)
+          midnight: "#0E1B33",    // Midnight Navy Card Surface (Dark mode)
+          border: "#1E2D4A",      // Midnight Navy Border (Dark mode)
+          primary: "#3B6FD8",     // Slate Blue (Brand Primary Authority)
+          hover: "#2B58B8",       // Deep Slate Blue Hover
+          bright: "#5B8BF7",      // Slate Blue Bright (Interactive & High Visibility)
+          cool: "#8DA4C4",        // Cool Grey (Badges, Accents, Glows)
+          canvas: "#F4F6FA",      // Cool Grey Mist Canvas (Light mode)
+          card: "#FFFFFF",        // Pure White Surface (Light mode)
+          glow: "rgba(59, 111, 216, 0.20)",
         },
       },
       fontFamily: {

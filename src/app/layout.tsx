@@ -4,8 +4,8 @@ import { ThemeProvider } from "./components/ThemeProvider";
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#F8FCFC" },
-    { media: "(prefers-color-scheme: dark)", color: "#0A1E2F" },
+    { media: "(prefers-color-scheme: light)", color: "#F4F6FA" },
+    { media: "(prefers-color-scheme: dark)", color: "#050B14" },
   ],
   width: "device-width",
   initialScale: 1,
@@ -61,7 +61,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
-      <body className="font-sans antialiased bg-[#F8FCFC] dark:bg-[#0A1E2F] text-[#0A1E2F] dark:text-[#F0FDFA] selection:bg-[#0D9488]/20 selection:text-[#0D9488]">
+      <body className="font-sans antialiased bg-[#F4F6FA] dark:bg-[#050B14] text-[#050B14] dark:text-[#F1F5F9] selection:bg-[#3B6FD8]/20 selection:text-[#3B6FD8]">
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
