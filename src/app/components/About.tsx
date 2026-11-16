@@ -17,11 +17,11 @@ export function About() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal>
           <div className="flex items-center gap-2 mb-3">
-            <span className="font-mono text-xs uppercase tracking-wider text-[#2563EB] dark:text-[#06B6D4]">
+            <span className="font-mono text-xs uppercase tracking-wider text-[#0284C7] dark:text-[#38BDF8]">
               01 // Background
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#0F172A] dark:text-[#F8FAFC]">
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#0B192C] dark:text-[#F0F9FF]">
             About Me
           </h2>
         </Reveal>
@@ -32,11 +32,11 @@ export function About() {
             <Reveal delay={0.1}>
               <p>
                 I am a dedicated 3rd-year Computer Science and Engineering student at{" "}
-                <span className="font-semibold text-[#0F172A] dark:text-[#F8FAFC]">
+                <span className="font-semibold text-[#0B192C] dark:text-[#F0F9FF]">
                   Raj Kumar Goel Institute of Technology, Ghaziabad
                 </span>
                 . With a strong foundation in computer science fundamentals and a consistent{" "}
-                <span className="font-semibold text-[#2563EB] dark:text-[#06B6D4]">
+                <span className="font-semibold text-[#0284C7] dark:text-[#38BDF8]">
                   8.8 / 10 CGPA
                 </span>
                 , I focus on building high-performance backend APIs, scalable web architectures, and applied AI systems.
@@ -46,29 +46,29 @@ export function About() {
             <Reveal delay={0.2}>
               <p>
                 I have cleared the internal college qualification round for{" "}
-                <span className="font-semibold text-[#0F172A] dark:text-[#F8FAFC]">
+                <span className="font-semibold text-[#0B192C] dark:text-[#F0F9FF]">
                   Smart India Hackathon (SIH 2026)
                 </span>{" "}
                 and am actively gearing up for{" "}
-                <span className="font-semibold text-[#2563EB] dark:text-[#06B6D4]">
+                <span className="font-semibold text-[#0284C7] dark:text-[#38BDF8]">
                   Google Summer of Code (GSoC 2027)
                 </span>
                 , engaging with open-source communities and honeynet telemetry architectures. My project portfolio spans{" "}
-                <span className="text-[#0F172A] dark:text-[#F8FAFC] font-medium">RepoMedic AI</span>{" "}
+                <span className="text-[#0B192C] dark:text-[#F0F9FF] font-medium">RepoMedic AI</span>{" "}
                 (intelligent repo diagnostics), the{" "}
-                <span className="text-[#0F172A] dark:text-[#F8FAFC] font-medium">Live Hackathon Leaderboard</span>, and{" "}
-                <span className="text-[#0F172A] dark:text-[#F8FAFC] font-medium">SecureHealth Telehealth Platform</span>.
+                <span className="text-[#0B192C] dark:text-[#F0F9FF] font-medium">Live Hackathon Leaderboard</span>, and{" "}
+                <span className="text-[#0B192C] dark:text-[#F0F9FF] font-medium">SecureHealth Telehealth Platform</span>.
               </p>
             </Reveal>
 
             <Reveal delay={0.3}>
               <p>
                 Beyond individual development, I serve as a student leader at the{" "}
-                <span className="text-[#0F172A] dark:text-[#F8FAFC] font-medium">
+                <span className="text-[#0B192C] dark:text-[#F0F9FF] font-medium">
                   GeeksforGeeks Student Chapter (RKGIT)
                 </span>
                 , curating algorithmic challenges and mentoring peers in C++ and Python. I also coordinated a 100+ participant campus event as an{" "}
-                <span className="text-[#0F172A] dark:text-[#F8FAFC] font-medium">
+                <span className="text-[#0B192C] dark:text-[#F0F9FF] font-medium">
                   NSS Event Coordinator
                 </span>
                 , managing end-to-end logistics and volunteer execution.
@@ -78,9 +78,9 @@ export function About() {
             {/* Core Values / Highlights */}
             <Reveal delay={0.4}>
               <div className="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#151F32] shadow-xs">
-                  <div className="flex items-center gap-2 font-medium text-[#0F172A] dark:text-[#F8FAFC] mb-1 text-sm">
-                    <Trophy className="w-4 h-4 text-amber-500 dark:text-[#06B6D4]" />
+                <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#112240] shadow-xs">
+                  <div className="flex items-center gap-2 font-medium text-[#0B192C] dark:text-[#F0F9FF] mb-1 text-sm">
+                    <Trophy className="w-4 h-4 text-amber-500 dark:text-[#38BDF8]" />
                     SIH 2026 Internal Cleared
                   </div>
                   <p className="text-xs text-slate-500 dark:text-slate-400">
@@ -88,9 +88,9 @@ export function About() {
                   </p>
                 </div>
 
-                <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#151F32] shadow-xs">
-                  <div className="flex items-center gap-2 font-medium text-[#0F172A] dark:text-[#F8FAFC] mb-1 text-sm">
-                    <GitPullRequest className="w-4 h-4 text-[#2563EB] dark:text-[#06B6D4]" />
+                <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#112240] shadow-xs">
+                  <div className="flex items-center gap-2 font-medium text-[#0B192C] dark:text-[#F0F9FF] mb-1 text-sm">
+                    <GitPullRequest className="w-4 h-4 text-[#0284C7] dark:text-[#38BDF8]" />
                     GSoC 2027 Preparation
                   </div>
                   <p className="text-xs text-slate-500 dark:text-slate-400">
@@ -104,13 +104,13 @@ export function About() {
           {/* Quick Metrics & Education Card */}
           <div className="lg:col-span-5 space-y-6">
             <Reveal delay={0.2}>
-              <div className="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#151F32] shadow-sm space-y-6">
+              <div className="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#112240] shadow-sm space-y-6">
                 <div className="flex items-center gap-3 pb-4 border-b border-slate-200 dark:border-slate-800">
-                  <div className="p-2.5 rounded-xl bg-slate-100 dark:bg-[#0B1120] text-[#2563EB] dark:text-[#06B6D4]">
+                  <div className="p-2.5 rounded-xl bg-slate-100 dark:bg-[#0B192C] text-[#0284C7] dark:text-[#38BDF8]">
                     <GraduationCap className="w-5 h-5" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-[#0F172A] dark:text-[#F8FAFC] text-sm">
+                    <h3 className="font-semibold text-[#0B192C] dark:text-[#F0F9FF] text-sm">
                       Education & Milestones
                     </h3>
                     <p className="text-xs text-slate-500 dark:text-slate-400">
@@ -123,12 +123,12 @@ export function About() {
                   {stats.map((stat) => (
                     <div
                       key={stat.label}
-                      className="p-3.5 rounded-xl border border-slate-100 dark:border-slate-800/80 bg-slate-50/80 dark:bg-[#0B1120]"
+                      className="p-3.5 rounded-xl border border-slate-100 dark:border-slate-800/80 bg-slate-50/80 dark:bg-[#0B192C]"
                     >
                       <div className="text-xs text-slate-500 dark:text-slate-400 font-mono">
                         {stat.label}
                       </div>
-                      <div className="mt-1 text-base sm:text-lg font-bold text-[#2563EB] dark:text-[#06B6D4] truncate">
+                      <div className="mt-1 text-base sm:text-lg font-bold text-[#0284C7] dark:text-[#38BDF8] truncate">
                         {stat.value}
                       </div>
                       <div className="mt-0.5 text-[11px] text-slate-400 dark:text-slate-500">
@@ -140,7 +140,7 @@ export function About() {
 
                 <div className="pt-2 text-xs text-slate-500 dark:text-slate-400 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between">
                   <span className="flex items-center gap-1.5">
-                    <Award className="w-3.5 h-3.5 text-[#2563EB] dark:text-[#06B6D4]" />
+                    <Award className="w-3.5 h-3.5 text-[#0284C7] dark:text-[#38BDF8]" />
                     Consistent Top Ranker
                   </span>
                   <span className="font-mono text-[11px] text-slate-400">2022 - 2028</span>

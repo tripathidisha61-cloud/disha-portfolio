@@ -12,20 +12,17 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        corporate: {
-          bg: "#F8FAFC",       // Main Background (Slate-50)
-          card: "#FFFFFF",     // White Card Surfaces
-          border: "#E2E8F0",   // Slate-200 Border
-          text: "#0F172A",     // Slate-900 Main Text
-          muted: "#64748B",    // Slate-500 Muted Text
-          inset: "#F1F5F9",    // Slate-100 Inset Surface
-        },
-        royalBlue: {
-          primary: "#2563EB",  // Royal Blue (Blue-600)
-          hover: "#1D4ED8",    // Deep Royal Blue (Blue-700)
-          accent: "#06B6D4",   // Cyan-500 Accent
-          light: "#EFF6FF",    // Soft Blue-50 Tint
-          glow: "rgba(37, 99, 235, 0.20)",
+        ocean: {
+          navy: "#0B192C",       // Deep Navy (Background in Dark, Primary Text in Light)
+          surface: "#112240",    // Deep Navy Card Surface (Dark mode)
+          border: "#1E3A5F",     // Deep Navy Border (Dark mode)
+          primary: "#0284C7",    // Ocean Blue (Brand Primary)
+          hover: "#0369A1",      // Deep Ocean Blue Hover
+          bright: "#0EA5E9",     // Bright Blue (Interactive & High Visibility)
+          cyan: "#38BDF8",       // Light Cyan (Badges, Accents, Glows)
+          mist: "#F0F7FF",       // Ocean Mist Light Canvas
+          card: "#FFFFFF",       // Pure White Surface (Light mode)
+          glow: "rgba(2, 132, 199, 0.20)",
         },
       },
       fontFamily: {

@@ -3,29 +3,31 @@
 @tailwind utilities;
 
 :root {
-  --background: #F8FAFC;
-  --foreground: #0F172A;
-  --muted: #64748B;
-  --muted-bg: #F1F5F9;
-  --border: #E2E8F0;
+  --background: #F0F7FF;
+  --foreground: #0B192C;
+  --muted: #475569;
+  --muted-bg: #E0F2FE;
+  --border: #BAE6FD;
   --card: #FFFFFF;
-  --card-foreground: #0F172A;
-  --primary: #2563EB;
-  --accent: #06B6D4;
-  --ring: #2563EB;
+  --card-foreground: #0B192C;
+  --primary: #0284C7;
+  --bright: #0EA5E9;
+  --accent: #38BDF8;
+  --ring: #0284C7;
 }
 
 .dark {
-  --background: #0B1120;
-  --foreground: #F8FAFC;
+  --background: #0B192C;
+  --foreground: #F0F9FF;
   --muted: #94A3B8;
-  --muted-bg: #111827;
-  --border: #1E293B;
-  --card: #151F32;
-  --card-foreground: #F8FAFC;
-  --primary: #2563EB;
-  --accent: #06B6D4;
-  --ring: #2563EB;
+  --muted-bg: #0D2137;
+  --border: #1E3A5F;
+  --card: #112240;
+  --card-foreground: #F0F9FF;
+  --primary: #0284C7;
+  --bright: #0EA5E9;
+  --accent: #38BDF8;
+  --ring: #0284C7;
 }
 
 * {
@@ -59,7 +61,7 @@ body {
   }
 }
 
-/* Custom purple scrollbar */
+/* Custom ocean scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -75,36 +77,36 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #2563EB;
+  background: #0284C7;
 }
 
 .dark ::-webkit-scrollbar-thumb {
-  background: #1E293B;
+  background: #1E3A5F;
 }
 
 .dark ::-webkit-scrollbar-thumb:hover {
-  background: #2563EB;
+  background: #38BDF8;
 }
 
 /* Utility subtle grid background */
 .bg-grid-subtle {
   background-size: 32px 32px;
   background-image: 
-    linear-gradient(to right, rgba(37, 99, 235, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(37, 99, 235, 0.04) 1px, transparent 1px);
+    linear-gradient(to right, rgba(2, 132, 199, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(2, 132, 199, 0.05) 1px, transparent 1px);
 }
 
 .dark .bg-grid-subtle {
   background-image: 
-    linear-gradient(to right, rgba(37, 99, 235, 0.08) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(37, 99, 235, 0.08) 1px, transparent 1px);
+    linear-gradient(to right, rgba(14, 165, 233, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(14, 165, 233, 0.08) 1px, transparent 1px);
 }
 
-/* Royal Blue & Cyan glow effects */
-.glow-royalblue {
-  box-shadow: 0 0 25px -5px rgba(37, 99, 235, 0.25);
+/* Ocean Blue & Light Cyan glow effects */
+.glow-ocean {
+  box-shadow: 0 0 25px -5px rgba(2, 132, 199, 0.35);
 }
 
 .glow-cyan-accent {
-  box-shadow: 0 0 25px -5px rgba(6, 182, 212, 0.25);
+  box-shadow: 0 0 25px -5px rgba(56, 189, 248, 0.35);
 }
