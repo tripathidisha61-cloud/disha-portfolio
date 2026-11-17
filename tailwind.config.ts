@@ -12,22 +12,40 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        obsidian: {
+          bg: "#0B1718",          // Obsidian dark canvas
+          bgSecondary: "#122526", // Deep Teal secondary canvas
+          card: "#193334",        // Surface card background
+          border: "#203F40",      // Dark border
+          glacier: "#5CC8B2",     // Glacier Teal primary
+          lime: "#D6F36A",        // Acid Lime accent
+          porcelain: "#F1F5EF",   // Main text
+          muted: "#A6B8B2",       // Muted text
+          lightBg: "#F4F7F3",     // Light canvas
+          lightSurface: "#FFFFFF",// Light card surface
+          lightSecondary: "#EBF1EA", // Light secondary
+          lightTeal: "#246D61",   // Light Teal primary
+          lightLime: "#8BAE44",   // Light Lime accent
+          lightText: "#142522",   // Light text
+          lightBorder: "#D8E2D7", // Light border
+          glow: "rgba(92, 200, 178, 0.25)",
+        },
         midnightEng: {
-          bg: "#0A1020",          // Main background
-          bgSecondary: "#111A2B", // Secondary background
-          card: "#172238",        // Card background
+          bg: "#0B1718",          // Main background
+          bgSecondary: "#122526", // Secondary background
+          card: "#193334",        // Card background
           surface: "#1E2B42",     // Elevated surface
-          border: "#263B5A",      // Border
+          border: "#203F40",      // Border
           primary: "#2563EB",     // Primary blue
-          electric: "#60A5FA",    // Electric blue
-          cyan: "#22D3EE",        // Cyan accent
-          text: "#F8FAFC",        // Main text
-          secondaryText: "#C9D4E5", // Secondary text
+          electric: "#5CC8B2",    // Electric blue
+          cyan: "#D6F36A",        // Cyan accent
+          text: "#F1F5EF",        // Main text
+          secondaryText: "#A6B8B2", // Secondary text
           muted: "#94A3B8",       // Muted text
           glow: "rgba(96, 165, 250, 0.25)",
         },
         royalSlate: {
-          bg: "#F8FAFC",        // Light Canvas Background (Slate-50)
+          bg: "#F1F5EF",        // Light Canvas Background (Slate-50)
           text: "#0F172A",      // Dark Slate High-Contrast Text (Slate-900)
           surface: "#FFFFFF",   // Pure White Card Surface
           border: "#E2E8F0",    // Slate Border (Slate-200)
@@ -78,7 +96,7 @@ const config: Config = {
           hover: "#1D4ED8",
           bright: "#2563EB",
           cyan: "#3B82F6",
-          mist: "#F8FAFC",
+          mist: "#F1F5EF",
           card: "#FFFFFF",
           glow: "rgba(37, 99, 235, 0.25)",
         },

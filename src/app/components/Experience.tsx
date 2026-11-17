@@ -23,18 +23,18 @@ export function Experience() {
   ];
 
   return (
-    <section id="experience" className="py-20 md:py-28 border-t border-slate-200/60 dark:border-[#263B5A]/80 bg-[#EEF3FA]/70 dark:bg-[#111A2B] transition-colors">
+    <section id="experience" className="py-20 md:py-28 border-t border-slate-200/60 dark:border-[#203F40]/80 bg-[#EBF1EA]/70 dark:bg-[#122526] transition-colors">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal>
           <div className="flex items-center gap-2 mb-3">
-            <span className="font-mono text-xs uppercase tracking-wider text-[#2563EB] dark:text-[#60A5FA]">
+            <span className="font-mono text-xs uppercase tracking-wider text-[#2563EB] dark:text-[#5CC8B2]">
               05 // Experience & Open Source
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#101828] dark:text-[#F7F9FC]">
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#142522] dark:text-[#F4F7F3]">
             Experience & Open Source
           </h2>
-          <p className="mt-3 text-base text-slate-600 dark:text-[#C9D4E5] max-w-2xl">
+          <p className="mt-3 text-base text-slate-600 dark:text-[#A6B8B2] max-w-2xl">
             Technical leadership, open-source proposal preparation, and collegiate community mentoring across developer organizations.
           </p>
         </Reveal>
@@ -48,21 +48,21 @@ export function Experience() {
               <Reveal key={exp.id} delay={idx * 0.1}>
                 <div className="relative md:pl-14">
                   {/* Milestone dot */}
-                  <div className="hidden md:flex absolute left-6 top-8 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-[#22D3EE] shadow-[0_0_12px_rgba(34,211,238,0.6)] items-center justify-center">
+                  <div className="hidden md:flex absolute left-6 top-8 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-[#8BAE44] dark:bg-[#D6F36A] shadow-[0_0_12px_rgba(34,211,238,0.6)] items-center justify-center">
                     <div className="w-1.5 h-1.5 rounded-full bg-white" />
                   </div>
 
-                  <div className="p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-[#263B5A] bg-white dark:bg-[#172238] hover:border-[#60A5FA]/40 shadow-xs hover:shadow-lg transition-all">
-                    <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 pb-5 border-b border-slate-100 dark:border-[#263B5A]">
+                  <div className="p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-[#203F40] bg-white dark:bg-[#193334] hover:border-[#5CC8B2]/40 shadow-xs hover:shadow-lg transition-all">
+                    <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 pb-5 border-b border-slate-100 dark:border-[#203F40]">
                       <div className="flex items-start gap-3">
-                        <div className="p-2.5 rounded-xl bg-slate-100 dark:bg-[#0A1020] text-[#2563EB] dark:text-[#60A5FA] shrink-0 mt-0.5">
-                          {exp.id.includes("gsoc") ? <GitBranch className="w-5 h-5 text-[#22D3EE]" /> : <Briefcase className="w-5 h-5 text-[#60A5FA]" />}
+                        <div className="p-2.5 rounded-xl bg-slate-100 dark:bg-[#0B1718] text-[#2563EB] dark:text-[#5CC8B2] shrink-0 mt-0.5">
+                          {exp.id.includes("gsoc") ? <GitBranch className="w-5 h-5 text-[#8BAE44] dark:text-[#D6F36A]" /> : <Briefcase className="w-5 h-5 text-[#5CC8B2]" />}
                         </div>
                         <div>
-                          <h3 className="text-lg font-bold text-[#101828] dark:text-[#F7F9FC]">
+                          <h3 className="text-lg font-bold text-[#142522] dark:text-[#F4F7F3]">
                             {exp.role}
                           </h3>
-                          <div className="text-sm font-medium text-slate-700 dark:text-[#C9D4E5] mt-0.5">
+                          <div className="text-sm font-medium text-slate-700 dark:text-[#A6B8B2] mt-0.5">
                             {exp.organization}
                           </div>
                         </div>
@@ -70,11 +70,11 @@ export function Experience() {
 
                       <div className="flex flex-wrap sm:flex-col sm:items-end gap-2 text-xs text-slate-500 dark:text-[#94A3B8] font-mono shrink-0">
                         <span className="inline-flex items-center gap-1.5">
-                          <Calendar className="w-3.5 h-3.5 text-[#2563EB] dark:text-[#60A5FA]" />
+                          <Calendar className="w-3.5 h-3.5 text-[#2563EB] dark:text-[#5CC8B2]" />
                           {exp.period}
                         </span>
                         <span className="inline-flex items-center gap-1.5">
-                          <MapPin className="w-3.5 h-3.5 text-[#2563EB] dark:text-[#60A5FA]" />
+                          <MapPin className="w-3.5 h-3.5 text-[#2563EB] dark:text-[#5CC8B2]" />
                           {exp.location}
                         </span>
                       </div>
@@ -84,19 +84,19 @@ export function Experience() {
                       {exp.description.map((point, i) => (
                         <li
                           key={i}
-                          className="text-sm text-slate-600 dark:text-[#C9D4E5] flex items-start gap-2.5 leading-relaxed"
+                          className="text-sm text-slate-600 dark:text-[#A6B8B2] flex items-start gap-2.5 leading-relaxed"
                         >
-                          <span className="w-1.5 h-1.5 rounded-full bg-[#22D3EE] mt-2 shrink-0" />
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#8BAE44] dark:bg-[#D6F36A] mt-2 shrink-0" />
                           <span>{point}</span>
                         </li>
                       ))}
                     </ul>
 
-                    <div className="mt-6 pt-5 border-t border-slate-100 dark:border-[#263B5A] flex flex-wrap gap-2">
+                    <div className="mt-6 pt-5 border-t border-slate-100 dark:border-[#203F40] flex flex-wrap gap-2">
                       {exp.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="px-2.5 py-0.5 rounded-md text-xs font-mono border border-slate-200 dark:border-[#263B5A] bg-slate-50 dark:bg-[#0A1020] text-slate-600 dark:text-[#C9D4E5]"
+                          className="px-2.5 py-0.5 rounded-md text-xs font-mono border border-slate-200 dark:border-[#203F40] bg-slate-50 dark:bg-[#0B1718] text-slate-600 dark:text-[#A6B8B2]"
                         >
                           {tag}
                         </span>

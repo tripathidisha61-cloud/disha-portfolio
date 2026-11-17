@@ -14,7 +14,7 @@ export default function SkillsPage() {
   const [isRecruiterModalOpen, setIsRecruiterModalOpen] = useState(false);
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#F7F9FC] dark:bg-[#0A1020] text-[#101828] dark:text-[#F8FAFC] transition-colors duration-200">
+    <div className="min-h-screen flex flex-col bg-[#F4F7F3] dark:bg-[#0B1718] text-[#142522] dark:text-[#F1F5EF] transition-colors duration-200">
       <Navbar
         onOpenCommandPalette={() => setIsCommandPaletteOpen(true)}
         onOpenRecruiter={() => setIsRecruiterModalOpen(true)}

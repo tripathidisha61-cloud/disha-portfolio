@@ -4,8 +4,8 @@ import { ThemeProvider } from "./components/ThemeProvider";
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#F7F9FC" },
-    { media: "(prefers-color-scheme: dark)", color: "#0A1020" },
+    { media: "(prefers-color-scheme: light)", color: "#F4F7F3" },
+    { media: "(prefers-color-scheme: dark)", color: "#0B1718" },
   ],
   width: "device-width",
   initialScale: 1,
@@ -61,11 +61,11 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
-      <body className="font-sans antialiased bg-[#F7F9FC] dark:bg-[#0A1020] text-[#101828] dark:text-[#F8FAFC] selection:bg-[#2563EB]/20 selection:text-[#60A5FA]">
+      <body className="font-sans antialiased bg-[#F4F7F3] dark:bg-[#0B1718] text-[#142522] dark:text-[#F1F5EF] selection:bg-[#5CC8B2]/20 selection:text-[#246D61] dark:selection:bg-[#5CC8B2]/30 dark:selection:text-[#D6F36A]">
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
-          storageKey="disha-theme-midnight-engineering"
+          storageKey="disha-theme-obsidian-glacier"
           enableSystem={false}
           disableTransitionOnChange={false}
         >

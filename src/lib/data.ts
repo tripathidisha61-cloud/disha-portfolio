@@ -57,8 +57,8 @@ export interface AchievementItem {
 
 export const PERSONAL_INFO = {
   name: "Disha Tripathi",
-  title: "Software Development | AI/ML | Problem Solving",
-  tagline: "Engineering ideas into reality.",
+  title: "Software Engineering · AI · Innovation",
+  tagline: "Beyond the Ordinary. Built for What's Next.",
   headline: "Hi, I'm Disha Tripathi — I build intelligent, scalable and impactful software solutions.",
   shortBio:
     "3rd-year B.Tech CSE student at RKGIT Ghaziabad (CGPA: 8.8/10). Smart India Hackathon (SIH 2026) internal level cleared, actively preparing for Google Summer of Code (GSoC 2027). Passionate about software engineering, AI/ML systems, and resilient full-stack applications.",
@@ -92,7 +92,7 @@ export const PERSONAL_INFO = {
 export const SKILL_CATEGORIES: SkillCategory[] = [
   {
     title: "Programming",
-    accent: "#60A5FA",
+    accent: "#5CC8B2",
     colorName: "blue",
     skills: [
       { name: "Python" },
@@ -105,7 +105,7 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
   },
   {
     title: "Frontend",
-    accent: "#22D3EE",
+    accent: "#D6F36A",
     colorName: "cyan",
     skills: [
       { name: "React" },

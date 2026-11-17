@@ -11,25 +11,25 @@ export function Achievements() {
       case 0:
         return <Trophy className="w-5 h-5 text-[#FBBF24]" />; // Gold for SIH 2026 Award
       case 1:
-        return <Award className="w-5 h-5 text-[#60A5FA]" />;
+        return <Award className="w-5 h-5 text-[#5CC8B2]" />;
       default:
-        return <ShieldCheck className="w-5 h-5 text-[#22D3EE]" />;
+        return <ShieldCheck className="w-5 h-5 text-[#8BAE44] dark:text-[#D6F36A]" />;
     }
   };
 
   return (
-    <section id="achievements" className="py-20 md:py-28 border-t border-slate-200/60 dark:border-[#263B5A]/80 bg-[#F7F9FC] dark:bg-[#0A1020] transition-colors">
+    <section id="achievements" className="py-20 md:py-28 border-t border-slate-200/60 dark:border-[#203F40]/80 bg-[#F4F7F3] dark:bg-[#0B1718] transition-colors">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal>
           <div className="flex items-center gap-2 mb-3">
-            <span className="font-mono text-xs uppercase tracking-wider text-[#2563EB] dark:text-[#60A5FA]">
+            <span className="font-mono text-xs uppercase tracking-wider text-[#2563EB] dark:text-[#5CC8B2]">
               06 // Recognition & Honors
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#101828] dark:text-[#F7F9FC]">
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#142522] dark:text-[#F4F7F3]">
             Achievements & Certifications
           </h2>
-          <p className="mt-3 text-base text-slate-600 dark:text-[#C9D4E5] max-w-2xl">
+          <p className="mt-3 text-base text-slate-600 dark:text-[#A6B8B2] max-w-2xl">
             National hackathon accomplishments, academic honors, and verified credentials across industry technologies.
           </p>
         </Reveal>
@@ -39,10 +39,10 @@ export function Achievements() {
             const isAward = idx === 0;
             return (
               <Reveal key={item.id} delay={idx * 0.1}>
-                <div className="flex flex-col justify-between h-full p-6 sm:p-7 rounded-2xl border border-slate-200 dark:border-[#263B5A] bg-white dark:bg-[#172238] hover:border-[#60A5FA]/40 shadow-xs hover:shadow-lg transition-all">
+                <div className="flex flex-col justify-between h-full p-6 sm:p-7 rounded-2xl border border-slate-200 dark:border-[#203F40] bg-white dark:bg-[#193334] hover:border-[#5CC8B2]/40 shadow-xs hover:shadow-lg transition-all">
                   <div>
                     <div className="flex items-center justify-between gap-3 mb-5">
-                      <div className="p-2.5 rounded-xl bg-slate-100 dark:bg-[#0A1020]">
+                      <div className="p-2.5 rounded-xl bg-slate-100 dark:bg-[#0B1718]">
                         {getBadgeIcon(idx)}
                       </div>
                       {item.badge && (
@@ -51,7 +51,7 @@ export function Achievements() {
                           style={{
                             borderColor: isAward ? "rgba(251, 191, 36, 0.4)" : "rgba(96, 165, 250, 0.3)",
                             backgroundColor: isAward ? "rgba(251, 191, 36, 0.1)" : "rgba(96, 165, 250, 0.1)",
-                            color: isAward ? "#FBBF24" : "#60A5FA"
+                            color: isAward ? "#FBBF24" : "#5CC8B2"
                           }}
                         >
                           <Sparkles className="w-3 h-3" />
@@ -60,7 +60,7 @@ export function Achievements() {
                       )}
                     </div>
 
-                    <h3 className="font-bold text-base text-[#101828] dark:text-[#F7F9FC] leading-snug">
+                    <h3 className="font-bold text-base text-[#142522] dark:text-[#F4F7F3] leading-snug">
                       {item.title}
                     </h3>
 
@@ -68,12 +68,12 @@ export function Achievements() {
                       {item.issuer} • {item.date}
                     </div>
 
-                    <p className="mt-3 text-xs sm:text-sm text-slate-600 dark:text-[#C9D4E5] leading-relaxed">
+                    <p className="mt-3 text-xs sm:text-sm text-slate-600 dark:text-[#A6B8B2] leading-relaxed">
                       {item.description}
                     </p>
                   </div>
 
-                  <div className="mt-6 pt-4 border-t border-slate-100 dark:border-[#263B5A] flex items-center justify-between text-[11px] text-slate-400 font-mono">
+                  <div className="mt-6 pt-4 border-t border-slate-100 dark:border-[#203F40] flex items-center justify-between text-[11px] text-slate-400 font-mono">
                     <span>VERIFIED RECORD</span>
                     <span className="text-emerald-500 font-semibold">Active</span>
                   </div>
@@ -88,7 +88,7 @@ export function Achievements() {
           <div className="mt-12">
             <div className="flex items-center justify-between mb-6">
               <div>
-                <h3 className="text-xl font-bold text-[#101828] dark:text-[#F7F9FC]">
+                <h3 className="text-xl font-bold text-[#142522] dark:text-[#F4F7F3]">
                   Verified Technical Credentials & Badges
                 </h3>
                 <p className="text-xs text-slate-500 dark:text-[#94A3B8] font-mono mt-0.5">
@@ -104,11 +104,11 @@ export function Achievements() {
               {VERIFIED_CREDENTIALS.map((cred) => (
                 <div
                   key={cred.id}
-                  className="p-4 rounded-xl border border-slate-200 dark:border-[#263B5A] bg-white dark:bg-[#172238] flex flex-col justify-between hover:border-[#60A5FA]/40 transition-all"
+                  className="p-4 rounded-xl border border-slate-200 dark:border-[#203F40] bg-white dark:bg-[#193334] flex flex-col justify-between hover:border-[#5CC8B2]/40 transition-all"
                 >
                   <div>
                     <div className="flex items-center justify-between gap-2 mb-2">
-                      <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-slate-100 dark:bg-[#0A1020] text-[#2563EB] dark:text-[#60A5FA] font-semibold">
+                      <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-slate-100 dark:bg-[#0B1718] text-[#2563EB] dark:text-[#5CC8B2] font-semibold">
                         {cred.badgeType} Credential
                       </span>
                       {cred.credentialId && (
@@ -118,7 +118,7 @@ export function Achievements() {
                       )}
                     </div>
 
-                    <h4 className="font-bold text-xs sm:text-sm text-[#101828] dark:text-[#F7F9FC] leading-snug">
+                    <h4 className="font-bold text-xs sm:text-sm text-[#142522] dark:text-[#F4F7F3] leading-snug">
                       {cred.title}
                     </h4>
 
@@ -130,7 +130,7 @@ export function Achievements() {
                       {cred.skills.map((skill) => (
                         <span
                           key={skill}
-                          className="px-1.5 py-0.5 rounded text-[10px] font-mono bg-slate-50 dark:bg-[#0A1020] text-slate-600 dark:text-[#C9D4E5] border border-slate-200/60 dark:border-[#263B5A]"
+                          className="px-1.5 py-0.5 rounded text-[10px] font-mono bg-slate-50 dark:bg-[#0B1718] text-slate-600 dark:text-[#A6B8B2] border border-slate-200/60 dark:border-[#203F40]"
                         >
                           {skill}
                         </span>
@@ -138,7 +138,7 @@ export function Achievements() {
                     </div>
                   </div>
 
-                  <div className="mt-4 pt-3 border-t border-slate-100 dark:border-[#263B5A] flex items-center justify-between text-[11px] font-mono">
+                  <div className="mt-4 pt-3 border-t border-slate-100 dark:border-[#203F40] flex items-center justify-between text-[11px] font-mono">
                     <span className="text-emerald-500 flex items-center gap-1">
                       <CheckCircle2 className="w-3 h-3" />
                       Verified
@@ -148,7 +148,7 @@ export function Achievements() {
                         href={cred.verificationUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-slate-500 hover:text-[#2563EB] dark:hover:text-[#60A5FA] flex items-center gap-1 transition-colors"
+                        className="text-slate-500 hover:text-[#2563EB] dark:hover:text-[#5CC8B2] flex items-center gap-1 transition-colors"
                       >
                         <span>Inspect</span>
                         <ExternalLink className="w-3 h-3" />

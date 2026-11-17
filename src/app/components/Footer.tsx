@@ -9,12 +9,12 @@ export function Footer() {
   };
 
   return (
-    <footer className="border-t border-slate-200 dark:border-slate-800/80 bg-[#F7F9FC] dark:bg-[#0A1020] py-12">
+    <footer className="border-t border-slate-200 dark:border-slate-800/80 bg-[#F4F7F3] dark:bg-[#0B1718] py-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Brand info */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <div className="font-mono text-sm font-bold text-[#0A1020] dark:text-[#F7F9FC]">
+            <div className="font-mono text-sm font-bold text-[#0B1718] dark:text-[#F4F7F3]">
               Disha Tripathi
             </div>
             <p className="mt-1 text-xs text-slate-500 dark:text-slate-400 max-w-sm">
@@ -24,17 +24,17 @@ export function Footer() {
 
           {/* Production Standards Badges */}
           <div className="flex flex-wrap items-center justify-center gap-2 text-[11px] font-mono text-slate-400">
-            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md border border-slate-200 dark:border-[#263B5A] bg-white dark:bg-[#172238]">
+            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md border border-slate-200 dark:border-[#203F40] bg-white dark:bg-[#193334]">
               <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB]" />
               TypeScript 100%
             </span>
-            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md border border-slate-200 dark:border-[#263B5A] bg-white dark:bg-[#172238]">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#22D3EE]" />
+            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md border border-slate-200 dark:border-[#203F40] bg-white dark:bg-[#193334]">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#8BAE44] dark:bg-[#D6F36A]" />
               Next.js 14 App Router
             </span>
-            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md border border-slate-200 dark:border-[#263B5A] bg-white dark:bg-[#172238]">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#60A5FA]" />
-              Midnight Engineering (Master Colour Identity)
+            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md border border-slate-200 dark:border-[#203F40] bg-white dark:bg-[#193334]">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#5CC8B2]" />
+              Obsidian × Glacier × Acid Lime (Unique + Premium)
             </span>
           </div>
 
@@ -44,7 +44,7 @@ export function Footer() {
               href={PERSONAL_INFO.socials.github.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-lg text-slate-400 hover:text-[#2563EB] dark:hover:text-[#60A5FA] transition-colors"
+              className="p-2 rounded-lg text-slate-400 hover:text-[#2563EB] dark:hover:text-[#5CC8B2] transition-colors"
               aria-label="GitHub"
             >
               <Github className="w-4 h-4" />
@@ -54,7 +54,7 @@ export function Footer() {
               href={PERSONAL_INFO.socials.linkedin.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-lg text-slate-400 hover:text-[#2563EB] dark:hover:text-[#60A5FA] transition-colors"
+              className="p-2 rounded-lg text-slate-400 hover:text-[#2563EB] dark:hover:text-[#5CC8B2] transition-colors"
               aria-label="LinkedIn"
             >
               <Linkedin className="w-4 h-4" />
@@ -64,7 +64,7 @@ export function Footer() {
               href={PERSONAL_INFO.socials.leetcode.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-lg text-slate-400 hover:text-[#2563EB] dark:hover:text-[#60A5FA] transition-colors"
+              className="p-2 rounded-lg text-slate-400 hover:text-[#2563EB] dark:hover:text-[#5CC8B2] transition-colors"
               aria-label="LeetCode"
             >
               <Code className="w-4 h-4" />
@@ -72,7 +72,7 @@ export function Footer() {
 
             <a
               href={`mailto:${PERSONAL_INFO.email}`}
-              className="p-2 rounded-lg text-slate-400 hover:text-[#2563EB] dark:hover:text-[#60A5FA] transition-colors"
+              className="p-2 rounded-lg text-slate-400 hover:text-[#2563EB] dark:hover:text-[#5CC8B2] transition-colors"
               aria-label="Email"
             >
               <Mail className="w-4 h-4" />
@@ -84,7 +84,7 @@ export function Footer() {
             <button
               type="button"
               onClick={scrollToTop}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-[#172238] text-xs font-mono text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all shadow-xs"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-[#193334] text-xs font-mono text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all shadow-xs"
               aria-label="Scroll back to top"
             >
               <span>Top</span>
@@ -97,8 +97,8 @@ export function Footer() {
           <div>
             © {new Date().getFullYear()} Disha Tripathi. Crafted with Next.js, TypeScript & Tailwind CSS.
           </div>
-          <div className="font-mono text-[11px] text-[#2563EB] dark:text-[#60A5FA]">
-            Midnight Engineering • Engineering ideas into reality.
+          <div className="font-mono text-[11px] text-[#2563EB] dark:text-[#5CC8B2]">
+            Beyond the Ordinary. Built for What's Next. • Software Engineering · AI · Innovation
           </div>
         </div>
       </div>

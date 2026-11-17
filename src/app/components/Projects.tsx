@@ -31,7 +31,7 @@ export function Projects() {
         );
       case "Prototype":
         return (
-          <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-medium border border-[#2563EB]/30 bg-[#2563EB]/10 text-[#2563EB] dark:text-[#60A5FA]">
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-medium border border-[#2563EB]/30 bg-[#2563EB]/10 text-[#2563EB] dark:text-[#5CC8B2]">
             <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB]" />
             Prototype
           </span>
@@ -40,26 +40,26 @@ export function Projects() {
   };
 
   return (
-    <section id="projects" className="py-20 md:py-28 border-t border-slate-200/60 dark:border-[#263B5A]/80 bg-[#F7F9FC] dark:bg-[#0A1020] transition-colors">
+    <section id="projects" className="py-20 md:py-28 border-t border-slate-200/60 dark:border-[#203F40]/80 bg-[#F4F7F3] dark:bg-[#0B1718] transition-colors">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
           <Reveal>
             <div className="flex items-center gap-2 mb-3">
-              <span className="font-mono text-xs uppercase tracking-wider text-[#2563EB] dark:text-[#60A5FA]">
+              <span className="font-mono text-xs uppercase tracking-wider text-[#2563EB] dark:text-[#5CC8B2]">
                 04 // Selected Projects (Recruiter Priority)
               </span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#101828] dark:text-[#F8FAFC]">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#142522] dark:text-[#F1F5EF]">
               Featured Projects
             </h2>
-            <p className="mt-3 text-base text-slate-600 dark:text-[#C9D4E5] max-w-2xl">
+            <p className="mt-3 text-base text-slate-600 dark:text-[#A6B8B2] max-w-2xl">
               Production-ready engineering systems spanning automated AST vulnerability triage, real-time telemetry scoreboards, and clinical symptom decision engines.
             </p>
           </Reveal>
 
           {/* Filter toggle */}
           <Reveal delay={0.1}>
-            <div className="inline-flex p-1 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-100/80 dark:bg-[#172238] text-xs font-medium">
+            <div className="inline-flex p-1 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-100/80 dark:bg-[#193334] text-xs font-medium">
               <button
                 type="button"
                 onClick={() => setFilter("All")}
@@ -90,13 +90,13 @@ export function Projects() {
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
           {displayedProjects.map((project, idx) => (
             <Reveal key={project.id} delay={idx * 0.1}>
-              <div className="group flex flex-col justify-between h-full rounded-2xl border border-slate-200 dark:border-[#263B5A] bg-white dark:bg-[#172238] hover:border-[#22D3EE]/70 dark:hover:border-[#22D3EE]/60 shadow-xs hover:shadow-lg transition-all overflow-hidden">
+              <div className="group flex flex-col justify-between h-full rounded-2xl border border-slate-200 dark:border-[#203F40] bg-white dark:bg-[#193334] hover:border-[#D6F36A]/70 dark:hover:border-[#D6F36A]/60 shadow-xs hover:shadow-lg transition-all overflow-hidden">
                 {/* Project Header / Placeholder Visual */}
                 <div className="relative p-6 pb-0">
-                  <div className="h-44 rounded-xl border border-slate-100 dark:border-[#263B5A] bg-slate-50 dark:bg-[#0A1020] flex flex-col justify-between p-5 overflow-hidden group-hover:border-slate-300 dark:group-hover:border-[#22D3EE]/40 transition-colors">
+                  <div className="h-44 rounded-xl border border-slate-100 dark:border-[#203F40] bg-slate-50 dark:bg-[#0B1718] flex flex-col justify-between p-5 overflow-hidden group-hover:border-slate-300 dark:group-hover:border-[#D6F36A]/40 transition-colors">
                     <div className="flex items-center justify-between">
-                      <div className="p-2.5 rounded-lg bg-white dark:bg-[#172238] border border-slate-200 dark:border-[#263B5A] shadow-xs">
-                        <FolderGit2 className="w-5 h-5 text-slate-700 dark:text-[#60A5FA]" />
+                      <div className="p-2.5 rounded-lg bg-white dark:bg-[#193334] border border-slate-200 dark:border-[#203F40] shadow-xs">
+                        <FolderGit2 className="w-5 h-5 text-slate-700 dark:text-[#5CC8B2]" />
                       </div>
                       {getStatusBadge(project.devStatus)}
                     </div>
@@ -105,7 +105,7 @@ export function Projects() {
                       <div className="font-mono text-xs text-slate-400 dark:text-[#94A3B8]">
                         REPOSITORY IDENTIFIER
                       </div>
-                      <div className="font-mono text-sm font-semibold text-slate-800 dark:text-[#C9D4E5] mt-0.5">
+                      <div className="font-mono text-sm font-semibold text-slate-800 dark:text-[#A6B8B2] mt-0.5">
                         {project.title.toLowerCase().replace(/\s+/g, "-")}
                       </div>
                     </div>
@@ -115,10 +115,10 @@ export function Projects() {
                 {/* Project Details */}
                 <div className="p-6 flex flex-col flex-grow justify-between">
                   <div>
-                    <h3 className="text-xl font-bold tracking-tight text-[#101828] dark:text-[#F8FAFC] group-hover:text-[#2563EB] dark:group-hover:text-[#60A5FA] transition-colors">
+                    <h3 className="text-xl font-bold tracking-tight text-[#142522] dark:text-[#F1F5EF] group-hover:text-[#2563EB] dark:group-hover:text-[#5CC8B2] transition-colors">
                       {project.title}
                     </h3>
-                    <p className="mt-2.5 text-sm text-slate-600 dark:text-[#C9D4E5] leading-relaxed">
+                    <p className="mt-2.5 text-sm text-slate-600 dark:text-[#A6B8B2] leading-relaxed">
                       {project.description}
                     </p>
                   </div>
@@ -129,7 +129,7 @@ export function Projects() {
                       {project.technologies.map((tech) => (
                         <span
                           key={tech}
-                          className="px-2.5 py-0.5 rounded-md text-[11px] font-mono border border-slate-200/80 dark:border-slate-800 bg-slate-50 dark:bg-[#0A1020] text-slate-700 dark:text-slate-300"
+                          className="px-2.5 py-0.5 rounded-md text-[11px] font-mono border border-slate-200/80 dark:border-slate-800 bg-slate-50 dark:bg-[#0B1718] text-slate-700 dark:text-slate-300"
                         >
                           {tech}
                         </span>
@@ -165,11 +165,11 @@ export function Projects() {
                       <button
                         type="button"
                         onClick={() => setSelectedProject(project)}
-                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium border border-slate-200 dark:border-slate-700 hover:border-[#2563EB] bg-slate-50 dark:bg-[#0A1020] text-slate-800 dark:text-[#60A5FA] transition-all group-hover:bg-slate-100 dark:group-hover:bg-[#172238]"
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium border border-slate-200 dark:border-slate-700 hover:border-[#2563EB] bg-slate-50 dark:bg-[#0B1718] text-slate-800 dark:text-[#5CC8B2] transition-all group-hover:bg-slate-100 dark:group-hover:bg-[#193334]"
                       >
-                        <Code2 className="w-3.5 h-3.5 text-slate-500 dark:text-[#60A5FA]" />
+                        <Code2 className="w-3.5 h-3.5 text-slate-500 dark:text-[#5CC8B2]" />
                         <span>Architecture & Case Study</span>
-                        <ArrowRight className="w-3 h-3 text-slate-400 dark:text-[#60A5FA] group-hover:translate-x-0.5 transition-transform" />
+                        <ArrowRight className="w-3 h-3 text-slate-400 dark:text-[#5CC8B2] group-hover:translate-x-0.5 transition-transform" />
                       </button>
                     </div>
                   </div>
