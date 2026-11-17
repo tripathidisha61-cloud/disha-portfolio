@@ -66,18 +66,18 @@ export function SystemBenchmark() {
   return (
     <section
       id="system-benchmarks"
-      className="py-20 md:py-28 border-t border-slate-200/60 dark:border-slate-800/80 bg-[#F0F7FF] dark:bg-[#0B192C]"
+      className="py-20 md:py-28 border-t border-slate-200/60 dark:border-slate-800/80 bg-[#F8FAFC] dark:bg-[#0B1120]"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal>
           <div className="flex items-center gap-2 mb-3">
-            <span className="font-mono text-xs uppercase tracking-wider text-[#0284C7] dark:text-[#38BDF8]">
+            <span className="font-mono text-xs uppercase tracking-wider text-[#2563EB] dark:text-[#22D3EE]">
               05.1 // Telemetry & Performance
             </span>
           </div>
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
             <div>
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#0B192C] dark:text-[#F0F9FF]">
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#0B1120] dark:text-[#F8FAFC]">
                 Distributed Systems Benchmark
               </h2>
               <p className="mt-3 text-base text-slate-600 dark:text-slate-400 max-w-2xl">
@@ -86,8 +86,8 @@ export function SystemBenchmark() {
               </p>
             </div>
 
-            <div className="flex items-center gap-2 self-start md:self-auto px-3 py-1.5 rounded-full border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#112240] text-xs font-mono text-slate-500 dark:text-slate-400">
-              <Activity className="w-3.5 h-3.5 text-[#38BDF8] animate-pulse" />
+            <div className="flex items-center gap-2 self-start md:self-auto px-3 py-1.5 rounded-full border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#151F32] text-xs font-mono text-slate-500 dark:text-slate-400">
+              <Activity className="w-3.5 h-3.5 text-[#22D3EE] animate-pulse" />
               <span>Simulated Live Telemetry</span>
             </div>
           </div>
@@ -108,8 +108,8 @@ export function SystemBenchmark() {
                   }}
                   className={`p-4 rounded-xl text-left border transition-all ${
                     isSelected
-                      ? "border-[#0284C7] bg-white dark:bg-[#112240] shadow-md dark:shadow-[#0284C7]/10 ring-1 ring-[#0284C7]"
-                      : "border-slate-200 dark:border-slate-800/80 bg-white/60 dark:bg-[#112240]/50 hover:bg-white dark:hover:bg-[#112240] text-slate-600 dark:text-slate-400"
+                      ? "border-[#2563EB] bg-white dark:bg-[#151F32] shadow-md dark:shadow-[#2563EB]/10 ring-1 ring-[#2563EB]"
+                      : "border-slate-200 dark:border-slate-800/80 bg-white/60 dark:bg-[#151F32]/50 hover:bg-white dark:hover:bg-[#151F32] text-slate-600 dark:text-slate-400"
                   }`}
                 >
                   <div className="flex items-center justify-between mb-1.5">
@@ -118,15 +118,15 @@ export function SystemBenchmark() {
                     </span>
                     {isSelected && (
                       <span className="flex h-2 w-2 relative">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#38BDF8] opacity-75" />
-                        <span className="relative inline-flex rounded-full h-2 w-2 bg-[#38BDF8]" />
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#22D3EE] opacity-75" />
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-[#22D3EE]" />
                       </span>
                     )}
                   </div>
                   <div
                     className={`font-bold text-xs sm:text-sm line-clamp-1 ${
                       isSelected
-                        ? "text-[#0B192C] dark:text-[#F0F9FF]"
+                        ? "text-[#0B1120] dark:text-[#F8FAFC]"
                         : "text-slate-700 dark:text-slate-300"
                     }`}
                   >
@@ -143,11 +143,11 @@ export function SystemBenchmark() {
 
         {/* Main Interactive Benchmark Board */}
         <Reveal delay={0.2}>
-          <div className="mt-8 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#112240] p-6 sm:p-8 shadow-sm">
+          <div className="mt-8 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#151F32] p-6 sm:p-8 shadow-sm">
             {/* Header & Architecture Flow */}
             <div className="pb-6 border-b border-slate-100 dark:border-slate-800">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
-                <h3 className="text-lg sm:text-xl font-bold text-[#0B192C] dark:text-[#F0F9FF]">
+                <h3 className="text-lg sm:text-xl font-bold text-[#0B1120] dark:text-[#F8FAFC]">
                   {selectedScenario.name}
                 </h3>
                 <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-medium border border-emerald-500/20 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 self-start sm:self-auto">
@@ -160,14 +160,14 @@ export function SystemBenchmark() {
               </p>
 
               {/* Architecture Dataflow Breadcrumb */}
-              <div className="p-3 rounded-xl border border-slate-200/80 dark:border-slate-800/80 bg-slate-50 dark:bg-[#0B192C]">
+              <div className="p-3 rounded-xl border border-slate-200/80 dark:border-slate-800/80 bg-slate-50 dark:bg-[#0B1120]">
                 <div className="text-[10px] font-mono uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-1.5">
                   End-to-End Pipeline Topology:
                 </div>
-                <div className="text-xs font-mono text-slate-700 dark:text-[#38BDF8] flex flex-wrap items-center gap-2">
+                <div className="text-xs font-mono text-slate-700 dark:text-[#22D3EE] flex flex-wrap items-center gap-2">
                   {selectedScenario.architectureFlow.split(" -> ").map((step, idx, arr) => (
                     <span key={idx} className="flex items-center gap-2">
-                      <span className="px-2 py-0.5 rounded bg-slate-200/60 dark:bg-[#112240] text-slate-800 dark:text-slate-200">
+                      <span className="px-2 py-0.5 rounded bg-slate-200/60 dark:bg-[#151F32] text-slate-800 dark:text-slate-200">
                         {step}
                       </span>
                       {idx < arr.length - 1 && (
@@ -183,14 +183,14 @@ export function SystemBenchmark() {
             <div className="py-6 border-b border-slate-100 dark:border-slate-800">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
                 <div className="flex items-center gap-2">
-                  <Sliders className="w-4 h-4 text-[#0284C7] dark:text-[#38BDF8]" />
-                  <span className="text-xs sm:text-sm font-semibold text-[#0B192C] dark:text-[#F0F9FF]">
+                  <Sliders className="w-4 h-4 text-[#2563EB] dark:text-[#22D3EE]" />
+                  <span className="text-xs sm:text-sm font-semibold text-[#0B1120] dark:text-[#F8FAFC]">
                     Simulated Concurrent Load (Active Streams / QPS)
                   </span>
                 </div>
                 <div className="font-mono text-xs text-slate-500 dark:text-slate-400">
                   Load Multiplier:{" "}
-                  <span className="text-[#0284C7] dark:text-[#38BDF8] font-bold">
+                  <span className="text-[#2563EB] dark:text-[#22D3EE] font-bold">
                     {concurrencyMultiplier.toFixed(1)}x
                   </span>{" "}
                   ({currentUsers.toLocaleString()} concurrent clients)
@@ -204,7 +204,7 @@ export function SystemBenchmark() {
                 step="0.1"
                 value={concurrencyMultiplier}
                 onChange={(e) => setConcurrencyMultiplier(parseFloat(e.target.value))}
-                className="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-lg appearance-none cursor-pointer accent-[#0284C7]"
+                className="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-lg appearance-none cursor-pointer accent-[#2563EB]"
                 aria-label="Adjust Concurrency Load Multiplier"
               />
 
@@ -218,7 +218,7 @@ export function SystemBenchmark() {
             {/* Metrics Comparison Grid */}
             <div className="py-6 grid grid-cols-1 md:grid-cols-3 gap-5 border-b border-slate-100 dark:border-slate-800">
               {/* Metric 1: p99 Latency */}
-              <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/60 dark:bg-[#0B192C] space-y-3">
+              <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/60 dark:bg-[#0B1120] space-y-3">
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-mono uppercase text-slate-400 dark:text-slate-400">
                     p99 Latency
@@ -234,7 +234,7 @@ export function SystemBenchmark() {
                     </span>
                   </div>
                   <div className="flex justify-between items-baseline text-xs">
-                    <span className="text-[#0B192C] dark:text-[#F0F9FF] font-semibold">
+                    <span className="text-[#0B1120] dark:text-[#F8FAFC] font-semibold">
                       Optimized:
                     </span>
                     <span className="font-mono text-emerald-500 font-bold text-base">
@@ -261,12 +261,12 @@ export function SystemBenchmark() {
               </div>
 
               {/* Metric 2: Network Egress */}
-              <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/60 dark:bg-[#0B192C] space-y-3">
+              <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/60 dark:bg-[#0B1120] space-y-3">
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-mono uppercase text-slate-400 dark:text-slate-400">
                     Network Egress / min
                   </span>
-                  <Zap className="w-4 h-4 text-[#0284C7] dark:text-[#38BDF8]" />
+                  <Zap className="w-4 h-4 text-[#2563EB] dark:text-[#22D3EE]" />
                 </div>
 
                 <div className="space-y-1.5">
@@ -277,10 +277,10 @@ export function SystemBenchmark() {
                     </span>
                   </div>
                   <div className="flex justify-between items-baseline text-xs">
-                    <span className="text-[#0B192C] dark:text-[#F0F9FF] font-semibold">
+                    <span className="text-[#0B1120] dark:text-[#F8FAFC] font-semibold">
                       Delta Stream:
                     </span>
-                    <span className="font-mono text-[#0284C7] dark:text-[#38BDF8] font-bold text-base">
+                    <span className="font-mono text-[#2563EB] dark:text-[#22D3EE] font-bold text-base">
                       {dynamicOptimizedEgress} MB
                     </span>
                   </div>
@@ -295,7 +295,7 @@ export function SystemBenchmark() {
                         100
                       ).toFixed(0)}%`,
                     }}
-                    className="bg-[#0284C7] h-full rounded-full transition-all duration-300"
+                    className="bg-[#2563EB] h-full rounded-full transition-all duration-300"
                   />
                 </div>
                 <div className="text-[10px] font-mono text-slate-400 dark:text-slate-500">
@@ -304,7 +304,7 @@ export function SystemBenchmark() {
               </div>
 
               {/* Metric 3: Server CPU / Worker Load */}
-              <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/60 dark:bg-[#0B192C] space-y-3">
+              <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/60 dark:bg-[#0B1120] space-y-3">
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-mono uppercase text-slate-400 dark:text-slate-400">
                     Host Worker Utilization
@@ -320,7 +320,7 @@ export function SystemBenchmark() {
                     </span>
                   </div>
                   <div className="flex justify-between items-baseline text-xs">
-                    <span className="text-[#0B192C] dark:text-[#F0F9FF] font-semibold">
+                    <span className="text-[#0B1120] dark:text-[#F8FAFC] font-semibold">
                       Optimized CPU:
                     </span>
                     <span className="font-mono text-emerald-500 font-bold text-base">
@@ -347,7 +347,7 @@ export function SystemBenchmark() {
             <div className="pt-6">
               <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center gap-2">
-                  <Code2 className="w-4 h-4 text-[#0284C7] dark:text-[#38BDF8]" />
+                  <Code2 className="w-4 h-4 text-[#2563EB] dark:text-[#22D3EE]" />
                   <span className="text-xs font-mono uppercase tracking-wider text-slate-500 dark:text-slate-400">
                     Production Implementation Snippet:
                   </span>
@@ -356,7 +356,7 @@ export function SystemBenchmark() {
                 <button
                   type="button"
                   onClick={handleCopyCode}
-                  className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-mono border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-[#0B192C] text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-[#F0F9FF] transition-colors"
+                  className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-mono border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-[#0B1120] text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-[#F8FAFC] transition-colors"
                 >
                   {copiedCode ? (
                     <>
@@ -372,8 +372,8 @@ export function SystemBenchmark() {
                 </button>
               </div>
 
-              <div className="rounded-xl border border-slate-200 dark:border-slate-800 bg-[#0B192C] overflow-hidden">
-                <div className="px-4 py-2 border-b border-slate-800 bg-[#0B192C] flex items-center justify-between text-[11px] font-mono text-slate-400">
+              <div className="rounded-xl border border-slate-200 dark:border-slate-800 bg-[#0B1120] overflow-hidden">
+                <div className="px-4 py-2 border-b border-slate-800 bg-[#0B1120] flex items-center justify-between text-[11px] font-mono text-slate-400">
                   <div className="flex items-center gap-1.5">
                     <span className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
                     <span className="w-2.5 h-2.5 rounded-full bg-amber-500/80" />
@@ -382,7 +382,7 @@ export function SystemBenchmark() {
                       telemetry_benchmark_core.py
                     </span>
                   </div>
-                  <span className="text-[#38BDF8]">Python / FastAPI Async</span>
+                  <span className="text-[#22D3EE]">Python / FastAPI Async</span>
                 </div>
 
                 <pre className="p-4 text-xs font-mono text-slate-300 overflow-x-auto leading-relaxed">
@@ -391,10 +391,10 @@ export function SystemBenchmark() {
               </div>
 
               {/* Key Takeaway Callout */}
-              <div className="mt-4 p-3.5 rounded-xl border border-[#0284C7]/30 bg-[#0284C7]/10 flex items-start gap-2.5 text-xs text-slate-700 dark:text-slate-300">
-                <Sparkles className="w-4 h-4 text-[#0284C7] dark:text-[#38BDF8] shrink-0 mt-0.5" />
+              <div className="mt-4 p-3.5 rounded-xl border border-[#2563EB]/30 bg-[#2563EB]/10 flex items-start gap-2.5 text-xs text-slate-700 dark:text-slate-300">
+                <Sparkles className="w-4 h-4 text-[#2563EB] dark:text-[#22D3EE] shrink-0 mt-0.5" />
                 <div>
-                  <span className="font-semibold text-[#0B192C] dark:text-[#F0F9FF]">
+                  <span className="font-semibold text-[#0B1120] dark:text-[#F8FAFC]">
                     Engineering Impact:{" "}
                   </span>
                   <span>{selectedScenario.keyAdvantage}</span>

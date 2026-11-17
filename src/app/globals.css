@@ -3,31 +3,31 @@
 @tailwind utilities;
 
 :root {
-  --background: #F0F7FF;
-  --foreground: #0B192C;
+  --background: #F8FAFC;
+  --foreground: #0B1120;
   --muted: #475569;
-  --muted-bg: #E0F2FE;
-  --border: #BAE6FD;
+  --muted-bg: #ECFEFF;
+  --border: #CFFAFE;
   --card: #FFFFFF;
-  --card-foreground: #0B192C;
-  --primary: #0284C7;
-  --bright: #0EA5E9;
-  --accent: #38BDF8;
-  --ring: #0284C7;
+  --card-foreground: #0B1120;
+  --primary: #2563EB;
+  --bright: #2563EB;
+  --accent: #22D3EE;
+  --ring: #2563EB;
 }
 
 .dark {
-  --background: #0B192C;
-  --foreground: #F0F9FF;
+  --background: #0B1120;
+  --foreground: #F8FAFC;
   --muted: #94A3B8;
-  --muted-bg: #0D2137;
-  --border: #1E3A5F;
-  --card: #112240;
-  --card-foreground: #F0F9FF;
-  --primary: #0284C7;
-  --bright: #0EA5E9;
-  --accent: #38BDF8;
-  --ring: #0284C7;
+  --muted-bg: #0D1527;
+  --border: #1E293B;
+  --card: #151F32;
+  --card-foreground: #F8FAFC;
+  --primary: #2563EB;
+  --bright: #2563EB;
+  --accent: #22D3EE;
+  --ring: #2563EB;
 }
 
 * {
@@ -77,15 +77,15 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #0284C7;
+  background: #2563EB;
 }
 
 .dark ::-webkit-scrollbar-thumb {
-  background: #1E3A5F;
+  background: #1E293B;
 }
 
 .dark ::-webkit-scrollbar-thumb:hover {
-  background: #38BDF8;
+  background: #22D3EE;
 }
 
 /* Utility subtle grid background */
@@ -102,9 +102,9 @@ body {
     linear-gradient(to bottom, rgba(14, 165, 233, 0.08) 1px, transparent 1px);
 }
 
-/* Ocean Blue & Light Cyan glow effects */
+/* Midnight Navy + Electric Blue & Light Cyan glow effects */
 .glow-ocean {
-  box-shadow: 0 0 25px -5px rgba(2, 132, 199, 0.35);
+  box-shadow: 0 0 25px -5px rgba(37, 99, 235, 0.35);
 }
 
 .glow-cyan-accent {

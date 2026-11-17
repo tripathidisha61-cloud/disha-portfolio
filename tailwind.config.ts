@@ -12,17 +12,26 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        midnight: {
+          bg: "#0B1120",       // Main Midnight Navy Background
+          card: "#151F32",     // Primary Elevated Card Surface
+          border: "#1E293B",   // Border & Line Accent
+          primary: "#2563EB",  // Primary Accent: Electric / Royal Blue
+          hover: "#1D4ED8",    // Deep Electric Blue Hover
+          accent: "#22D3EE",   // Secondary Accent: Electric Cyan
+          glow: "rgba(37, 99, 235, 0.25)",
+        },
         ocean: {
-          navy: "#0B192C",       // Deep Navy (Background in Dark, Primary Text in Light)
-          surface: "#112240",    // Deep Navy Card Surface (Dark mode)
-          border: "#1E3A5F",     // Deep Navy Border (Dark mode)
-          primary: "#0284C7",    // Ocean Blue (Brand Primary)
-          hover: "#0369A1",      // Deep Ocean Blue Hover
-          bright: "#0EA5E9",     // Bright Blue (Interactive & High Visibility)
-          cyan: "#38BDF8",       // Light Cyan (Badges, Accents, Glows)
-          mist: "#F0F7FF",       // Ocean Mist Light Canvas
-          card: "#FFFFFF",       // Pure White Surface (Light mode)
-          glow: "rgba(2, 132, 199, 0.20)",
+          navy: "#0B1120",
+          surface: "#151F32",
+          border: "#1E293B",
+          primary: "#2563EB",
+          hover: "#1D4ED8",
+          bright: "#2563EB",
+          cyan: "#22D3EE",
+          mist: "#F8FAFC",
+          card: "#FFFFFF",
+          glow: "rgba(37, 99, 235, 0.25)",
         },
       },
       fontFamily: {

@@ -9,11 +9,11 @@ export function Achievements() {
   const getBadgeIcon = (index: number) => {
     switch (index) {
       case 0:
-        return <Award className="w-5 h-5 text-[#0284C7] dark:text-[#38BDF8]" />;
+        return <Award className="w-5 h-5 text-[#2563EB] dark:text-[#22D3EE]" />;
       case 1:
-        return <ShieldCheck className="w-5 h-5 text-[#0284C7] dark:text-[#38BDF8]" />;
+        return <ShieldCheck className="w-5 h-5 text-[#2563EB] dark:text-[#22D3EE]" />;
       default:
-        return <Trophy className="w-5 h-5 text-[#0284C7] dark:text-[#38BDF8]" />;
+        return <Trophy className="w-5 h-5 text-[#2563EB] dark:text-[#22D3EE]" />;
     }
   };
 
@@ -22,11 +22,11 @@ export function Achievements() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal>
           <div className="flex items-center gap-2 mb-3">
-            <span className="font-mono text-xs uppercase tracking-wider text-[#0284C7] dark:text-[#38BDF8]">
+            <span className="font-mono text-xs uppercase tracking-wider text-[#2563EB] dark:text-[#22D3EE]">
               07 // Recognition
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#0B192C] dark:text-[#F0F9FF]">
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#0B1120] dark:text-[#F8FAFC]">
             Achievements & Certifications
           </h2>
           <p className="mt-3 text-base text-slate-600 dark:text-slate-400 max-w-2xl">
@@ -37,21 +37,21 @@ export function Achievements() {
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
           {ACHIEVEMENTS.map((item, idx) => (
             <Reveal key={item.id} delay={idx * 0.1}>
-              <div className="flex flex-col justify-between h-full p-6 sm:p-7 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#112240] hover:border-slate-300 dark:hover:border-[#0284C7]/50 shadow-xs hover:shadow-lg dark:hover:shadow-[#0284C7]/10 transition-all">
+              <div className="flex flex-col justify-between h-full p-6 sm:p-7 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#151F32] hover:border-slate-300 dark:hover:border-[#2563EB]/50 shadow-xs hover:shadow-lg dark:hover:shadow-[#2563EB]/10 transition-all">
                 <div>
                   <div className="flex items-center justify-between gap-3 mb-5">
-                    <div className="p-2.5 rounded-xl bg-slate-100 dark:bg-[#0B192C]">
+                    <div className="p-2.5 rounded-xl bg-slate-100 dark:bg-[#0B1120]">
                       {getBadgeIcon(idx)}
                     </div>
                     {item.badge && (
-                      <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-medium border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-[#0B192C] text-slate-700 dark:text-[#38BDF8]">
-                        <Sparkles className="w-3 h-3 text-[#38BDF8]" />
+                      <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-medium border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-[#0B1120] text-slate-700 dark:text-[#22D3EE]">
+                        <Sparkles className="w-3 h-3 text-[#22D3EE]" />
                         {item.badge}
                       </span>
                     )}
                   </div>
 
-                  <h3 className="font-bold text-base text-[#0B192C] dark:text-[#F0F9FF] leading-snug">
+                  <h3 className="font-bold text-base text-[#0B1120] dark:text-[#F8FAFC] leading-snug">
                     {item.title}
                   </h3>
 
@@ -78,7 +78,7 @@ export function Achievements() {
           <div className="mt-12">
             <div className="flex items-center justify-between mb-6">
               <div>
-                <h3 className="text-xl font-bold text-[#0B192C] dark:text-[#F0F9FF]">
+                <h3 className="text-xl font-bold text-[#0B1120] dark:text-[#F8FAFC]">
                   Verified Technical Credentials & Badges
                 </h3>
                 <p className="text-xs text-slate-500 dark:text-slate-400 font-mono mt-0.5">
@@ -94,11 +94,11 @@ export function Achievements() {
               {VERIFIED_CREDENTIALS.map((cred) => (
                 <div
                   key={cred.id}
-                  className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#112240] flex flex-col justify-between hover:border-slate-300 dark:hover:border-[#0284C7]/40 transition-all"
+                  className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#151F32] flex flex-col justify-between hover:border-slate-300 dark:hover:border-[#2563EB]/40 transition-all"
                 >
                   <div>
                     <div className="flex items-center justify-between gap-2 mb-2">
-                      <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-slate-100 dark:bg-[#0B192C] text-[#0284C7] dark:text-[#38BDF8] font-semibold">
+                      <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-slate-100 dark:bg-[#0B1120] text-[#2563EB] dark:text-[#22D3EE] font-semibold">
                         {cred.badgeType} Credential
                       </span>
                       {cred.credentialId && (
@@ -108,7 +108,7 @@ export function Achievements() {
                       )}
                     </div>
 
-                    <h4 className="font-bold text-xs sm:text-sm text-[#0B192C] dark:text-[#F0F9FF] leading-snug">
+                    <h4 className="font-bold text-xs sm:text-sm text-[#0B1120] dark:text-[#F8FAFC] leading-snug">
                       {cred.title}
                     </h4>
 
@@ -120,7 +120,7 @@ export function Achievements() {
                       {cred.skills.map((skill) => (
                         <span
                           key={skill}
-                          className="px-1.5 py-0.5 rounded text-[10px] font-mono bg-slate-50 dark:bg-[#0B192C] text-slate-600 dark:text-slate-300 border border-slate-200/60 dark:border-slate-800"
+                          className="px-1.5 py-0.5 rounded text-[10px] font-mono bg-slate-50 dark:bg-[#0B1120] text-slate-600 dark:text-slate-300 border border-slate-200/60 dark:border-slate-800"
                         >
                           {skill}
                         </span>
@@ -138,7 +138,7 @@ export function Achievements() {
                         href={cred.verificationUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-slate-500 hover:text-[#0284C7] dark:hover:text-[#38BDF8] flex items-center gap-1 transition-colors"
+                        className="text-slate-500 hover:text-[#2563EB] dark:hover:text-[#22D3EE] flex items-center gap-1 transition-colors"
                       >
                         <span>Inspect</span>
                         <ExternalLink className="w-3 h-3" />
