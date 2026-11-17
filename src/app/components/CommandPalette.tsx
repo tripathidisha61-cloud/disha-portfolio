@@ -215,7 +215,7 @@ export function CommandPalette({
       category: "Developer Tools",
       title: "Distributed Systems Benchmark & Latency Profiler",
       subtitle: "Interactive telemetry: WebSockets vs Polling & DB row locks",
-      icon: <Zap className="w-4 h-4 text-[#2563EB] dark:text-[#5CC8B2]" />,
+      icon: <Zap className="w-4 h-4 text-[#18A3B7] dark:text-[#18A3B7]" />,
       onSelect: () => scrollToSection("system-benchmarks"),
     },
     {
@@ -365,11 +365,11 @@ export function CommandPalette({
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.96, y: -10 }}
           transition={{ duration: 0.18, ease: [0.16, 1, 0.3, 1] }}
-          className="relative w-full max-w-xl rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#193334] shadow-2xl overflow-hidden z-10"
+          className="relative w-full max-w-xl rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#1A334A] shadow-2xl overflow-hidden z-10"
         >
           {/* Search Input Bar */}
           <div className="flex items-center gap-3 px-4 py-3.5 border-b border-slate-100 dark:border-slate-800">
-            <Search className="w-4 h-4 text-slate-400 dark:text-[#5CC8B2] shrink-0" />
+            <Search className="w-4 h-4 text-slate-400 dark:text-[#18A3B7] shrink-0" />
             <input
               ref={inputRef}
               type="text"
@@ -380,9 +380,9 @@ export function CommandPalette({
               }}
               onKeyDown={handleKeyDown}
               placeholder="Search sections, actions, skills, projects (or press ESC)..."
-              className="w-full bg-transparent text-sm text-[#0B1718] dark:text-[#F4F7F3] placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none"
+              className="w-full bg-transparent text-sm text-[#0D1B29] dark:text-[#F3F8FA] placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none"
             />
-            <kbd className="hidden sm:inline-flex items-center gap-0.5 px-2 py-0.5 text-[10px] font-mono text-slate-400 dark:text-slate-400 border border-slate-200 dark:border-slate-700 rounded bg-slate-50 dark:bg-[#0B1718]">
+            <kbd className="hidden sm:inline-flex items-center gap-0.5 px-2 py-0.5 text-[10px] font-mono text-slate-400 dark:text-slate-400 border border-slate-200 dark:border-slate-700 rounded bg-slate-50 dark:bg-[#0D1B29]">
               ESC
             </kbd>
           </div>
@@ -404,12 +404,12 @@ export function CommandPalette({
                     onMouseEnter={() => setSelectedIndex(idx)}
                     className={`w-full flex items-center justify-between p-3 rounded-xl text-left transition-all ${
                       isSelected
-                        ? "bg-blue-50 dark:bg-[#2563EB]/20 border border-blue-200 dark:border-[#2563EB]/40 text-[#0B1718] dark:text-[#F4F7F3]"
-                        : "text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-[#0B1718]/60"
+                        ? "bg-blue-50 dark:bg-[#18A3B7]/20 border border-blue-200 dark:border-[#18A3B7]/40 text-[#0D1B29] dark:text-[#F3F8FA]"
+                        : "text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-[#0D1B29]/60"
                     }`}
                   >
                     <div className="flex items-center gap-3 min-w-0">
-                      <div className="p-2 rounded-lg bg-slate-100 dark:bg-[#0B1718] shrink-0">
+                      <div className="p-2 rounded-lg bg-slate-100 dark:bg-[#0D1B29] shrink-0">
                         {item.icon}
                       </div>
                       <div className="min-w-0 truncate">
@@ -425,11 +425,11 @@ export function CommandPalette({
                     </div>
 
                     <div className="flex items-center gap-2 shrink-0 ml-3">
-                      <span className="hidden sm:inline-block text-[10px] font-mono text-slate-400 dark:text-[#5CC8B2] uppercase">
+                      <span className="hidden sm:inline-block text-[10px] font-mono text-slate-400 dark:text-[#18A3B7] uppercase">
                         {item.category}
                       </span>
                       {isSelected && (
-                        <ArrowRight className="w-3.5 h-3.5 text-[#2563EB] dark:text-[#5CC8B2]" />
+                        <ArrowRight className="w-3.5 h-3.5 text-[#18A3B7] dark:text-[#18A3B7]" />
                       )}
                     </div>
                   </button>
@@ -439,12 +439,12 @@ export function CommandPalette({
           </div>
 
           {/* Footer Shortcuts */}
-          <div className="px-4 py-2.5 bg-slate-50 dark:bg-[#0B1718] border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-[11px] font-mono text-slate-400 dark:text-slate-400">
+          <div className="px-4 py-2.5 bg-slate-50 dark:bg-[#0D1B29] border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-[11px] font-mono text-slate-400 dark:text-slate-400">
             <div className="flex items-center gap-3">
               <span>↑↓ to navigate</span>
               <span>↵ to execute</span>
             </div>
-            <span className="text-[#2563EB] dark:text-[#5CC8B2]">Disha Tripathi Portfolio</span>
+            <span className="text-[#18A3B7] dark:text-[#18A3B7]">Disha Tripathi Portfolio</span>
           </div>
         </motion.div>
       </div>

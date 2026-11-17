@@ -57,11 +57,11 @@ export interface AchievementItem {
 
 export const PERSONAL_INFO = {
   name: "Disha Tripathi",
-  title: "Software Engineering · AI · Innovation",
-  tagline: "Beyond the Ordinary. Built for What's Next.",
-  headline: "Hi, I'm Disha Tripathi — I build intelligent, scalable and impactful software solutions.",
+  title: "Software Engineer & AI/ML Enthusiast",
+  tagline: "Building ideas into intelligent solutions.",
+  headline: "Hi, I'm Disha Tripathi — Building ideas into intelligent solutions.",
   shortBio:
-    "3rd-year B.Tech CSE student at RKGIT Ghaziabad (CGPA: 8.8/10). Smart India Hackathon (SIH 2026) internal level cleared, actively preparing for Google Summer of Code (GSoC 2027). Passionate about software engineering, AI/ML systems, and resilient full-stack applications.",
+    "I design, develop and explore technology-driven solutions to meaningful real-world problems. 3rd-year B.Tech CSE student at RKGIT Ghaziabad (CGPA: 8.8/10), Smart India Hackathon (SIH 2026) internal level cleared, and Google Summer of Code (GSoC 2027) aspirant.",
   college: "Raj Kumar Goel Institute of Technology, Ghaziabad",
   degree: "B.Tech Computer Science and Engineering",
   year: "3rd Year",
@@ -92,7 +92,7 @@ export const PERSONAL_INFO = {
 export const SKILL_CATEGORIES: SkillCategory[] = [
   {
     title: "Programming",
-    accent: "#5CC8B2",
+    accent: "#18A3B7",
     colorName: "blue",
     skills: [
       { name: "Python" },
@@ -105,7 +105,7 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
   },
   {
     title: "Frontend",
-    accent: "#D6F36A",
+    accent: "#27E6EC",
     colorName: "cyan",
     skills: [
       { name: "React" },
@@ -117,7 +117,7 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
   },
   {
     title: "Backend",
-    accent: "#A78BFA",
+    accent: "#6F71A1",
     colorName: "violet",
     skills: [
       { name: "FastAPI" },
@@ -128,7 +128,7 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
   },
   {
     title: "AI/ML",
-    accent: "#8B5CF6",
+    accent: "#6F71A1",
     colorName: "purple",
     skills: [
       { name: "Machine Learning" },

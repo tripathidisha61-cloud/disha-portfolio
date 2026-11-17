@@ -1,33 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* AETHER DESIGN SYSTEM */
 :root {
-  --background: #F4F7F3;
-  --foreground: #142522;
-  --muted: #536862;
-  --muted-bg: #EBF1EA;
-  --border: #D8E2D7;
+  /* LIGHT MODE - Arctic Ocean */
+  --background: #F3F8FA;
+  --surface: #FFFFFF;
+  --surface-secondary: #E5F0F4;
+  --surface-elevated: #D5E9EB;
+  --primary: #147F91;
+  --primary-hover: #106675;
+  --accent: #27E6EC;
+  --secondary: #397FA5;
+  --violet: #62658F;
+  --text-primary: #142F40;
+  --text-secondary: #536B79;
+  --text-muted: #708796;
+  --border: #D9E6EC;
+  --foreground: #142F40;
+  --muted: #536B79;
+  --muted-bg: #E5F0F4;
   --card: #FFFFFF;
-  --card-foreground: #142522;
-  --primary: #246D61;
-  --bright: #246D61;
-  --accent: #8BAE44;
-  --ring: #246D61;
+  --card-foreground: #142F40;
+  --ring: #147F91;
 }
 
 .dark {
-  --background: #0B1718;
-  --foreground: #F1F5EF;
-  --muted: #A6B8B2;
-  --muted-bg: #122526;
-  --border: #203F40;
-  --card: #193334;
-  --card-foreground: #F1F5EF;
-  --primary: #5CC8B2;
-  --bright: #5CC8B2;
-  --accent: #D6F36A;
-  --ring: #5CC8B2;
+  /* DARK MODE - Deep Ocean */
+  --background: #0D1B29;
+  --surface: #122638;
+  --surface-secondary: #1A334A;
+  --surface-elevated: #1E536E;
+  --primary: #18A3B7;
+  --primary-hover: #27E6EC;
+  --accent: #27E6EC;
+  --secondary: #5AA5CD;
+  --violet: #6F71A1;
+  --text-primary: #F2FAFC;
+  --text-secondary: #B5C8D5;
+  --text-muted: #91A9B8;
+  --border: #29495D;
+  --foreground: #F2FAFC;
+  --muted: #B5C8D5;
+  --muted-bg: #122638;
+  --card: #1A334A;
+  --card-foreground: #F2FAFC;
+  --ring: #27E6EC;
 }
 
 * {
@@ -77,15 +98,15 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #246D61;
+  background: #147F91;
 }
 
 .dark ::-webkit-scrollbar-thumb {
-  background: #203F40;
+  background: #29495D;
 }
 
 .dark ::-webkit-scrollbar-thumb:hover {
-  background: #5CC8B2;
+  background: #18A3B7;
 }
 
 /* Utility subtle grid background */

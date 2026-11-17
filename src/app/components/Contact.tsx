@@ -55,18 +55,18 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-28 border-t border-slate-200/60 dark:border-[#203F40]/80 bg-[#EBF1EA]/70 dark:bg-[#122526] transition-colors">
+    <section id="contact" className="py-20 md:py-28 border-t border-[#D9E6EC] dark:border-[#29495D] bg-[#F3F8FA] dark:bg-[#0D1B29] transition-colors">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal>
           <div className="flex items-center gap-2 mb-3">
-            <span className="font-mono text-xs uppercase tracking-wider text-[#2563EB] dark:text-[#5CC8B2]">
+            <span className="font-mono text-xs uppercase tracking-wider text-[#147F91] dark:text-[#27E6EC]">
               08 // Contact & Collaboration
             </span>
           </div>
-          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#142522] dark:text-[#F4F7F3]">
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#142F40] dark:text-[#F2FAFC]">
             Have an interesting opportunity or project in mind? Let&apos;s connect.
           </h2>
-          <p className="mt-3 text-base text-slate-600 dark:text-[#A6B8B2] max-w-2xl">
+          <p className="mt-3 text-base text-slate-600 dark:text-[#B5C8D5] max-w-2xl">
             Whether you are evaluating candidates for software engineering internships, open-source initiatives, or technical projects, my inbox is always open.
           </p>
         </Reveal>
@@ -75,29 +75,29 @@ export function Contact() {
           {/* Direct channels & Quick Action card */}
           <div className="lg:col-span-5 space-y-6">
             <Reveal delay={0.1}>
-              <div className="p-6 sm:p-7 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#193334] shadow-xs space-y-6">
+              <div className="p-6 sm:p-7 rounded-2xl border border-[#D9E6EC] dark:border-[#29495D] bg-white dark:bg-[#1A334A] shadow-xs space-y-6">
                 <div>
-                  <h3 className="text-lg font-bold text-[#0B1718] dark:text-[#F4F7F3]">
+                  <h3 className="text-lg font-bold text-[#142F40] dark:text-[#F2FAFC]">
                     Direct Contact Channels
                   </h3>
-                  <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">
+                  <p className="mt-1 text-xs text-slate-500 dark:text-[#B5C8D5]">
                     Feel free to reach out directly via email or professional networks.
                   </p>
                 </div>
 
                 {/* Email Box with One-Click Copy */}
-                <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#0B1718] flex items-center justify-between gap-3">
+                <div className="p-4 rounded-xl border border-[#D9E6EC] dark:border-[#29495D] bg-[#E5F0F4] dark:bg-[#0D1B29] flex items-center justify-between gap-3">
                   <div className="flex items-center gap-3 truncate">
-                    <div className="p-2 rounded-lg bg-white dark:bg-[#193334] border border-slate-200 dark:border-slate-800 shrink-0">
-                      <Mail className="w-4 h-4 text-[#2563EB] dark:text-[#5CC8B2]" />
+                    <div className="p-2 rounded-lg bg-white dark:bg-[#1A334A] border border-[#D9E6EC] dark:border-[#29495D] shrink-0">
+                      <Mail className="w-4 h-4 text-[#147F91] dark:text-[#27E6EC]" />
                     </div>
                     <div className="truncate">
-                      <div className="text-[11px] font-mono text-slate-400 dark:text-slate-500 uppercase">
+                      <div className="text-[11px] font-mono text-slate-400 dark:text-[#5AA5CD] uppercase">
                         Email Address
                       </div>
                       <a
                         href={`mailto:${PERSONAL_INFO.email}`}
-                        className="text-sm font-medium text-[#0B1718] dark:text-[#F4F7F3] hover:underline hover:text-[#2563EB] dark:hover:text-[#5CC8B2] truncate block"
+                        className="text-sm font-medium text-[#142F40] dark:text-[#F2FAFC] hover:underline hover:text-[#147F91] dark:hover:text-[#27E6EC] truncate block"
                       >
                         {PERSONAL_INFO.email}
                       </a>
@@ -107,7 +107,7 @@ export function Contact() {
                   <button
                     type="button"
                     onClick={handleCopyEmail}
-                    className="p-2 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#193334] hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 transition-colors shrink-0"
+                    className="p-2 rounded-lg border border-[#D9E6EC] dark:border-[#29495D] bg-white dark:bg-[#1A334A] hover:bg-[#E5F0F4] dark:hover:bg-[#1E536E] text-[#142F40] dark:text-[#F2FAFC] transition-colors shrink-0"
                     aria-label="Copy email address"
                   >
                     {copiedEmail ? (
@@ -120,10 +120,10 @@ export function Contact() {
 
                 {/* Phone Box with Direct Dial & One-Click Copy */}
                 {PERSONAL_INFO.phone && (
-                  <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#0B1718] flex items-center justify-between gap-3">
+                  <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#0D1B29] flex items-center justify-between gap-3">
                     <div className="flex items-center gap-3 truncate">
-                      <div className="p-2 rounded-lg bg-white dark:bg-[#193334] border border-slate-200 dark:border-slate-800 shrink-0">
-                        <Phone className="w-4 h-4 text-[#2563EB] dark:text-[#5CC8B2]" />
+                      <div className="p-2 rounded-lg bg-white dark:bg-[#1A334A] border border-slate-200 dark:border-slate-800 shrink-0">
+                        <Phone className="w-4 h-4 text-[#18A3B7] dark:text-[#18A3B7]" />
                       </div>
                       <div className="truncate">
                         <div className="text-[11px] font-mono text-slate-400 dark:text-slate-500 uppercase">
@@ -131,7 +131,7 @@ export function Contact() {
                         </div>
                         <a
                           href={`tel:${PERSONAL_INFO.phone}`}
-                          className="text-sm font-medium text-[#0B1718] dark:text-[#F4F7F3] hover:underline hover:text-[#2563EB] dark:hover:text-[#5CC8B2] truncate block font-mono"
+                          className="text-sm font-medium text-[#0D1B29] dark:text-[#F3F8FA] hover:underline hover:text-[#18A3B7] dark:hover:text-[#18A3B7] truncate block font-mono"
                         >
                           {PERSONAL_INFO.phone}
                         </a>
@@ -141,7 +141,7 @@ export function Contact() {
                     <button
                       type="button"
                       onClick={handleCopyPhone}
-                      className="p-2 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#193334] hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 transition-colors shrink-0"
+                      className="p-2 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#1A334A] hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 transition-colors shrink-0"
                       aria-label="Copy phone number"
                     >
                       {copiedPhone ? (
@@ -159,26 +159,26 @@ export function Contact() {
                     href={PERSONAL_INFO.socials.linkedin.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-between p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-[#2563EB]/50 bg-slate-50/50 dark:bg-[#0B1718] text-slate-800 dark:text-slate-200 hover:bg-slate-100/60 dark:hover:bg-[#193334] transition-all text-sm font-medium group"
+                    className="flex items-center justify-between p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-[#18A3B7]/50 bg-slate-50/50 dark:bg-[#0D1B29] text-slate-800 dark:text-slate-200 hover:bg-slate-100/60 dark:hover:bg-[#1A334A] transition-all text-sm font-medium group"
                   >
                     <span className="flex items-center gap-2.5">
-                      <Linkedin className="w-4 h-4 text-[#2563EB] dark:text-[#5CC8B2]" />
+                      <Linkedin className="w-4 h-4 text-[#18A3B7] dark:text-[#18A3B7]" />
                       <span>LinkedIn Profile</span>
                     </span>
-                    <ArrowUpRight className="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-[#2563EB] dark:group-hover:text-[#2563EB] transition-all" />
+                    <ArrowUpRight className="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-[#18A3B7] dark:group-hover:text-[#18A3B7] transition-all" />
                   </a>
 
                   <a
                     href={PERSONAL_INFO.socials.github.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-between p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-[#2563EB]/50 bg-slate-50/50 dark:bg-[#0B1718] text-slate-800 dark:text-slate-200 hover:bg-slate-100/60 dark:hover:bg-[#193334] transition-all text-sm font-medium group"
+                    className="flex items-center justify-between p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-[#18A3B7]/50 bg-slate-50/50 dark:bg-[#0D1B29] text-slate-800 dark:text-slate-200 hover:bg-slate-100/60 dark:hover:bg-[#1A334A] transition-all text-sm font-medium group"
                   >
                     <span className="flex items-center gap-2.5">
-                      <Github className="w-4 h-4 text-[#2563EB] dark:text-[#5CC8B2]" />
+                      <Github className="w-4 h-4 text-[#18A3B7] dark:text-[#18A3B7]" />
                       <span>GitHub Organization & Repos</span>
                     </span>
-                    <ArrowUpRight className="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-[#2563EB] dark:group-hover:text-[#2563EB] transition-all" />
+                    <ArrowUpRight className="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-[#18A3B7] dark:group-hover:text-[#18A3B7] transition-all" />
                   </a>
                 </div>
 
@@ -186,13 +186,13 @@ export function Contact() {
                   <div className="flex items-center justify-between">
                     <span>LOCATION</span>
                     <span className="text-slate-700 dark:text-slate-300 font-sans text-xs flex items-center gap-1">
-                      <MapPin className="w-3.5 h-3.5 text-[#2563EB]" />
+                      <MapPin className="w-3.5 h-3.5 text-[#18A3B7]" />
                       {PERSONAL_INFO.location}
                     </span>
                   </div>
                   <div className="flex items-center justify-between">
                     <span>RESPONSE TIME</span>
-                    <span className="text-[#2563EB] dark:text-[#5CC8B2] font-medium">Within 24 Hours</span>
+                    <span className="text-[#18A3B7] dark:text-[#18A3B7] font-medium">Within 24 Hours</span>
                   </div>
                 </div>
               </div>
@@ -202,12 +202,12 @@ export function Contact() {
           {/* Interactive Contact Form */}
           <div className="lg:col-span-7">
             <Reveal delay={0.2}>
-              <div className="p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#193334] shadow-xs">
+              <div className="p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#1A334A] shadow-xs">
                 <div className="flex items-center gap-2.5 mb-6 pb-4 border-b border-slate-100 dark:border-slate-800">
-                  <div className="p-2 rounded-lg bg-slate-100 dark:bg-[#0B1718] text-[#2563EB] dark:text-[#5CC8B2]">
+                  <div className="p-2 rounded-lg bg-slate-100 dark:bg-[#0D1B29] text-[#18A3B7] dark:text-[#18A3B7]">
                     <MessageSquare className="w-4 h-4" />
                   </div>
-                  <h3 className="font-bold text-base text-[#0B1718] dark:text-[#F4F7F3]">
+                  <h3 className="font-bold text-base text-[#0D1B29] dark:text-[#F3F8FA]">
                     Send a Message
                   </h3>
                 </div>
@@ -230,7 +230,7 @@ export function Contact() {
                           setFormState({ ...formState, name: e.target.value })
                         }
                         placeholder="Alex Morgan"
-                        className="w-full px-3.5 py-2.5 rounded-xl text-sm border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#0B1718] text-[#0B1718] dark:text-[#F4F7F3] placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-[#2563EB] transition-all"
+                        className="w-full px-3.5 py-2.5 rounded-xl text-sm border border-[#D9E6EC] dark:border-[#29495D] bg-[#F3F8FA] dark:bg-[#0D1B29] text-[#142F40] dark:text-[#F2FAFC] placeholder:text-slate-400 dark:placeholder:text-[#536B79] focus:outline-none focus:ring-2 focus:ring-[#147F91] dark:focus:ring-[#27E6EC] transition-all"
                       />
                     </div>
 
@@ -250,7 +250,7 @@ export function Contact() {
                           setFormState({ ...formState, email: e.target.value })
                         }
                         placeholder="alex@company.com"
-                        className="w-full px-3.5 py-2.5 rounded-xl text-sm border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#0B1718] text-[#0B1718] dark:text-[#F4F7F3] placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-[#2563EB] transition-all"
+                        className="w-full px-3.5 py-2.5 rounded-xl text-sm border border-[#D9E6EC] dark:border-[#29495D] bg-[#F3F8FA] dark:bg-[#0D1B29] text-[#142F40] dark:text-[#F2FAFC] placeholder:text-slate-400 dark:placeholder:text-[#536B79] focus:outline-none focus:ring-2 focus:ring-[#147F91] dark:focus:ring-[#27E6EC] transition-all"
                       />
                     </div>
                   </div>
@@ -271,7 +271,7 @@ export function Contact() {
                         setFormState({ ...formState, subject: e.target.value })
                       }
                       placeholder="Opportunity / Collaboration Inquiry"
-                      className="w-full px-3.5 py-2.5 rounded-xl text-sm border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#0B1718] text-[#0B1718] dark:text-[#F4F7F3] placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-[#2563EB] transition-all"
+                      className="w-full px-3.5 py-2.5 rounded-xl text-sm border border-[#D9E6EC] dark:border-[#29495D] bg-[#F3F8FA] dark:bg-[#0D1B29] text-[#142F40] dark:text-[#F2FAFC] placeholder:text-slate-400 dark:placeholder:text-[#536B79] focus:outline-none focus:ring-2 focus:ring-[#147F91] dark:focus:ring-[#27E6EC] transition-all"
                     />
                   </div>
 
@@ -291,21 +291,21 @@ export function Contact() {
                         setFormState({ ...formState, message: e.target.value })
                       }
                       placeholder="Hello Disha, I came across your portfolio and would love to discuss..."
-                      className="w-full px-3.5 py-2.5 rounded-xl text-sm border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#0B1718] text-[#0B1718] dark:text-[#F4F7F3] placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-[#2563EB] transition-all resize-none"
+                      className="w-full px-3.5 py-2.5 rounded-xl text-sm border border-[#D9E6EC] dark:border-[#29495D] bg-[#F3F8FA] dark:bg-[#0D1B29] text-[#142F40] dark:text-[#F2FAFC] placeholder:text-slate-400 dark:placeholder:text-[#536B79] focus:outline-none focus:ring-2 focus:ring-[#147F91] dark:focus:ring-[#27E6EC] transition-all resize-none"
                     />
                   </div>
 
                   <div className="pt-2 flex items-center justify-between">
                     <button
                       type="submit"
-                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold bg-[#2563EB] text-white hover:bg-[#1D4ED8] transition-all shadow-xs active:scale-[0.98]"
+                      className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-bold bg-[#147F91] hover:bg-[#106675] dark:bg-[#18A3B7] dark:hover:bg-[#27E6EC] text-white dark:text-[#0D1B29] transition-all shadow-[0_4px_20px_rgba(24,163,183,0.3)] active:scale-[0.98]"
                     >
                       <Send className="w-3.5 h-3.5" />
                       <span>Send Message</span>
                     </button>
 
                     {submitted && (
-                      <span className="text-xs text-[#2563EB] dark:text-[#5CC8B2] font-medium">
+                      <span className="text-xs text-[#18A3B7] dark:text-[#18A3B7] font-medium">
                         Opening your email client...
                       </span>
                     )}

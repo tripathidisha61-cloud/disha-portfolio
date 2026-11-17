@@ -12,23 +12,34 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        obsidian: {
-          bg: "#0B1718",          // Obsidian dark canvas
-          bgSecondary: "#122526", // Deep Teal secondary canvas
-          card: "#193334",        // Surface card background
-          border: "#203F40",      // Dark border
-          glacier: "#5CC8B2",     // Glacier Teal primary
-          lime: "#D6F36A",        // Acid Lime accent
-          porcelain: "#F1F5EF",   // Main text
-          muted: "#A6B8B2",       // Muted text
-          lightBg: "#F4F7F3",     // Light canvas
-          lightSurface: "#FFFFFF",// Light card surface
-          lightSecondary: "#EBF1EA", // Light secondary
-          lightTeal: "#246D61",   // Light Teal primary
-          lightLime: "#8BAE44",   // Light Lime accent
-          lightText: "#142522",   // Light text
-          lightBorder: "#D8E2D7", // Light border
-          glow: "rgba(92, 200, 178, 0.25)",
+        aether: {
+          // Dark mode: Deep Ocean
+          darkBg: "#0D1B29",          // Deepest Ocean - Main background
+          darkSurface: "#122638",     // Midnight Surface - Alternate section
+          darkCard: "#1A334A",        // Original Deep Blue - Cards and navigation
+          darkElevated: "#1E536E",    // Ocean Blue - Elevated cards / hover
+          darkPrimary: "#18A3B7",     // Teal - Primary buttons & actions
+          darkAccent: "#27E6EC",      // Electric Cyan - Highlights & indicators
+          darkSecondary: "#5AA5CD",   // Arctic Blue - Links & secondary emphasis
+          darkViolet: "#6F71A1",      // Mystic Violet - AI/ML & creative highlights
+          darkText: "#F2FAFC",        // Primary Text - Headings
+          darkMuted: "#B5C8D5",       // Secondary Text - Descriptions
+          darkBorder: "#29495D",      // Borders - Card outlines & dividers
+
+          // Light mode: Arctic Ocean
+          lightBg: "#F3F8FA",         // Arctic White - Main background
+          lightSurface: "#FFFFFF",    // Pure White - Cards & elevated surfaces
+          lightSection: "#E5F0F4",    // Ice Blue - Alternate section background
+          lightElevated: "#D5E9EB",   // Pale Teal - Selected surfaces
+          lightPrimary: "#147F91",    // Ocean Teal - Primary buttons & links
+          lightHover: "#106675",      // Deep Teal - Hover & active buttons
+          lightSecondary: "#397FA5",  // Sky Blue - Secondary accents
+          lightViolet: "#62658F",     // Muted Violet - AI/ML highlights
+          lightText: "#142F40",       // Primary Text - Headings
+          lightMuted: "#536B79",      // Secondary Text - Body paragraphs
+          lightBorder: "#D9E6EC",     // Borders - Dividers & card outlines
+          glow: "rgba(24, 163, 183, 0.25)",
+          cyanGlow: "rgba(39, 230, 236, 0.35)",
         },
         midnightEng: {
           bg: "#0B1718",          // Main background
