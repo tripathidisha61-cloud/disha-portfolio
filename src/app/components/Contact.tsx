@@ -59,11 +59,11 @@ export function Contact() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal>
           <div className="flex items-center gap-2 mb-3">
-            <span className="font-mono text-xs uppercase tracking-wider text-[#0D9488] dark:text-[#2DD4BF]">
+            <span className="font-mono text-xs uppercase tracking-wider text-[#0284C7] dark:text-[#38BDF8]">
               08 // Connect
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#0A1E2F] dark:text-[#F0FDFA]">
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#0B192C] dark:text-[#F0F9FF]">
             Get In Touch
           </h2>
           <p className="mt-3 text-base text-slate-600 dark:text-slate-400 max-w-2xl">
@@ -75,9 +75,9 @@ export function Contact() {
           {/* Direct channels & Quick Action card */}
           <div className="lg:col-span-5 space-y-6">
             <Reveal delay={0.1}>
-              <div className="p-6 sm:p-7 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#102A43] shadow-xs space-y-6">
+              <div className="p-6 sm:p-7 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#112240] shadow-xs space-y-6">
                 <div>
-                  <h3 className="text-lg font-bold text-[#0A1E2F] dark:text-[#F0FDFA]">
+                  <h3 className="text-lg font-bold text-[#0B192C] dark:text-[#F0F9FF]">
                     Direct Contact Channels
                   </h3>
                   <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">
@@ -86,10 +86,10 @@ export function Contact() {
                 </div>
 
                 {/* Email Box with One-Click Copy */}
-                <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#0A1E2F] flex items-center justify-between gap-3">
+                <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#0B192C] flex items-center justify-between gap-3">
                   <div className="flex items-center gap-3 truncate">
-                    <div className="p-2 rounded-lg bg-white dark:bg-[#102A43] border border-slate-200 dark:border-slate-800 shrink-0">
-                      <Mail className="w-4 h-4 text-[#0D9488] dark:text-[#2DD4BF]" />
+                    <div className="p-2 rounded-lg bg-white dark:bg-[#112240] border border-slate-200 dark:border-slate-800 shrink-0">
+                      <Mail className="w-4 h-4 text-[#0284C7] dark:text-[#38BDF8]" />
                     </div>
                     <div className="truncate">
                       <div className="text-[11px] font-mono text-slate-400 dark:text-slate-500 uppercase">
@@ -97,7 +97,7 @@ export function Contact() {
                       </div>
                       <a
                         href={`mailto:${PERSONAL_INFO.email}`}
-                        className="text-sm font-medium text-[#0A1E2F] dark:text-[#F0FDFA] hover:underline hover:text-[#0D9488] dark:hover:text-[#2DD4BF] truncate block"
+                        className="text-sm font-medium text-[#0B192C] dark:text-[#F0F9FF] hover:underline hover:text-[#0284C7] dark:hover:text-[#38BDF8] truncate block"
                       >
                         {PERSONAL_INFO.email}
                       </a>
@@ -107,7 +107,7 @@ export function Contact() {
                   <button
                     type="button"
                     onClick={handleCopyEmail}
-                    className="p-2 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#102A43] hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 transition-colors shrink-0"
+                    className="p-2 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#112240] hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 transition-colors shrink-0"
                     aria-label="Copy email address"
                   >
                     {copiedEmail ? (
@@ -120,10 +120,10 @@ export function Contact() {
 
                 {/* Phone Box with Direct Dial & One-Click Copy */}
                 {PERSONAL_INFO.phone && (
-                  <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#0A1E2F] flex items-center justify-between gap-3">
+                  <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#0B192C] flex items-center justify-between gap-3">
                     <div className="flex items-center gap-3 truncate">
-                      <div className="p-2 rounded-lg bg-white dark:bg-[#102A43] border border-slate-200 dark:border-slate-800 shrink-0">
-                        <Phone className="w-4 h-4 text-[#0D9488] dark:text-[#2DD4BF]" />
+                      <div className="p-2 rounded-lg bg-white dark:bg-[#112240] border border-slate-200 dark:border-slate-800 shrink-0">
+                        <Phone className="w-4 h-4 text-[#0284C7] dark:text-[#38BDF8]" />
                       </div>
                       <div className="truncate">
                         <div className="text-[11px] font-mono text-slate-400 dark:text-slate-500 uppercase">
@@ -131,7 +131,7 @@ export function Contact() {
                         </div>
                         <a
                           href={`tel:${PERSONAL_INFO.phone}`}
-                          className="text-sm font-medium text-[#0A1E2F] dark:text-[#F0FDFA] hover:underline hover:text-[#0D9488] dark:hover:text-[#2DD4BF] truncate block font-mono"
+                          className="text-sm font-medium text-[#0B192C] dark:text-[#F0F9FF] hover:underline hover:text-[#0284C7] dark:hover:text-[#38BDF8] truncate block font-mono"
                         >
                           {PERSONAL_INFO.phone}
                         </a>
@@ -141,7 +141,7 @@ export function Contact() {
                     <button
                       type="button"
                       onClick={handleCopyPhone}
-                      className="p-2 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#102A43] hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 transition-colors shrink-0"
+                      className="p-2 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#112240] hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 transition-colors shrink-0"
                       aria-label="Copy phone number"
                     >
                       {copiedPhone ? (
@@ -159,26 +159,26 @@ export function Contact() {
                     href={PERSONAL_INFO.socials.linkedin.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-between p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-[#0D9488]/50 bg-slate-50/50 dark:bg-[#0A1E2F] text-slate-800 dark:text-slate-200 hover:bg-slate-100/60 dark:hover:bg-[#102A43] transition-all text-sm font-medium group"
+                    className="flex items-center justify-between p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-[#0284C7]/50 bg-slate-50/50 dark:bg-[#0B192C] text-slate-800 dark:text-slate-200 hover:bg-slate-100/60 dark:hover:bg-[#112240] transition-all text-sm font-medium group"
                   >
                     <span className="flex items-center gap-2.5">
-                      <Linkedin className="w-4 h-4 text-[#0D9488] dark:text-[#2DD4BF]" />
+                      <Linkedin className="w-4 h-4 text-[#0284C7] dark:text-[#38BDF8]" />
                       <span>LinkedIn Profile</span>
                     </span>
-                    <ArrowUpRight className="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-[#0D9488] dark:group-hover:text-[#2DD4BF] transition-all" />
+                    <ArrowUpRight className="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-[#0284C7] dark:group-hover:text-[#38BDF8] transition-all" />
                   </a>
 
                   <a
                     href={PERSONAL_INFO.socials.github.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-between p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-[#0D9488]/50 bg-slate-50/50 dark:bg-[#0A1E2F] text-slate-800 dark:text-slate-200 hover:bg-slate-100/60 dark:hover:bg-[#102A43] transition-all text-sm font-medium group"
+                    className="flex items-center justify-between p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-[#0284C7]/50 bg-slate-50/50 dark:bg-[#0B192C] text-slate-800 dark:text-slate-200 hover:bg-slate-100/60 dark:hover:bg-[#112240] transition-all text-sm font-medium group"
                   >
                     <span className="flex items-center gap-2.5">
-                      <Github className="w-4 h-4 text-[#0D9488] dark:text-[#2DD4BF]" />
+                      <Github className="w-4 h-4 text-[#0284C7] dark:text-[#38BDF8]" />
                       <span>GitHub Organization & Repos</span>
                     </span>
-                    <ArrowUpRight className="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-[#0D9488] dark:group-hover:text-[#2DD4BF] transition-all" />
+                    <ArrowUpRight className="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-[#0284C7] dark:group-hover:text-[#38BDF8] transition-all" />
                   </a>
                 </div>
 
@@ -186,13 +186,13 @@ export function Contact() {
                   <div className="flex items-center justify-between">
                     <span>LOCATION</span>
                     <span className="text-slate-700 dark:text-slate-300 font-sans text-xs flex items-center gap-1">
-                      <MapPin className="w-3.5 h-3.5 text-[#2DD4BF]" />
+                      <MapPin className="w-3.5 h-3.5 text-[#38BDF8]" />
                       {PERSONAL_INFO.location}
                     </span>
                   </div>
                   <div className="flex items-center justify-between">
                     <span>RESPONSE TIME</span>
-                    <span className="text-[#0D9488] dark:text-[#2DD4BF] font-medium">Within 24 Hours</span>
+                    <span className="text-[#0284C7] dark:text-[#38BDF8] font-medium">Within 24 Hours</span>
                   </div>
                 </div>
               </div>
@@ -202,12 +202,12 @@ export function Contact() {
           {/* Interactive Contact Form */}
           <div className="lg:col-span-7">
             <Reveal delay={0.2}>
-              <div className="p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#102A43] shadow-xs">
+              <div className="p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#112240] shadow-xs">
                 <div className="flex items-center gap-2.5 mb-6 pb-4 border-b border-slate-100 dark:border-slate-800">
-                  <div className="p-2 rounded-lg bg-slate-100 dark:bg-[#0A1E2F] text-[#0D9488] dark:text-[#2DD4BF]">
+                  <div className="p-2 rounded-lg bg-slate-100 dark:bg-[#0B192C] text-[#0284C7] dark:text-[#38BDF8]">
                     <MessageSquare className="w-4 h-4" />
                   </div>
-                  <h3 className="font-bold text-base text-[#0A1E2F] dark:text-[#F0FDFA]">
+                  <h3 className="font-bold text-base text-[#0B192C] dark:text-[#F0F9FF]">
                     Send a Message
                   </h3>
                 </div>
@@ -230,7 +230,7 @@ export function Contact() {
                           setFormState({ ...formState, name: e.target.value })
                         }
                         placeholder="Alex Morgan"
-                        className="w-full px-3.5 py-2.5 rounded-xl text-sm border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#0A1E2F] text-[#0A1E2F] dark:text-[#F0FDFA] placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-[#0D9488] transition-all"
+                        className="w-full px-3.5 py-2.5 rounded-xl text-sm border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#0B192C] text-[#0B192C] dark:text-[#F0F9FF] placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-[#0284C7] transition-all"
                       />
                     </div>
 
@@ -250,7 +250,7 @@ export function Contact() {
                           setFormState({ ...formState, email: e.target.value })
                         }
                         placeholder="alex@company.com"
-                        className="w-full px-3.5 py-2.5 rounded-xl text-sm border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#0A1E2F] text-[#0A1E2F] dark:text-[#F0FDFA] placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-[#0D9488] transition-all"
+                        className="w-full px-3.5 py-2.5 rounded-xl text-sm border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#0B192C] text-[#0B192C] dark:text-[#F0F9FF] placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-[#0284C7] transition-all"
                       />
                     </div>
                   </div>
@@ -271,7 +271,7 @@ export function Contact() {
                         setFormState({ ...formState, subject: e.target.value })
                       }
                       placeholder="Opportunity / Collaboration Inquiry"
-                      className="w-full px-3.5 py-2.5 rounded-xl text-sm border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#0A1E2F] text-[#0A1E2F] dark:text-[#F0FDFA] placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-[#0D9488] transition-all"
+                      className="w-full px-3.5 py-2.5 rounded-xl text-sm border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#0B192C] text-[#0B192C] dark:text-[#F0F9FF] placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-[#0284C7] transition-all"
                     />
                   </div>
 
@@ -291,21 +291,21 @@ export function Contact() {
                         setFormState({ ...formState, message: e.target.value })
                       }
                       placeholder="Hello Disha, I came across your portfolio and would love to discuss..."
-                      className="w-full px-3.5 py-2.5 rounded-xl text-sm border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#0A1E2F] text-[#0A1E2F] dark:text-[#F0FDFA] placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-[#0D9488] transition-all resize-none"
+                      className="w-full px-3.5 py-2.5 rounded-xl text-sm border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#0B192C] text-[#0B192C] dark:text-[#F0F9FF] placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-[#0284C7] transition-all resize-none"
                     />
                   </div>
 
                   <div className="pt-2 flex items-center justify-between">
                     <button
                       type="submit"
-                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold bg-[#0D9488] text-white hover:bg-[#0F766E] transition-all shadow-xs active:scale-[0.98]"
+                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold bg-[#0284C7] text-white hover:bg-[#0369A1] transition-all shadow-xs active:scale-[0.98]"
                     >
                       <Send className="w-3.5 h-3.5" />
                       <span>Send Message</span>
                     </button>
 
                     {submitted && (
-                      <span className="text-xs text-[#0D9488] dark:text-[#2DD4BF] font-medium">
+                      <span className="text-xs text-[#0284C7] dark:text-[#38BDF8] font-medium">
                         Opening your email client...
                       </span>
                     )}

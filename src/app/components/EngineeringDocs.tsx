@@ -28,11 +28,11 @@ export function EngineeringDocs() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal>
           <div className="flex items-center gap-2 mb-3">
-            <span className="font-mono text-xs uppercase tracking-wider text-[#0D9488] dark:text-[#2DD4BF]">
+            <span className="font-mono text-xs uppercase tracking-wider text-[#0284C7] dark:text-[#38BDF8]">
               05 // System Design & RFCs
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#0A1E2F] dark:text-[#F0FDFA]">
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#0B192C] dark:text-[#F0F9FF]">
             Engineering Design Documents
           </h2>
           <p className="mt-3 text-base text-slate-600 dark:text-slate-400 max-w-2xl">
@@ -44,10 +44,10 @@ export function EngineeringDocs() {
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
           {ENGINEERING_DOCS.map((doc, idx) => (
             <Reveal key={doc.id} delay={idx * 0.1}>
-              <div className="p-6 sm:p-7 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#102A43] hover:border-slate-300 dark:hover:border-[#0D9488]/50 flex flex-col justify-between h-full shadow-xs hover:shadow-lg dark:hover:shadow-[#0D9488]/10 transition-all group">
+              <div className="p-6 sm:p-7 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#112240] hover:border-slate-300 dark:hover:border-[#0284C7]/50 flex flex-col justify-between h-full shadow-xs hover:shadow-lg dark:hover:shadow-[#0284C7]/10 transition-all group">
                 <div>
                   <div className="flex items-center justify-between gap-2 mb-4">
-                    <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-medium border border-[#0D9488]/30 bg-[#0D9488]/10 text-[#0D9488] dark:text-[#2DD4BF]">
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-medium border border-[#0284C7]/30 bg-[#0284C7]/10 text-[#0284C7] dark:text-[#38BDF8]">
                       <FileText className="w-3 h-3" />
                       {doc.type}
                     </span>
@@ -57,7 +57,7 @@ export function EngineeringDocs() {
                     </span>
                   </div>
 
-                  <h3 className="font-bold text-base sm:text-lg text-[#0A1E2F] dark:text-[#F0FDFA] leading-snug group-hover:text-[#0D9488] dark:group-hover:text-[#2DD4BF] transition-colors">
+                  <h3 className="font-bold text-base sm:text-lg text-[#0B192C] dark:text-[#F0F9FF] leading-snug group-hover:text-[#0284C7] dark:group-hover:text-[#38BDF8] transition-colors">
                     {doc.title}
                   </h3>
 
@@ -69,7 +69,7 @@ export function EngineeringDocs() {
                     {doc.tags.slice(0, 3).map((tag) => (
                       <span
                         key={tag}
-                        className="px-2 py-0.5 rounded text-[10px] font-mono border border-slate-200/80 dark:border-slate-800 bg-slate-50 dark:bg-[#0A1E2F] text-slate-500 dark:text-slate-300"
+                        className="px-2 py-0.5 rounded text-[10px] font-mono border border-slate-200/80 dark:border-slate-800 bg-slate-50 dark:bg-[#0B192C] text-slate-500 dark:text-slate-300"
                       >
                         {tag}
                       </span>
@@ -81,7 +81,7 @@ export function EngineeringDocs() {
                   <button
                     type="button"
                     onClick={() => setSelectedDoc(doc)}
-                    className="w-full flex items-center justify-between text-xs font-semibold text-slate-800 dark:text-slate-200 group-hover:text-[#0D9488] dark:group-hover:text-[#2DD4BF] transition-colors"
+                    className="w-full flex items-center justify-between text-xs font-semibold text-slate-800 dark:text-slate-200 group-hover:text-[#0284C7] dark:group-hover:text-[#38BDF8] transition-colors"
                   >
                     <span>Read Full Architecture RFC</span>
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -103,7 +103,7 @@ export function EngineeringDocs() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setSelectedDoc(null)}
-              className="fixed inset-0 bg-[#0A1E2F]/80 backdrop-blur-sm"
+              className="fixed inset-0 bg-[#0B192C]/80 backdrop-blur-sm"
             />
 
             {/* Modal Body */}
@@ -112,19 +112,19 @@ export function EngineeringDocs() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 16 }}
               transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
-              className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#102A43] shadow-2xl p-6 sm:p-8 z-10 space-y-6"
+              className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#112240] shadow-2xl p-6 sm:p-8 z-10 space-y-6"
             >
               {/* Header */}
               <div className="flex items-start justify-between gap-4 pb-4 border-b border-slate-100 dark:border-slate-800">
                 <div>
                   <div className="flex items-center gap-2 mb-2">
-                    <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-mono font-medium border border-[#0D9488]/30 bg-[#0D9488]/10 text-[#0D9488] dark:text-[#2DD4BF]">
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-mono font-medium border border-[#0284C7]/30 bg-[#0284C7]/10 text-[#0284C7] dark:text-[#38BDF8]">
                       <BookOpen className="w-3.5 h-3.5" />
                       {selectedDoc.type}
                     </span>
                     <span className="text-xs font-mono text-slate-400">• {selectedDoc.readTime}</span>
                   </div>
-                  <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-[#0A1E2F] dark:text-[#F0FDFA] leading-tight">
+                  <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-[#0B192C] dark:text-[#F0F9FF] leading-tight">
                     {selectedDoc.title}
                   </h3>
                 </div>
@@ -132,7 +132,7 @@ export function EngineeringDocs() {
                 <button
                   type="button"
                   onClick={() => setSelectedDoc(null)}
-                  className="p-2 rounded-xl text-slate-500 hover:text-slate-900 dark:hover:text-[#2DD4BF] hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                  className="p-2 rounded-xl text-slate-500 hover:text-slate-900 dark:hover:text-[#38BDF8] hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
                   aria-label="Close design doc"
                 >
                   <X className="w-5 h-5" />
@@ -144,7 +144,7 @@ export function EngineeringDocs() {
                 <h4 className="text-xs font-mono uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">
                   1. The Engineering Challenge & Problem Statement
                 </h4>
-                <div className="p-4 rounded-xl border border-slate-200/80 dark:border-slate-800 bg-slate-50/70 dark:bg-[#0A1E2F] text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+                <div className="p-4 rounded-xl border border-slate-200/80 dark:border-slate-800 bg-slate-50/70 dark:bg-[#0B192C] text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
                   {selectedDoc.problemStatement}
                 </div>
               </div>
@@ -153,13 +153,13 @@ export function EngineeringDocs() {
               {selectedDoc.architectureDiagram && selectedDoc.architectureDiagram.length > 0 && (
                 <div>
                   <h4 className="text-xs font-mono uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2.5 flex items-center gap-1.5">
-                    <Cpu className="w-4 h-4 text-[#2DD4BF]" />
+                    <Cpu className="w-4 h-4 text-[#38BDF8]" />
                     <span>2. End-to-End System Dataflow</span>
                   </h4>
-                  <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-[#0A1E2F] flex flex-wrap items-center gap-2">
+                  <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-[#0B192C] flex flex-wrap items-center gap-2">
                     {selectedDoc.architectureDiagram.map((step, idx) => (
                       <div key={idx} className="flex items-center gap-2">
-                        <span className="px-3 py-1.5 rounded-lg text-xs font-mono border border-slate-200 dark:border-slate-700 bg-white dark:bg-[#102A43] text-slate-800 dark:text-slate-200 shadow-2xs">
+                        <span className="px-3 py-1.5 rounded-lg text-xs font-mono border border-slate-200 dark:border-slate-700 bg-white dark:bg-[#112240] text-slate-800 dark:text-slate-200 shadow-2xs">
                           {step}
                         </span>
                         {idx < selectedDoc.architectureDiagram!.length - 1 && (
@@ -174,20 +174,20 @@ export function EngineeringDocs() {
               {/* Trade-off Decisions */}
               <div>
                 <h4 className="text-xs font-mono uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-3 flex items-center gap-1.5">
-                  <Layers className="w-4 h-4 text-[#0D9488]" />
+                  <Layers className="w-4 h-4 text-[#0284C7]" />
                   <span>3. Design Decisions & Architectural Trade-offs</span>
                 </h4>
                 <div className="space-y-3">
                   {selectedDoc.designDecisions.map((dec, i) => (
                     <div
                       key={i}
-                      className="p-4 rounded-xl border border-slate-200/80 dark:border-slate-800 bg-slate-50/40 dark:bg-[#0A1E2F] space-y-2"
+                      className="p-4 rounded-xl border border-slate-200/80 dark:border-slate-800 bg-slate-50/40 dark:bg-[#0B192C] space-y-2"
                     >
                       <div className="flex items-start gap-2">
-                        <span className="font-semibold text-xs text-[#0D9488] dark:text-[#2DD4BF] font-mono shrink-0">
+                        <span className="font-semibold text-xs text-[#0284C7] dark:text-[#38BDF8] font-mono shrink-0">
                           [Decision]:
                         </span>
-                        <span className="text-xs sm:text-sm font-semibold text-[#0A1E2F] dark:text-[#F0FDFA]">
+                        <span className="text-xs sm:text-sm font-semibold text-[#0B192C] dark:text-[#F0F9FF]">
                           {dec.choice}
                         </span>
                       </div>
@@ -211,16 +211,16 @@ export function EngineeringDocs() {
               {/* Quantified Production Impact */}
               <div>
                 <h4 className="text-xs font-mono uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2.5 flex items-center gap-1.5">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-500 dark:text-[#2DD4BF]" />
+                  <CheckCircle2 className="w-4 h-4 text-emerald-500 dark:text-[#38BDF8]" />
                   <span>4. Quantified Production Impact (Google XYZ)</span>
                 </h4>
                 <div className="space-y-1.5">
                   {selectedDoc.metricsImpact.map((metric, idx) => (
                     <div
                       key={idx}
-                      className="p-3 rounded-lg border border-[#0D9488]/20 bg-blue-50/50 dark:bg-[#0D9488]/5 text-xs text-blue-700 dark:text-[#2DD4BF] flex items-center gap-2"
+                      className="p-3 rounded-lg border border-[#0284C7]/20 bg-blue-50/50 dark:bg-[#0284C7]/5 text-xs text-blue-700 dark:text-[#38BDF8] flex items-center gap-2"
                     >
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#0D9488] dark:bg-[#2DD4BF] shrink-0" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#0284C7] dark:bg-[#38BDF8] shrink-0" />
                       <span>{metric}</span>
                     </div>
                   ))}
@@ -243,7 +243,7 @@ export function EngineeringDocs() {
                 <button
                   type="button"
                   onClick={() => setSelectedDoc(null)}
-                  className="px-4 py-2 rounded-xl text-xs font-medium text-slate-500 hover:text-slate-900 dark:hover:text-[#2DD4BF] transition-colors"
+                  className="px-4 py-2 rounded-xl text-xs font-medium text-slate-500 hover:text-slate-900 dark:hover:text-[#38BDF8] transition-colors"
                 >
                   Close Document
                 </button>

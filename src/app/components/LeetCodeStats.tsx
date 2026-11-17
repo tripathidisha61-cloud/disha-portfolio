@@ -71,16 +71,16 @@ export function LeetCodeStats() {
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
           <Reveal>
             <div className="flex items-center gap-2 mb-3">
-              <span className="font-mono text-xs uppercase tracking-wider text-[#0D9488] dark:text-[#2DD4BF]">
+              <span className="font-mono text-xs uppercase tracking-wider text-[#0284C7] dark:text-[#38BDF8]">
                 05 // Problem Solving
               </span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#0A1E2F] dark:text-[#F0FDFA]">
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#0B192C] dark:text-[#F0F9FF]">
               LeetCode Problem Solving
             </h2>
             <p className="mt-3 text-base text-slate-600 dark:text-slate-400 max-w-2xl">
               Verified problem-solving telemetry for{" "}
-              <code className="text-xs px-2 py-1 rounded bg-slate-100 dark:bg-[#102A43] font-mono text-slate-800 dark:text-[#2DD4BF]">
+              <code className="text-xs px-2 py-1 rounded bg-slate-100 dark:bg-[#112240] font-mono text-slate-800 dark:text-[#38BDF8]">
                 Disha_tripathi2006
               </code>
               . Synchronized directly with official public endpoints.
@@ -104,7 +104,7 @@ export function LeetCodeStats() {
                 href="https://leetcode.com/u/Disha_tripathi2006/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-semibold bg-[#0D9488] text-white hover:bg-[#0F766E] transition-colors shadow-xs"
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-semibold bg-[#0284C7] text-white hover:bg-[#0369A1] transition-colors shadow-xs"
               >
                 <Code className="w-3.5 h-3.5" />
                 <span>Open LeetCode</span>
@@ -120,7 +120,7 @@ export function LeetCodeStats() {
             {[1, 2, 3, 4].map((i) => (
               <div
                 key={i}
-                className="h-32 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#102A43] animate-pulse space-y-3"
+                className="h-32 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#112240] animate-pulse space-y-3"
               >
                 <div className="h-4 bg-slate-200 dark:bg-slate-800 rounded w-1/2" />
                 <div className="h-8 bg-slate-200 dark:bg-slate-800 rounded w-1/3" />
@@ -133,7 +133,7 @@ export function LeetCodeStats() {
         {!loading && stats && (
           <div className="mt-8 space-y-6">
             {stats.status === "fallback" && (
-              <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/70 dark:bg-[#102A43] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs">
+              <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/70 dark:bg-[#112240] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs">
                 <div className="flex items-center gap-2 text-slate-600 dark:text-slate-400">
                   <span className="w-2 h-2 rounded-full bg-amber-500" />
                   <span>
@@ -144,7 +144,7 @@ export function LeetCodeStats() {
                   href={stats.profileUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-medium underline hover:text-[#0F766E] dark:hover:text-[#2DD4BF] text-[#0D9488] dark:text-[#2DD4BF] flex items-center gap-1 shrink-0"
+                  className="font-medium underline hover:text-[#0369A1] dark:hover:text-[#38BDF8] text-[#0284C7] dark:text-[#38BDF8] flex items-center gap-1 shrink-0"
                 >
                   Visit Profile <ExternalLink className="w-3 h-3" />
                 </a>
@@ -155,14 +155,14 @@ export function LeetCodeStats() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {/* Total Solved Card */}
               <Reveal delay={0.05}>
-                <div className="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#102A43] shadow-xs">
+                <div className="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#112240] shadow-xs">
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-mono uppercase text-slate-500 dark:text-slate-400">
                       Total Solved
                     </span>
-                    <Trophy className="w-4 h-4 text-[#2DD4BF]" />
+                    <Trophy className="w-4 h-4 text-[#38BDF8]" />
                   </div>
-                  <div className="mt-3 text-3xl font-extrabold text-[#0D9488] dark:text-[#2DD4BF]">
+                  <div className="mt-3 text-3xl font-extrabold text-[#0284C7] dark:text-[#38BDF8]">
                     {stats.status === "success" ? stats.totalSolved : "311+"}
                   </div>
                   <p className="mt-1 text-xs text-slate-400">
@@ -175,14 +175,14 @@ export function LeetCodeStats() {
 
               {/* Easy Card */}
               <Reveal delay={0.1}>
-                <div className="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#102A43] shadow-xs">
+                <div className="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#112240] shadow-xs">
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-mono uppercase text-emerald-600 dark:text-emerald-400">
                       Easy
                     </span>
                     <CheckCircle className="w-4 h-4 text-emerald-500" />
                   </div>
-                  <div className="mt-3 text-3xl font-extrabold text-[#0A1E2F] dark:text-[#F0FDFA]">
+                  <div className="mt-3 text-3xl font-extrabold text-[#0B192C] dark:text-[#F0F9FF]">
                     {stats.status === "success" ? stats.easySolved : "Solved"}
                   </div>
                   <p className="mt-1 text-xs text-slate-400">
@@ -195,14 +195,14 @@ export function LeetCodeStats() {
 
               {/* Medium Card */}
               <Reveal delay={0.15}>
-                <div className="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#102A43] shadow-xs">
+                <div className="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#112240] shadow-xs">
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-mono uppercase text-amber-600 dark:text-amber-400">
                       Medium
                     </span>
                     <CheckCircle className="w-4 h-4 text-amber-500" />
                   </div>
-                  <div className="mt-3 text-3xl font-extrabold text-[#0A1E2F] dark:text-[#F0FDFA]">
+                  <div className="mt-3 text-3xl font-extrabold text-[#0B192C] dark:text-[#F0F9FF]">
                     {stats.status === "success" ? stats.mediumSolved : "Solved"}
                   </div>
                   <p className="mt-1 text-xs text-slate-400">
@@ -215,14 +215,14 @@ export function LeetCodeStats() {
 
               {/* Hard / Ranking Card */}
               <Reveal delay={0.2}>
-                <div className="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#102A43] shadow-xs">
+                <div className="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#112240] shadow-xs">
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-mono uppercase text-rose-600 dark:text-rose-400">
                       Hard & Ranking
                     </span>
                     <CheckCircle className="w-4 h-4 text-rose-500" />
                   </div>
-                  <div className="mt-3 text-3xl font-extrabold text-[#0A1E2F] dark:text-[#F0FDFA]">
+                  <div className="mt-3 text-3xl font-extrabold text-[#0B192C] dark:text-[#F0F9FF]">
                     {stats.status === "success"
                       ? stats.hardSolved > 0
                         ? stats.hardSolved
