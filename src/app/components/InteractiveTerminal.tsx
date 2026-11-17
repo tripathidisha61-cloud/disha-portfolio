@@ -299,7 +299,7 @@ export function InteractiveTerminal() {
         <button
           type="button"
           onClick={() => setIsOpen(!isOpen)}
-          className="group relative flex items-center gap-2 px-3.5 py-2.5 rounded-full bg-white dark:bg-[#0F172A] text-[#0F172A] dark:text-[#F8FAFC] border border-[#2563EB]/40 shadow-lg hover:shadow-[#2563EB]/20 hover:scale-105 active:scale-95 transition-all text-xs font-mono"
+          className="group relative flex items-center gap-2 px-3.5 py-2.5 rounded-full bg-white dark:bg-[#0A1020] text-[#0A1020] dark:text-[#F7F9FC] border border-[#2563EB]/40 shadow-lg hover:shadow-[#2563EB]/20 hover:scale-105 active:scale-95 transition-all text-xs font-mono"
           aria-label="Open Interactive CLI Terminal"
         >
           <span className="relative flex h-2 w-2">
@@ -321,7 +321,7 @@ export function InteractiveTerminal() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setIsOpen(false)}
-              className="fixed inset-0 bg-[#0F172A]/80 backdrop-blur-xs pointer-events-auto"
+              className="fixed inset-0 bg-[#0A1020]/80 backdrop-blur-xs pointer-events-auto"
             />
 
             <motion.div
@@ -331,10 +331,10 @@ export function InteractiveTerminal() {
               transition={{ duration: 0.2 }}
               className={`relative w-full ${
                 isMaximized ? "max-w-5xl h-[85vh]" : "max-w-2xl h-[520px]"
-              } rounded-2xl border border-slate-800 bg-[#0F172A] shadow-2xl flex flex-col overflow-hidden pointer-events-auto z-10`}
+              } rounded-2xl border border-slate-800 bg-[#0A1020] shadow-2xl flex flex-col overflow-hidden pointer-events-auto z-10`}
             >
               {/* Terminal Title Bar */}
-              <div className="flex items-center justify-between px-4 py-3 bg-[#0F172A] border-b border-slate-800 select-none">
+              <div className="flex items-center justify-between px-4 py-3 bg-[#0A1020] border-b border-slate-800 select-none">
                 <div className="flex items-center gap-2">
                   <div className="flex items-center gap-1.5">
                     <button
@@ -406,7 +406,7 @@ export function InteractiveTerminal() {
                     value={inputVal}
                     onChange={(e) => setInputVal(e.target.value)}
                     onKeyDown={handleKeyDown}
-                    className="w-full bg-transparent text-[#F8FAFC] focus:outline-none font-mono text-xs caret-[#3B82F6]"
+                    className="w-full bg-transparent text-[#F7F9FC] focus:outline-none font-mono text-xs caret-[#3B82F6]"
                     placeholder="Type 'help' or 'sudo hire'..."
                     autoFocus
                   />
@@ -415,7 +415,7 @@ export function InteractiveTerminal() {
               </div>
 
               {/* Terminal Quick Hint Bar */}
-              <div className="px-4 py-2 bg-[#0F172A]/80 border-t border-slate-800/80 flex items-center justify-between text-[11px] font-mono text-slate-400">
+              <div className="px-4 py-2 bg-[#0A1020]/80 border-t border-slate-800/80 flex items-center justify-between text-[11px] font-mono text-slate-400">
                 <div className="flex items-center gap-2">
                   <span>Quick commands:</span>
                   <button

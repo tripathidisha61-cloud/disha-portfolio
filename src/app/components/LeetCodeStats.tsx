@@ -66,21 +66,21 @@ export function LeetCodeStats() {
   }, []);
 
   return (
-    <section id="leetcode" className="py-20 md:py-28 border-t border-zinc-200/60 dark:border-zinc-800/80">
+    <section id="leetcode" className="py-20 md:py-28 border-t border-slate-200/60 dark:border-[#263B5A]/80 bg-[#EEF3FA]/70 dark:bg-[#111A2B] transition-colors">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
           <Reveal>
             <div className="flex items-center gap-2 mb-3">
-              <span className="font-mono text-xs uppercase tracking-wider text-[#2563EB] dark:text-[#60A5FA]">
-                05 // Problem Solving
+              <span className="font-mono text-xs uppercase tracking-wider text-[#FFA116]">
+                07 // Coding Profiles · LeetCode
               </span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#0F172A] dark:text-[#F8FAFC]">
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#101828] dark:text-[#F8FAFC]">
               LeetCode Problem Solving
             </h2>
-            <p className="mt-3 text-base text-slate-600 dark:text-slate-400 max-w-2xl">
+            <p className="mt-3 text-base text-slate-600 dark:text-[#C9D4E5] max-w-2xl">
               Verified problem-solving telemetry for{" "}
-              <code className="text-xs px-2 py-1 rounded bg-slate-100 dark:bg-[#1E293B] font-mono text-slate-800 dark:text-[#60A5FA]">
+              <code className="text-xs px-2 py-1 rounded bg-slate-100 dark:bg-[#172238] font-mono text-[#FFA116] border border-[#FFA116]/30">
                 Disha_tripathi2006
               </code>
               . Synchronized directly with official public endpoints.
@@ -120,7 +120,7 @@ export function LeetCodeStats() {
             {[1, 2, 3, 4].map((i) => (
               <div
                 key={i}
-                className="h-32 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#1E293B] animate-pulse space-y-3"
+                className="h-32 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#172238] animate-pulse space-y-3"
               >
                 <div className="h-4 bg-slate-200 dark:bg-slate-800 rounded w-1/2" />
                 <div className="h-8 bg-slate-200 dark:bg-slate-800 rounded w-1/3" />
@@ -133,7 +133,7 @@ export function LeetCodeStats() {
         {!loading && stats && (
           <div className="mt-8 space-y-6">
             {stats.status === "fallback" && (
-              <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/70 dark:bg-[#1E293B] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs">
+              <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/70 dark:bg-[#172238] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs">
                 <div className="flex items-center gap-2 text-slate-600 dark:text-slate-400">
                   <span className="w-2 h-2 rounded-full bg-amber-500" />
                   <span>
@@ -155,7 +155,7 @@ export function LeetCodeStats() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {/* Total Solved Card */}
               <Reveal delay={0.05}>
-                <div className="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#1E293B] shadow-xs">
+                <div className="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#172238] shadow-xs">
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-mono uppercase text-slate-500 dark:text-slate-400">
                       Total Solved
@@ -175,14 +175,14 @@ export function LeetCodeStats() {
 
               {/* Easy Card */}
               <Reveal delay={0.1}>
-                <div className="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#1E293B] shadow-xs">
+                <div className="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#172238] shadow-xs">
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-mono uppercase text-emerald-600 dark:text-emerald-400">
                       Easy
                     </span>
                     <CheckCircle className="w-4 h-4 text-emerald-500" />
                   </div>
-                  <div className="mt-3 text-3xl font-extrabold text-[#0F172A] dark:text-[#F8FAFC]">
+                  <div className="mt-3 text-3xl font-extrabold text-[#0A1020] dark:text-[#F7F9FC]">
                     {stats.status === "success" ? stats.easySolved : "Solved"}
                   </div>
                   <p className="mt-1 text-xs text-slate-400">
@@ -195,14 +195,14 @@ export function LeetCodeStats() {
 
               {/* Medium Card */}
               <Reveal delay={0.15}>
-                <div className="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#1E293B] shadow-xs">
+                <div className="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#172238] shadow-xs">
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-mono uppercase text-amber-600 dark:text-amber-400">
                       Medium
                     </span>
                     <CheckCircle className="w-4 h-4 text-amber-500" />
                   </div>
-                  <div className="mt-3 text-3xl font-extrabold text-[#0F172A] dark:text-[#F8FAFC]">
+                  <div className="mt-3 text-3xl font-extrabold text-[#0A1020] dark:text-[#F7F9FC]">
                     {stats.status === "success" ? stats.mediumSolved : "Solved"}
                   </div>
                   <p className="mt-1 text-xs text-slate-400">
@@ -215,14 +215,14 @@ export function LeetCodeStats() {
 
               {/* Hard / Ranking Card */}
               <Reveal delay={0.2}>
-                <div className="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#1E293B] shadow-xs">
+                <div className="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#172238] shadow-xs">
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-mono uppercase text-rose-600 dark:text-rose-400">
                       Hard & Ranking
                     </span>
                     <CheckCircle className="w-4 h-4 text-rose-500" />
                   </div>
-                  <div className="mt-3 text-3xl font-extrabold text-[#0F172A] dark:text-[#F8FAFC]">
+                  <div className="mt-3 text-3xl font-extrabold text-[#0A1020] dark:text-[#F7F9FC]">
                     {stats.status === "success"
                       ? stats.hardSolved > 0
                         ? stats.hardSolved

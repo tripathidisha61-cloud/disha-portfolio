@@ -9,68 +9,78 @@ export function Achievements() {
   const getBadgeIcon = (index: number) => {
     switch (index) {
       case 0:
-        return <Award className="w-5 h-5 text-[#2563EB] dark:text-[#60A5FA]" />;
+        return <Trophy className="w-5 h-5 text-[#FBBF24]" />; // Gold for SIH 2026 Award
       case 1:
-        return <ShieldCheck className="w-5 h-5 text-[#2563EB] dark:text-[#60A5FA]" />;
+        return <Award className="w-5 h-5 text-[#60A5FA]" />;
       default:
-        return <Trophy className="w-5 h-5 text-[#2563EB] dark:text-[#60A5FA]" />;
+        return <ShieldCheck className="w-5 h-5 text-[#22D3EE]" />;
     }
   };
 
   return (
-    <section id="achievements" className="py-20 md:py-28 border-t border-slate-200/60 dark:border-slate-800/80">
+    <section id="achievements" className="py-20 md:py-28 border-t border-slate-200/60 dark:border-[#263B5A]/80 bg-[#F7F9FC] dark:bg-[#0A1020] transition-colors">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal>
           <div className="flex items-center gap-2 mb-3">
             <span className="font-mono text-xs uppercase tracking-wider text-[#2563EB] dark:text-[#60A5FA]">
-              07 // Recognition
+              06 // Recognition & Honors
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#0F172A] dark:text-[#F8FAFC]">
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#101828] dark:text-[#F7F9FC]">
             Achievements & Certifications
           </h2>
-          <p className="mt-3 text-base text-slate-600 dark:text-slate-400 max-w-2xl">
-            Honors, professional credentials, and open-source project initiatives.
+          <p className="mt-3 text-base text-slate-600 dark:text-[#C9D4E5] max-w-2xl">
+            National hackathon accomplishments, academic honors, and verified credentials across industry technologies.
           </p>
         </Reveal>
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-          {ACHIEVEMENTS.map((item, idx) => (
-            <Reveal key={item.id} delay={idx * 0.1}>
-              <div className="flex flex-col justify-between h-full p-6 sm:p-7 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#1E293B] hover:border-slate-300 dark:hover:border-[#2563EB]/50 shadow-xs hover:shadow-lg dark:hover:shadow-[#2563EB]/10 transition-all">
-                <div>
-                  <div className="flex items-center justify-between gap-3 mb-5">
-                    <div className="p-2.5 rounded-xl bg-slate-100 dark:bg-[#0F172A]">
-                      {getBadgeIcon(idx)}
+          {ACHIEVEMENTS.map((item, idx) => {
+            const isAward = idx === 0;
+            return (
+              <Reveal key={item.id} delay={idx * 0.1}>
+                <div className="flex flex-col justify-between h-full p-6 sm:p-7 rounded-2xl border border-slate-200 dark:border-[#263B5A] bg-white dark:bg-[#172238] hover:border-[#60A5FA]/40 shadow-xs hover:shadow-lg transition-all">
+                  <div>
+                    <div className="flex items-center justify-between gap-3 mb-5">
+                      <div className="p-2.5 rounded-xl bg-slate-100 dark:bg-[#0A1020]">
+                        {getBadgeIcon(idx)}
+                      </div>
+                      {item.badge && (
+                        <span 
+                          className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-medium border"
+                          style={{
+                            borderColor: isAward ? "rgba(251, 191, 36, 0.4)" : "rgba(96, 165, 250, 0.3)",
+                            backgroundColor: isAward ? "rgba(251, 191, 36, 0.1)" : "rgba(96, 165, 250, 0.1)",
+                            color: isAward ? "#FBBF24" : "#60A5FA"
+                          }}
+                        >
+                          <Sparkles className="w-3 h-3" />
+                          {item.badge}
+                        </span>
+                      )}
                     </div>
-                    {item.badge && (
-                      <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-medium border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-[#0F172A] text-slate-700 dark:text-[#60A5FA]">
-                        <Sparkles className="w-3 h-3 text-[#2563EB]" />
-                        {item.badge}
-                      </span>
-                    )}
+
+                    <h3 className="font-bold text-base text-[#101828] dark:text-[#F7F9FC] leading-snug">
+                      {item.title}
+                    </h3>
+
+                    <div className="mt-1 text-xs text-slate-500 dark:text-[#94A3B8] font-mono">
+                      {item.issuer} • {item.date}
+                    </div>
+
+                    <p className="mt-3 text-xs sm:text-sm text-slate-600 dark:text-[#C9D4E5] leading-relaxed">
+                      {item.description}
+                    </p>
                   </div>
 
-                  <h3 className="font-bold text-base text-[#0F172A] dark:text-[#F8FAFC] leading-snug">
-                    {item.title}
-                  </h3>
-
-                  <div className="mt-1 text-xs text-slate-500 dark:text-slate-400 font-mono">
-                    {item.issuer} • {item.date}
+                  <div className="mt-6 pt-4 border-t border-slate-100 dark:border-[#263B5A] flex items-center justify-between text-[11px] text-slate-400 font-mono">
+                    <span>VERIFIED RECORD</span>
+                    <span className="text-emerald-500 font-semibold">Active</span>
                   </div>
-
-                  <p className="mt-3 text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                    {item.description}
-                  </p>
                 </div>
-
-                <div className="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-[11px] text-slate-400 font-mono">
-                  <span>VERIFIED RECORD</span>
-                  <span className="text-emerald-500 font-semibold">Active</span>
-                </div>
-              </div>
-            </Reveal>
-          ))}
+              </Reveal>
+            );
+          })}
         </div>
 
         {/* Verified Technical Badges & Certifications Grid */}
@@ -78,10 +88,10 @@ export function Achievements() {
           <div className="mt-12">
             <div className="flex items-center justify-between mb-6">
               <div>
-                <h3 className="text-xl font-bold text-[#0F172A] dark:text-[#F8FAFC]">
+                <h3 className="text-xl font-bold text-[#101828] dark:text-[#F7F9FC]">
                   Verified Technical Credentials & Badges
                 </h3>
-                <p className="text-xs text-slate-500 dark:text-slate-400 font-mono mt-0.5">
+                <p className="text-xs text-slate-500 dark:text-[#94A3B8] font-mono mt-0.5">
                   Industry skill credentials with official IDs and verified domains
                 </p>
               </div>
@@ -94,11 +104,11 @@ export function Achievements() {
               {VERIFIED_CREDENTIALS.map((cred) => (
                 <div
                   key={cred.id}
-                  className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#1E293B] flex flex-col justify-between hover:border-slate-300 dark:hover:border-[#2563EB]/40 transition-all"
+                  className="p-4 rounded-xl border border-slate-200 dark:border-[#263B5A] bg-white dark:bg-[#172238] flex flex-col justify-between hover:border-[#60A5FA]/40 transition-all"
                 >
                   <div>
                     <div className="flex items-center justify-between gap-2 mb-2">
-                      <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-slate-100 dark:bg-[#0F172A] text-[#2563EB] dark:text-[#60A5FA] font-semibold">
+                      <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-slate-100 dark:bg-[#0A1020] text-[#2563EB] dark:text-[#60A5FA] font-semibold">
                         {cred.badgeType} Credential
                       </span>
                       {cred.credentialId && (
@@ -108,11 +118,11 @@ export function Achievements() {
                       )}
                     </div>
 
-                    <h4 className="font-bold text-xs sm:text-sm text-[#0F172A] dark:text-[#F8FAFC] leading-snug">
+                    <h4 className="font-bold text-xs sm:text-sm text-[#101828] dark:text-[#F7F9FC] leading-snug">
                       {cred.title}
                     </h4>
 
-                    <div className="text-[11px] text-slate-500 dark:text-slate-400 font-mono mt-1">
+                    <div className="text-[11px] text-slate-500 dark:text-[#94A3B8] font-mono mt-1">
                       {cred.issuer} • {cred.issueDate}
                     </div>
 
@@ -120,7 +130,7 @@ export function Achievements() {
                       {cred.skills.map((skill) => (
                         <span
                           key={skill}
-                          className="px-1.5 py-0.5 rounded text-[10px] font-mono bg-slate-50 dark:bg-[#0F172A] text-slate-600 dark:text-slate-300 border border-slate-200/60 dark:border-slate-800"
+                          className="px-1.5 py-0.5 rounded text-[10px] font-mono bg-slate-50 dark:bg-[#0A1020] text-slate-600 dark:text-[#C9D4E5] border border-slate-200/60 dark:border-[#263B5A]"
                         >
                           {skill}
                         </span>
@@ -128,7 +138,7 @@ export function Achievements() {
                     </div>
                   </div>
 
-                  <div className="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-[11px] font-mono">
+                  <div className="mt-4 pt-3 border-t border-slate-100 dark:border-[#263B5A] flex items-center justify-between text-[11px] font-mono">
                     <span className="text-emerald-500 flex items-center gap-1">
                       <CheckCircle2 className="w-3 h-3" />
                       Verified

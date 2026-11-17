@@ -32,7 +32,7 @@ export function EngineeringDocs() {
               05 // System Design & RFCs
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#0F172A] dark:text-[#F8FAFC]">
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#0A1020] dark:text-[#F7F9FC]">
             Engineering Design Documents
           </h2>
           <p className="mt-3 text-base text-slate-600 dark:text-slate-400 max-w-2xl">
@@ -44,7 +44,7 @@ export function EngineeringDocs() {
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
           {ENGINEERING_DOCS.map((doc, idx) => (
             <Reveal key={doc.id} delay={idx * 0.1}>
-              <div className="p-6 sm:p-7 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#1E293B] hover:border-slate-300 dark:hover:border-[#2563EB]/50 flex flex-col justify-between h-full shadow-xs hover:shadow-lg dark:hover:shadow-[#2563EB]/10 transition-all group">
+              <div className="p-6 sm:p-7 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#172238] hover:border-slate-300 dark:hover:border-[#2563EB]/50 flex flex-col justify-between h-full shadow-xs hover:shadow-lg dark:hover:shadow-[#2563EB]/10 transition-all group">
                 <div>
                   <div className="flex items-center justify-between gap-2 mb-4">
                     <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-medium border border-[#2563EB]/30 bg-[#2563EB]/10 text-[#2563EB] dark:text-[#60A5FA]">
@@ -57,7 +57,7 @@ export function EngineeringDocs() {
                     </span>
                   </div>
 
-                  <h3 className="font-bold text-base sm:text-lg text-[#0F172A] dark:text-[#F8FAFC] leading-snug group-hover:text-[#2563EB] dark:group-hover:text-[#2563EB] transition-colors">
+                  <h3 className="font-bold text-base sm:text-lg text-[#0A1020] dark:text-[#F7F9FC] leading-snug group-hover:text-[#2563EB] dark:group-hover:text-[#2563EB] transition-colors">
                     {doc.title}
                   </h3>
 
@@ -69,7 +69,7 @@ export function EngineeringDocs() {
                     {doc.tags.slice(0, 3).map((tag) => (
                       <span
                         key={tag}
-                        className="px-2 py-0.5 rounded text-[10px] font-mono border border-slate-200/80 dark:border-slate-800 bg-slate-50 dark:bg-[#0F172A] text-slate-500 dark:text-slate-300"
+                        className="px-2 py-0.5 rounded text-[10px] font-mono border border-slate-200/80 dark:border-slate-800 bg-slate-50 dark:bg-[#0A1020] text-slate-500 dark:text-slate-300"
                       >
                         {tag}
                       </span>
@@ -103,7 +103,7 @@ export function EngineeringDocs() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setSelectedDoc(null)}
-              className="fixed inset-0 bg-[#0F172A]/80 backdrop-blur-sm"
+              className="fixed inset-0 bg-[#0A1020]/80 backdrop-blur-sm"
             />
 
             {/* Modal Body */}
@@ -112,7 +112,7 @@ export function EngineeringDocs() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 16 }}
               transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
-              className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#1E293B] shadow-2xl p-6 sm:p-8 z-10 space-y-6"
+              className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#172238] shadow-2xl p-6 sm:p-8 z-10 space-y-6"
             >
               {/* Header */}
               <div className="flex items-start justify-between gap-4 pb-4 border-b border-slate-100 dark:border-slate-800">
@@ -124,7 +124,7 @@ export function EngineeringDocs() {
                     </span>
                     <span className="text-xs font-mono text-slate-400">• {selectedDoc.readTime}</span>
                   </div>
-                  <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-[#0F172A] dark:text-[#F8FAFC] leading-tight">
+                  <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-[#0A1020] dark:text-[#F7F9FC] leading-tight">
                     {selectedDoc.title}
                   </h3>
                 </div>
@@ -144,7 +144,7 @@ export function EngineeringDocs() {
                 <h4 className="text-xs font-mono uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">
                   1. The Engineering Challenge & Problem Statement
                 </h4>
-                <div className="p-4 rounded-xl border border-slate-200/80 dark:border-slate-800 bg-slate-50/70 dark:bg-[#0F172A] text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+                <div className="p-4 rounded-xl border border-slate-200/80 dark:border-slate-800 bg-slate-50/70 dark:bg-[#0A1020] text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
                   {selectedDoc.problemStatement}
                 </div>
               </div>
@@ -156,10 +156,10 @@ export function EngineeringDocs() {
                     <Cpu className="w-4 h-4 text-[#2563EB]" />
                     <span>2. End-to-End System Dataflow</span>
                   </h4>
-                  <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-[#0F172A] flex flex-wrap items-center gap-2">
+                  <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-[#0A1020] flex flex-wrap items-center gap-2">
                     {selectedDoc.architectureDiagram.map((step, idx) => (
                       <div key={idx} className="flex items-center gap-2">
-                        <span className="px-3 py-1.5 rounded-lg text-xs font-mono border border-slate-200 dark:border-slate-700 bg-white dark:bg-[#1E293B] text-slate-800 dark:text-slate-200 shadow-2xs">
+                        <span className="px-3 py-1.5 rounded-lg text-xs font-mono border border-slate-200 dark:border-slate-700 bg-white dark:bg-[#172238] text-slate-800 dark:text-slate-200 shadow-2xs">
                           {step}
                         </span>
                         {idx < selectedDoc.architectureDiagram!.length - 1 && (
@@ -181,13 +181,13 @@ export function EngineeringDocs() {
                   {selectedDoc.designDecisions.map((dec, i) => (
                     <div
                       key={i}
-                      className="p-4 rounded-xl border border-slate-200/80 dark:border-slate-800 bg-slate-50/40 dark:bg-[#0F172A] space-y-2"
+                      className="p-4 rounded-xl border border-slate-200/80 dark:border-slate-800 bg-slate-50/40 dark:bg-[#0A1020] space-y-2"
                     >
                       <div className="flex items-start gap-2">
                         <span className="font-semibold text-xs text-[#2563EB] dark:text-[#60A5FA] font-mono shrink-0">
                           [Decision]:
                         </span>
-                        <span className="text-xs sm:text-sm font-semibold text-[#0F172A] dark:text-[#F8FAFC]">
+                        <span className="text-xs sm:text-sm font-semibold text-[#0A1020] dark:text-[#F7F9FC]">
                           {dec.choice}
                         </span>
                       </div>

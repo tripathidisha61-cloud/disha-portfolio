@@ -57,21 +57,21 @@ export function GitHubStats() {
   };
 
   return (
-    <section id="github" className="py-20 md:py-28 border-t border-slate-200/60 dark:border-slate-800/80">
+    <section id="github" className="py-20 md:py-28 border-t border-slate-200/60 dark:border-[#263B5A]/80 bg-[#EEF3FA]/70 dark:bg-[#111A2B] transition-colors">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
           <Reveal>
             <div className="flex items-center gap-2 mb-3">
               <span className="font-mono text-xs uppercase tracking-wider text-[#2563EB] dark:text-[#60A5FA]">
-                04 // Open Source
+                07 // Coding Profiles · GitHub
               </span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#0F172A] dark:text-[#F8FAFC]">
-              GitHub Repositories
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#101828] dark:text-[#F8FAFC]">
+              GitHub Repositories & Open Source
             </h2>
-            <p className="mt-3 text-base text-slate-600 dark:text-slate-400 max-w-2xl">
-              Live repositories fetched directly from GitHub for{" "}
-              <code className="text-xs px-2 py-1 rounded bg-slate-100 dark:bg-[#1E293B] font-mono text-slate-800 dark:text-[#60A5FA]">
+            <p className="mt-3 text-base text-slate-600 dark:text-[#C9D4E5] max-w-2xl">
+              Live repositories and commits fetched directly from GitHub for{" "}
+              <code className="text-xs px-2 py-1 rounded bg-slate-100 dark:bg-[#172238] font-mono text-slate-800 dark:text-[#F8FAFC] border border-slate-300 dark:border-[#263B5A]">
                 tripathidisha61-cloud
               </code>
               .
@@ -108,13 +108,13 @@ export function GitHubStats() {
         {/* Profile metadata strip if loaded */}
         {profile && (
           <Reveal delay={0.15}>
-            <div className="mt-8 p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#1E293B] flex flex-wrap items-center justify-between gap-4">
+            <div className="mt-8 p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#172238] flex flex-wrap items-center justify-between gap-4">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full border border-blue-200 dark:border-slate-700 bg-blue-50 dark:bg-[#0F172A] flex items-center justify-center font-bold text-sm text-[#2563EB] dark:text-[#60A5FA]">
+                <div className="w-10 h-10 rounded-full border border-blue-200 dark:border-slate-700 bg-blue-50 dark:bg-[#0A1020] flex items-center justify-center font-bold text-sm text-[#2563EB] dark:text-[#60A5FA]">
                   DT
                 </div>
                 <div>
-                  <div className="text-sm font-semibold text-[#0F172A] dark:text-[#F8FAFC]">
+                  <div className="text-sm font-semibold text-[#0A1020] dark:text-[#F7F9FC]">
                     {profile.name || "Disha Tripathi"}
                   </div>
                   <div className="text-xs text-slate-500 dark:text-slate-400 font-mono">@{profile.login}</div>
@@ -145,7 +145,7 @@ export function GitHubStats() {
             {[1, 2, 3, 4, 5, 6].map((i) => (
               <div
                 key={i}
-                className="h-44 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#1E293B] animate-pulse flex flex-col justify-between"
+                className="h-44 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#172238] animate-pulse flex flex-col justify-between"
               >
                 <div className="space-y-3">
                   <div className="h-4 bg-slate-200 dark:bg-slate-800 rounded w-3/4" />
@@ -160,9 +160,9 @@ export function GitHubStats() {
 
         {/* Error state */}
         {!loading && error && (
-          <div className="mt-8 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#1E293B] text-center">
+          <div className="mt-8 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#172238] text-center">
             <AlertCircle className="w-8 h-8 text-slate-400 dark:text-[#60A5FA] mx-auto mb-3" />
-            <h3 className="text-sm font-semibold text-[#0F172A] dark:text-[#F8FAFC]">
+            <h3 className="text-sm font-semibold text-[#0A1020] dark:text-[#F7F9FC]">
               Unable to sync live GitHub repositories
             </h3>
             <p className="mt-1 text-xs text-slate-500 dark:text-slate-400 max-w-md mx-auto">
@@ -210,13 +210,13 @@ export function GitHubStats() {
                   href={repo.html_url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex flex-col justify-between h-48 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#1E293B] hover:border-slate-300 dark:hover:border-[#2563EB]/50 shadow-xs hover:shadow-lg dark:hover:shadow-[#2563EB]/10 transition-all"
+                  className="group flex flex-col justify-between h-48 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#172238] hover:border-slate-300 dark:hover:border-[#2563EB]/50 shadow-xs hover:shadow-lg dark:hover:shadow-[#2563EB]/10 transition-all"
                 >
                   <div>
                     <div className="flex items-start justify-between gap-2">
                       <div className="flex items-center gap-2">
                         <Code2 className="w-4 h-4 text-slate-500 dark:text-[#60A5FA] flex-shrink-0" />
-                        <h3 className="font-semibold text-sm text-[#0F172A] dark:text-[#F8FAFC] group-hover:text-[#2563EB] dark:group-hover:text-[#2563EB] transition-colors truncate">
+                        <h3 className="font-semibold text-sm text-[#0A1020] dark:text-[#F7F9FC] group-hover:text-[#2563EB] dark:group-hover:text-[#2563EB] transition-colors truncate">
                           {repo.name}
                         </h3>
                       </div>

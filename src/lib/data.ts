@@ -26,6 +26,8 @@ export interface RoadmapMilestone {
 
 export interface SkillCategory {
   title: string;
+  accent?: string;
+  colorName?: string;
   skills: {
     name: string;
     level?: string;
@@ -55,7 +57,9 @@ export interface AchievementItem {
 
 export const PERSONAL_INFO = {
   name: "Disha Tripathi",
-  title: "Software Developer | AI/ML Enthusiast | Computer Science Student",
+  title: "Software Development | AI/ML | Problem Solving",
+  tagline: "Engineering ideas into reality.",
+  headline: "Hi, I'm Disha Tripathi — I build intelligent, scalable and impactful software solutions.",
   shortBio:
     "3rd-year B.Tech CSE student at RKGIT Ghaziabad (CGPA: 8.8/10). Smart India Hackathon (SIH 2026) internal level cleared, actively preparing for Google Summer of Code (GSoC 2027). Passionate about software engineering, AI/ML systems, and resilient full-stack applications.",
   college: "Raj Kumar Goel Institute of Technology, Ghaziabad",
@@ -87,49 +91,86 @@ export const PERSONAL_INFO = {
 
 export const SKILL_CATEGORIES: SkillCategory[] = [
   {
-    title: "Programming Languages",
+    title: "Programming",
+    accent: "#60A5FA",
+    colorName: "blue",
     skills: [
       { name: "Python" },
-      { name: "C++" },
       { name: "C" },
-      { name: "Bash" },
-      { name: "JavaScript" },
+      { name: "C++" },
       { name: "TypeScript" },
+      { name: "Bash" },
       { name: "SQL" },
     ],
   },
   {
-    title: "Web & Backend Engineering",
+    title: "Frontend",
+    accent: "#22D3EE",
+    colorName: "cyan",
     skills: [
       { name: "React" },
       { name: "Next.js" },
+      { name: "Tailwind CSS" },
+      { name: "HTML5 / CSS3" },
+      { name: "JavaScript" },
+    ],
+  },
+  {
+    title: "Backend",
+    accent: "#A78BFA",
+    colorName: "violet",
+    skills: [
       { name: "FastAPI" },
       { name: "REST APIs" },
-      { name: "PostgreSQL" },
-      { name: "MySQL" },
-      { name: "Tailwind CSS" },
+      { name: "Node.js" },
+      { name: "Microservices" },
     ],
   },
   {
-    title: "AI, ML & Data",
+    title: "AI/ML",
+    accent: "#8B5CF6",
+    colorName: "purple",
     skills: [
       { name: "Machine Learning" },
-      { name: "Deep Learning" },
+      { name: "Neural Networks" },
       { name: "RAG Architectures" },
-      { name: "Data Analytics" },
+      { name: "PyTorch" },
       { name: "LLM Orchestration" },
-      { name: "Vector Databases" },
     ],
   },
   {
-    title: "Cloud & DevOps Tools",
+    title: "Cloud & DevOps",
+    accent: "#34D399",
+    colorName: "green",
     skills: [
       { name: "AWS (EC2, S3)" },
       { name: "Docker" },
       { name: "Linux" },
-      { name: "Git & GitHub" },
-      { name: "GitHub Actions (CI/CD)" },
-      { name: "Vercel" },
+      { name: "GitHub Actions" },
+      { name: "CI/CD Pipelines" },
+    ],
+  },
+  {
+    title: "Database",
+    accent: "#FBBF24",
+    colorName: "amber",
+    skills: [
+      { name: "PostgreSQL" },
+      { name: "MySQL" },
+      { name: "Redis" },
+      { name: "Vector Databases" },
+    ],
+  },
+  {
+    title: "Tools",
+    accent: "#CBD5E1",
+    colorName: "silver",
+    skills: [
+      { name: "Git" },
+      { name: "GitHub" },
+      { name: "VS Code" },
+      { name: "Postman" },
+      { name: "Linux Terminal" },
     ],
   },
 ];
@@ -453,19 +494,13 @@ export interface InterviewQuestion {
 }
 
 export const NAV_LINKS = [
-  { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
-  { name: "AI Sandbox", href: "#ai-sandbox" },
-  { name: "CS Rigor", href: "#cs-fundamentals" },
-  { name: "Design Docs", href: "#design-docs" },
-  { name: "MNC Fit", href: "#mnc-alignment" },
-  { name: "Screening Q&A", href: "#interview-prep" },
-  { name: "GitHub", href: "#github" },
-  { name: "LeetCode", href: "#leetcode" },
-  { name: "Experience", href: "#experience" },
-  { name: "Achievements", href: "#achievements" },
-  { name: "Contact", href: "#contact" },
+  { name: "About", href: "/about" },
+  { name: "Skills", href: "/skills" },
+  { name: "Projects", href: "/projects" },
+  { name: "Experience", href: "/experience" },
+  { name: "Achievements", href: "/achievements" },
+  { name: "Coding Profiles", href: "/coding-profiles" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export const DSA_PATTERNS: DsaPattern[] = [

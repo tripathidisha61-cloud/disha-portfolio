@@ -9,12 +9,12 @@ export function Footer() {
   };
 
   return (
-    <footer className="border-t border-slate-200 dark:border-slate-800/80 bg-[#F8FAFC] dark:bg-[#0F172A] py-12">
+    <footer className="border-t border-slate-200 dark:border-slate-800/80 bg-[#F7F9FC] dark:bg-[#0A1020] py-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Brand info */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <div className="font-mono text-sm font-bold text-[#0F172A] dark:text-[#F8FAFC]">
+            <div className="font-mono text-sm font-bold text-[#0A1020] dark:text-[#F7F9FC]">
               Disha Tripathi
             </div>
             <p className="mt-1 text-xs text-slate-500 dark:text-slate-400 max-w-sm">
@@ -24,17 +24,17 @@ export function Footer() {
 
           {/* Production Standards Badges */}
           <div className="flex flex-wrap items-center justify-center gap-2 text-[11px] font-mono text-slate-400">
-            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#1E293B]">
+            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md border border-slate-200 dark:border-[#263B5A] bg-white dark:bg-[#172238]">
               <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB]" />
               TypeScript 100%
             </span>
-            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#1E293B]">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#3B82F6]" />
+            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md border border-slate-200 dark:border-[#263B5A] bg-white dark:bg-[#172238]">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#22D3EE]" />
               Next.js 14 App Router
             </span>
-            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#1E293B]">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB]" />
-              White + Royal Blue + Slate (Recruiter-Friendly Corporate Aesthetic)
+            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md border border-slate-200 dark:border-[#263B5A] bg-white dark:bg-[#172238]">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#60A5FA]" />
+              Midnight Engineering (Master Colour Identity)
             </span>
           </div>
 
@@ -84,7 +84,7 @@ export function Footer() {
             <button
               type="button"
               onClick={scrollToTop}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-[#1E293B] text-xs font-mono text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all shadow-xs"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-[#172238] text-xs font-mono text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all shadow-xs"
               aria-label="Scroll back to top"
             >
               <span>Top</span>
@@ -98,7 +98,7 @@ export function Footer() {
             © {new Date().getFullYear()} Disha Tripathi. Crafted with Next.js, TypeScript & Tailwind CSS.
           </div>
           <div className="font-mono text-[11px] text-[#2563EB] dark:text-[#60A5FA]">
-            White + Royal Blue + Slate • Creating Impact Through Technology.
+            Midnight Engineering • Engineering ideas into reality.
           </div>
         </div>
       </div>

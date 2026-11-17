@@ -12,6 +12,20 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        midnightEng: {
+          bg: "#0A1020",          // Main background
+          bgSecondary: "#111A2B", // Secondary background
+          card: "#172238",        // Card background
+          surface: "#1E2B42",     // Elevated surface
+          border: "#263B5A",      // Border
+          primary: "#2563EB",     // Primary blue
+          electric: "#60A5FA",    // Electric blue
+          cyan: "#22D3EE",        // Cyan accent
+          text: "#F8FAFC",        // Main text
+          secondaryText: "#C9D4E5", // Secondary text
+          muted: "#94A3B8",       // Muted text
+          glow: "rgba(96, 165, 250, 0.25)",
+        },
         royalSlate: {
           bg: "#F8FAFC",        // Light Canvas Background (Slate-50)
           text: "#0F172A",      // Dark Slate High-Contrast Text (Slate-900)

@@ -131,7 +131,7 @@ LinkedIn: ${PERSONAL_INFO.socials.linkedin.url}`;
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 16 }}
           transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#1E293B] shadow-2xl p-6 sm:p-7 z-10 space-y-5"
+          className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#172238] shadow-2xl p-6 sm:p-7 z-10 space-y-5"
         >
           {/* Header */}
           <div className="flex items-start justify-between gap-4 pb-4 border-b border-slate-100 dark:border-slate-800">
@@ -143,7 +143,7 @@ LinkedIn: ${PERSONAL_INFO.socials.linkedin.url}`;
                 </span>
                 <span className="text-xs text-slate-400 dark:text-slate-400 font-mono">• Verified Profile</span>
               </div>
-              <h3 className="text-2xl font-bold tracking-tight text-[#0F172A] dark:text-[#F8FAFC]">
+              <h3 className="text-2xl font-bold tracking-tight text-[#0A1020] dark:text-[#F7F9FC]">
                 {RECRUITER_SUMMARY.name}
               </h3>
               <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-0.5">
@@ -162,13 +162,13 @@ LinkedIn: ${PERSONAL_INFO.socials.linkedin.url}`;
           </div>
 
           {/* Tab Bar: Executive Overview vs ATS Resume */}
-          <div className="flex items-center gap-2 p-1 rounded-xl bg-slate-100 dark:bg-[#0F172A] border border-slate-200 dark:border-slate-800 text-xs font-mono">
+          <div className="flex items-center gap-2 p-1 rounded-xl bg-slate-100 dark:bg-[#0A1020] border border-slate-200 dark:border-slate-800 text-xs font-mono">
             <button
               type="button"
               onClick={() => setActiveTab("overview")}
               className={`flex-1 py-1.5 px-3 rounded-lg text-center font-semibold transition-all ${
                 activeTab === "overview"
-                  ? "bg-white dark:bg-[#1E293B] text-[#2563EB] dark:text-[#60A5FA] shadow-xs"
+                  ? "bg-white dark:bg-[#172238] text-[#2563EB] dark:text-[#60A5FA] shadow-xs"
                   : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200"
               }`}
             >
@@ -179,7 +179,7 @@ LinkedIn: ${PERSONAL_INFO.socials.linkedin.url}`;
               onClick={() => setActiveTab("ats")}
               className={`flex-1 py-1.5 px-3 rounded-lg text-center font-semibold transition-all flex items-center justify-center gap-1.5 ${
                 activeTab === "ats"
-                  ? "bg-white dark:bg-[#1E293B] text-[#2563EB] dark:text-[#60A5FA] shadow-xs"
+                  ? "bg-white dark:bg-[#172238] text-[#2563EB] dark:text-[#60A5FA] shadow-xs"
                   : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200"
               }`}
             >
@@ -197,12 +197,12 @@ LinkedIn: ${PERSONAL_INFO.socials.linkedin.url}`;
                 {RECRUITER_SUMMARY.verifiedMetrics.map((metric) => (
                   <div
                     key={metric.label}
-                    className="p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/70 dark:bg-[#0F172A]"
+                    className="p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/70 dark:bg-[#0A1020]"
                   >
                     <div className="text-[11px] font-mono text-slate-400 dark:text-slate-400 uppercase truncate">
                       {metric.label}
                     </div>
-                    <div className="text-sm sm:text-base font-bold text-[#0F172A] dark:text-[#60A5FA] mt-0.5 truncate">
+                    <div className="text-sm sm:text-base font-bold text-[#0A1020] dark:text-[#60A5FA] mt-0.5 truncate">
                       {metric.value}
                     </div>
                   </div>
@@ -218,7 +218,7 @@ LinkedIn: ${PERSONAL_INFO.socials.linkedin.url}`;
                   {RECRUITER_SUMMARY.coreStrengths.map((strength, idx) => (
                     <div
                       key={idx}
-                      className="p-2.5 rounded-lg border border-slate-200/60 dark:border-slate-800 bg-slate-50/40 dark:bg-[#0F172A] flex items-start gap-2 text-xs text-slate-700 dark:text-slate-300"
+                      className="p-2.5 rounded-lg border border-slate-200/60 dark:border-slate-800 bg-slate-50/40 dark:bg-[#0A1020] flex items-start gap-2 text-xs text-slate-700 dark:text-slate-300"
                     >
                       <Sparkles className="w-3.5 h-3.5 text-[#2563EB] shrink-0 mt-0.5" />
                       <span>{strength}</span>
@@ -236,10 +236,10 @@ LinkedIn: ${PERSONAL_INFO.socials.linkedin.url}`;
                   {RECRUITER_SUMMARY.topProjects.map((p) => (
                     <div
                       key={p.name}
-                      className="p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-[#0F172A] flex flex-col justify-between"
+                      className="p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-[#0A1020] flex flex-col justify-between"
                     >
                       <div>
-                        <div className="font-bold text-xs text-[#0F172A] dark:text-[#F8FAFC]">
+                        <div className="font-bold text-xs text-[#0A1020] dark:text-[#F7F9FC]">
                           {p.name}
                         </div>
                         <div className="text-[11px] text-slate-500 dark:text-slate-400 mt-1 line-clamp-2">
@@ -280,7 +280,7 @@ LinkedIn: ${PERSONAL_INFO.socials.linkedin.url}`;
                 </button>
               </div>
 
-              <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#0F172A] max-h-[300px] overflow-y-auto font-mono text-xs text-slate-700 dark:text-slate-300 leading-relaxed whitespace-pre-wrap select-all">
+              <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#0A1020] max-h-[300px] overflow-y-auto font-mono text-xs text-slate-700 dark:text-slate-300 leading-relaxed whitespace-pre-wrap select-all">
                 {atsResumeText}
               </div>
             </div>

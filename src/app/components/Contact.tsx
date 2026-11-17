@@ -55,19 +55,19 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-28 border-t border-slate-200/60 dark:border-slate-800/80">
+    <section id="contact" className="py-20 md:py-28 border-t border-slate-200/60 dark:border-[#263B5A]/80 bg-[#EEF3FA]/70 dark:bg-[#111A2B] transition-colors">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal>
           <div className="flex items-center gap-2 mb-3">
             <span className="font-mono text-xs uppercase tracking-wider text-[#2563EB] dark:text-[#60A5FA]">
-              08 // Connect
+              08 // Contact & Collaboration
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#0F172A] dark:text-[#F8FAFC]">
-            Get In Touch
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#101828] dark:text-[#F7F9FC]">
+            Have an interesting opportunity or project in mind? Let&apos;s connect.
           </h2>
-          <p className="mt-3 text-base text-slate-600 dark:text-slate-400 max-w-2xl">
-            Whether you are looking to discuss software engineering internships, collaborative AI/ML research, or technical projects, my inbox is always open.
+          <p className="mt-3 text-base text-slate-600 dark:text-[#C9D4E5] max-w-2xl">
+            Whether you are evaluating candidates for software engineering internships, open-source initiatives, or technical projects, my inbox is always open.
           </p>
         </Reveal>
 
@@ -75,9 +75,9 @@ export function Contact() {
           {/* Direct channels & Quick Action card */}
           <div className="lg:col-span-5 space-y-6">
             <Reveal delay={0.1}>
-              <div className="p-6 sm:p-7 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#1E293B] shadow-xs space-y-6">
+              <div className="p-6 sm:p-7 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#172238] shadow-xs space-y-6">
                 <div>
-                  <h3 className="text-lg font-bold text-[#0F172A] dark:text-[#F8FAFC]">
+                  <h3 className="text-lg font-bold text-[#0A1020] dark:text-[#F7F9FC]">
                     Direct Contact Channels
                   </h3>
                   <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">
@@ -86,9 +86,9 @@ export function Contact() {
                 </div>
 
                 {/* Email Box with One-Click Copy */}
-                <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#0F172A] flex items-center justify-between gap-3">
+                <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#0A1020] flex items-center justify-between gap-3">
                   <div className="flex items-center gap-3 truncate">
-                    <div className="p-2 rounded-lg bg-white dark:bg-[#1E293B] border border-slate-200 dark:border-slate-800 shrink-0">
+                    <div className="p-2 rounded-lg bg-white dark:bg-[#172238] border border-slate-200 dark:border-slate-800 shrink-0">
                       <Mail className="w-4 h-4 text-[#2563EB] dark:text-[#60A5FA]" />
                     </div>
                     <div className="truncate">
@@ -97,7 +97,7 @@ export function Contact() {
                       </div>
                       <a
                         href={`mailto:${PERSONAL_INFO.email}`}
-                        className="text-sm font-medium text-[#0F172A] dark:text-[#F8FAFC] hover:underline hover:text-[#2563EB] dark:hover:text-[#60A5FA] truncate block"
+                        className="text-sm font-medium text-[#0A1020] dark:text-[#F7F9FC] hover:underline hover:text-[#2563EB] dark:hover:text-[#60A5FA] truncate block"
                       >
                         {PERSONAL_INFO.email}
                       </a>
@@ -107,7 +107,7 @@ export function Contact() {
                   <button
                     type="button"
                     onClick={handleCopyEmail}
-                    className="p-2 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#1E293B] hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 transition-colors shrink-0"
+                    className="p-2 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#172238] hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 transition-colors shrink-0"
                     aria-label="Copy email address"
                   >
                     {copiedEmail ? (
@@ -120,9 +120,9 @@ export function Contact() {
 
                 {/* Phone Box with Direct Dial & One-Click Copy */}
                 {PERSONAL_INFO.phone && (
-                  <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#0F172A] flex items-center justify-between gap-3">
+                  <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#0A1020] flex items-center justify-between gap-3">
                     <div className="flex items-center gap-3 truncate">
-                      <div className="p-2 rounded-lg bg-white dark:bg-[#1E293B] border border-slate-200 dark:border-slate-800 shrink-0">
+                      <div className="p-2 rounded-lg bg-white dark:bg-[#172238] border border-slate-200 dark:border-slate-800 shrink-0">
                         <Phone className="w-4 h-4 text-[#2563EB] dark:text-[#60A5FA]" />
                       </div>
                       <div className="truncate">
@@ -131,7 +131,7 @@ export function Contact() {
                         </div>
                         <a
                           href={`tel:${PERSONAL_INFO.phone}`}
-                          className="text-sm font-medium text-[#0F172A] dark:text-[#F8FAFC] hover:underline hover:text-[#2563EB] dark:hover:text-[#60A5FA] truncate block font-mono"
+                          className="text-sm font-medium text-[#0A1020] dark:text-[#F7F9FC] hover:underline hover:text-[#2563EB] dark:hover:text-[#60A5FA] truncate block font-mono"
                         >
                           {PERSONAL_INFO.phone}
                         </a>
@@ -141,7 +141,7 @@ export function Contact() {
                     <button
                       type="button"
                       onClick={handleCopyPhone}
-                      className="p-2 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#1E293B] hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 transition-colors shrink-0"
+                      className="p-2 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#172238] hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 transition-colors shrink-0"
                       aria-label="Copy phone number"
                     >
                       {copiedPhone ? (
@@ -159,7 +159,7 @@ export function Contact() {
                     href={PERSONAL_INFO.socials.linkedin.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-between p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-[#2563EB]/50 bg-slate-50/50 dark:bg-[#0F172A] text-slate-800 dark:text-slate-200 hover:bg-slate-100/60 dark:hover:bg-[#1E293B] transition-all text-sm font-medium group"
+                    className="flex items-center justify-between p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-[#2563EB]/50 bg-slate-50/50 dark:bg-[#0A1020] text-slate-800 dark:text-slate-200 hover:bg-slate-100/60 dark:hover:bg-[#172238] transition-all text-sm font-medium group"
                   >
                     <span className="flex items-center gap-2.5">
                       <Linkedin className="w-4 h-4 text-[#2563EB] dark:text-[#60A5FA]" />
@@ -172,7 +172,7 @@ export function Contact() {
                     href={PERSONAL_INFO.socials.github.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-between p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-[#2563EB]/50 bg-slate-50/50 dark:bg-[#0F172A] text-slate-800 dark:text-slate-200 hover:bg-slate-100/60 dark:hover:bg-[#1E293B] transition-all text-sm font-medium group"
+                    className="flex items-center justify-between p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-[#2563EB]/50 bg-slate-50/50 dark:bg-[#0A1020] text-slate-800 dark:text-slate-200 hover:bg-slate-100/60 dark:hover:bg-[#172238] transition-all text-sm font-medium group"
                   >
                     <span className="flex items-center gap-2.5">
                       <Github className="w-4 h-4 text-[#2563EB] dark:text-[#60A5FA]" />
@@ -202,12 +202,12 @@ export function Contact() {
           {/* Interactive Contact Form */}
           <div className="lg:col-span-7">
             <Reveal delay={0.2}>
-              <div className="p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#1E293B] shadow-xs">
+              <div className="p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#172238] shadow-xs">
                 <div className="flex items-center gap-2.5 mb-6 pb-4 border-b border-slate-100 dark:border-slate-800">
-                  <div className="p-2 rounded-lg bg-slate-100 dark:bg-[#0F172A] text-[#2563EB] dark:text-[#60A5FA]">
+                  <div className="p-2 rounded-lg bg-slate-100 dark:bg-[#0A1020] text-[#2563EB] dark:text-[#60A5FA]">
                     <MessageSquare className="w-4 h-4" />
                   </div>
-                  <h3 className="font-bold text-base text-[#0F172A] dark:text-[#F8FAFC]">
+                  <h3 className="font-bold text-base text-[#0A1020] dark:text-[#F7F9FC]">
                     Send a Message
                   </h3>
                 </div>
@@ -230,7 +230,7 @@ export function Contact() {
                           setFormState({ ...formState, name: e.target.value })
                         }
                         placeholder="Alex Morgan"
-                        className="w-full px-3.5 py-2.5 rounded-xl text-sm border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#0F172A] text-[#0F172A] dark:text-[#F8FAFC] placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-[#2563EB] transition-all"
+                        className="w-full px-3.5 py-2.5 rounded-xl text-sm border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#0A1020] text-[#0A1020] dark:text-[#F7F9FC] placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-[#2563EB] transition-all"
                       />
                     </div>
 
@@ -250,7 +250,7 @@ export function Contact() {
                           setFormState({ ...formState, email: e.target.value })
                         }
                         placeholder="alex@company.com"
-                        className="w-full px-3.5 py-2.5 rounded-xl text-sm border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#0F172A] text-[#0F172A] dark:text-[#F8FAFC] placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-[#2563EB] transition-all"
+                        className="w-full px-3.5 py-2.5 rounded-xl text-sm border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#0A1020] text-[#0A1020] dark:text-[#F7F9FC] placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-[#2563EB] transition-all"
                       />
                     </div>
                   </div>
@@ -271,7 +271,7 @@ export function Contact() {
                         setFormState({ ...formState, subject: e.target.value })
                       }
                       placeholder="Opportunity / Collaboration Inquiry"
-                      className="w-full px-3.5 py-2.5 rounded-xl text-sm border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#0F172A] text-[#0F172A] dark:text-[#F8FAFC] placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-[#2563EB] transition-all"
+                      className="w-full px-3.5 py-2.5 rounded-xl text-sm border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#0A1020] text-[#0A1020] dark:text-[#F7F9FC] placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-[#2563EB] transition-all"
                     />
                   </div>
 
@@ -291,7 +291,7 @@ export function Contact() {
                         setFormState({ ...formState, message: e.target.value })
                       }
                       placeholder="Hello Disha, I came across your portfolio and would love to discuss..."
-                      className="w-full px-3.5 py-2.5 rounded-xl text-sm border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#0F172A] text-[#0F172A] dark:text-[#F8FAFC] placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-[#2563EB] transition-all resize-none"
+                      className="w-full px-3.5 py-2.5 rounded-xl text-sm border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#0A1020] text-[#0A1020] dark:text-[#F7F9FC] placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-[#2563EB] transition-all resize-none"
                     />
                   </div>
 

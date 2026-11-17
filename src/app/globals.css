@@ -3,30 +3,30 @@
 @tailwind utilities;
 
 :root {
-  --background: #F8FAFC;
-  --foreground: #0F172A;
+  --background: #F7F9FC;
+  --foreground: #101828;
   --muted: #475569;
-  --muted-bg: #EFF6FF;
+  --muted-bg: #EEF3FA;
   --border: #E2E8F0;
   --card: #FFFFFF;
-  --card-foreground: #0F172A;
+  --card-foreground: #101828;
   --primary: #2563EB;
   --bright: #2563EB;
-  --accent: #3B82F6;
+  --accent: #0891B2;
   --ring: #2563EB;
 }
 
 .dark {
-  --background: #0F172A;
+  --background: #0A1020;
   --foreground: #F8FAFC;
   --muted: #94A3B8;
-  --muted-bg: #1E293B;
-  --border: #334155;
-  --card: #1E293B;
+  --muted-bg: #111A2B;
+  --border: #263B5A;
+  --card: #172238;
   --card-foreground: #F8FAFC;
   --primary: #2563EB;
-  --bright: #2563EB;
-  --accent: #3B82F6;
+  --bright: #60A5FA;
+  --accent: #22D3EE;
   --ring: #2563EB;
 }
 
@@ -81,11 +81,11 @@ body {
 }
 
 .dark ::-webkit-scrollbar-thumb {
-  background: #334155;
+  background: #263B5A;
 }
 
 .dark ::-webkit-scrollbar-thumb:hover {
-  background: #3B82F6;
+  background: #60A5FA;
 }
 
 /* Utility subtle grid background */
@@ -102,7 +102,7 @@ body {
     linear-gradient(to bottom, rgba(14, 165, 233, 0.08) 1px, transparent 1px);
 }
 
-/* White + Royal Blue + Slate & Light Cyan glow effects */
+/* Midnight Engineering & Light Cyan glow effects */
 .glow-ocean {
   box-shadow: 0 0 25px -5px rgba(37, 99, 235, 0.35);
 }

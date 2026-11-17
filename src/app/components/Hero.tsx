@@ -46,9 +46,9 @@ export function Hero({ onOpenRecruiter }: HeroProps) {
   };
 
   return (
-    <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
-      {/* Background radial spotlight in White + Royal Blue + Slate + Bright Blue + Light Cyan */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[620px] h-[400px] bg-gradient-to-tr from-[#2563EB]/20 via-[#2563EB]/15 to-[#3B82F6]/5 blur-[140px] rounded-full pointer-events-none -z-10" />
+    <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-[#F7F9FC] dark:bg-[#0A1020] transition-colors">
+      {/* Background radial spotlight in Midnight Engineering (Primary Blue, Electric Blue, Cyan) */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[620px] h-[400px] bg-gradient-to-tr from-[#2563EB]/20 via-[#60A5FA]/15 to-[#22D3EE]/10 blur-[140px] rounded-full pointer-events-none -z-10" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
@@ -61,21 +61,21 @@ export function Hero({ onOpenRecruiter }: HeroProps) {
           >
             {/* Status Badges */}
             <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-2 mb-6">
-              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium border border-slate-200 dark:border-[#334155] bg-white dark:bg-[#1E293B] text-slate-800 dark:text-[#F8FAFC] shadow-xs">
+              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium border border-slate-200 dark:border-[#263B5A] bg-white dark:bg-[#111A2B] text-slate-800 dark:text-[#F7F9FC] shadow-xs">
                 <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#2563EB] opacity-75" />
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-[#2563EB]" />
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#22D3EE] opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-[#22D3EE]" />
                 </span>
                 <span>{PERSONAL_INFO.availability}</span>
               </span>
 
               <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium border border-[#2563EB]/30 bg-[#2563EB]/10 text-[#2563EB] dark:text-[#60A5FA]">
-                <Trophy className="w-3.5 h-3.5 text-[#2563EB]" />
+                <Trophy className="w-3.5 h-3.5 text-[#FBBF24]" />
                 <span>SIH 2026 Internal Cleared</span>
               </span>
 
-              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium border border-[#2563EB]/30 bg-[#2563EB]/10 text-[#2563EB] dark:text-[#60A5FA]">
-                <GitBranch className="w-3.5 h-3.5 text-[#2563EB]" />
+              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium border border-[#22D3EE]/30 bg-[#22D3EE]/10 text-[#2563EB] dark:text-[#22D3EE]">
+                <GitBranch className="w-3.5 h-3.5 text-[#22D3EE]" />
                 <span>GSoC 2027 Aspirant</span>
               </span>
             </motion.div>
@@ -83,28 +83,26 @@ export function Hero({ onOpenRecruiter }: HeroProps) {
             {/* Heading */}
             <motion.h1
               variants={itemVariants}
-              className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#0F172A] dark:text-[#F8FAFC] leading-[1.12]"
+              className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#101828] dark:text-[#F7F9FC] leading-[1.14]"
             >
-              Hi, I&apos;m <span className="underline decoration-[#2563EB] dark:decoration-[#3B82F6] underline-offset-8">Disha Tripathi</span>.
+              Hi, I&apos;m <span className="underline decoration-[#2563EB] dark:decoration-[#22D3EE] underline-offset-8">Disha Tripathi</span> — I build <span className="text-[#2563EB] dark:text-[#60A5FA]">intelligent, scalable</span> & impactful solutions.
             </motion.h1>
 
             {/* Subtitle */}
             <motion.p
               variants={itemVariants}
-              className="mt-4 text-xl sm:text-2xl font-medium text-[#0F172A] dark:text-slate-200"
+              className="mt-4 text-xl sm:text-2xl font-medium text-slate-700 dark:text-[#C9D4E5]"
             >
-              Software Developer and AI/ML Enthusiast
+              Software Development | AI/ML | Problem Solving
             </motion.p>
 
             {/* Bio paragraph */}
             <motion.p
               variants={itemVariants}
-              className="mt-6 text-base sm:text-lg text-slate-600 dark:text-slate-400 leading-relaxed"
+              className="mt-5 text-base sm:text-lg text-slate-600 dark:text-[#94A3B8] leading-relaxed"
             >
               3rd-year B.Tech Computer Science student at Raj Kumar Goel Institute of Technology (CGPA: 8.8/10).
-              Internal level cleared for Smart India Hackathon (SIH 2026) and actively preparing for Google Summer of Code (GSoC 2027).
-              Passionate about architecting resilient full-stack applications, deep learning solutions, and developer
-              tooling with performance, scalability, and recruiter-ready clean code.
+              Engineering ideas into reality with resilient full-stack architectures, applied machine learning systems, and high-performance algorithms.
             </motion.p>
 
             {/* Quick info row */}
@@ -143,7 +141,7 @@ export function Hero({ onOpenRecruiter }: HeroProps) {
                 href={PERSONAL_INFO.resumeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold border border-slate-300 dark:border-[#334155] bg-white dark:bg-[#1E293B] hover:bg-sky-50 dark:hover:bg-[#334155] text-[#0F172A] dark:text-[#F8FAFC] transition-all shadow-xs active:scale-[0.98]"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold border border-slate-300 dark:border-[#263B5A] bg-white dark:bg-[#172238] hover:bg-sky-50 dark:hover:bg-[#263B5A] text-[#0A1020] dark:text-[#F7F9FC] transition-all shadow-xs active:scale-[0.98]"
               >
                 <Download className="w-4 h-4 text-[#2563EB]" />
                 <span>Download Resume</span>
@@ -165,7 +163,7 @@ export function Hero({ onOpenRecruiter }: HeroProps) {
             {/* Social links row */}
             <motion.div
               variants={itemVariants}
-              className="mt-8 pt-6 border-t border-slate-200 dark:border-[#334155] flex items-center gap-3"
+              className="mt-8 pt-6 border-t border-slate-200 dark:border-[#263B5A] flex items-center gap-3"
             >
               <span className="text-xs font-mono uppercase tracking-wider text-slate-400">
                 Connect
@@ -176,7 +174,7 @@ export function Hero({ onOpenRecruiter }: HeroProps) {
                 href={PERSONAL_INFO.socials.github.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-lg text-slate-400 hover:text-[#2563EB] dark:hover:text-[#60A5FA] hover:bg-sky-50 dark:hover:bg-[#1E293B] transition-colors"
+                className="p-2 rounded-lg text-slate-400 hover:text-[#2563EB] dark:hover:text-[#60A5FA] hover:bg-sky-50 dark:hover:bg-[#172238] transition-colors"
                 aria-label="GitHub profile"
               >
                 <Github className="w-4 h-4" />
@@ -186,7 +184,7 @@ export function Hero({ onOpenRecruiter }: HeroProps) {
                 href={PERSONAL_INFO.socials.linkedin.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-lg text-slate-400 hover:text-[#2563EB] dark:hover:text-[#60A5FA] hover:bg-sky-50 dark:hover:bg-[#1E293B] transition-colors"
+                className="p-2 rounded-lg text-slate-400 hover:text-[#2563EB] dark:hover:text-[#60A5FA] hover:bg-sky-50 dark:hover:bg-[#172238] transition-colors"
                 aria-label="LinkedIn profile"
               >
                 <Linkedin className="w-4 h-4" />
@@ -194,7 +192,7 @@ export function Hero({ onOpenRecruiter }: HeroProps) {
 
               <a
                 href={`mailto:${PERSONAL_INFO.email}`}
-                className="p-2 rounded-lg text-slate-400 hover:text-[#2563EB] dark:hover:text-[#60A5FA] hover:bg-sky-50 dark:hover:bg-[#1E293B] transition-colors"
+                className="p-2 rounded-lg text-slate-400 hover:text-[#2563EB] dark:hover:text-[#60A5FA] hover:bg-sky-50 dark:hover:bg-[#172238] transition-colors"
                 aria-label="Send Email"
               >
                 <Mail className="w-4 h-4" />
@@ -204,7 +202,7 @@ export function Hero({ onOpenRecruiter }: HeroProps) {
                 href={PERSONAL_INFO.socials.leetcode.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-2.5 py-1 rounded-md text-xs font-mono border border-slate-200 dark:border-[#334155] text-slate-500 hover:text-[#2563EB] dark:hover:text-[#60A5FA] hover:bg-sky-50 dark:hover:bg-[#1E293B] transition-colors"
+                className="px-2.5 py-1 rounded-md text-xs font-mono border border-slate-200 dark:border-[#263B5A] text-slate-500 hover:text-[#2563EB] dark:hover:text-[#60A5FA] hover:bg-sky-50 dark:hover:bg-[#172238] transition-colors"
                 aria-label="LeetCode profile"
               >
                 LeetCode (311+)
@@ -219,78 +217,78 @@ export function Hero({ onOpenRecruiter }: HeroProps) {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="hidden lg:block lg:col-span-5"
           >
-            <div className="rounded-2xl border border-slate-200 dark:border-[#334155] bg-[#0F172A] shadow-2xl overflow-hidden">
+            <div className="rounded-2xl border border-slate-200 dark:border-[#263B5A] bg-white dark:bg-[#0A1020] shadow-2xl overflow-hidden">
               {/* Window Header */}
-              <div className="flex items-center justify-between px-4 py-3 bg-[#0B132B] border-b border-[#334155]">
+              <div className="flex items-center justify-between px-4 py-3 bg-slate-100 dark:bg-[#111A2B] border-b border-slate-200 dark:border-[#263B5A]">
                 <div className="flex items-center gap-2">
                   <div className="flex items-center gap-1.5">
                     <div className="w-3 h-3 rounded-full bg-red-400/80" />
                     <div className="w-3 h-3 rounded-full bg-amber-400/80" />
-                    <div className="w-3 h-3 rounded-full bg-[#3B82F6]/80" />
+                    <div className="w-3 h-3 rounded-full bg-[#22D3EE]/80" />
                   </div>
-                  <span className="ml-2 font-mono text-xs text-slate-400 flex items-center gap-1">
-                    <FileCode className="w-3.5 h-3.5 text-[#2563EB]" />
+                  <span className="ml-2 font-mono text-xs text-slate-500 dark:text-[#C9D4E5] flex items-center gap-1">
+                    <FileCode className="w-3.5 h-3.5 text-[#2563EB] dark:text-[#60A5FA]" />
                     disha.candidate.ts
                   </span>
                 </div>
-                <span className="text-[10px] font-mono text-[#60A5FA] font-medium">TypeScript</span>
+                <span className="text-[10px] font-mono text-[#2563EB] dark:text-[#22D3EE] font-medium">TypeScript</span>
               </div>
 
               {/* Code Editor Body */}
-              <div className="p-4 sm:p-5 font-mono text-[12px] leading-relaxed text-slate-300 overflow-x-auto space-y-1 bg-[#0F172A]">
+              <div className="p-4 sm:p-5 font-mono text-[12px] leading-relaxed text-slate-700 dark:text-slate-300 overflow-x-auto space-y-1 bg-slate-50/60 dark:bg-[#0A1020]">
                 <div>
-                  <span className="text-[#38BDF8]">export const</span>{" "}
-                  <span className="text-[#60A5FA]">disha</span> = {"{"}
+                  <span className="text-[#2563EB] dark:text-[#60A5FA]">export const</span>{" "}
+                  <span className="text-[#2563EB] dark:text-[#22D3EE]">disha</span> = {"{"}
                 </div>
                 <div className="pl-4">
-                  <span className="text-slate-400">name:</span>{" "}
-                  <span className="text-[#F8FAFC]">&quot;Disha Tripathi&quot;</span>,
+                  <span className="text-slate-500 dark:text-[#94A3B8]">name:</span>{" "}
+                  <span className="text-[#101828] dark:text-[#F7F9FC]">&quot;Disha Tripathi&quot;</span>,
                 </div>
                 <div className="pl-4">
-                  <span className="text-slate-400">degree:</span>{" "}
-                  <span className="text-[#93C5FD]">&quot;B.Tech Computer Science&quot;</span>,
+                  <span className="text-slate-500 dark:text-[#94A3B8]">degree:</span>{" "}
+                  <span className="text-[#2563EB] dark:text-[#60A5FA]">&quot;B.Tech Computer Science&quot;</span>,
                 </div>
                 <div className="pl-4">
-                  <span className="text-slate-400">college:</span>{" "}
-                  <span className="text-[#F8FAFC]">&quot;RKGIT Ghaziabad&quot;</span>,
+                  <span className="text-slate-500 dark:text-[#94A3B8]">college:</span>{" "}
+                  <span className="text-[#101828] dark:text-[#F7F9FC]">&quot;RKGIT Ghaziabad&quot;</span>,
                 </div>
                 <div className="pl-4">
-                  <span className="text-slate-400">cgpa:</span>{" "}
-                  <span className="text-[#60A5FA] font-bold">8.8</span>,
+                  <span className="text-slate-500 dark:text-[#94A3B8]">cgpa:</span>{" "}
+                  <span className="text-[#2563EB] dark:text-[#22D3EE] font-bold">8.8</span>,
                 </div>
                 <div className="pl-4">
-                  <span className="text-slate-400">hackathons:</span> [
-                  <span className="text-[#93C5FD]">&quot;SIH 2026 Internal Cleared&quot;</span>],
+                  <span className="text-slate-500 dark:text-[#94A3B8]">hackathons:</span> [
+                  <span className="text-[#2563EB] dark:text-[#60A5FA]">&quot;SIH 2026 Internal Cleared&quot;</span>],
                 </div>
                 <div className="pl-4">
-                  <span className="text-slate-400">openSource:</span>{" "}
-                  <span className="text-[#60A5FA]">&quot;GSoC 2027 Aspirant&quot;</span>,
+                  <span className="text-slate-500 dark:text-[#94A3B8]">openSource:</span>{" "}
+                  <span className="text-[#2563EB] dark:text-[#22D3EE]">&quot;GSoC 2027 Aspirant&quot;</span>,
                 </div>
                 <div className="pl-4">
-                  <span className="text-slate-400">leetcodeSolved:</span>{" "}
-                  <span className="text-[#38BDF8] font-bold">311</span>,
+                  <span className="text-slate-500 dark:text-[#94A3B8]">leetcodeSolved:</span>{" "}
+                  <span className="text-[#2563EB] dark:text-[#60A5FA] font-bold">311</span>,
                 </div>
                 <div className="pl-4">
-                  <span className="text-slate-400">stack:</span> [
-                  <span className="text-slate-300">&quot;Python&quot;</span>,{" "}
-                  <span className="text-slate-300">&quot;FastAPI&quot;</span>,{" "}
-                  <span className="text-slate-300">&quot;Next.js&quot;</span>,{" "}
-                  <span className="text-slate-300">&quot;C++&quot;</span>],
+                  <span className="text-slate-500 dark:text-[#94A3B8]">stack:</span> [
+                  <span className="text-slate-700 dark:text-[#C9D4E5]">&quot;Python&quot;</span>,{" "}
+                  <span className="text-slate-700 dark:text-[#C9D4E5]">&quot;FastAPI&quot;</span>,{" "}
+                  <span className="text-slate-700 dark:text-[#C9D4E5]">&quot;Next.js&quot;</span>,{" "}
+                  <span className="text-slate-700 dark:text-[#C9D4E5]">&quot;C++&quot;</span>],
                 </div>
                 <div className="pl-4">
-                  <span className="text-slate-400">openToInternships:</span>{" "}
-                  <span className="text-[#60A5FA] font-bold">true</span>,
+                  <span className="text-slate-500 dark:text-[#94A3B8]">openToInternships:</span>{" "}
+                  <span className="text-[#2563EB] dark:text-[#22D3EE] font-bold">true</span>,
                 </div>
                 <div>{"};"}</div>
               </div>
 
               {/* Status footer */}
-              <div className="px-4 py-2.5 bg-[#0B132B] border-t border-[#334155] flex items-center justify-between text-[11px] font-mono text-slate-400">
-                <span className="flex items-center gap-1.5 text-[#38BDF8]">
-                  <span className="w-2 h-2 rounded-full bg-[#38BDF8] animate-pulse" />
+              <div className="px-4 py-2.5 bg-slate-100 dark:bg-[#111A2B] border-t border-slate-200 dark:border-[#263B5A] flex items-center justify-between text-[11px] font-mono text-slate-500 dark:text-[#94A3B8]">
+                <span className="flex items-center gap-1.5 text-[#2563EB] dark:text-[#22D3EE]">
+                  <span className="w-2 h-2 rounded-full bg-[#22D3EE] animate-pulse" />
                   Status: Available for Hire
                 </span>
-                <span className="text-slate-500">UTF-8</span>
+                <span className="text-slate-400 dark:text-[#94A3B8]">UTF-8</span>
               </div>
             </div>
           </motion.div>

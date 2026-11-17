@@ -35,7 +35,7 @@ export function GsocRoadmap() {
         );
       case "Upcoming":
         return (
-          <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-medium border border-slate-200 dark:border-slate-700 bg-slate-100/60 dark:bg-[#0F172A] text-slate-600 dark:text-slate-400">
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-medium border border-slate-200 dark:border-slate-700 bg-slate-100/60 dark:bg-[#0A1020] text-slate-600 dark:text-slate-400">
             <CircleDashed className="w-3 h-3" />
             Upcoming Roadmap
           </span>
@@ -44,7 +44,7 @@ export function GsocRoadmap() {
   };
 
   return (
-    <div className="mt-8 p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#1E293B] shadow-xs">
+    <div className="mt-8 p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#172238] shadow-xs">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-100 dark:border-slate-800">
         <div>
           <div className="flex items-center gap-2 mb-1.5">
@@ -54,7 +54,7 @@ export function GsocRoadmap() {
             </span>
             <span className="font-mono text-xs text-slate-400">• The Honeynet Project</span>
           </div>
-          <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-[#0F172A] dark:text-[#F8FAFC]">
+          <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-[#0A1020] dark:text-[#F7F9FC]">
             Google Summer of Code (GSoC 2027) Roadmap
           </h3>
           <p className="mt-1 text-xs sm:text-sm text-slate-600 dark:text-slate-400 max-w-2xl">
@@ -84,21 +84,21 @@ export function GsocRoadmap() {
               key={item.phase}
               className={`p-5 rounded-xl border transition-all ${
                 isActive
-                  ? "border-[#2563EB]/60 bg-blue-500/[0.04] dark:bg-[#0F172A] dark:border-[#2563EB] shadow-sm"
-                  : "border-slate-200 dark:border-slate-800/80 bg-slate-50/50 dark:bg-[#0F172A] hover:border-slate-300 dark:hover:border-slate-700"
+                  ? "border-[#2563EB]/60 bg-blue-500/[0.04] dark:bg-[#0A1020] dark:border-[#2563EB] shadow-sm"
+                  : "border-slate-200 dark:border-slate-800/80 bg-slate-50/50 dark:bg-[#0A1020] hover:border-slate-300 dark:hover:border-slate-700"
               }`}
             >
               <div className="flex items-start justify-between gap-3">
                 <div>
                   <div className="flex items-center gap-2 mb-1.5">
-                    <span className="font-mono text-xs font-semibold text-[#0F172A] dark:text-[#F8FAFC]">
+                    <span className="font-mono text-xs font-semibold text-[#0A1020] dark:text-[#F7F9FC]">
                       {item.phase}
                     </span>
                     <span className="text-xs text-slate-400 font-mono">
                       // {item.period}
                     </span>
                   </div>
-                  <h4 className="text-sm sm:base font-bold text-[#0F172A] dark:text-[#F8FAFC] leading-snug">
+                  <h4 className="text-sm sm:base font-bold text-[#0A1020] dark:text-[#F7F9FC] leading-snug">
                     {item.title}
                   </h4>
                 </div>
