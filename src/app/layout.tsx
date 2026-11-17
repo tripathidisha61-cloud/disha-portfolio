@@ -4,7 +4,7 @@ import { ThemeProvider } from "./components/ThemeProvider";
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#F4F6FA" },
+    { media: "(prefers-color-scheme: light)", color: "#050B14" },
     { media: "(prefers-color-scheme: dark)", color: "#050B14" },
   ],
   width: "device-width",
@@ -64,8 +64,9 @@ export default function RootLayout({
       <body className="font-sans antialiased bg-[#F4F6FA] dark:bg-[#050B14] text-[#050B14] dark:text-[#F1F5F9] selection:bg-[#3B6FD8]/20 selection:text-[#3B6FD8]">
         <ThemeProvider
           attribute="class"
-          defaultTheme="light"
-          enableSystem
+          defaultTheme="dark"
+          storageKey="disha-theme-navy"
+          enableSystem={false}
           disableTransitionOnChange={false}
         >
           {children}
