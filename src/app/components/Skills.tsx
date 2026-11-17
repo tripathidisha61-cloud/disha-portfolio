@@ -8,15 +8,15 @@ export function Skills() {
   const getCategoryIcon = (index: number) => {
     switch (index) {
       case 0:
-        return <Terminal className="w-4 h-4 text-[#3B6FD8] dark:text-[#8DA4C4]" />;
+        return <Terminal className="w-4 h-4 text-[#0D9488] dark:text-[#2DD4BF]" />;
       case 1:
-        return <Code className="w-4 h-4 text-[#3B6FD8] dark:text-[#8DA4C4]" />;
+        return <Code className="w-4 h-4 text-[#0D9488] dark:text-[#2DD4BF]" />;
       case 2:
-        return <Cpu className="w-4 h-4 text-[#3B6FD8] dark:text-[#8DA4C4]" />;
+        return <Cpu className="w-4 h-4 text-[#0D9488] dark:text-[#2DD4BF]" />;
       case 3:
-        return <Cloud className="w-4 h-4 text-[#3B6FD8] dark:text-[#8DA4C4]" />;
+        return <Cloud className="w-4 h-4 text-[#0D9488] dark:text-[#2DD4BF]" />;
       default:
-        return <CheckCircle2 className="w-4 h-4 text-[#3B6FD8] dark:text-[#8DA4C4]" />;
+        return <CheckCircle2 className="w-4 h-4 text-[#0D9488] dark:text-[#2DD4BF]" />;
     }
   };
 
@@ -25,11 +25,11 @@ export function Skills() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal>
           <div className="flex items-center gap-2 mb-3">
-            <span className="font-mono text-xs uppercase tracking-wider text-[#3B6FD8] dark:text-[#8DA4C4]">
+            <span className="font-mono text-xs uppercase tracking-wider text-[#0D9488] dark:text-[#2DD4BF]">
               02 // Core Competencies
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#050B14] dark:text-[#F1F5F9]">
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#0A1E2F] dark:text-[#F0FDFA]">
             Technical Skills
           </h2>
           <p className="mt-3 text-base text-slate-600 dark:text-slate-400 max-w-2xl">
@@ -40,12 +40,12 @@ export function Skills() {
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {SKILL_CATEGORIES.map((category, idx) => (
             <Reveal key={category.title} delay={idx * 0.1}>
-              <div className="h-full p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0E1B33] shadow-xs hover:border-[#3B6FD8]/40 hover:shadow-md dark:hover:shadow-[#3B6FD8]/10 transition-all">
+              <div className="h-full p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#102A43] shadow-xs hover:border-[#0D9488]/40 hover:shadow-md dark:hover:shadow-[#0D9488]/10 transition-all">
                 <div className="flex items-center gap-2.5 pb-4 border-b border-slate-100 dark:border-slate-800">
-                  <div className="p-2 rounded-lg bg-slate-100 dark:bg-[#050B14] text-[#3B6FD8] dark:text-[#8DA4C4]">
+                  <div className="p-2 rounded-lg bg-slate-100 dark:bg-[#0A1E2F] text-[#0D9488] dark:text-[#2DD4BF]">
                     {getCategoryIcon(idx)}
                   </div>
-                  <h3 className="font-semibold text-[#050B14] dark:text-[#F1F5F9] text-base">
+                  <h3 className="font-semibold text-[#0A1E2F] dark:text-[#F0FDFA] text-base">
                     {category.title}
                   </h3>
                 </div>
@@ -54,7 +54,7 @@ export function Skills() {
                   {category.skills.map((skill) => (
                     <span
                       key={skill.name}
-                      className="px-3 py-1.5 rounded-lg text-xs font-mono font-medium border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#050B14] text-slate-800 dark:text-slate-200 hover:border-[#3B6FD8] dark:hover:border-[#8DA4C4] hover:bg-white dark:hover:bg-[#0E1B33] transition-all cursor-default"
+                      className="px-3 py-1.5 rounded-lg text-xs font-mono font-medium border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#0A1E2F] text-slate-800 dark:text-slate-200 hover:border-[#0D9488] dark:hover:border-[#2DD4BF] hover:bg-white dark:hover:bg-[#102A43] transition-all cursor-default"
                     >
                       {skill.name}
                     </span>
