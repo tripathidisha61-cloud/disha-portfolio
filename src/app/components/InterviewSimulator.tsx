@@ -56,11 +56,11 @@ export function InterviewSimulator() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal>
           <div className="flex items-center gap-2 mb-3">
-            <span className="font-mono text-xs uppercase tracking-wider text-[#3B82F6] dark:text-[#60A5FA]">
+            <span className="font-mono text-xs uppercase tracking-wider text-[#0D9488] dark:text-[#2DD4BF]">
               07 // Candidate Screening
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#111315] dark:text-[#F8FAFC]">
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#0B1724] dark:text-[#F8FAFC]">
             Recruiter Interview Q&A Simulator (STAR Method)
           </h2>
           <p className="mt-3 text-base text-slate-600 dark:text-slate-400 max-w-2xl">
@@ -79,8 +79,8 @@ export function InterviewSimulator() {
                 onClick={() => setSelectedCategory(cat)}
                 className={`px-3.5 py-1.5 rounded-xl text-xs font-medium transition-all ${
                   isSelected
-                    ? "bg-[#3B82F6] text-white shadow-xs font-semibold"
-                    : "border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#20252B] text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-[#F8FAFC] hover:bg-slate-50 dark:hover:bg-slate-800"
+                    ? "bg-[#0D9488] text-white shadow-xs font-semibold"
+                    : "border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#132238] text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-[#F8FAFC] hover:bg-slate-50 dark:hover:bg-slate-800"
                 }`}
               >
                 {cat}
@@ -98,8 +98,8 @@ export function InterviewSimulator() {
                 <div
                   className={`rounded-2xl border transition-all ${
                     isExpanded
-                      ? "border-[#3B82F6]/60 bg-white dark:bg-[#20252B] shadow-md dark:shadow-[#3B82F6]/10"
-                      : "border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-[#20252B]/60 hover:border-slate-300 dark:hover:border-slate-700"
+                      ? "border-[#0D9488]/60 bg-white dark:bg-[#132238] shadow-md dark:shadow-[#0D9488]/10"
+                      : "border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-[#132238]/60 hover:border-slate-300 dark:hover:border-slate-700"
                   }`}
                 >
                   {/* Question Accordion Header */}
@@ -109,12 +109,12 @@ export function InterviewSimulator() {
                     className="w-full flex items-center justify-between p-5 sm:p-6 text-left gap-4"
                   >
                     <div className="flex items-start gap-3.5 min-w-0">
-                      <div className="p-2 rounded-xl bg-slate-100 dark:bg-[#111315] text-[#3B82F6] dark:text-[#60A5FA] shrink-0 mt-0.5">
+                      <div className="p-2 rounded-xl bg-slate-100 dark:bg-[#0B1724] text-[#0D9488] dark:text-[#2DD4BF] shrink-0 mt-0.5">
                         <MessageSquare className="w-4 h-4" />
                       </div>
                       <div className="min-w-0">
                         <div className="flex items-center gap-2 mb-1.5">
-                          <span className="px-2 py-0.5 rounded-md text-[10px] font-mono font-medium border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#111315] text-slate-600 dark:text-slate-300">
+                          <span className="px-2 py-0.5 rounded-md text-[10px] font-mono font-medium border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#0B1724] text-slate-600 dark:text-slate-300">
                             {q.category}
                           </span>
                           <span className="text-[11px] font-mono text-slate-400 dark:text-slate-400 flex items-center gap-1">
@@ -122,13 +122,13 @@ export function InterviewSimulator() {
                             {q.timeEstimate}
                           </span>
                         </div>
-                        <h3 className="text-base sm:text-lg font-bold text-[#111315] dark:text-[#F8FAFC] leading-snug">
+                        <h3 className="text-base sm:text-lg font-bold text-[#0B1724] dark:text-[#F8FAFC] leading-snug">
                           {q.question}
                         </h3>
                       </div>
                     </div>
 
-                    <div className="p-1 rounded-lg text-slate-400 hover:text-slate-900 dark:hover:text-[#60A5FA] shrink-0">
+                    <div className="p-1 rounded-lg text-slate-400 hover:text-slate-900 dark:hover:text-[#2DD4BF] shrink-0">
                       <ChevronDown
                         className={`w-5 h-5 transition-transform duration-200 ${
                           isExpanded ? "rotate-180" : ""
@@ -150,7 +150,7 @@ export function InterviewSimulator() {
                         {/* 4 STAR Steps */}
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                           {/* Situation */}
-                          <div className="p-4 rounded-xl border border-slate-100 dark:border-slate-800/80 bg-slate-50/60 dark:bg-[#111315] space-y-1">
+                          <div className="p-4 rounded-xl border border-slate-100 dark:border-slate-800/80 bg-slate-50/60 dark:bg-[#0B1724] space-y-1">
                             <span className="text-[11px] font-mono font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider">
                               [Situation]
                             </span>
@@ -160,8 +160,8 @@ export function InterviewSimulator() {
                           </div>
 
                           {/* Task */}
-                          <div className="p-4 rounded-xl border border-slate-100 dark:border-slate-800/80 bg-slate-50/60 dark:bg-[#111315] space-y-1">
-                            <span className="text-[11px] font-mono font-bold text-[#3B82F6] dark:text-[#60A5FA] uppercase tracking-wider">
+                          <div className="p-4 rounded-xl border border-slate-100 dark:border-slate-800/80 bg-slate-50/60 dark:bg-[#0B1724] space-y-1">
+                            <span className="text-[11px] font-mono font-bold text-[#0D9488] dark:text-[#2DD4BF] uppercase tracking-wider">
                               [Task]
                             </span>
                             <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
@@ -170,8 +170,8 @@ export function InterviewSimulator() {
                           </div>
 
                           {/* Action */}
-                          <div className="p-4 rounded-xl border border-slate-100 dark:border-slate-800/80 bg-slate-50/60 dark:bg-[#111315] space-y-1">
-                            <span className="text-[11px] font-mono font-bold text-[#3B82F6] dark:text-[#60A5FA] uppercase tracking-wider">
+                          <div className="p-4 rounded-xl border border-slate-100 dark:border-slate-800/80 bg-slate-50/60 dark:bg-[#0B1724] space-y-1">
+                            <span className="text-[11px] font-mono font-bold text-[#0D9488] dark:text-[#2DD4BF] uppercase tracking-wider">
                               [Action]
                             </span>
                             <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
@@ -180,9 +180,9 @@ export function InterviewSimulator() {
                           </div>
 
                           {/* Result */}
-                          <div className="p-4 rounded-xl border border-[#3B82F6]/30 bg-blue-50/50 dark:bg-[#3B82F6]/[0.05] space-y-1">
-                            <span className="text-[11px] font-mono font-bold text-[#3B82F6] dark:text-[#60A5FA] uppercase tracking-wider flex items-center gap-1">
-                              <CheckCircle2 className="w-3.5 h-3.5 text-[#60A5FA]" />
+                          <div className="p-4 rounded-xl border border-[#0D9488]/30 bg-blue-50/50 dark:bg-[#0D9488]/[0.05] space-y-1">
+                            <span className="text-[11px] font-mono font-bold text-[#0D9488] dark:text-[#2DD4BF] uppercase tracking-wider flex items-center gap-1">
+                              <CheckCircle2 className="w-3.5 h-3.5 text-[#2DD4BF]" />
                               [Result]
                             </span>
                             <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
@@ -192,11 +192,11 @@ export function InterviewSimulator() {
                         </div>
 
                         {/* Interviewer Takeaway Box & Copy Action */}
-                        <div className="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#111315]/80 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
+                        <div className="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#0B1724]/80 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
                           <div className="flex items-start sm:items-center gap-2">
-                            <Sparkles className="w-4 h-4 text-[#60A5FA] shrink-0 mt-0.5 sm:mt-0" />
+                            <Sparkles className="w-4 h-4 text-[#2DD4BF] shrink-0 mt-0.5 sm:mt-0" />
                             <span className="text-slate-600 dark:text-slate-300">
-                              <span className="font-semibold text-[#3B82F6] dark:text-[#60A5FA]">
+                              <span className="font-semibold text-[#0D9488] dark:text-[#2DD4BF]">
                                 Evaluator Takeaway:{" "}
                               </span>
                               {q.keyTakeaway}
@@ -206,7 +206,7 @@ export function InterviewSimulator() {
                           <button
                             type="button"
                             onClick={() => handleCopyAnswer(q)}
-                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-mono text-[11px] border border-slate-200 dark:border-slate-700 bg-white dark:bg-[#20252B] text-slate-700 dark:text-slate-200 hover:text-[#3B82F6] dark:hover:text-[#F8FAFC] transition-colors shrink-0 self-end sm:self-auto"
+                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-mono text-[11px] border border-slate-200 dark:border-slate-700 bg-white dark:bg-[#132238] text-slate-700 dark:text-slate-200 hover:text-[#0D9488] dark:hover:text-[#F8FAFC] transition-colors shrink-0 self-end sm:self-auto"
                           >
                             {copiedId === q.id ? (
                               <>

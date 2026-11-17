@@ -10,11 +10,11 @@ export function Experience() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal>
           <div className="flex items-center gap-2 mb-3">
-            <span className="font-mono text-xs uppercase tracking-wider text-[#3B82F6] dark:text-[#60A5FA]">
+            <span className="font-mono text-xs uppercase tracking-wider text-[#0D9488] dark:text-[#2DD4BF]">
               06 // Leadership & Community
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#111315] dark:text-[#F8FAFC]">
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#0B1724] dark:text-[#F8FAFC]">
             Experience & Activities
           </h2>
           <p className="mt-3 text-base text-slate-600 dark:text-slate-400 max-w-2xl">
@@ -25,14 +25,14 @@ export function Experience() {
         <div className="mt-12 space-y-8">
           {EXPERIENCES.map((exp, idx) => (
             <Reveal key={exp.id} delay={idx * 0.1}>
-              <div className="p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#20252B] hover:border-slate-300 dark:hover:border-[#3B82F6]/50 shadow-xs hover:shadow-lg dark:hover:shadow-[#3B82F6]/10 transition-all">
+              <div className="p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#132238] hover:border-slate-300 dark:hover:border-[#0D9488]/50 shadow-xs hover:shadow-lg dark:hover:shadow-[#0D9488]/10 transition-all">
                 <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 pb-5 border-b border-slate-100 dark:border-slate-800">
                   <div className="flex items-start gap-3">
-                    <div className="p-2.5 rounded-xl bg-slate-100 dark:bg-[#111315] text-[#3B82F6] dark:text-[#60A5FA] shrink-0 mt-0.5">
+                    <div className="p-2.5 rounded-xl bg-slate-100 dark:bg-[#0B1724] text-[#0D9488] dark:text-[#2DD4BF] shrink-0 mt-0.5">
                       <Briefcase className="w-5 h-5" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold text-[#111315] dark:text-[#F8FAFC]">
+                      <h3 className="text-lg font-bold text-[#0B1724] dark:text-[#F8FAFC]">
                         {exp.role}
                       </h3>
                       <div className="text-sm font-medium text-slate-700 dark:text-slate-300 mt-0.5">
@@ -43,11 +43,11 @@ export function Experience() {
 
                   <div className="flex flex-wrap sm:flex-col sm:items-end gap-2 text-xs text-slate-500 dark:text-slate-400 font-mono shrink-0">
                     <span className="inline-flex items-center gap-1.5">
-                      <Calendar className="w-3.5 h-3.5 text-[#3B82F6]" />
+                      <Calendar className="w-3.5 h-3.5 text-[#0D9488]" />
                       {exp.period}
                     </span>
                     <span className="inline-flex items-center gap-1.5">
-                      <MapPin className="w-3.5 h-3.5 text-[#60A5FA]" />
+                      <MapPin className="w-3.5 h-3.5 text-[#2DD4BF]" />
                       {exp.location}
                     </span>
                   </div>
@@ -59,7 +59,7 @@ export function Experience() {
                       key={i}
                       className="text-sm text-slate-600 dark:text-slate-300 flex items-start gap-2.5 leading-relaxed"
                     >
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#3B82F6] dark:bg-[#60A5FA] mt-2 shrink-0" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#0D9488] dark:bg-[#2DD4BF] mt-2 shrink-0" />
                       <span>{point}</span>
                     </li>
                   ))}
@@ -69,7 +69,7 @@ export function Experience() {
                   {exp.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-2.5 py-0.5 rounded-md text-xs font-mono border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#111315] text-slate-600 dark:text-slate-300"
+                      className="px-2.5 py-0.5 rounded-md text-xs font-mono border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#0B1724] text-slate-600 dark:text-slate-300"
                     >
                       {tag}
                     </span>

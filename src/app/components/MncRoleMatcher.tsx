@@ -30,11 +30,11 @@ export function MncRoleMatcher() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal>
           <div className="flex items-center gap-2 mb-3">
-            <span className="font-mono text-xs uppercase tracking-wider text-[#3B82F6] dark:text-[#60A5FA]">
+            <span className="font-mono text-xs uppercase tracking-wider text-[#0D9488] dark:text-[#2DD4BF]">
               06 // Candidate Fit
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#111315] dark:text-[#F8FAFC]">
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#0B1724] dark:text-[#F8FAFC]">
             Top MNC Role Alignment Matrix
           </h2>
           <p className="mt-3 text-base text-slate-600 dark:text-slate-400 max-w-2xl">
@@ -53,17 +53,17 @@ export function MncRoleMatcher() {
                 onClick={() => setSelectedRoleId(role.roleId)}
                 className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-medium transition-all ${
                   isSelected
-                    ? "bg-[#3B82F6] text-white shadow-xs font-semibold"
-                    : "border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#20252B] text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-[#F8FAFC] hover:bg-slate-50 dark:hover:bg-slate-800"
+                    ? "bg-[#0D9488] text-white shadow-xs font-semibold"
+                    : "border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#132238] text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-[#F8FAFC] hover:bg-slate-50 dark:hover:bg-slate-800"
                 }`}
               >
-                <Briefcase className="w-3.5 h-3.5 text-[#60A5FA]" />
+                <Briefcase className="w-3.5 h-3.5 text-[#2DD4BF]" />
                 <span className="truncate">{role.roleTitle.split("—")[0].trim()}</span>
                 <span
                   className={`px-2 py-0.5 rounded-md text-[10px] font-mono font-bold ${
                     isSelected
                       ? "bg-blue-700 text-white"
-                      : "bg-blue-50 text-[#3B82F6] dark:bg-[#111315] dark:text-[#60A5FA] border border-blue-200 dark:border-[#60A5FA]/30"
+                      : "bg-blue-50 text-[#0D9488] dark:bg-[#0B1724] dark:text-[#2DD4BF] border border-blue-200 dark:border-[#2DD4BF]/30"
                   }`}
                 >
                   {role.matchRate}
@@ -81,19 +81,19 @@ export function MncRoleMatcher() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.2 }}
-            className="mt-6 p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#20252B] shadow-xs space-y-8"
+            className="mt-6 p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#132238] shadow-xs space-y-8"
           >
             {/* Header info */}
             <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-6 border-b border-slate-100 dark:border-slate-800">
               <div>
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-mono font-medium border border-[#3B82F6]/30 bg-[#3B82F6]/10 text-blue-600 dark:text-[#60A5FA]">
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-mono font-medium border border-[#0D9488]/30 bg-[#0D9488]/10 text-blue-600 dark:text-[#2DD4BF]">
                     <TrendingUp className="w-3.5 h-3.5" />
                     {currentRole.matchRate} Match
                   </span>
                   <span className="text-xs text-slate-400 font-mono">• Internship 2025/2026</span>
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-[#111315] dark:text-[#F8FAFC]">
+                <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-[#0B1724] dark:text-[#F8FAFC]">
                   {currentRole.roleTitle}
                 </h3>
               </div>
@@ -101,13 +101,13 @@ export function MncRoleMatcher() {
               {/* Target MNC tags */}
               <div className="flex flex-wrap items-center gap-1.5">
                 <span className="text-xs font-mono text-slate-400 mr-1 flex items-center gap-1">
-                  <Building2 className="w-3.5 h-3.5 text-[#3B82F6]" />
+                  <Building2 className="w-3.5 h-3.5 text-[#0D9488]" />
                   Target Cohorts:
                 </span>
                 {currentRole.targetMNCs.map((mnc) => (
                   <span
                     key={mnc}
-                    className="px-2.5 py-1 rounded-lg text-xs font-mono font-medium border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#111315] text-slate-800 dark:text-slate-200"
+                    className="px-2.5 py-1 rounded-lg text-xs font-mono font-medium border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#0B1724] text-slate-800 dark:text-slate-200"
                   >
                     {mnc}
                   </span>
@@ -118,16 +118,16 @@ export function MncRoleMatcher() {
             {/* Core Competencies */}
             <div>
               <h4 className="text-xs font-mono uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-3 flex items-center gap-1.5">
-                <Sparkles className="w-4 h-4 text-amber-500 dark:text-[#60A5FA]" />
+                <Sparkles className="w-4 h-4 text-amber-500 dark:text-[#2DD4BF]" />
                 <span>Primary Technical Competencies</span>
               </h4>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5">
                 {currentRole.coreCompetencies.map((comp, idx) => (
                   <div
                     key={idx}
-                    className="p-3.5 rounded-xl border border-slate-100 dark:border-slate-800/80 bg-slate-50/50 dark:bg-[#111315] flex items-start gap-2.5 text-xs sm:text-sm text-slate-700 dark:text-slate-300"
+                    className="p-3.5 rounded-xl border border-slate-100 dark:border-slate-800/80 bg-slate-50/50 dark:bg-[#0B1724] flex items-start gap-2.5 text-xs sm:text-sm text-slate-700 dark:text-slate-300"
                   >
-                    <CheckCircle2 className="w-4 h-4 text-emerald-500 dark:text-[#60A5FA] shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-4 h-4 text-emerald-500 dark:text-[#2DD4BF] shrink-0 mt-0.5" />
                     <span>{comp}</span>
                   </div>
                 ))}
@@ -137,24 +137,24 @@ export function MncRoleMatcher() {
             {/* Quantified Project Evidence (Google XYZ style) */}
             <div>
               <h4 className="text-xs font-mono uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-3 flex items-center gap-1.5">
-                <Zap className="w-4 h-4 text-[#3B82F6]" />
+                <Zap className="w-4 h-4 text-[#0D9488]" />
                 <span>Production Project Evidence & Quantified Impact</span>
               </h4>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {currentRole.relevantProjects.map((p) => (
                   <div
                     key={p.name}
-                    className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#111315] flex flex-col justify-between"
+                    className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0B1724] flex flex-col justify-between"
                   >
                     <div>
-                      <div className="font-bold text-sm text-[#111315] dark:text-[#F8FAFC]">
+                      <div className="font-bold text-sm text-[#0B1724] dark:text-[#F8FAFC]">
                         {p.name}
                       </div>
                       <p className="mt-1.5 text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                         {p.contribution}
                       </p>
                     </div>
-                    <div className="mt-3 pt-2.5 border-t border-slate-100 dark:border-slate-800/80 text-[11px] font-mono text-[#3B82F6] dark:text-[#60A5FA]">
+                    <div className="mt-3 pt-2.5 border-t border-slate-100 dark:border-slate-800/80 text-[11px] font-mono text-[#0D9488] dark:text-[#2DD4BF]">
                       Impact: {p.metrics}
                     </div>
                   </div>
@@ -165,7 +165,7 @@ export function MncRoleMatcher() {
             {/* Interview Readiness Checklist */}
             <div>
               <h4 className="text-xs font-mono uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2.5 flex items-center gap-1.5">
-                <ShieldCheck className="w-4 h-4 text-emerald-500 dark:text-[#60A5FA]" />
+                <ShieldCheck className="w-4 h-4 text-emerald-500 dark:text-[#2DD4BF]" />
                 <span>Interview Round Readiness</span>
               </h4>
               <ul className="space-y-1.5">
@@ -174,7 +174,7 @@ export function MncRoleMatcher() {
                     key={idx}
                     className="text-xs text-slate-600 dark:text-slate-300 flex items-start gap-2 font-mono"
                   >
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#3B82F6] dark:bg-[#60A5FA] mt-1.5 shrink-0" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#0D9488] dark:bg-[#2DD4BF] mt-1.5 shrink-0" />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -191,7 +191,7 @@ export function MncRoleMatcher() {
                 href={`mailto:tripathidisha61@gmail.com?subject=Interview%20Invitation%20for%20Disha%20Tripathi%20-%20${encodeURIComponent(
                   currentRole.roleTitle
                 )}`}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold bg-[#3B82F6] text-white hover:bg-[#2563EB] transition-colors shadow-xs active:scale-[0.98]"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold bg-[#0D9488] text-white hover:bg-[#0F766E] transition-colors shadow-xs active:scale-[0.98]"
               >
                 <Send className="w-3.5 h-3.5" />
                 <span>Connect Regarding This Role</span>

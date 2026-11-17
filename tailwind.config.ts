@@ -12,37 +12,47 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        midnightTeal: {
+          bg: "#0B1724",       // Midnight Blue Canvas
+          surface: "#132238",  // Midnight Blue Card Surface
+          border: "#1E3554",   // Silver Midnight Border
+          primary: "#0D9488",  // Teal Primary CTA
+          hover: "#0F766E",    // Deep Teal Hover
+          accent: "#2DD4BF",   // Bright Pale Aqua Accent
+          silver: "#CBD5E1",   // Silver highlight
+          glow: "rgba(13, 148, 136, 0.25)",
+        },
         graphite: {
-          bg: "#111315",       // Graphite Black Background
-          surface: "#20252B",  // Premium Surface / Cards
-          border: "#2D3540",   // Platinum Border
-          primary: "#3B82F6",  // Blue Primary CTA
-          hover: "#2563EB",    // Primary Hover
-          accent: "#60A5FA",   // Engineering Blue Accent
+          bg: "#0B1724",       // Graphite Black Background
+          surface: "#132238",  // Premium Surface / Cards
+          border: "#1E3554",   // Platinum Border
+          primary: "#0D9488",  // Blue Primary CTA
+          hover: "#0F766E",    // Primary Hover
+          accent: "#2DD4BF",   // Engineering Blue Accent
           platinum: "#E2E8F0", // Platinum highlight
           card: "#FFFFFF",
-          glow: "rgba(96, 165, 250, 0.25)",
+          glow: "rgba(13, 148, 136, 0.25)",
         },
         midnight: {
-          bg: "#111315",       // Main Midnight Navy Background
-          card: "#20252B",     // Primary Elevated Card Surface
-          border: "#2D3540",   // Border & Line Accent
-          primary: "#3B82F6",  // Primary Accent: Electric / Royal Blue
-          hover: "#2563EB",    // Deep Electric Blue Hover
-          accent: "#60A5FA",   // Secondary Accent: Electric Cyan
-          glow: "rgba(96, 165, 250, 0.25)",
+          bg: "#0B1724",       // Main Midnight Navy Background
+          card: "#132238",     // Primary Elevated Card Surface
+          border: "#1E3554",   // Border & Line Accent
+          primary: "#0D9488",  // Primary Accent: Electric / Royal Blue
+          hover: "#0F766E",    // Deep Electric Blue Hover
+          accent: "#2DD4BF",   // Secondary Accent: Electric Cyan
+          glow: "rgba(13, 148, 136, 0.25)",
         },
         ocean: {
-          navy: "#111315",
-          surface: "#20252B",
-          border: "#2D3540",
-          primary: "#3B82F6",
-          hover: "#2563EB",
-          bright: "#3B82F6",
-          cyan: "#60A5FA",
+          navy: "#0B1724",
+          surface: "#132238",
+          border: "#1E3554",
+          primary: "#0D9488",
+          hover: "#0F766E",
+          bright: "#0D9488",
+          cyan: "#2DD4BF",
           mist: "#F8FAFC",
           card: "#FFFFFF",
-          glow: "rgba(96, 165, 250, 0.25)",
+          glow: "rgba(13, 148, 136, 0.25)",
         },
       },
       fontFamily: {
