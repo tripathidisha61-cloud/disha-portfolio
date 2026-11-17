@@ -28,7 +28,7 @@ export function CoreCsFundamentals() {
       case "Database":
         return <Database className="w-5 h-5 text-emerald-500" />;
       case "Network":
-        return <Network className="w-5 h-5 text-[#2563EB]" />;
+        return <Network className="w-5 h-5 text-[#3B82F6]" />;
       default:
         return <Cpu className="w-5 h-5 text-slate-500" />;
     }
@@ -43,11 +43,11 @@ export function CoreCsFundamentals() {
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
           <Reveal>
             <div className="flex items-center gap-2 mb-3">
-              <span className="font-mono text-xs uppercase tracking-wider text-[#2563EB] dark:text-[#22D3EE]">
+              <span className="font-mono text-xs uppercase tracking-wider text-[#3B82F6] dark:text-[#60A5FA]">
                 04 // Engineering Rigor
               </span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#0B1120] dark:text-[#F8FAFC]">
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#111315] dark:text-[#F8FAFC]">
               Core CS & Algorithmic Patterns
             </h2>
             <p className="mt-3 text-base text-slate-600 dark:text-slate-400 max-w-2xl">
@@ -57,13 +57,13 @@ export function CoreCsFundamentals() {
 
           {/* Tab Selector */}
           <Reveal delay={0.1}>
-            <div className="inline-flex p-1 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-100/60 dark:bg-[#151F32] text-xs font-medium self-start sm:self-auto">
+            <div className="inline-flex p-1 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-100/60 dark:bg-[#20252B] text-xs font-medium self-start sm:self-auto">
               <button
                 type="button"
                 onClick={() => setActiveTab("dsa")}
                 className={`flex items-center gap-2 px-3.5 py-1.5 rounded-lg transition-all ${
                   activeTab === "dsa"
-                    ? "bg-[#2563EB] text-white shadow-xs font-semibold"
+                    ? "bg-[#3B82F6] text-white shadow-xs font-semibold"
                     : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-[#F8FAFC]"
                 }`}
               >
@@ -76,11 +76,11 @@ export function CoreCsFundamentals() {
                 onClick={() => setActiveTab("systems")}
                 className={`flex items-center gap-2 px-3.5 py-1.5 rounded-lg transition-all ${
                   activeTab === "systems"
-                    ? "bg-[#2563EB] text-white shadow-xs font-semibold"
+                    ? "bg-[#3B82F6] text-white shadow-xs font-semibold"
                     : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-[#F8FAFC]"
                 }`}
               >
-                <Layers className="w-3.5 h-3.5 text-[#22D3EE]" />
+                <Layers className="w-3.5 h-3.5 text-[#60A5FA]" />
                 <span>Systems & Core CS Topics</span>
               </button>
             </div>
@@ -101,20 +101,20 @@ export function CoreCsFundamentals() {
                     onClick={() => setSelectedPatternIndex(idx)}
                     className={`w-full text-left p-4 rounded-xl border transition-all ${
                       isSelected
-                        ? "border-[#2563EB] dark:border-[#2563EB] bg-blue-50/50 dark:bg-[#151F32] shadow-sm"
-                        : "border-slate-200 dark:border-slate-800/80 bg-white dark:bg-[#0B1120]/60 hover:border-slate-300 dark:hover:border-slate-700"
+                        ? "border-[#3B82F6] dark:border-[#3B82F6] bg-blue-50/50 dark:bg-[#20252B] shadow-sm"
+                        : "border-slate-200 dark:border-slate-800/80 bg-white dark:bg-[#111315]/60 hover:border-slate-300 dark:hover:border-slate-700"
                     }`}
                   >
                     <div className="flex items-center justify-between gap-2">
-                      <span className="font-bold text-sm text-[#0B1120] dark:text-[#F8FAFC]">
+                      <span className="font-bold text-sm text-[#111315] dark:text-[#F8FAFC]">
                         {pattern.name}
                       </span>
-                      <span className="px-2 py-0.5 rounded-md text-[10px] font-mono font-medium border border-slate-200 dark:border-slate-700 bg-white dark:bg-[#0B1120] text-slate-700 dark:text-slate-300">
+                      <span className="px-2 py-0.5 rounded-md text-[10px] font-mono font-medium border border-slate-200 dark:border-slate-700 bg-white dark:bg-[#111315] text-slate-700 dark:text-slate-300">
                         {pattern.solvedCount}
                       </span>
                     </div>
 
-                    <div className="mt-2 text-xs font-mono text-emerald-600 dark:text-[#22D3EE] truncate">
+                    <div className="mt-2 text-xs font-mono text-emerald-600 dark:text-[#60A5FA] truncate">
                       {pattern.complexity}
                     </div>
                   </button>
@@ -131,7 +131,7 @@ export function CoreCsFundamentals() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.2 }}
-                  className="p-6 sm:p-7 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#151F32] shadow-xs space-y-6"
+                  className="p-6 sm:p-7 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#20252B] shadow-xs space-y-6"
                 >
                   <div className="flex items-start justify-between gap-4 pb-4 border-b border-slate-100 dark:border-slate-800">
                     <div>
@@ -144,12 +144,12 @@ export function CoreCsFundamentals() {
                           Verified Solved: {DSA_PATTERNS[selectedPatternIndex].solvedCount}
                         </span>
                       </div>
-                      <h3 className="text-xl sm:text-2xl font-bold text-[#0B1120] dark:text-[#F8FAFC]">
+                      <h3 className="text-xl sm:text-2xl font-bold text-[#111315] dark:text-[#F8FAFC]">
                         {DSA_PATTERNS[selectedPatternIndex].name}
                       </h3>
                     </div>
 
-                    <div className="px-3 py-1.5 rounded-xl border border-[#2563EB]/30 bg-[#2563EB]/10 text-[#2563EB] dark:text-[#22D3EE] font-mono text-xs font-semibold shrink-0">
+                    <div className="px-3 py-1.5 rounded-xl border border-[#3B82F6]/30 bg-[#3B82F6]/10 text-[#3B82F6] dark:text-[#60A5FA] font-mono text-xs font-semibold shrink-0">
                       {DSA_PATTERNS[selectedPatternIndex].complexity}
                     </div>
                   </div>
@@ -167,9 +167,9 @@ export function CoreCsFundamentals() {
                       {DSA_PATTERNS[selectedPatternIndex].canonicalProblems.map((prob) => (
                         <div
                           key={prob}
-                          className="p-2.5 rounded-lg border border-slate-200/80 dark:border-slate-800 bg-slate-50/60 dark:bg-[#0B1120] flex items-center gap-2 text-xs font-medium text-slate-800 dark:text-slate-200"
+                          className="p-2.5 rounded-lg border border-slate-200/80 dark:border-slate-800 bg-slate-50/60 dark:bg-[#111315] flex items-center gap-2 text-xs font-medium text-slate-800 dark:text-slate-200"
                         >
-                          <Code2 className="w-3.5 h-3.5 text-slate-400 dark:text-[#22D3EE] shrink-0" />
+                          <Code2 className="w-3.5 h-3.5 text-slate-400 dark:text-[#60A5FA] shrink-0" />
                           <span className="truncate">{prob}</span>
                         </div>
                       ))}
@@ -204,13 +204,13 @@ export function CoreCsFundamentals() {
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
             {CORE_CS_TOPICS.map((sys, idx) => (
               <Reveal key={sys.subject} delay={idx * 0.1}>
-                <div className="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#151F32] flex flex-col justify-between h-full shadow-xs hover:border-slate-300 dark:hover:border-[#2563EB]/50 transition-all">
+                <div className="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#20252B] flex flex-col justify-between h-full shadow-xs hover:border-slate-300 dark:hover:border-[#3B82F6]/50 transition-all">
                   <div>
                     <div className="flex items-center gap-3 mb-4">
-                      <div className="p-2.5 rounded-xl bg-slate-100 dark:bg-[#0B1120]">
+                      <div className="p-2.5 rounded-xl bg-slate-100 dark:bg-[#111315]">
                         {getSystemIcon(sys.iconName)}
                       </div>
-                      <h3 className="font-bold text-base text-[#0B1120] dark:text-[#F8FAFC] leading-snug">
+                      <h3 className="font-bold text-base text-[#111315] dark:text-[#F8FAFC] leading-snug">
                         {sys.subject}
                       </h3>
                     </div>
@@ -219,9 +219,9 @@ export function CoreCsFundamentals() {
                       {sys.topics.map((t) => (
                         <div
                           key={t.name}
-                          className="p-3.5 rounded-xl border border-slate-100 dark:border-slate-800/80 bg-slate-50/60 dark:bg-[#0B1120]"
+                          className="p-3.5 rounded-xl border border-slate-100 dark:border-slate-800/80 bg-slate-50/60 dark:bg-[#111315]"
                         >
-                          <div className="font-semibold text-xs text-[#0B1120] dark:text-[#F8FAFC] mb-1">
+                          <div className="font-semibold text-xs text-[#111315] dark:text-[#F8FAFC] mb-1">
                             {t.name}
                           </div>
                           <p className="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed mb-2">
@@ -231,7 +231,7 @@ export function CoreCsFundamentals() {
                             {t.keyPrerequisites.map((req) => (
                               <span
                                 key={req}
-                                className="px-1.5 py-0.5 rounded text-[10px] font-mono border border-slate-200 dark:border-slate-700 bg-white dark:bg-[#151F32] text-slate-600 dark:text-slate-300"
+                                className="px-1.5 py-0.5 rounded text-[10px] font-mono border border-slate-200 dark:border-slate-700 bg-white dark:bg-[#20252B] text-slate-600 dark:text-slate-300"
                               >
                                 {req}
                               </span>

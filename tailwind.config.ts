@@ -12,26 +12,37 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        graphite: {
+          bg: "#111315",       // Graphite Black Background
+          surface: "#20252B",  // Premium Surface / Cards
+          border: "#2D3540",   // Platinum Border
+          primary: "#3B82F6",  // Blue Primary CTA
+          hover: "#2563EB",    // Primary Hover
+          accent: "#60A5FA",   // Engineering Blue Accent
+          platinum: "#E2E8F0", // Platinum highlight
+          card: "#FFFFFF",
+          glow: "rgba(96, 165, 250, 0.25)",
+        },
         midnight: {
-          bg: "#0B1120",       // Main Midnight Navy Background
-          card: "#151F32",     // Primary Elevated Card Surface
-          border: "#1E293B",   // Border & Line Accent
-          primary: "#2563EB",  // Primary Accent: Electric / Royal Blue
-          hover: "#1D4ED8",    // Deep Electric Blue Hover
-          accent: "#22D3EE",   // Secondary Accent: Electric Cyan
-          glow: "rgba(37, 99, 235, 0.25)",
+          bg: "#111315",       // Main Midnight Navy Background
+          card: "#20252B",     // Primary Elevated Card Surface
+          border: "#2D3540",   // Border & Line Accent
+          primary: "#3B82F6",  // Primary Accent: Electric / Royal Blue
+          hover: "#2563EB",    // Deep Electric Blue Hover
+          accent: "#60A5FA",   // Secondary Accent: Electric Cyan
+          glow: "rgba(96, 165, 250, 0.25)",
         },
         ocean: {
-          navy: "#0B1120",
-          surface: "#151F32",
-          border: "#1E293B",
-          primary: "#2563EB",
-          hover: "#1D4ED8",
-          bright: "#2563EB",
-          cyan: "#22D3EE",
+          navy: "#111315",
+          surface: "#20252B",
+          border: "#2D3540",
+          primary: "#3B82F6",
+          hover: "#2563EB",
+          bright: "#3B82F6",
+          cyan: "#60A5FA",
           mist: "#F8FAFC",
           card: "#FFFFFF",
-          glow: "rgba(37, 99, 235, 0.25)",
+          glow: "rgba(96, 165, 250, 0.25)",
         },
       },
       fontFamily: {
