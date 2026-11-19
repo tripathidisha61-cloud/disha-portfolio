@@ -229,6 +229,58 @@ export const PROJECTS: Project[] = [
     ],
   },
   {
+    id: "sih-2026-arogya",
+    title: "ArogyaSetu Telemetry (SIH 2026)",
+    description:
+      "National Smart India Hackathon (SIH 2026) internal college Rank 1 qualifying platform: decentralized rural health monitoring, emergency triage dispatch, and low-bandwidth telemetry synchronization.",
+    longDescription:
+      "Engineered for resource-constrained disaster response and rural healthcare centers. Features offline-first telemetry queues, automated clinical urgency classification, and resilient data replication.",
+    technologies: ["Python", "FastAPI", "React", "PostgreSQL", "IoT Telemetry", "Docker"],
+    image: "/images/sih-telemetry.png",
+    githubUrl: "https://github.com/tripathidisha61-cloud",
+    liveUrl: "https://github.com/tripathidisha61-cloud",
+    devStatus: "Completed",
+    featured: true,
+    architecture:
+      "Rural Telemetry Node / Field Client -> Offline SQLite Queue -> Encrypted Sync Protocol -> FastAPI Gateway -> PostgreSQL Triage Database -> Emergency Response Command Dashboard",
+    highlights: [
+      "Qualified Rank 1 in institutional evaluations for Smart India Hackathon (SIH 2026) out of 50+ college teams",
+      "Offline-first synchronization protocol operating reliably over sub-50kbps low-bandwidth connections",
+      "Automated clinical urgency classification sorting critical cases for rapid emergency dispatch",
+      "Interactive geospatial dashboard showing real-time community infection patterns and resource hotspots",
+    ],
+    challengesSolved: [
+      "Implemented conflict-free data replication (CRDTs) to handle intermittent network dropouts without record collision",
+      "Optimized battery telemetry transmission with delta-compressed payload encoding",
+    ],
+  },
+  {
+    id: "gsoc-2027-honeynet",
+    title: "Honeynet Telemetry Engine (GSoC 2027)",
+    description:
+      "Google Summer of Code (GSoC 2027) proposal research with The Honeynet Project: distributed honeypot packet capture clustering, automated telemetry ingestion, and attack classification.",
+    longDescription:
+      "Building scalable threat telemetry ingestion pipelines for distributed honeypot sensors (Cowrie, Dionaea). Analyzes raw PCAP traffic, extracts intrusion heuristics, and classifies automated bot attacks.",
+    technologies: ["Python", "Docker", "Wireshark/PCAP", "FastAPI", "ChromaDB", "Linux"],
+    image: "/images/honeynet-telemetry.png",
+    githubUrl: "https://github.com/tripathidisha61-cloud",
+    liveUrl: "https://github.com/tripathidisha61-cloud",
+    devStatus: "In Development",
+    featured: true,
+    architecture:
+      "Distributed Honeypot Sensors (Cowrie/Dionaea) -> Syslog & PCAP Stream Collector -> Python Telemetry Parser -> Feature Extraction Engine -> Vector Clustering (ChromaDB) -> Threat Intel UI",
+    highlights: [
+      "Conducting exploratory threat intelligence research for GSoC 2027 proposal with The Honeynet Project",
+      "Containerized deployment reproducing multi-sensor attack vectors in sandboxed Docker networks",
+      "Automated extraction of credential stuffing, shell shock, and zero-day scan fingerprints",
+      "Profiling telemetry ingestion throughput to handle 10,000+ packets/sec with zero buffer drop",
+    ],
+    challengesSolved: [
+      "Mitigated log ingestion backpressure by implementing an asynchronous producer-consumer queue in Python",
+      "Normalized heterogeneous honeypot log formats into standard JSON threat events",
+    ],
+  },
+  {
     id: "securehealth-telehealth",
     title: "SecureHealth — Telehealth Platform",
     description:
@@ -264,7 +316,7 @@ export const PROJECTS: Project[] = [
     image: "/images/campuspilot.png",
     githubUrl: "https://github.com/tripathidisha61-cloud",
     devStatus: "Prototype",
-    featured: false,
+    featured: true,
     architecture:
       "Campus Documents / Syllabi -> PyPDF / Markdown Ingestion -> Semantic Chunking -> ChromaDB Vector Store -> FastAPI Query Router -> React Chatbot Interface",
     highlights: [
