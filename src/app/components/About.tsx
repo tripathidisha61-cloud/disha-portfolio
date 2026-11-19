@@ -10,7 +10,7 @@ export function About() {
     { label: "Current CGPA", value: PERSONAL_INFO.cgpa, note: "RKGIT CSE Undergrad" },
     { label: "Program", value: "B.Tech CSE", note: "3rd Year (Class of 2028)" },
     { label: "National Hackathon", value: "SIH 2026", note: "Internal Level Cleared" },
-    { label: "Open Source", value: "GSoC 2027", note: "Proposal & Research" },
+    { label: "Open Source", value: "GSoC '26 & '27", note: "The Honeynet Project" },
   ];
 
   const exploringTopics = [
@@ -60,11 +60,15 @@ export function About() {
                 <span className="font-semibold text-[#142F40] dark:text-[#F3F8FA]">
                   Smart India Hackathon (SIH 2026)
                 </span>{" "}
-                and am actively conducting preparatory research for{" "}
+                and am contributing to open-source threat intelligence research under{" "}
                 <span className="font-semibold text-[#18A3B7] dark:text-[#18A3B7]">
-                  Google Summer of Code (GSoC 2027)
+                  Google Summer of Code (GSoC 2026)
+                </span>{" "}
+                with The Honeynet Project, while actively preparing proposals for{" "}
+                <span className="font-semibold text-[#18A3B7] dark:text-[#18A3B7]">
+                  GSoC 2027
                 </span>
-                , focusing on open-source honeynet telemetry capture pipelines and automated vulnerability diagnostics.
+                , focusing on distributed honeypot telemetry capture pipelines and automated vulnerability diagnostics.
               </p>
             </Reveal>
 
@@ -97,10 +101,10 @@ export function About() {
                 <div className="p-4 rounded-xl border border-slate-200 dark:border-[#29495D] bg-white dark:bg-[#1A334A] shadow-xs">
                   <div className="flex items-center gap-2 font-medium text-[#142F40] dark:text-[#F3F8FA] mb-1 text-sm">
                     <GitPullRequest className="w-4 h-4 text-[#18A3B7]" />
-                    GSoC 2027 Preparation
+                    GSoC &apos;26 Contributor &bull; GSoC &apos;27
                   </div>
                   <p className="text-xs text-slate-500 dark:text-[#94A3B8]">
-                    Actively preparing open-source research proposals and contributing bug fixes to upstream telemetry tools.
+                    Open-source research contributor with The Honeynet Project for GSoC 2026, and actively preparing proposals for GSoC 2027.
                   </p>
                 </div>
               </div>

@@ -76,7 +76,7 @@ export function Hero({ onOpenRecruiter }: HeroProps) {
 
               <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium border border-[#147F91]/30 dark:border-[#27E6EC]/30 bg-[#147F91]/10 dark:bg-[#27E6EC]/10 text-[#147F91] dark:text-[#27E6EC]">
                 <GitBranch className="w-3.5 h-3.5 text-[#147F91] dark:text-[#27E6EC]" />
-                <span>GSoC 2027 Aspirant</span>
+                <span>GSoC &apos;26 Contributor &bull; GSoC &apos;27</span>
               </span>
             </motion.div>
 
@@ -101,7 +101,7 @@ export function Hero({ onOpenRecruiter }: HeroProps) {
               variants={itemVariants}
               className="mt-4 text-sm sm:text-base text-slate-600 dark:text-[#B5C8D5] leading-relaxed"
             >
-              I design, develop and explore technology-driven solutions to meaningful real-world problems. 3rd-year B.Tech CSE student at Raj Kumar Goel Institute of Technology (CGPA: 8.8/10), Smart India Hackathon (SIH 2026) internal level cleared, and Google Summer of Code (GSoC 2027) aspirant.
+              I design, develop and explore technology-driven solutions to meaningful real-world problems. 3rd-year B.Tech CSE student at Raj Kumar Goel Institute of Technology (CGPA: 8.8/10), Smart India Hackathon (SIH 2026) internal level cleared, GSoC 2026 contributor with The Honeynet Project, and actively preparing for GSoC 2027.
             </motion.p>
 
             {/* Quick stats pills */}
@@ -263,7 +263,7 @@ export function Hero({ onOpenRecruiter }: HeroProps) {
                 </div>
                 <div className="pl-4">
                   <span className="text-slate-500 dark:text-[#B5C8D5]">openSource:</span>{" "}
-                  <span className="text-[#147F91] dark:text-[#27E6EC]">&quot;GSoC 2027 Aspirant&quot;</span>,
+                  <span className="text-[#147F91] dark:text-[#27E6EC]">&quot;GSoC &apos;26 (Honeynet) &bull; GSoC &apos;27&quot;</span>,
                 </div>
                 <div className="pl-4">
                   <span className="text-slate-500 dark:text-[#B5C8D5]">leetcodeSolved:</span>{" "}

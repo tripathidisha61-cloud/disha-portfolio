@@ -66,7 +66,7 @@ TECHNICAL SKILLS
 
 KEY ACHIEVEMENTS & MILESTONES
 - Smart India Hackathon (SIH 2026): Cleared internal screening round at campus level
-- Google Summer of Code (GSoC 2027) Aspirant: Telemetry architecture analysis with The Honeynet Project
+- Google Summer of Code (GSoC 2026) Contributor & GSoC 2027 Aspirant: Distributed threat telemetry with The Honeynet Project
 - LeetCode Track Record: 311+ Problems Solved (171 Easy, 129 Medium, 11 Hard)
 - Postman API Fundamentals Student Expert Certified
 
@@ -95,7 +95,7 @@ Role: Software Developer & AI/ML Enthusiast
 Education: B.Tech CSE (3rd Year), RKGIT Ghaziabad (CGPA: 8.8/10)
 Key Highlights:
 - Smart India Hackathon (SIH 2026) Internal Level Cleared
-- Google Summer of Code (GSoC 2027) Aspirant
+- GSoC '26 Contributor (The Honeynet Project) & GSoC '27 Aspirant
 - 311+ LeetCode Solved
 Email: ${PERSONAL_INFO.email}
 Phone: ${PERSONAL_INFO.phone}

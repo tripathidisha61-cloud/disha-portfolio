@@ -126,7 +126,7 @@ export function InteractiveTerminal() {
     } else if (lower === "gsoc") {
       output = (
         <div className="space-y-1 text-xs text-neutral-300 font-mono">
-          <p className="text-blue-400 font-bold">Google Summer of Code (GSoC 2027) Aspirant</p>
+          <p className="text-blue-400 font-bold">Google Summer of Code (GSoC 2026) Contributor & GSoC 2027 Aspirant</p>
           <p>Target Organization: <span className="text-white font-semibold">The Honeynet Project</span></p>
           <p>Research Focus: Distributed honeypot telemetry, sensor data clustering, and automated threat intelligence pipelines.</p>
         </div>

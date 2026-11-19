@@ -9,16 +9,16 @@ export function Experience() {
     ...EXPERIENCES,
     {
       id: "honeynet-gsoc",
-      role: "Open Source Contributor & GSoC 2027 Research Aspirant",
+      role: "Open Source Contributor (GSoC '26) & GSoC '27 Aspirant",
       organization: "The Honeynet Project (Community Research)",
       period: "2024 - Present",
       location: "Remote / Open Source",
       description: [
-        "Analyzing distributed sensor network architectures and honeypot packet telemetry for automated threat categorization.",
-        "Authoring formal GSoC 2027 proposal focusing on telemetry aggregation engines and log triage modules.",
-        "Contributing documentation clarifications, reproduction scripts, and test harnesses to target open-source repositories.",
+        "Analyzing distributed sensor network architectures and honeypot packet telemetry (Cowrie, Dionaea) for automated threat categorization under GSoC 2026.",
+        "Authoring formal GSoC 2027 proposal focusing on high-throughput telemetry aggregation engines and automated vulnerability triage modules.",
+        "Contributing documentation, reproduction scripts, and Docker test harnesses to upstream honeynet repositories.",
       ],
-      tags: ["GSoC 2027", "Telemetry", "Open Source", "Python", "Docker"],
+      tags: ["GSoC '26", "GSoC '27", "The Honeynet Project", "Telemetry", "Python", "Docker"],
     },
   ];
 

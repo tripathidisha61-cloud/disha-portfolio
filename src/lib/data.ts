@@ -61,7 +61,7 @@ export const PERSONAL_INFO = {
   tagline: "Building ideas into intelligent solutions.",
   headline: "Hi, I'm Disha Tripathi — Building ideas into intelligent solutions.",
   shortBio:
-    "I design, develop and explore technology-driven solutions to meaningful real-world problems. 3rd-year B.Tech CSE student at RKGIT Ghaziabad (CGPA: 8.8/10), Smart India Hackathon (SIH 2026) internal level cleared, and Google Summer of Code (GSoC 2027) aspirant.",
+    "I design, develop and explore technology-driven solutions to meaningful real-world problems. 3rd-year B.Tech CSE student at RKGIT Ghaziabad (CGPA: 8.8/10), Smart India Hackathon (SIH 2026) internal level cleared, GSoC 2026 contributor with The Honeynet Project, and actively preparing for GSoC 2027.",
   college: "Raj Kumar Goel Institute of Technology, Ghaziabad",
   degree: "B.Tech Computer Science and Engineering",
   year: "3rd Year",
@@ -255,12 +255,12 @@ export const PROJECTS: Project[] = [
     ],
   },
   {
-    id: "gsoc-2027-honeynet",
-    title: "Honeynet Telemetry Engine (GSoC 2027)",
+    id: "gsoc-2026-honeynet",
+    title: "Honeynet Telemetry Engine (GSoC 2026)",
     description:
-      "Google Summer of Code (GSoC 2027) proposal research with The Honeynet Project: distributed honeypot packet capture clustering, automated telemetry ingestion, and attack classification.",
+      "Google Summer of Code (GSoC 2026) research contributor with The Honeynet Project: distributed honeypot packet capture clustering, automated telemetry ingestion, and attack classification; formulating advanced proposals for GSoC 2027.",
     longDescription:
-      "Building scalable threat telemetry ingestion pipelines for distributed honeypot sensors (Cowrie, Dionaea). Analyzes raw PCAP traffic, extracts intrusion heuristics, and classifies automated bot attacks.",
+      "Building scalable threat telemetry ingestion pipelines for distributed honeypot sensors (Cowrie, Dionaea) under The Honeynet Project for GSoC 2026. Analyzes raw PCAP traffic, extracts intrusion heuristics, and classifies automated bot attacks while formulating advanced proposals for GSoC 2027.",
     technologies: ["Python", "Docker", "Wireshark/PCAP", "FastAPI", "ChromaDB", "Linux"],
     image: "/images/honeynet-telemetry.png",
     githubUrl: "https://github.com/tripathidisha61-cloud",
@@ -270,10 +270,11 @@ export const PROJECTS: Project[] = [
     architecture:
       "Distributed Honeypot Sensors (Cowrie/Dionaea) -> Syslog & PCAP Stream Collector -> Python Telemetry Parser -> Feature Extraction Engine -> Vector Clustering (ChromaDB) -> Threat Intel UI",
     highlights: [
-      "Conducting exploratory threat intelligence research for GSoC 2027 proposal with The Honeynet Project",
+      "Contributing to open-source threat intelligence research for GSoC 2026 with The Honeynet Project",
       "Containerized deployment reproducing multi-sensor attack vectors in sandboxed Docker networks",
       "Automated extraction of credential stuffing, shell shock, and zero-day scan fingerprints",
       "Profiling telemetry ingestion throughput to handle 10,000+ packets/sec with zero buffer drop",
+      "Actively preparing and expanding research pipeline for Google Summer of Code (GSoC 2027)",
     ],
     challengesSolved: [
       "Mitigated log ingestion backpressure by implementing an asynchronous producer-consumer queue in Python",
@@ -440,13 +441,13 @@ export const ACHIEVEMENTS: AchievementItem[] = [
     badge: "SIH 2026 Cleared",
   },
   {
-    id: "gsoc-2027",
-    title: "Google Summer of Code (GSoC 2027) — Preparation & Open Source",
-    issuer: "Open Source Organizations & The Honeynet Project",
-    date: "2026 - 2027",
+    id: "gsoc-2026",
+    title: "Google Summer of Code (GSoC 2026) — The Honeynet Project",
+    issuer: "The Honeynet Project & Open Source Communities",
+    date: "2026 - Present",
     description:
-      "Actively analyzing threat intelligence telemetry and honeypot architectures to formulate a competitive Google Summer of Code (GSoC 2027) project proposal.",
-    badge: "GSoC 2027 Aspirant",
+      "Contributing to distributed threat intelligence research, packet capture ingestion pipelines, and attack vector clustering with The Honeynet Project for GSoC 2026, while targeting GSoC 2027.",
+    badge: "GSoC 2026 Contributor & GSoC 2027 Aspirant",
   },
   {
     id: "sih-2025",
@@ -790,7 +791,7 @@ export const MNC_ROLES: RoleAlignment[] = [
     coreCompetencies: [
       "Retrieval-Augmented Generation (RAG) system design with vector embeddings and ChromaDB",
       "LLM orchestration with LangChain, structured prompting, and deterministic output validation",
-      "Open-source threat telemetry analysis and honeynet sensor clustering (GSoC 2027)",
+      "Open-source threat telemetry analysis and honeynet sensor clustering (GSoC 2026 & GSoC 2027)",
       "Applied data analytics, feature processing, and statistical machine learning workflows",
     ],
     relevantProjects: [
@@ -964,7 +965,7 @@ export const RECRUITER_SUMMARY = {
     { label: "Academic CGPA", value: "8.8 / 10" },
     { label: "LeetCode Solved", value: "311+ Problems" },
     { label: "National Hackathon", value: "SIH 2026 (Internal Cleared)" },
-    { label: "Open Source Target", value: "GSoC 2027 Aspirant" },
+    { label: "Open Source Target", value: "GSoC '26 & GSoC '27 Aspirant" },
   ],
 };
 
@@ -1114,7 +1115,7 @@ export const INTERVIEW_QUESTIONS: InterviewQuestion[] = [
       task:
         "My passion lies in backend system architectures, applied AI (RAG, AST diagnostics), and high-throughput real-time web services.",
       action:
-        "I've solved 311+ problems on LeetCode with strong algorithmic rigor across Dynamic Programming, Graphs, and Trees. I cleared the internal campus screening for Smart India Hackathon (SIH 2026) and am actively preparing for Google Summer of Code (GSoC 2027) with The Honeynet Project. I've designed and built RepoMedic AI and real-time hackathon telemetry infrastructure.",
+        "I've solved 311+ problems on LeetCode with strong algorithmic rigor across Dynamic Programming, Graphs, and Trees. I cleared the internal campus screening for Smart India Hackathon (SIH 2026), am contributing to GSoC 2026 research with The Honeynet Project, and actively preparing for GSoC 2027. I've designed and built RepoMedic AI and real-time hackathon telemetry infrastructure.",
       result:
         "I combine algorithmic fundamentals with hands-on full-stack execution, and I am eager to contribute to high-impact production systems in summer internships.",
     },
